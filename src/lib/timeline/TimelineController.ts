@@ -10,10 +10,10 @@ const ZOOM_FACTOR = 1.12; // per wheel tick
 
 // ─── Event rendering constants ───────────────────────────────────────────────
 
-const DOT_STEM = 18;    // px — spine → instant dot
-const BAR_BOTTOM = 34;  // px — spine → bottom of interval bar (clears the dots)
-const BAR_HEIGHT = 8;   // px — height of interval bars
-const DOT_RADIUS = 3;   // px — instant event dot radius
+const DOT_STEM = 18; // px — spine → instant dot
+const BAR_BOTTOM = 34; // px — spine → bottom of interval bar (clears the dots)
+const BAR_HEIGHT = 8; // px — height of interval bars
+const DOT_RADIUS = 3; // px — instant event dot radius
 const MIN_BAR_WIDTH = 3; // px — minimum rendered width for interval bars
 
 const CATEGORY_COLORS: Record<string, number> = {
@@ -27,9 +27,9 @@ const DEFAULT_EVENT_COLOR = 0x7777aa;
 // ─── Public data shapes ───────────────────────────────────────────────────────
 
 export interface GapInfo {
-  x1: number;    // left endpoint pixel
-  x2: number;    // right endpoint pixel
-  y: number;     // y position (below spine)
+  x1: number; // left endpoint pixel
+  x2: number; // right endpoint pixel
+  y: number; // y position (below spine)
   label: string; // e.g. "430 yrs"
 }
 
@@ -225,7 +225,10 @@ export class TimelineController {
       this._viewStart = event.start - padding;
       this._viewEnd = end + padding;
     } else if (this.selectedBinRange) {
-      const span = Math.max(this.selectedBinRange.end - this.selectedBinRange.start, 1);
+      const span = Math.max(
+        this.selectedBinRange.end - this.selectedBinRange.start,
+        1,
+      );
       const padding = span * 0.2;
       this._viewStart = this.selectedBinRange.start - padding;
       this._viewEnd = this.selectedBinRange.end + padding;
@@ -310,7 +313,8 @@ export class TimelineController {
     // Pass 1: instant events — smaller targets, always take priority.
     for (const event of this.events) {
       if (event.end != null) continue;
-      if (event.start < this._viewStart || event.start > this._viewEnd) continue;
+      if (event.start < this._viewStart || event.start > this._viewEnd)
+        continue;
       const x1 = this.timeToPixel(event.start);
       // Hit the stem or the dot.
       if (Math.abs(x - x1) <= HIT && y >= dotY - HIT && y <= spineY) {
@@ -326,7 +330,12 @@ export class TimelineController {
       const x1 = this.timeToPixel(event.start);
       const x2 = this.timeToPixel(eventEnd);
       // Hit the bar.
-      if (x >= x1 - HIT && x <= x2 + HIT && y >= barTopY - HIT && y <= barBotY + HIT) {
+      if (
+        x >= x1 - HIT &&
+        x <= x2 + HIT &&
+        y >= barTopY - HIT &&
+        y <= barBotY + HIT
+      ) {
         return event;
       }
       // Hit either stem.
@@ -390,7 +399,14 @@ export class TimelineController {
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => b.count - a.count);
 
-    return { timeStart: binStart, timeEnd: binEnd, eventStart, eventEnd, count, categories };
+    return {
+      timeStart: binStart,
+      timeEnd: binEnd,
+      eventStart,
+      eventEnd,
+      count,
+      categories,
+    };
   }
 
   /**
@@ -416,9 +432,11 @@ export class TimelineController {
 
       const years = Math.round((b.start - a.start) / MS_PER_YEAR);
       const label =
-        years === 0 ? "<1 yr"
-        : years === 1 ? "1 yr"
-        : `${years.toLocaleString()} yrs`;
+        years === 0
+          ? "<1 yr"
+          : years === 1
+            ? "1 yr"
+            : `${years.toLocaleString()} yrs`;
 
       gaps.push({ x1, x2, y, label });
     }
@@ -529,7 +547,10 @@ export class TimelineController {
 
       const fraction =
         (event.start - this._viewStart) / (this._viewEnd - this._viewStart);
-      const binIdx = Math.min(numBins - 1, Math.max(0, Math.floor(fraction * numBins)));
+      const binIdx = Math.min(
+        numBins - 1,
+        Math.max(0, Math.floor(fraction * numBins)),
+      );
       bins[binIdx].count++;
       const cat = event.category ?? "";
       bins[binIdx].votes[cat] = (bins[binIdx].votes[cat] ?? 0) + 1;
@@ -557,7 +578,10 @@ export class TimelineController {
       let dominantCat = "";
       let maxVotes = 0;
       for (const [cat, votes] of Object.entries(bin.votes)) {
-        if (votes > maxVotes) { maxVotes = votes; dominantCat = cat; }
+        if (votes > maxVotes) {
+          maxVotes = votes;
+          dominantCat = cat;
+        }
       }
       const color = CATEGORY_COLORS[dominantCat] ?? DEFAULT_EVENT_COLOR;
       const isSelected = i === selectedBinIdx;
@@ -583,9 +607,9 @@ export class TimelineController {
     const w = this.viewWidth;
     const h = this.viewHeight;
     const spineY = h * SPINE_Y_FRACTION;
-    const dotY = spineY - DOT_STEM;           // instant dot sits here
-    const barBotY = spineY - BAR_BOTTOM;      // bottom edge of interval bar
-    const barTopY = barBotY - BAR_HEIGHT;     // top edge of interval bar
+    const dotY = spineY - DOT_STEM; // instant dot sits here
+    const barBotY = spineY - BAR_BOTTOM; // bottom edge of interval bar
+    const barTopY = barBotY - BAR_HEIGHT; // top edge of interval bar
 
     // ── Pass 1: interval bars (drawn first, underneath dots) ─────────────────
     for (const event of this.events) {
@@ -594,7 +618,8 @@ export class TimelineController {
       const eventEnd = event.end;
       if (eventEnd < this._viewStart || event.start > this._viewEnd) continue;
 
-      const color = CATEGORY_COLORS[event.category ?? ""] ?? DEFAULT_EVENT_COLOR;
+      const color =
+        CATEGORY_COLORS[event.category ?? ""] ?? DEFAULT_EVENT_COLOR;
       const isSelected = event.id === this.selectedId;
       const alpha = isSelected ? 1 : 0.8;
 
@@ -626,12 +651,14 @@ export class TimelineController {
     // ── Pass 2: instant dots (drawn on top so they're never obscured) ────────
     for (const event of this.events) {
       if (event.end != null) continue;
-      if (event.start < this._viewStart || event.start > this._viewEnd) continue;
+      if (event.start < this._viewStart || event.start > this._viewEnd)
+        continue;
 
       const x1 = this.timeToPixel(event.start);
       if (x1 < -DOT_RADIUS || x1 > w + DOT_RADIUS) continue;
 
-      const color = CATEGORY_COLORS[event.category ?? ""] ?? DEFAULT_EVENT_COLOR;
+      const color =
+        CATEGORY_COLORS[event.category ?? ""] ?? DEFAULT_EVENT_COLOR;
       const isSelected = event.id === this.selectedId;
       const alpha = isSelected ? 1 : 0.8;
 
