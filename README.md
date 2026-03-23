@@ -40,13 +40,13 @@ bun run dev
 
 ## Scripts
 
-| Command | Description |
-|---|---|
-| `bun run dev` | Start dev server and open in browser |
-| `bun run build` | Create production build |
-| `bun run preview` | Preview the production build |
-| `bun run check` | Type-check with `svelte-check` |
-| `bun run format` | Format source files with Prettier |
+| Command                           | Description                           |
+| --------------------------------- | ------------------------------------- |
+| `bun run dev`                     | Start dev server and open in browser  |
+| `bun run build`                   | Create production build               |
+| `bun run preview`                 | Preview the production build          |
+| `bun run check`                   | Type-check with `svelte-check`        |
+| `bun run format`                  | Format source files with Prettier     |
 | `bun scripts/generate-genesis.ts` | Regenerate the Genesis sample dataset |
 
 ## Dataset
