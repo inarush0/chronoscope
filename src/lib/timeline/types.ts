@@ -14,7 +14,6 @@ export interface TimelineEvent {
 export interface ViewState {
   viewStart: Time;
   viewEnd: Time;
-  playhead: Time;
 }
 
 export interface TickMark {

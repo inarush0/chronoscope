@@ -1,25 +1,33 @@
 <script lang="ts">
-    import { onMount, untrack } from "svelte";
-    import { TimelineController } from "./TimelineController.js";
-    import type { TimelineControllerOptions } from "./TimelineController.js";
-    import type { TickMark } from "./types.js";
+    import { onMount } from "svelte";
+    import {
+        TimelineController,
+        THEME_COLORS,
+    } from "./TimelineController.js";
+    import type {
+        TimelineControllerOptions,
+        TimelineColors,
+        BinInfo,
+        GapInfo,
+    } from "./TimelineController.js";
+    import type { TimelineEvent } from "./types.js";
 
     // ─── Props ─────────────────────────────────────────────────────────────────
 
     interface Props {
         initialViewStart: number;
         initialViewEnd: number;
-        initialPlayhead?: number;
+        colors?: TimelineColors;
+        dataset?: TimelineEvent[];
         onSelectionChange?: TimelineControllerOptions["onSelectionChange"];
-        onPlayheadChange?: TimelineControllerOptions["onPlayheadChange"];
     }
 
     let {
         initialViewStart,
         initialViewEnd,
-        initialPlayhead,
+        colors = THEME_COLORS.light,
+        dataset,
         onSelectionChange,
-        onPlayheadChange,
     }: Props = $props();
 
     // ─── DOM refs ──────────────────────────────────────────────────────────────
@@ -27,47 +35,68 @@
     let wrapper: HTMLDivElement;
     let canvas: HTMLCanvasElement;
 
-    // ─── Overlay state (driven by rAF loop, updates DOM labels) ───────────────
-
-    let ticks = $state<TickMark[]>([]);
-    let playheadX = $state(0);
-    // untrack: these are stable "initial" props; the rAF loop owns playheadTime after init.
-    let playheadTime = $state(
-        untrack(() => initialPlayhead ?? initialViewStart),
-    );
-
-    // ─── Controller (reactive so exported methods and template track it) ───────
+    // ─── Controller ────────────────────────────────────────────────────────────
 
     let ctrl = $state<TimelineController | undefined>(undefined);
 
+    // Propagate prop changes to the controller after it is initialised.
+    $effect(() => { ctrl?.setColors(colors); });
+    $effect(() => { if (dataset) ctrl?.setDataset(dataset); });
+
+    // ─── Hover / tooltip state ─────────────────────────────────────────────────
+
+    let hoveredEvent = $state<TimelineEvent | null>(null);
+    let hoveredBin = $state<BinInfo | null>(null);
+    let tooltipX = $state(0);
+    let tooltipY = $state(0);
+
+    let gaps = $state<GapInfo[]>([]);
+
+    function formatYear(ts: number): string {
+        const year = new Date(ts).getUTCFullYear();
+        return year <= 0 ? `${1 - year} BCE` : `${year} CE`;
+    }
+
+    function onMouseMove(e: MouseEvent) {
+        if (!ctrl) return;
+        tooltipX = e.offsetX;
+        tooltipY = e.offsetY;
+        if (ctrl.lod === "A") {
+            hoveredEvent = null;
+            hoveredBin = ctrl.getBinAt(e.offsetX, e.offsetY);
+        } else {
+            hoveredBin = null;
+            hoveredEvent = ctrl.getEventAt(e.offsetX, e.offsetY);
+        }
+    }
+
+    function onMouseLeave() {
+        hoveredEvent = null;
+        hoveredBin = null;
+    }
+
     // ─── Exposed imperative API ────────────────────────────────────────────────
 
-    export function resetView() {
-        ctrl?.resetView();
-    }
-
-    export function zoomToSelection() {
-        ctrl?.zoomToSelection();
-    }
+    export function resetView() { ctrl?.resetView(); }
+    export function zoomToSelection() { ctrl?.zoomToSelection(); }
 
     // ─── Lifecycle ─────────────────────────────────────────────────────────────
 
     onMount(() => {
         let ro: ResizeObserver | undefined;
-        let rafId: number;
-
-        // Only recompute tick array when the view window changes.
-        let lastViewStart = NaN;
-        let lastViewEnd = NaN;
+        let rafId = 0;
 
         async function init() {
             ctrl = await TimelineController.create(canvas, {
                 initialViewStart,
                 initialViewEnd,
-                initialPlayhead,
+                colors,
                 onSelectionChange,
-                onPlayheadChange,
             });
+
+            // Load dataset immediately — the $effect above may not re-run
+            // reliably after an async assignment.
+            if (dataset) ctrl.setDataset(dataset);
 
             ro = new ResizeObserver(([entry]) => {
                 const { width, height } = entry.contentRect;
@@ -75,23 +104,12 @@
             });
             ro.observe(wrapper);
 
-            function loop() {
-                if (ctrl) {
-                    const vs = ctrl.getViewState();
-                    if (
-                        vs.viewStart !== lastViewStart ||
-                        vs.viewEnd !== lastViewEnd
-                    ) {
-                        ticks = ctrl.getTicks();
-                        lastViewStart = vs.viewStart;
-                        lastViewEnd = vs.viewEnd;
-                    }
-                    playheadX = ctrl.getPlayheadX();
-                    playheadTime = vs.playhead;
-                }
-                rafId = requestAnimationFrame(loop);
+            // Update gap positions every frame (they shift on every pan/zoom).
+            function tick() {
+                gaps = ctrl!.getGaps();
+                rafId = requestAnimationFrame(tick);
             }
-            rafId = requestAnimationFrame(loop);
+            rafId = requestAnimationFrame(tick);
         }
 
         init();
@@ -102,36 +120,59 @@
             ctrl?.destroy();
         };
     });
-
-    // ─── Derived ───────────────────────────────────────────────────────────────
-
-    const playheadLabel = $derived(
-        new Date(playheadTime).toISOString().replace("T", " ").slice(0, 19) +
-            " UTC",
-    );
 </script>
 
 <!-- ─── Markup ───────────────────────────────────────────────────────────────── -->
 
 <div class="timeline-root" bind:this={wrapper}>
-    <canvas bind:this={canvas}></canvas>
+    <canvas
+        bind:this={canvas}
+        onmousemove={onMouseMove}
+        onmouseleave={onMouseLeave}
+    ></canvas>
 
-    <!-- Tick labels — DOM-positioned over the header band -->
-    <div class="tick-labels" aria-hidden="true">
-        {#each ticks as tick (tick.time)}
-            <span class="tick-label" style="left: {tick.x}px">{tick.label}</span
-            >
-        {/each}
-    </div>
+    <!-- ── Gap indicators (LOD B only) ── -->
+    {#each gaps as gap}
+        <div
+            class="gap-line"
+            style="left: {gap.x1}px; width: {gap.x2 - gap.x1}px; top: {gap.y}px"
+        ></div>
+        {#if gap.x2 - gap.x1 > 48}
+            <span
+                class="gap-label"
+                style="left: {(gap.x1 + gap.x2) / 2}px; top: {gap.y}px"
+            >{gap.label}</span>
+        {/if}
+    {/each}
 
-    <!-- Playhead time readout — follows the playhead line -->
-    <div
-        class="playhead-readout"
-        style="left: {playheadX}px"
-        aria-hidden="true"
-    >
-        {playheadLabel}
-    </div>
+    {#if hoveredEvent}
+        <div
+            class="tooltip"
+            style="left: {tooltipX + 14}px; top: {tooltipY - 12}px"
+        >
+            <div class="tooltip-title">{hoveredEvent.title}</div>
+            {#if hoveredEvent.meta?.reference}
+                <div class="tooltip-ref">{hoveredEvent.meta.reference}</div>
+            {/if}
+        </div>
+    {:else if hoveredBin}
+        <div
+            class="tooltip"
+            style="left: {tooltipX + 14}px; top: {tooltipY - 12}px"
+        >
+            <div class="tooltip-title">{hoveredBin.count} event{hoveredBin.count === 1 ? "" : "s"}</div>
+            <div class="tooltip-range">
+                {formatYear(hoveredBin.timeStart)} – {formatYear(hoveredBin.timeEnd)}
+            </div>
+            {#each hoveredBin.categories.slice(0, 3) as cat}
+                <div class="tooltip-cat">
+                    <span class="tooltip-cat-name">{cat.name || "Uncategorized"}</span>
+                    <span class="tooltip-cat-count">{cat.count}</span>
+                </div>
+            {/each}
+            <div class="tooltip-hint">Click to select · Zoom to Selection to drill in</div>
+        </div>
+    {/if}
 </div>
 
 <!-- ─── Styles ──────────────────────────────────────────────────────────────── -->
@@ -150,43 +191,87 @@
         height: 100%;
     }
 
-    /* ── Tick labels ── */
+    /* ── Gap indicators ── */
 
-    .tick-labels {
+    .gap-line {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 32px; /* matches HEADER_HEIGHT in TimelineController */
+        height: 1px;
+        background: var(--color-logo);
+        opacity: 0.25;
         pointer-events: none;
-        overflow: hidden;
     }
 
-    .tick-label {
+    .gap-label {
         position: absolute;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 10px;
+        transform: translate(-50%, 3px);
+        font-size: 9px;
         font-family: ui-monospace, "Cascadia Code", "Fira Mono", monospace;
-        color: #7070aa;
+        color: var(--color-fg);
+        opacity: 0.4;
+        pointer-events: none;
         white-space: nowrap;
         user-select: none;
     }
 
-    /* ── Playhead time readout ── */
+    /* ── Tooltip ── */
 
-    .playhead-readout {
+    .tooltip {
         position: absolute;
-        top: 32px; /* sits just below the header band */
-        transform: translateX(-50%);
+        pointer-events: none;
+        background: var(--color-toolbar-bg);
+        border: 1px solid var(--color-toolbar-border);
+        border-radius: 4px;
+        padding: 6px 10px;
+        max-width: 240px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .tooltip-title {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--color-fg);
+        line-height: 1.3;
+    }
+
+    .tooltip-ref {
+        font-size: 11px;
+        font-family: ui-monospace, "Cascadia Code", "Fira Mono", monospace;
+        color: var(--color-logo);
+    }
+
+    /* ── LOD A bin tooltip extras ── */
+
+    .tooltip-range {
         font-size: 10px;
         font-family: ui-monospace, "Cascadia Code", "Fira Mono", monospace;
-        color: #ff5f5f;
-        white-space: nowrap;
-        pointer-events: none;
-        user-select: none;
-        background: rgba(19, 19, 31, 0.75);
-        padding: 1px 4px;
-        border-radius: 2px;
+        color: var(--color-logo);
+    }
+
+    .tooltip-cat {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        font-size: 11px;
+        color: var(--color-fg);
+        opacity: 0.8;
+    }
+
+    .tooltip-cat-name {
+        font-style: italic;
+    }
+
+    .tooltip-cat-count {
+        font-variant-numeric: tabular-nums;
+    }
+
+    .tooltip-hint {
+        margin-top: 2px;
+        font-size: 10px;
+        color: var(--color-fg);
+        opacity: 0.45;
     }
 </style>
