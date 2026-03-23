@@ -65,3 +65,7 @@ bun scripts/generate-genesis.ts
 
 To deploy, install an [adapter](https://svelte.dev/docs/kit/adapters) for your
 target environment.
+
+## Copyright
+
+Copyright © 2026 Andrew Rush. All rights reserved.
