@@ -64,7 +64,7 @@ for (const event of events) {
       ${book},
       ${event.category ?? null},
       ${event.lane ?? null},
-      ${event.meta ? sql.json(event.meta) : null}
+      ${event.meta ? sql.json(event.meta as Parameters<typeof sql.json>[0]) : null}
     )
     ON CONFLICT (id, dataset_id) DO UPDATE SET
       start_time = EXCLUDED.start_time,
