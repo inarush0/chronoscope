@@ -4,7 +4,8 @@
   import Inspector from "$lib/inspector/Inspector.svelte";
   import { THEME_COLORS } from "$lib/timeline/TimelineController.js";
   import type { TimelineEvent } from "$lib/timeline/types.js";
-  import genesisData from "$lib/data/genesis.json";
+
+  let { data } = $props();
 
   // ─── Theme ─────────────────────────────────────────────────────────────────
 
@@ -33,16 +34,27 @@
 
   // ─── Dataset ───────────────────────────────────────────────────────────────
 
-  const dataset = genesisData.events as TimelineEvent[];
+  const dataset = $derived(data.events as TimelineEvent[]);
 
-  const allTimes = dataset.flatMap((e) =>
-    e.end != null ? [e.start, e.end] : [e.start],
-  );
-  const dataStart = Math.min(...allTimes);
-  const dataEnd = Math.max(...allTimes);
-  const padding = (dataEnd - dataStart) * 0.05;
-  const initialViewStart = dataStart - padding;
-  const initialViewEnd = dataEnd + padding;
+  const initialViewStart = $derived.by(() => {
+    const times = dataset.flatMap((e) =>
+      e.end != null ? [e.start, e.end] : [e.start],
+    );
+    const min = Math.min(...times);
+    const max = Math.max(...times);
+    const pad = (max - min) * 0.05;
+    return min - pad;
+  });
+
+  const initialViewEnd = $derived.by(() => {
+    const times = dataset.flatMap((e) =>
+      e.end != null ? [e.start, e.end] : [e.start],
+    );
+    const min = Math.min(...times);
+    const max = Math.max(...times);
+    const pad = (max - min) * 0.05;
+    return max + pad;
+  });
 
   // ─── Selection ─────────────────────────────────────────────────────────────
 

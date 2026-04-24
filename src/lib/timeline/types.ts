@@ -6,6 +6,7 @@ export interface TimelineEvent {
   start: Time;
   end?: Time;
   title: string;
+  book?: string;
   category?: string;
   lane?: string;
   meta?: Record<string, unknown>;
