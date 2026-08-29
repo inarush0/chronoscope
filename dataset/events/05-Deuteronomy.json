@@ -1,0 +1,322 @@
+{
+  "book": "Deuteronomy",
+  "order": 5,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "deu-first-discourse-begins",
+      "title": "Moses Begins to Expound the Law",
+      "start": "1406-11-01 BC",
+      "category": "The First Discourse",
+      "reference": "Deuteronomy 1:1-5",
+      "description": "In the fortieth year, on the first day of the eleventh month, in the land of Moab beyond the Jordan, Moses begins to expound this law to all Israel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-recalls-horeb-departure",
+      "title": "Recalling the Departure from Horeb",
+      "start": "1406-11 BC",
+      "category": "The First Discourse",
+      "reference": "Deuteronomy 1:6-18",
+      "description": "Moses recalls the command to leave Horeb and take the land, and the appointment of wise leaders as commanders and judges over thousands, hundreds, fifties, and tens.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-recalls-kadesh-rebellion",
+      "title": "Recalling the Rebellion at Kadesh-Barnea",
+      "start": "1406-11 BC",
+      "category": "The First Discourse",
+      "reference": "Deuteronomy 1:19-46",
+      "description": "Moses recounts the sending of the scouts, the people's refusal to go up, the LORD's oath that none of that generation would see the land, and their defeat by the Amorites at Hormah.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-recalls-wilderness-route",
+      "title": "Recalling the Route Around Edom, Moab, and Ammon",
+      "start": "1406-11 BC",
+      "category": "The First Discourse",
+      "reference": "Deuteronomy 2:1-25",
+      "description": "Moses recalls the thirty-eight years until the warrior generation had died, and the command not to harass Esau, Moab, or Ammon, whose lands were given to them as possessions.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-recalls-sihon-og",
+      "title": "Recalling the Defeat of Sihon and Og",
+      "start": "1406-11 BC",
+      "category": "The First Discourse",
+      "reference": "Deuteronomy 2:26-3:11",
+      "description": "Moses recounts the victories over Sihon of Heshbon and Og of Bashan, the last of the Rephaim, whose iron bedstead was nine cubits long.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-transjordan-allotment-recalled",
+      "title": "The Transjordan Allotment and Joshua's Charge",
+      "start": "1406-11 BC",
+      "category": "The First Discourse",
+      "reference": "Deuteronomy 3:12-29",
+      "description": "The conquered land is given to Reuben, Gad, and half of Manasseh; Joshua is charged not to fear; and Moses' plea to cross over and see the good land is refused.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-exhortation-to-obey",
+      "title": "Exhortation to Obey the Law",
+      "start": "1406-11 BC",
+      "category": "The First Discourse",
+      "reference": "Deuteronomy 4:1-40",
+      "description": "Moses warns against adding to or taking from the commandments, against making any idol since Israel saw no form at Horeb, and promises that the LORD is merciful to those who return to him.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-cities-refuge-east",
+      "title": "Cities of Refuge East of the Jordan",
+      "start": "1406-11 BC",
+      "category": "The First Discourse",
+      "reference": "Deuteronomy 4:41-49",
+      "description": "Moses sets apart Bezer, Ramoth, and Golan east of the Jordan as places of refuge for one who kills a neighbor unintentionally.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-ten-commandments",
+      "title": "The Ten Commandments Restated",
+      "start": "1406-11 BC",
+      "category": "The Second Discourse",
+      "reference": "Deuteronomy 5:1-33",
+      "description": "Moses declares that the covenant at Horeb was made not with the ancestors but with the living generation, and repeats the ten commandments spoken from the fire.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-shema",
+      "title": "The Shema and the Great Commandment",
+      "start": "1406-11 BC",
+      "category": "The Second Discourse",
+      "reference": "Deuteronomy 6:1-25",
+      "description": "Israel is called to hear that the LORD their God is one, and to love him with all their heart, soul, and might, teaching these words to their children at home and on the way.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-driving-out-nations",
+      "title": "The Command to Destroy the Nations of Canaan",
+      "start": "1406-11 BC",
+      "category": "The Second Discourse",
+      "reference": "Deuteronomy 7:1-26",
+      "description": "Israel must make no covenant or marriage with the seven nations and must tear down their altars, being a people holy to the LORD, chosen not for their numbers but because he loved them.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-warning-against-pride",
+      "title": "Warning Against Forgetting in Prosperity",
+      "start": "1406-11 BC",
+      "category": "The Second Discourse",
+      "reference": "Deuteronomy 8:1-20",
+      "description": "The forty years of manna taught that one does not live by bread alone. In a good land Israel must not credit its wealth to its own power and forget the LORD.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-golden-calf-recalled",
+      "title": "Recalling the Golden Calf and Moses' Intercession",
+      "start": "1406-11 BC",
+      "category": "The Second Discourse",
+      "reference": "Deuteronomy 9:1-10:11",
+      "description": "Israel is warned that it is not their righteousness that wins the land. Moses recalls breaking the tablets over the calf, lying prostrate forty days, and the second tablets placed in the ark.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-what-god-requires",
+      "title": "What the LORD Requires",
+      "start": "1406-11 BC",
+      "category": "The Second Discourse",
+      "reference": "Deuteronomy 10:12-11:32",
+      "description": "To fear the LORD, walk in his ways, and love him; to circumcise the heart and love the stranger. Blessing and curse are set before Israel on Mount Gerizim and Mount Ebal.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-central-sanctuary",
+      "title": "The Single Place of Worship",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 12:1-32",
+      "description": "The Canaanite places of worship are to be destroyed and sacrifice brought only to the place the LORD chooses. Meat may be slaughtered locally for food, but the blood must be poured out on the ground.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-against-apostasy",
+      "title": "Laws Against Enticement to Other Gods",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 13:1-18",
+      "description": "A prophet, a family member, or a whole town that entices Israel to serve other gods must not be spared, even if the prophet's sign comes true.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-clean-food-and-tithes",
+      "title": "Clean Food and the Tithe",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 14:1-29",
+      "description": "The permitted and forbidden animals, birds, and fish, and the yearly tithe eaten before the LORD, with the third-year tithe stored in the towns for Levites, aliens, orphans, and widows.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-sabbatical-remission",
+      "title": "The Year of Remission and Release of Slaves",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 15:1-23",
+      "description": "Every seventh year debts are remitted and Hebrew slaves are set free, not empty-handed but provided liberally from flock, threshing floor, and wine press.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-festival-calendar",
+      "title": "The Three Pilgrimage Festivals",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 16:1-17",
+      "description": "Passover, the festival of weeks, and the festival of booths are to be kept at the place the LORD chooses, and no one shall appear before the LORD empty-handed.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-judges-and-king",
+      "title": "Judges, Courts, and the Law of the King",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 16:18-17:20",
+      "description": "Judges are appointed in every town and justice pursued without bribes. A king, if appointed, must be chosen by the LORD, must not multiply horses, wives, or silver, and must write and read a copy of the law.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-priests-and-prophets",
+      "title": "The Levitical Priests and the Prophet Like Moses",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 18:1-22",
+      "description": "The priests' portion is set, divination and sorcery are forbidden, and the LORD promises to raise up a prophet like Moses; a prophet whose word does not come true has spoken presumptuously.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-refuge-and-witnesses",
+      "title": "Cities of Refuge, Boundaries, and Witnesses",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 19:1-21",
+      "description": "Three cities of refuge are set apart, boundary markers must not be moved, and a charge stands only on the evidence of two or three witnesses, with a malicious witness receiving the penalty he intended.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-rules-of-war",
+      "title": "Rules for Waging War",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 20:1-20",
+      "description": "Exemptions are granted to those with a new house, vineyard, or bride, and to the fainthearted. Distant towns are offered terms first, and fruit trees must not be cut down in a siege.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-family-and-property-laws",
+      "title": "Laws on Homicide, Family, and Property",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 21:1-22:30",
+      "description": "Atonement for an unsolved murder, the rights of a captive wife and of a firstborn son, the rebellious son, the return of lost property, and the requirement of a parapet on a new roof.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-assembly-and-purity",
+      "title": "Admission to the Assembly and Camp Purity",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 23:1-25",
+      "description": "Who may be admitted to the assembly of the LORD, the holiness of the war camp, the harboring of an escaped slave, the ban on cult prostitution and on interest charged to fellow Israelites.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-social-laws",
+      "title": "Laws Protecting the Vulnerable",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 24:1-25:19",
+      "description": "Divorce, the pledge taken from a poor man, prompt payment of wages, gleanings left for the alien and widow, limits on flogging, levirate marriage, honest weights, and the command to blot out Amalek.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-firstfruits-liturgy",
+      "title": "The Liturgy of First Fruits",
+      "start": "1406-11 BC",
+      "category": "The Deuteronomic Code",
+      "reference": "Deuteronomy 26:1-19",
+      "description": "The worshiper brings the first of the ground in a basket and recites the creed that traces Israel's descent from a wandering Aramean ancestor, declaring the tithe given to Levite, alien, orphan, and widow.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-ebal-gerizim-ceremony",
+      "title": "The Ceremony Commanded at Ebal and Gerizim",
+      "start": "1406-11 BC",
+      "category": "Blessings and Curses",
+      "reference": "Deuteronomy 27:1-26",
+      "description": "Israel is to set up large plastered stones with the law written on them, build an altar of unhewn stones on Mount Ebal, and pronounce twelve curses to each of which the whole people assent",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-blessings-and-curses",
+      "title": "The Blessings and the Curses",
+      "start": "1406-11 BC",
+      "category": "Blessings and Curses",
+      "reference": "Deuteronomy 28:1-68",
+      "description": "Blessings in city and field for obedience, and an extended catalogue of curses for disobedience — disease, siege, defeat, and scattering among all the peoples from one end of the earth to the other.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-covenant-in-moab",
+      "title": "The Covenant Made in Moab",
+      "start": "1406-11 BC",
+      "category": "The Third Discourse",
+      "reference": "Deuteronomy 29:1-29",
+      "description": "Moses summons all Israel to enter the covenant, made not with them alone but with those not present that day, warning against a root sprouting poisonous and bitter growth.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-restoration-promised",
+      "title": "The Promise of Restoration and the Choice of Life",
+      "start": "1406-11 BC",
+      "category": "The Third Discourse",
+      "reference": "Deuteronomy 30:1-20",
+      "description": "Even after exile, if Israel returns the LORD will gather them and circumcise their hearts. The commandment is not too hard nor far off: life and death are set before them, and they are urged to choose life.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-joshua-succeeds-moses",
+      "title": "Joshua Commissioned and the Law Written Down",
+      "start": "1406-12 BC",
+      "category": "The Death of Moses",
+      "reference": "Deuteronomy 31:1-29",
+      "description": "Moses, a hundred and twenty years old, charges Joshua to be strong and bold, writes down the law and gives it to the priests to be read every seventh year at the festival of booths.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-song-of-moses",
+      "title": "The Song of Moses",
+      "start": "1406-12 BC",
+      "category": "The Death of Moses",
+      "reference": "Deuteronomy 31:30-32:47",
+      "description": "Moses recites the song calling heaven and earth to witness — the Rock whose work is perfect, Israel's desertion, and the LORD's judgment and final vindication of his people.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-blessing-of-moses",
+      "title": "The Blessing of the Twelve Tribes",
+      "start": "1406-12 BC",
+      "category": "The Death of Moses",
+      "reference": "Deuteronomy 33:1-29",
+      "description": "Before his death Moses blesses each tribe in turn, closing with praise of Israel's incomparable God and of the everlasting arms beneath his people.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "deu-death-of-moses",
+      "title": "The Death of Moses on Mount Nebo",
+      "start": "1406-12 BC",
+      "category": "The Death of Moses",
+      "reference": "Deuteronomy 34:1-12",
+      "description": "Moses goes up Mount Nebo to Pisgah, sees the whole land, and dies there in Moab at a hundred and twenty, his sight unimpaired. He is buried in a valley, and no one knows his grave; Israel mourns thirty days.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

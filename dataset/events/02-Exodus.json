@@ -1,0 +1,552 @@
+{
+  "book": "Exodus",
+  "order": 2,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "exo-israel-multiplies",
+      "title": "Israel Multiplies in Egypt",
+      "start": "1600 BC",
+      "category": "Oppression in Egypt",
+      "reference": "Exodus 1:1-7",
+      "description": "The seventy who came with Jacob die, but the Israelites are fruitful and prolific; they multiply and grow exceedingly strong, so that the land is filled with them.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "exo-new-king-oppression",
+      "title": "A New King Who Did Not Know Joseph",
+      "start": "1580 BC",
+      "end": "1530 BC",
+      "category": "Oppression in Egypt",
+      "reference": "Exodus 1:8-14",
+      "description": "Fearing the Israelites will join his enemies in war, Pharaoh sets taskmasters over them and they build the supply cities Pithom and Rameses. The more they are oppressed the more they multiply, and the Egyptians come to dread them.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "exo-hebrew-midwives",
+      "title": "The Midwives Shiphrah and Puah Defy Pharaoh",
+      "start": "1530 BC",
+      "category": "Oppression in Egypt",
+      "reference": "Exodus 1:15-21",
+      "description": "Ordered to kill the Hebrew boys at the birthstool, the midwives fear God and let them live, telling Pharaoh the Hebrew women give birth before they arrive. God deals well with them and gives them families.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "exo-nile-decree",
+      "title": "Pharaoh Orders the Boys Thrown into the Nile",
+      "start": "1527 BC",
+      "category": "Oppression in Egypt",
+      "reference": "Exodus 1:22",
+      "description": "Pharaoh commands all his people: every boy born to the Hebrews shall be thrown into the Nile, but every girl shall live.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "exo-birth-of-moses",
+      "title": "The Birth of Moses",
+      "start": "1526 BC",
+      "category": "The Early Life of Moses",
+      "reference": "Exodus 2:1-10",
+      "description": "A Levite woman hides her son three months, then places him in a papyrus basket sealed with bitumen and pitch among the reeds. Pharaoh's daughter takes pity on him, his own mother is hired to nurse him, and she names him Moses.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "exo-moses-kills-egyptian",
+      "title": "Moses Kills an Egyptian and Flees",
+      "start": "1486 BC",
+      "category": "The Early Life of Moses",
+      "reference": "Exodus 2:11-15",
+      "description": "Grown up, Moses sees an Egyptian beating a Hebrew, looks this way and that, and kills him, hiding him in the sand. The next day two Hebrews reveal the deed is known; Pharaoh seeks to kill him and Moses flees.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "exo-moses-in-midian",
+      "title": "Moses in Midian and the Birth of Gershom",
+      "start": "1486 BC",
+      "category": "The Early Life of Moses",
+      "reference": "Exodus 2:16-22",
+      "description": "Sitting by a well in Midian, Moses defends the seven daughters of the priest against shepherds and waters their flock. He stays with Reuel, marries Zipporah, and names his son Gershom to mark his life as an alien in a foreign land.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "exo-god-hears-groaning",
+      "title": "God Hears Israel's Groaning",
+      "start": "1450 BC",
+      "category": "The Call of Moses",
+      "reference": "Exodus 2:23-25",
+      "description": "After a long time the king of Egypt dies. The Israelites groan under their slavery and cry out; God hears their groaning, remembers his covenant with Abraham, Isaac, and Jacob, and takes notice of them.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "exo-burning-bush",
+      "title": "The Burning Bush",
+      "start": "1447 BC",
+      "category": "The Call of Moses",
+      "reference": "Exodus 3:1-12",
+      "description": "Keeping Jethro's flock at Horeb, Moses sees a bush blazing yet not consumed. Told to remove his sandals on holy ground, he is sent to Pharaoh to bring Israel out to a land flowing with milk and honey.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "exo-divine-name",
+      "title": "God Reveals the Divine Name",
+      "start": "1447 BC",
+      "category": "The Call of Moses",
+      "reference": "Exodus 3:13-22",
+      "description": "Asked what name to give the Israelites, God answers with the name I AM — the LORD, the God of Abraham, Isaac, and Jacob. Moses is told Pharaoh will not let them go unless compelled by a mighty hand, and that Israel will plunder the Egyptians.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-signs-and-objections",
+      "title": "The Signs and Moses' Objections",
+      "start": "1447 BC",
+      "category": "The Call of Moses",
+      "reference": "Exodus 4:1-17",
+      "description": "The staff becomes a snake, Moses' hand turns leprous and is restored, and Nile water will become blood. Pleading that he is slow of speech, Moses asks God to send someone else; the LORD's anger is kindled and Aaron is appointed his mouth.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-return-to-egypt",
+      "title": "Moses Returns to Egypt",
+      "start": "1446 BC",
+      "category": "The Call of Moses",
+      "reference": "Exodus 4:18-31",
+      "description": "Jethro sends Moses in peace. On the way the LORD meets him and seeks to kill him until Zipporah circumcises their son and calls him a bridegroom of blood. Aaron meets him at the mountain of God, and the people believe and bow down and worship.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-first-audience-pharaoh",
+      "title": "The First Audience with Pharaoh Fails",
+      "start": "1446 BC",
+      "category": "The Call of Moses",
+      "reference": "Exodus 5:1-21",
+      "description": "Pharaoh dismisses the LORD as a god he does not know and refuses, ordering that straw no longer be given while the quota of bricks stands. The Israelite supervisors are beaten and blame Moses and Aaron for putting a sword in Pharaoh's hand.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-i-am-the-lord",
+      "title": "God Renews His Promise of Deliverance",
+      "start": "1446 BC",
+      "category": "The Call of Moses",
+      "reference": "Exodus 5:22-7:7",
+      "description": "The LORD promises to redeem Israel with an outstretched arm and mighty acts of judgment, but they will not listen because of their broken spirit and cruel slavery. Moses is eighty years old and Aaron eighty-three when they speak to Pharaoh.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-aarons-staff-snake",
+      "title": "Aaron's Staff Swallows the Magicians' Staffs",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 7:8-13",
+      "description": "Aaron throws down his staff before Pharaoh and it becomes a snake. The magicians of Egypt do the same by their secret arts, but Aaron's staff swallows up theirs; still Pharaoh's heart is hardened.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-plague-blood",
+      "title": "First Plague: Water Turned to Blood",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 7:14-25",
+      "description": "Moses strikes the Nile in the sight of Pharaoh and all its water turns to blood. The fish die, the river stinks, and the Egyptians dig along the Nile for water. Seven days pass after the LORD strikes the river.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-plague-frogs",
+      "title": "Second Plague: Frogs",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 8:1-15",
+      "description": "Frogs come up and cover the land, entering palace, bedchamber, ovens, and kneading bowls. Pharaoh asks Moses to pray and names the next day; the frogs die and are gathered in heaps until the land stinks, but seeing a respite Pharaoh hardens his heart.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-plague-gnats",
+      "title": "Third Plague: Gnats",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 8:16-19",
+      "description": "Aaron strikes the dust of the earth and it becomes gnats on humans and animals throughout Egypt. The magicians try and fail, and tell Pharaoh that the finger of God is at work.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-plague-flies",
+      "title": "Fourth Plague: Swarms of Flies",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 8:20-32",
+      "description": "Great swarms of flies ruin the land, but the LORD sets apart Goshen where his people live. Pharaoh offers to let them sacrifice within the land, then not far away, then deals falsely once more.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-plague-livestock",
+      "title": "Fifth Plague: Death of the Livestock",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 9:1-7",
+      "description": "The LORD sets a time, and the next day all the livestock of the Egyptians die while not one of Israel's dies. Pharaoh inquires and finds it so, but his heart is hardened.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-plague-boils",
+      "title": "Sixth Plague: Festering Boils",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 9:8-12",
+      "description": "Moses throws handfuls of soot from the kiln into the air, and it becomes fine dust causing festering boils on humans and animals. The magicians cannot even stand before Moses because of the boils.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-plague-hail",
+      "title": "Seventh Plague: Hail and Fire",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 9:13-35",
+      "description": "The heaviest hail ever to fall in Egypt strikes with fire flashing in its midst, shattering every tree, though not in Goshen. Pharaoh admits that this time he has sinned, but hardens his heart when the thunder ceases. Flax and barley are ruined; wheat and spelt survive.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-plague-locusts",
+      "title": "Eighth Plague: Locusts",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 10:1-20",
+      "description": "Pharaoh's officials demand to know how long this will go on, warning that Egypt is already ruined. An east wind brings locusts that blacken the land and eat all the hail has left. A strong west wind drives them into the Red Sea, but Pharaoh will not let Israel go.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-plague-darkness",
+      "title": "Ninth Plague: Darkness That Can Be Felt",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 10:21-29",
+      "description": "Dense darkness covers Egypt three days; no one can see another or move, but the Israelites have light. Pharaoh tells Moses that on the day he sees his face again he will die, and Moses answers that he will not see it.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-final-plague-announced",
+      "title": "The Final Plague Announced",
+      "start": "1446 BC",
+      "category": "The Plagues of Egypt",
+      "reference": "Exodus 11:1-10",
+      "description": "About midnight every firstborn in Egypt shall die, from Pharaoh's to the slave's behind the handmill, and there will be a loud cry such as has never been. But not a dog shall growl at any of the Israelites. In hot anger Moses leaves Pharaoh.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-passover-instituted",
+      "title": "The Passover Instituted",
+      "start": "1446-01-10 BC",
+      "end": "1446-01-14 BC",
+      "category": "Passover and Departure",
+      "reference": "Exodus 12:1-28",
+      "description": "This month becomes the first month of the year. On the tenth day each household takes a year-old lamb without blemish, keeping it until the fourteenth, when it is slaughtered at twilight. Blood on the lintel and doorposts marks the houses the LORD will pass over.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-death-of-firstborn",
+      "title": "The Death of the Firstborn",
+      "start": "1446-01-14 BC",
+      "category": "Passover and Departure",
+      "reference": "Exodus 12:29-36",
+      "description": "At midnight the LORD strikes down all the firstborn of Egypt, and there is not a house without someone dead. Pharaoh summons Moses and Aaron in the night and drives them out. The people take their dough unleavened and plunder the Egyptians of silver, gold, and clothing.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-departure-from-rameses",
+      "title": "Israel Departs from Rameses",
+      "start": "1446-01-15 BC",
+      "category": "Passover and Departure",
+      "reference": "Exodus 12:37-51",
+      "description": "About six hundred thousand men on foot besides children journey from Rameses to Succoth, with a mixed crowd and great herds. The text records that Israel had lived in Egypt four hundred thirty years, and that on that very day all the companies of the LORD went out.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-consecration-firstborn",
+      "title": "Consecration of the Firstborn and Unleavened Bread",
+      "start": "1446-01 BC",
+      "category": "Passover and Departure",
+      "reference": "Exodus 13:1-16",
+      "description": "All that first opens the womb is consecrated to the LORD, every firstborn donkey redeemed with a sheep. Seven days of unleavened bread are to be kept in the month of Abib as a sign on the hand and an emblem on the forehead.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-pillar-of-cloud-and-fire",
+      "title": "The Pillar of Cloud and Fire",
+      "start": "1446-01 BC",
+      "category": "Crossing the Sea",
+      "reference": "Exodus 13:17-22",
+      "description": "God leads them by the roundabout way of the wilderness rather than the land of the Philistines, lest they face war and return. Moses takes the bones of Joseph. The LORD goes before them in a pillar of cloud by day and fire by night.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-crossing-the-sea",
+      "title": "The Crossing of the Sea",
+      "start": "1446-01 BC",
+      "category": "Crossing the Sea",
+      "reference": "Exodus 14:1-31",
+      "description": "Pharaoh pursues with six hundred picked chariots and overtakes them at Pi-hahiroth. Moses stretches out his hand; a strong east wind divides the sea and Israel walks through on dry ground. At dawn the waters return and cover the entire army; not one remains.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-song-of-the-sea",
+      "title": "The Song of the Sea",
+      "start": "1446-01 BC",
+      "category": "Crossing the Sea",
+      "reference": "Exodus 15:1-21",
+      "description": "Moses and the Israelites sing of the LORD's glorious triumph, of horse and rider thrown into the sea. Miriam the prophet takes a tambourine in her hand, and all the women go out after her with tambourines and dancing.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-marah-and-elim",
+      "title": "Bitter Water at Marah and the Springs of Elim",
+      "start": "1446-01 BC",
+      "category": "Wilderness Journey",
+      "reference": "Exodus 15:22-27",
+      "description": "Three days in the wilderness of Shur without water, they cannot drink at Marah because it is bitter. The LORD shows Moses a piece of wood that sweetens it. They come to Elim, with twelve springs and seventy palm trees.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-manna-and-quails",
+      "title": "Manna and Quails in the Wilderness of Sin",
+      "start": "1446-02-15 BC",
+      "category": "Wilderness Journey",
+      "reference": "Exodus 16:1-36",
+      "description": "On the fifteenth day of the second month the people complain of the fleshpots of Egypt. Quails cover the camp at evening; in the morning a fine flaky substance appears that no one can identify, and their puzzled question at the sight gives manna its name. Twice as much falls on the sixth day, and none on the sabbath.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-water-from-the-rock",
+      "title": "Water from the Rock at Massah and Meribah",
+      "start": "1446-02 BC",
+      "category": "Wilderness Journey",
+      "reference": "Exodus 17:1-7",
+      "description": "At Rephidim there is no water and the people are almost ready to stone Moses. Told to strike the rock at Horeb with the staff that struck the Nile, he does so and water comes out. He names the place Massah and Meribah for their quarrelling and their testing of whether the LORD was among them.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-battle-with-amalek",
+      "title": "The Battle with Amalek",
+      "start": "1446-02 BC",
+      "category": "Wilderness Journey",
+      "reference": "Exodus 17:8-16",
+      "description": "Joshua fights Amalek at Rephidim while Moses holds up the staff of God on the hilltop. Whenever his hands drop Amalek prevails, so Aaron and Hur hold them steady until sunset. Moses builds an altar and names it for the LORD as his banner.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-jethros-counsel",
+      "title": "Jethro's Visit and the Appointment of Judges",
+      "start": "1446-03 BC",
+      "category": "Wilderness Journey",
+      "reference": "Exodus 18:1-27",
+      "description": "Jethro brings Zipporah and her two sons and rejoices at all the LORD has done. Seeing Moses judge alone from morning to evening, he warns that what he is doing is not good and counsels appointing able men as officers over thousands, hundreds, fifties, and tens.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-arrival-at-sinai",
+      "title": "Israel Arrives at Sinai",
+      "start": "1446-03 BC",
+      "category": "The Covenant at Sinai",
+      "reference": "Exodus 19:1-15",
+      "description": "On the third new moon after leaving Egypt they camp before the mountain. If they obey his voice they shall be a priestly kingdom and a holy nation; the people answer as one that they will do everything the LORD has spoken. They consecrate themselves for the third day.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-theophany-at-sinai",
+      "title": "The LORD Descends on Mount Sinai",
+      "start": "1446-03 BC",
+      "category": "The Covenant at Sinai",
+      "reference": "Exodus 19:16-25",
+      "description": "On the morning of the third day there is thunder, lightning, a thick cloud, and a trumpet blast so loud the people tremble. Sinai is wrapped in smoke like a kiln and the whole mountain shakes violently as the LORD descends in fire.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-ten-commandments",
+      "title": "The Ten Commandments",
+      "start": "1446-03 BC",
+      "category": "The Covenant at Sinai",
+      "reference": "Exodus 20:1-17",
+      "description": "God speaks all these words: no other gods, no idol, no wrongful use of the name, remember the sabbath, honor father and mother, and the prohibitions of murder, adultery, theft, false witness, and coveting.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-people-fear",
+      "title": "The People Ask Moses to Mediate",
+      "start": "1446-03 BC",
+      "category": "The Covenant at Sinai",
+      "reference": "Exodus 20:18-26",
+      "description": "Witnessing the thunder, trumpet, and smoking mountain, the people stand at a distance and beg Moses to speak instead of God, lest they die. Moses draws near to the thick darkness where God was.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-book-of-covenant",
+      "title": "The Book of the Covenant",
+      "start": "1446-03 BC",
+      "category": "The Covenant at Sinai",
+      "reference": "Exodus 21:1-23:33",
+      "description": "The ordinances set before Israel: the rights of Hebrew slaves, laws of homicide and bodily injury, restitution for theft and damage, protection of the alien, widow, and orphan, the sabbatical year, the three annual festivals, and the promise of an angel to guard the way.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-covenant-ratified",
+      "title": "The Covenant Ratified in Blood",
+      "start": "1446-03 BC",
+      "category": "The Covenant at Sinai",
+      "reference": "Exodus 24:1-11",
+      "description": "Moses builds an altar with twelve pillars and dashes half the blood against it. Reading the book of the covenant, he dashes the rest on the people as the blood of the covenant the LORD has made with them. Then seventy elders go up, see the God of Israel on a pavement of sapphire, and eat and drink.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-moses-forty-days",
+      "title": "Moses Forty Days on the Mountain",
+      "start": "1446-03 BC",
+      "end": "1446-05 BC",
+      "category": "The Covenant at Sinai",
+      "reference": "Exodus 24:12-18",
+      "description": "Summoned to receive the tablets of stone, Moses goes up with Joshua. The cloud covers the mountain six days, and on the seventh the LORD calls to him out of it. The glory appears like a devouring fire, and Moses is on the mountain forty days and forty nights.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-ark-table-lampstand",
+      "title": "Instructions for the Ark, Table, and Lampstand",
+      "start": "1446-04 BC",
+      "category": "Tabernacle Instructions",
+      "reference": "Exodus 25:1-40",
+      "description": "An offering is to be taken from all whose hearts prompt them. The ark of acacia wood is overlaid with gold with a mercy seat and two cherubim, along with the table for the bread of the Presence and the lampstand of hammered gold.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-tabernacle-structure",
+      "title": "Instructions for the Tabernacle and Its Curtains",
+      "start": "1446-04 BC",
+      "category": "Tabernacle Instructions",
+      "reference": "Exodus 26:1-37",
+      "description": "Ten curtains of fine twisted linen with blue, purple, and crimson yarns, coverings of goats' hair and tanned rams' skins, frames of acacia wood, and the veil separating the holy place from the holy of holies.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-altar-and-court",
+      "title": "Instructions for the Altar and the Court",
+      "start": "1446-04 BC",
+      "category": "Tabernacle Instructions",
+      "reference": "Exodus 27:1-21",
+      "description": "The bronze altar of burnt offering with horns at its corners, the hangings of the court, and the command that pure beaten olive oil be brought so a lamp may burn regularly from evening to morning.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-priestly-vestments",
+      "title": "Instructions for the Priestly Vestments",
+      "start": "1446-04 BC",
+      "category": "Tabernacle Instructions",
+      "reference": "Exodus 28:1-43",
+      "description": "Aaron and his sons are set apart as priests. The ephod, the breastpiece of judgment with twelve engraved stones and the Urim and Thummim, the robe with pomegranates and bells, and the rosette engraved as holy to the LORD are described.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-ordination-instructions",
+      "title": "Instructions for the Ordination of Priests",
+      "start": "1446-04 BC",
+      "category": "Tabernacle Instructions",
+      "reference": "Exodus 29:1-46",
+      "description": "The seven-day rite of ordination: the bull of sin offering, the two rams, the blood placed on ear, thumb, and toe, and the daily offering of two lambs, so that the LORD may dwell among the Israelites and be their God.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-incense-altar-and-oil",
+      "title": "The Incense Altar, the Basin, and the Anointing Oil",
+      "start": "1446-04 BC",
+      "category": "Tabernacle Instructions",
+      "reference": "Exodus 30:1-38",
+      "description": "The altar of incense, the census half-shekel as atonement money, the bronze basin for washing, and the holy anointing oil and fragrant incense, neither of which may be reproduced for ordinary use.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-bezalel-and-oholiab",
+      "title": "Bezalel and Oholiab Appointed",
+      "start": "1446-04 BC",
+      "category": "Tabernacle Instructions",
+      "reference": "Exodus 31:1-18",
+      "description": "The LORD fills Bezalel of Judah with divine spirit, skill, and knowledge in every craft, and appoints Oholiab of Dan with him. The sabbath is given as a perpetual sign, and Moses receives the two tablets written with the finger of God.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-golden-calf",
+      "title": "The Golden Calf",
+      "start": "1446-05 BC",
+      "category": "The Golden Calf",
+      "reference": "Exodus 32:1-6",
+      "description": "Seeing Moses delay, the people gather around Aaron, who collects their gold rings and casts an image of a calf, which they hail as the gods that brought them up out of Egypt. They rise early to offer sacrifices, then sit down to eat and drink and rise up to revel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-moses-intercedes",
+      "title": "Moses Intercedes and Breaks the Tablets",
+      "start": "1446-05 BC",
+      "category": "The Golden Calf",
+      "reference": "Exodus 32:7-35",
+      "description": "Moses implores the LORD to remember Abraham, Isaac, and Israel, and the LORD changes his mind about the disaster. Coming down and seeing the calf and the dancing, Moses breaks the tablets, burns the calf, grinds it to powder, and makes the people drink it. Three thousand fall by the Levites' swords.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-tent-of-meeting-and-glory",
+      "title": "Moses Asks to See God's Glory",
+      "start": "1446-05 BC",
+      "category": "The Golden Calf",
+      "reference": "Exodus 33:1-23",
+      "description": "Moses pitches the tent of meeting outside the camp, where the LORD speaks with him face to face as one speaks to a friend. Promised that the divine presence will go with him, Moses asks to see God's glory and is placed in a cleft of the rock to see only his back.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-covenant-renewed",
+      "title": "The Covenant Renewed and the Second Tablets",
+      "start": "1446-05 BC",
+      "end": "1446-06 BC",
+      "category": "The Golden Calf",
+      "reference": "Exodus 34:1-35",
+      "description": "Moses cuts two new tablets and goes up. The LORD passes before him proclaiming himself merciful and gracious, slow to anger. Moses is again on the mountain forty days without bread or water, and comes down with his face shining, so that he veils it.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-freewill-offering",
+      "title": "The Freewill Offering for the Tabernacle",
+      "start": "1446-06 BC",
+      "category": "Building the Tabernacle",
+      "reference": "Exodus 35:1-36:7",
+      "description": "All whose hearts are stirred bring gold, yarn, linen, skins, and acacia wood, and skilled women spin. They bring so much more than enough that Moses must issue a command restraining the people from bringing anything further.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-tabernacle-constructed",
+      "title": "The Tabernacle and Its Furnishings Are Made",
+      "start": "1446-06 BC",
+      "end": "1445-01 BC",
+      "category": "Building the Tabernacle",
+      "reference": "Exodus 36:8-38:31",
+      "description": "Bezalel and the skilled workers make the curtains and frames, the ark and mercy seat, the table, the lampstand, the altars, the basin from the mirrors of the women who served at the entrance, and the court, with an accounting of all the metal used.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-vestments-completed",
+      "title": "The Vestments Completed and the Work Inspected",
+      "start": "1445-01 BC",
+      "category": "Building the Tabernacle",
+      "reference": "Exodus 39:1-43",
+      "description": "The ephod, breastpiece, robe, and the rosette of pure gold are finished as the LORD commanded Moses. All the work is brought to Moses, who sees that they have done it just as commanded, and he blesses them.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-tabernacle-erected",
+      "title": "The Tabernacle Is Erected",
+      "start": "1445-01-01 BC",
+      "category": "Building the Tabernacle",
+      "reference": "Exodus 40:1-33",
+      "description": "On the first day of the first month in the second year the tabernacle is set up. Moses places the ark behind the veil, sets out the bread, lights the lamps, and anoints everything, and the court is raised around it.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "exo-glory-fills-tabernacle",
+      "title": "The Glory of the LORD Fills the Tabernacle",
+      "start": "1445-01-01 BC",
+      "category": "Building the Tabernacle",
+      "reference": "Exodus 40:34-38",
+      "description": "The cloud covers the tent of meeting and the glory of the LORD fills the tabernacle, so that Moses cannot enter. Whenever the cloud lifts Israel sets out; if it does not lift they remain, for the cloud was on it by day and fire by night in the sight of all Israel.",
+      "datingBasis": "narrative"
+    }
+  ]
+}
