@@ -1,7 +1,7 @@
 import { DatabaseSync } from 'node:sqlite';
 import { env } from '$env/dynamic/private';
 import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, renameSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, renameSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -17,8 +17,19 @@ import { join } from 'node:path';
  */
 
 let database: Promise<DatabaseSync> | undefined;
+let watchedPath: string | undefined;
+let watchedMtimeMs = 0;
+
+/**
+ * Opt-in, for iterating on the dataset: re-open when the file changes on disk
+ * so `bun run build-db` shows up without restarting. Off unless DATASET_RELOAD
+ * is set, and only meaningful for DATABASE_FILE.
+ */
+const reloadEnabled = () => env.DATASET_RELOAD === '1' || env.DATASET_RELOAD === 'true';
 
 export function getDb(): Promise<DatabaseSync> {
+  if (database && watchedPath && reloadEnabled()) discardIfStale(watchedPath);
+
   database ??= open().catch((error) => {
     // Don't memoize a failure — a transient fetch error should be retryable.
     database = undefined;
@@ -27,8 +38,31 @@ export function getDb(): Promise<DatabaseSync> {
   return database;
 }
 
+function discardIfStale(path: string): void {
+  let mtimeMs: number;
+  try {
+    mtimeMs = statSync(path).mtimeMs;
+  } catch {
+    // build-db unlinks before recreating; keep serving the open handle rather
+    // than failing requests during the rebuild.
+    return;
+  }
+  if (mtimeMs === watchedMtimeMs) return;
+
+  const stale = database;
+  database = undefined;
+  // Let any in-flight request finish its queries before the handle goes away.
+  setTimeout(() => void stale?.then((db) => db.close()).catch(() => {}), 5_000).unref?.();
+}
+
 async function open(): Promise<DatabaseSync> {
   const path = await resolveDatabasePath();
+
+  if (env.DATABASE_FILE) {
+    watchedPath = path;
+    watchedMtimeMs = statSync(path).mtimeMs;
+  }
+
   return new DatabaseSync(path, { readOnly: true });
 }
 
