@@ -1,0 +1,513 @@
+{
+  "book": "1 Maccabees",
+  "order": 50,
+  "testament": "Deuterocanon",
+  "events": [
+    {
+      "id": "1ma-alexander-conquests-death",
+      "title": "Alexander Conquers the East and Dies",
+      "start": "336 BC",
+      "end": "323 BC",
+      "category": "Hellenistic Background",
+      "reference": "1 Maccabees 1:1-9",
+      "description": "Alexander of Macedon defeats Darius, extends his empire through many lands, and divides his kingdom among leading officers before his death. His successors establish rival dynasties that continue to rule after him.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "1ma-antiochus-iv-accession",
+      "title": "Antiochus IV Takes the Seleucid Throne",
+      "start": "175 BC",
+      "category": "Hellenistic Background",
+      "reference": "1 Maccabees 1:10",
+      "description": "Antiochus Epiphanes, formerly a hostage at Rome, begins his reign in Seleucid year 137.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-jerusalem-hellenization",
+      "title": "Jerusalem Leaders Promote Hellenization",
+      "start": "175 BC",
+      "category": "Persecution",
+      "reference": "1 Maccabees 1:11-15",
+      "description": "Jewish advocates of accommodation obtain royal approval for Gentile institutions. They build a gymnasium in Jerusalem, obscure circumcision, and abandon covenantal practices.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-antiochus-invades-egypt",
+      "title": "Antiochus Invades Egypt",
+      "start": "170 BC",
+      "category": "Persecution",
+      "reference": "1 Maccabees 1:16-19",
+      "description": "Antiochus attacks Ptolemaic Egypt with a large combined force, defeats the Egyptian king, captures fortified cities, and plunders the country.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "1ma-antiochus-plunders-temple",
+      "title": "Antiochus Plunders the Jerusalem Temple",
+      "start": "169 BC",
+      "category": "Persecution",
+      "reference": "1 Maccabees 1:20-28",
+      "description": "Returning from Egypt in Seleucid year 143, Antiochus enters the sanctuary and carries away its vessels, furnishings, precious metals, and concealed treasures. Bloodshed and public mourning follow throughout Judea.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-jerusalem-attacked-citadel",
+      "title": "Jerusalem Is Attacked and the Citadel Occupied",
+      "start": "167 BC",
+      "category": "Persecution",
+      "reference": "1 Maccabees 1:29-40",
+      "description": "A royal force enters Jerusalem under false assurances, kills inhabitants, plunders and burns the city, and enslaves families. The occupiers fortify the City of David as a citadel overlooking the sanctuary.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-antiochus-religious-decree",
+      "title": "Antiochus Suppresses Jewish Worship",
+      "start": "167 BC",
+      "category": "Persecution",
+      "reference": "1 Maccabees 1:41-53",
+      "description": "The king orders religious uniformity, prohibits temple worship and Jewish observances, and commands idolatrous sacrifices and practices. Inspectors enforce the decree town by town while faithful families seek refuge.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-desolating-sacrilege",
+      "title": "The Temple Altar Is Desecrated",
+      "start": "167-09-15 BC",
+      "category": "Persecution",
+      "reference": "1 Maccabees 1:54-64",
+      "description": "On the fifteenth of Chislev in Seleucid year 145, an illicit cult object is erected on the altar, and ten days later sacrifice is offered there. Torah scrolls are destroyed and people who retain Jewish practices are executed, though many refuse to abandon the covenant.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-mattathias-revolt-modein",
+      "title": "Mattathias Begins the Revolt at Modein",
+      "start": "167 BC",
+      "category": "Mattathias's Revolt",
+      "reference": "1 Maccabees 2:1-28",
+      "description": "Mattathias and his five sons reject the enforced sacrifices. He kills both a participant and the royal officer at Modein, tears down the altar, and calls supporters of the law to follow him into the hills.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-sabbath-massacre-wilderness",
+      "title": "Refugees Are Killed on the Sabbath",
+      "start": "167 BC",
+      "category": "Mattathias's Revolt",
+      "reference": "1 Maccabees 2:29-41",
+      "description": "Royal troops attack a community hiding in the wilderness on the Sabbath. The refugees do not resist and are killed with their families, prompting Mattathias's followers to permit defensive fighting on the Sabbath.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-mattathias-guerrilla-campaign",
+      "title": "Mattathias Organizes Armed Resistance",
+      "start": "167 BC",
+      "category": "Mattathias's Revolt",
+      "reference": "1 Maccabees 2:42-48",
+      "description": "Hasideans and other fugitives join Mattathias. The growing force attacks apostate groups, destroys illicit altars, circumcises boys, and restores observance in the countryside.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-mattathias-death",
+      "title": "Mattathias Dies and Judas Takes Command",
+      "start": "166 BC",
+      "category": "Mattathias's Revolt",
+      "reference": "1 Maccabees 2:49-70",
+      "description": "Before dying in Seleucid year 146, Mattathias exhorts his sons to remain faithful, designates Simon as counselor and Judas as military leader, and is buried at Modein.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-judas-defeats-apollonius-seron",
+      "title": "Judas Defeats Apollonius and Seron",
+      "start": "166 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 3:1-26",
+      "description": "Judas succeeds his father and defeats Apollonius's Samaritan force, taking its commander's sword. He then routs Seron's larger army at the ascent of Beth-horon, increasing the revolt's reputation.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-antiochus-persian-campaign",
+      "title": "Antiochus Leaves Lysias to Suppress Judea",
+      "start": "165 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 3:27-37",
+      "description": "Facing depleted revenues, Antiochus departs for the eastern provinces in Seleucid year 147. He leaves Lysias responsible for the western kingdom, the young prince, and a campaign intended to destroy resistance in Judea.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-battle-emmaus",
+      "title": "Judas Defeats the Royal Army at Emmaus",
+      "start": "165 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 3:38-4:25",
+      "description": "Nicanor and Gorgias bring a large army to Emmaus while merchants gather to purchase captives. Judas evades Gorgias's night attack, strikes the main camp at dawn, and drives the royal troops toward the coastal plain.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-first-beth-zur-victory",
+      "title": "Judas Defeats Lysias near Beth-zur",
+      "start": "164 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 4:26-35",
+      "description": "In the following year Lysias enters Idumea with a reinforced army. Judas meets him near Beth-zur and inflicts heavy losses, causing Lysias to withdraw to Antioch.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-temple-cleansed-rededicated",
+      "title": "The Temple Is Cleansed and Rededicated",
+      "start": "164-09-25 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 4:36-59",
+      "description": "Judas appoints priests to cleanse and repair the sanctuary, replace the profaned altar, and restore its furnishings. Beginning on the twenty-fifth of Chislev in Seleucid year 148, the people celebrate the new dedication for eight days and establish an annual observance.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-zion-beth-zur-fortified",
+      "title": "Mount Zion and Beth-zur Are Fortified",
+      "start": "164 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 4:60-61",
+      "description": "Judas surrounds Mount Zion with walls and towers and stations a guard there. He also fortifies Beth-zur to protect Judea's southern approach.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-galilee-gilead-rescues",
+      "title": "Judas and Simon Rescue Besieged Jewish Communities",
+      "start": "163 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 5:1-54",
+      "description": "After attacks on Jewish communities beyond Judea, Simon campaigns in Galilee while Judas and Jonathan fight through Gilead. They defeat several armies and towns, then escort the threatened populations safely into Judea.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-jamnia-defeat-southern-campaign",
+      "title": "Unauthorized Commanders Fail at Jamnia",
+      "start": "163 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 5:55-68",
+      "description": "Joseph and Azariah attack Jamnia against Judas's instructions and suffer a severe defeat. Judas later campaigns through Hebron and the Philistine region, destroying pagan altars before returning to Judea.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-antiochus-iv-death",
+      "title": "Antiochus IV Dies in the East",
+      "start": "163 BC",
+      "category": "Royal Succession",
+      "reference": "1 Maccabees 6:1-17",
+      "description": "After failing to seize Elymais, Antiochus learns of the reverses in Judea, becomes gravely ill, and dies in Seleucid year 149. Lysias enthrones his young son as Antiochus Eupator.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-judas-besieges-citadel",
+      "title": "Judas Besieges the Jerusalem Citadel",
+      "start": "162 BC",
+      "category": "Royal Succession",
+      "reference": "1 Maccabees 6:18-27",
+      "description": "In Seleucid year 150, Judas surrounds the hostile citadel and constructs siege works. Escapees appeal to Antiochus V, leading the king and Lysias to mobilize a major relief army.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-beth-zechariah-eleazar-death",
+      "title": "The Royal Army Wins at Beth-zechariah",
+      "start": "162 BC",
+      "category": "Royal Succession",
+      "reference": "1 Maccabees 6:28-54",
+      "description": "The royal army advances with war elephants and defeats Judas near Beth-zechariah. Eleazar dies beneath an elephant he attacks, Beth-zur is evacuated, and famine weakens the defenders of the sanctuary.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-lysias-peace-jews",
+      "title": "Lysias Restores Jewish Religious Freedom",
+      "start": "162 BC",
+      "category": "Royal Succession",
+      "reference": "1 Maccabees 6:55-63",
+      "description": "A rival claim at Antioch prompts Lysias to negotiate. The king permits the Jews to live by their laws, though he subsequently breaks his oath by demolishing Jerusalem's fortifications before returning north.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-demetrius-i-accession-alcimus",
+      "title": "Demetrius I Reigns and Installs Alcimus",
+      "start": "161 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 7:1-25",
+      "description": "Demetrius escapes from Rome and takes the Seleucid throne in year 151 after Antiochus V and Lysias are killed. He sends Bacchides with Alcimus as high priest; Alcimus violates assurances of peace by killing sixty Hasideans.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-nicanor-defeated-adar",
+      "title": "Judas Defeats Nicanor at Adasa",
+      "start": "161-12-13 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 7:26-50",
+      "description": "After a failed attempt to seize Judas, Nicanor threatens the temple and marches against him. Judas's force defeats and kills Nicanor on the thirteenth of Adar, and the victory becomes an annual commemoration.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-judas-treaty-rome",
+      "title": "Judas Makes an Alliance with Rome",
+      "start": "161 BC",
+      "category": "Diplomacy",
+      "reference": "1 Maccabees 8:1-32",
+      "description": "Having learned of Roman power, Judas sends Eupolemus and Jason to negotiate. The Roman senate records a mutual-defense agreement with the Jewish nation and warns Demetrius against further oppression.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-judas-killed-elasa",
+      "title": "Judas Is Killed at Elasa",
+      "start": "160-01 BC",
+      "category": "Judas's Victories",
+      "reference": "1 Maccabees 9:1-22",
+      "description": "Bacchides returns with a large army in the first month of Seleucid year 152. Most of Judas's troops desert before battle at Elasa; Judas attacks with the remaining force and is killed, and his brothers bury him at Modein.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-jonathan-chosen-leader",
+      "title": "Jonathan Succeeds Judas",
+      "start": "160 BC",
+      "category": "Jonathan's Leadership",
+      "reference": "1 Maccabees 9:23-31",
+      "description": "Amid famine and renewed persecution, Judas's supporters choose Jonathan to lead the resistance against Bacchides and local opponents.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-jonathan-jordan-escape",
+      "title": "Jonathan Escapes Bacchides across the Jordan",
+      "start": "160 BC",
+      "category": "Jonathan's Leadership",
+      "reference": "1 Maccabees 9:32-49",
+      "description": "Jonathan's group withdraws to the wilderness, avenges the killing of his brother John by the Jambri clan, and fights Bacchides at the Jordan. Jonathan's men swim across the river after inflicting substantial losses.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-alcimus-death",
+      "title": "Alcimus Dies after Attacking the Temple Court",
+      "start": "159-02 BC",
+      "category": "Jonathan's Leadership",
+      "reference": "1 Maccabees 9:50-57",
+      "description": "After Bacchides fortifies Judean towns, Alcimus begins demolishing the inner sanctuary wall in the second month of Seleucid year 153. He is suddenly incapacitated and dies, and Bacchides leaves the country for two years.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-bethbasi-peace",
+      "title": "Jonathan Forces Bacchides to Make Peace",
+      "start": "157 BC",
+      "category": "Jonathan's Leadership",
+      "reference": "1 Maccabees 9:58-73",
+      "description": "Bacchides returns after local opponents invite him to capture Jonathan. Jonathan and Simon defeat his siege at Bethbasi, after which Bacchides releases captives and withdraws under an oath of peace; Jonathan governs from Michmash.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-alexander-balas-jonathan-high-priest",
+      "title": "Alexander Balas Appoints Jonathan High Priest",
+      "start": "152-10 BC",
+      "category": "Jonathan's High Priesthood",
+      "reference": "1 Maccabees 10:1-47",
+      "description": "Alexander Balas challenges Demetrius in Seleucid year 160, and both rivals seek Jonathan's support. Jonathan accepts Alexander's appointment as high priest and wears the sacred vestments at the festival of booths while restoring Jerusalem's defenses.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-demetrius-i-defeated",
+      "title": "Alexander Balas Defeats Demetrius I",
+      "start": "150 BC",
+      "category": "Royal Succession",
+      "reference": "1 Maccabees 10:48-50",
+      "description": "Alexander's forces defeat Demetrius after a prolonged battle, and Demetrius is killed.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "1ma-alexander-cleopatra-wedding",
+      "title": "Alexander Marries Cleopatra at Ptolemais",
+      "start": "150 BC",
+      "category": "Diplomacy",
+      "reference": "1 Maccabees 10:51-66",
+      "description": "In Seleucid year 162, Ptolemy VI gives his daughter Cleopatra to Alexander in a royal wedding at Ptolemais. Jonathan attends, receives public vindication against his accusers, and is honored as governor and a leading royal friend.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-jonathan-defeats-apollonius",
+      "title": "Jonathan Defeats Apollonius near Azotus",
+      "start": "147 BC",
+      "category": "Jonathan's High Priesthood",
+      "reference": "1 Maccabees 10:67-89",
+      "description": "As Demetrius II challenges Alexander in Seleucid year 165, Apollonius provokes Jonathan into battle. Jonathan captures Joppa, survives a cavalry ambush, defeats the enemy near Azotus, and receives Ekron from Alexander.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-ptolemy-alexander-deaths",
+      "title": "Ptolemy VI and Alexander Balas Die",
+      "start": "145 BC",
+      "category": "Royal Succession",
+      "reference": "1 Maccabees 11:1-19",
+      "description": "Ptolemy seizes the Syrian coastal cities, transfers Cleopatra to Demetrius, and defeats Alexander. Alexander is killed in Arabia and Ptolemy dies soon afterward, leaving Demetrius II king in Seleucid year 167.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-demetrius-confirms-jonathan",
+      "title": "Demetrius II Confirms Jonathan's Authority",
+      "start": "145 BC",
+      "category": "Jonathan's High Priesthood",
+      "reference": "1 Maccabees 11:20-37",
+      "description": "While Jonathan besieges Jerusalem's citadel, Demetrius summons him to Ptolemais. Gifts and negotiations secure Jonathan's offices and tax concessions for Judea and three attached districts.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-jewish-troops-save-demetrius",
+      "title": "Jonathan's Troops Save Demetrius in Antioch",
+      "start": "145 BC",
+      "category": "Jonathan's High Priesthood",
+      "reference": "1 Maccabees 11:38-53",
+      "description": "Jonathan sends three thousand soldiers to help Demetrius suppress an uprising at Antioch. The Jewish troops preserve the king's rule, but Demetrius later breaks his promises and treats Jonathan harshly.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-antiochus-vi-jonathan-alliance",
+      "title": "Jonathan Supports Antiochus VI",
+      "start": "144 BC",
+      "category": "Jonathan's High Priesthood",
+      "reference": "1 Maccabees 11:54-74",
+      "description": "Trypho installs the young Antiochus VI against Demetrius and confirms Jonathan's authority while appointing Simon over the coast. Jonathan secures Gaza, Simon takes Beth-zur, and Jonathan recovers from an ambush near Hazor to rout Demetrius's army.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "1ma-jonathan-renews-alliances",
+      "title": "Jonathan Renews Roman and Spartan Alliances",
+      "start": "143 BC",
+      "category": "Diplomacy",
+      "reference": "1 Maccabees 12:1-23",
+      "description": "Jonathan sends envoys to Rome and Sparta to renew formal friendship. His letter appeals to an earlier exchange that treated the Spartans and Jews as related peoples.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "1ma-jonathan-northern-campaign-fortifies",
+      "title": "Jonathan Drives Back Demetrius's Commanders",
+      "start": "143 BC",
+      "category": "Jonathan's High Priesthood",
+      "reference": "1 Maccabees 12:24-38",
+      "description": "Jonathan prevents a night attack near Hamath and pursues the withdrawing enemy beyond the Eleutherus. He and Simon then strengthen Joppa, Jerusalem, and other fortifications.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "1ma-jonathan-captured-ptolemais",
+      "title": "Trypho Captures Jonathan at Ptolemais",
+      "start": "143 BC",
+      "category": "Jonathan's High Priesthood",
+      "reference": "1 Maccabees 12:39-53",
+      "description": "Trypho lures Jonathan to Ptolemais with promises of territory after persuading him to dismiss most of his army. The gates close behind Jonathan, his escort is killed, and he is taken captive.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "1ma-simon-chosen-leader",
+      "title": "Simon Assumes Leadership",
+      "start": "143 BC",
+      "category": "Simon's Rule",
+      "reference": "1 Maccabees 13:1-11",
+      "description": "With Jonathan captive and invasion threatening, Simon rallies Jerusalem, is acclaimed as leader, completes the city's walls, and secures Joppa.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-trypho-kills-jonathan",
+      "title": "Trypho Kills Jonathan",
+      "start": "143 BC",
+      "category": "Simon's Rule",
+      "reference": "1 Maccabees 13:12-30",
+      "description": "Trypho demands money and hostages but refuses to release Jonathan after Simon complies. Blocked from aiding Jerusalem's citadel, Trypho withdraws through Gilead and kills Jonathan near Baskama; Simon retrieves and buries his remains at Modein.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-demetrius-recognizes-simon",
+      "title": "Demetrius Grants Judea Independence under Simon",
+      "start": "142 BC",
+      "category": "Simon's Rule",
+      "reference": "1 Maccabees 13:31-42",
+      "description": "After Trypho kills Antiochus VI and claims the throne, Simon aligns with Demetrius II. In Seleucid year 170, Demetrius cancels tribute and recognizes Simon's authority, and Judean documents begin dating by Simon's leadership.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-simon-captures-gazara-citadel",
+      "title": "Simon Captures Gazara and Jerusalem's Citadel",
+      "start": "142 BC",
+      "end": "141-02-23 BC",
+      "category": "Simon's Rule",
+      "reference": "1 Maccabees 13:43-53",
+      "description": "Simon takes Gazara, removes its idolatrous institutions, and settles observant Jews there. Starvation then forces the Jerusalem citadel to surrender, and on the twenty-third of the second month in Seleucid year 171 its foreign garrison is expelled.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-demetrius-captured-parthians",
+      "title": "The Parthians Capture Demetrius II",
+      "start": "140 BC",
+      "category": "Royal Succession",
+      "reference": "1 Maccabees 14:1-3",
+      "description": "In Seleucid year 172, Demetrius campaigns in Media for support against Trypho. A general of Arsaces defeats him and takes him into captivity.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-simon-roman-spartan-alliances",
+      "title": "Rome and Sparta Renew Their Alliances with Simon",
+      "start": "140 BC",
+      "category": "Diplomacy",
+      "reference": "1 Maccabees 14:16-24",
+      "description": "News of Jonathan's death and Simon's rule reaches Rome and Sparta. Both renew their friendship with Judea, and Simon sends a costly gold shield to Rome to confirm the alliance.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-simon-appointed-ethnarch",
+      "title": "The Assembly Appoints Simon Ethnarch and High Priest",
+      "start": "140-06-18 BC",
+      "category": "Simon's Rule",
+      "reference": "1 Maccabees 14:25-49",
+      "description": "On the eighteenth of Elul in Seleucid year 172, a national assembly records Simon's achievements and grants him hereditary leadership, military command, and the high priesthood until a trustworthy prophet should arise.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-antiochus-vii-lands",
+      "title": "Antiochus VII Challenges Trypho",
+      "start": "138 BC",
+      "category": "Royal Succession",
+      "reference": "1 Maccabees 15:1-14",
+      "description": "Antiochus VII initially confirms Simon's privileges, including tax relief and local coinage. In Seleucid year 174 he lands with a large force, wins widespread support, and besieges Trypho at Dor.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-rome-recognizes-simon",
+      "title": "Rome Circulates Recognition of Simon",
+      "start": "138 BC",
+      "category": "Diplomacy",
+      "reference": "1 Maccabees 15:15-24",
+      "description": "Numenius returns with a consular letter acknowledging the Jewish alliance and directing Mediterranean rulers not to attack Judea or shelter its enemies.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-antiochus-breaks-simon",
+      "title": "Antiochus VII Breaks with Simon",
+      "start": "138 BC",
+      "category": "Simon's Rule",
+      "reference": "1 Maccabees 15:25-41",
+      "description": "Antiochus rejects Simon's troops and supplies, demands Joppa, Gazara, and heavy payments, and refuses Simon's counteroffer. He appoints Cendebeus to fortify Kedron and raid Judea while continuing his pursuit of Trypho.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-john-defeats-cendebeus",
+      "title": "John Hyrcanus Defeats Cendebeus",
+      "start": "137 BC",
+      "category": "Hasmonean Succession",
+      "reference": "1 Maccabees 16:1-10",
+      "description": "Simon gives command to his sons John and Judas against Cendebeus. John leads the army across a stream, routs the coastal force, and burns its positions before returning safely to Judea.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "1ma-simon-assassinated-dok",
+      "title": "Simon and Two Sons Are Assassinated at Dok",
+      "start": "135-11 BC",
+      "category": "Hasmonean Succession",
+      "reference": "1 Maccabees 16:11-22",
+      "description": "In the eleventh month of Seleucid year 177, Simon's son-in-law Ptolemy hosts him and his sons Mattathias and Judas at Dok near Jericho, then murders them during the banquet. John learns of the plot against him at Gazara and kills the would-be assassins.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ma-john-hyrcanus-succeeds",
+      "title": "John Hyrcanus Succeeds Simon",
+      "start": "135 BC",
+      "category": "Hasmonean Succession",
+      "reference": "1 Maccabees 16:23-24",
+      "description": "The narrative closes by directing readers to the annals of John's high priesthood for his subsequent wars, fortifications, and achievements after succeeding his father.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "book": "Jonah",
+  "order": 32,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "jon-flees-tarshish",
+      "title": "Jonah Flees toward Tarshish",
+      "start": "760 BC",
+      "category": "Flight from the Call",
+      "reference": "Jonah 1:1-3",
+      "description": "The LORD directs Jonah son of Amittai to warn Nineveh about its wickedness. Jonah instead travels to Joppa, pays passage on a ship bound for Tarshish, and attempts to flee in the opposite direction.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "jon-storm-and-lot",
+      "title": "A Storm Exposes Jonah",
+      "start": "760 BC",
+      "category": "Flight from the Call",
+      "reference": "Jonah 1:4-10",
+      "description": "A violent storm threatens to break apart the ship while Jonah sleeps below deck. The frightened sailors cast cargo overboard and then cast lots, which identify Jonah after he admits that he is fleeing the God who made sea and land.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jon-thrown-into-sea",
+      "title": "Jonah Is Thrown into the Sea",
+      "start": "760 BC",
+      "category": "Flight from the Call",
+      "reference": "Jonah 1:11-17",
+      "description": "The sailors initially struggle to row back to land rather than harm Jonah, but finally throw him overboard at his direction. The sea becomes calm, the sailors sacrifice to the LORD, and a great fish swallows Jonah for three days and nights.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jon-prays-from-fish",
+      "title": "Jonah Prays from the Fish",
+      "start": "760 BC",
+      "category": "Deliverance",
+      "reference": "Jonah 2:1-10",
+      "description": "From inside the fish Jonah gives thanks for being heard in mortal distress and recalls sinking into the deep before his life was rescued. The LORD then directs the fish to release Jonah onto dry land.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jon-preaches-nineveh",
+      "title": "Jonah Warns Nineveh",
+      "start": "760 BC",
+      "category": "Nineveh Repents",
+      "reference": "Jonah 3:1-5",
+      "description": "Called a second time, Jonah travels to the vast city of Nineveh and announces its overthrow in forty days. The people believe God and proclaim a fast, with residents of every rank putting on sackcloth.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jon-nineveh-turns-violence",
+      "title": "Nineveh Turns from Violence",
+      "start": "760 BC",
+      "category": "Nineveh Repents",
+      "reference": "Jonah 3:6-10",
+      "description": "Nineveh's king leaves his throne for sackcloth and ashes and orders a citywide fast for people and animals. When the city turns from its violence, God does not bring the announced calamity.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jon-angered-by-mercy",
+      "title": "Jonah Is Angered by Mercy",
+      "start": "760 BC",
+      "category": "The Bush and the City",
+      "reference": "Jonah 4:1-5",
+      "description": "Jonah resents Nineveh's deliverance and explains that his expectation of divine compassion motivated his flight. He asks to die, then builds a shelter east of the city and waits to see what will happen.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jon-bush-worm-lesson",
+      "title": "The Bush and Worm Expose Jonah's Priorities",
+      "start": "760 BC",
+      "category": "The Bush and the City",
+      "reference": "Jonah 4:6-11",
+      "description": "God provides a bush to shade Jonah, then a worm and hot east wind that destroy the plant and leave him faint. Jonah's grief over the short-lived bush becomes the occasion for contrasting his concern with God's compassion for Nineveh's vast population and animals.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

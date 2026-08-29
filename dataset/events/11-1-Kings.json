@@ -1,0 +1,558 @@
+{
+  "book": "1 Kings",
+  "order": 11,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "1ki-adonijah-claims-throne",
+      "title": "Adonijah Claims the Throne",
+      "start": "970 BC",
+      "category": "Solomon's Accession",
+      "reference": "1 Kings 1:1-27",
+      "description": "As David's strength fails, Adonijah presents himself as king with support from Joab and Abiathar and holds a sacrificial feast. Nathan and Bathsheba alert David that Solomon and his supporters face danger unless the succession is settled.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-solomon-anointed-gihon",
+      "title": "Solomon Is Anointed at Gihon",
+      "start": "970 BC",
+      "category": "Solomon's Accession",
+      "reference": "1 Kings 1:28-53",
+      "description": "David confirms Solomon as successor and sends him to Gihon on the royal mule, where Zadok and Nathan anoint him. Adonijah's feast collapses at the news, and Solomon conditionally spares him when he seeks refuge at the altar.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-david-final-charge-death",
+      "title": "David Gives His Final Charge and Dies",
+      "start": "970 BC",
+      "category": "Solomon's Accession",
+      "reference": "1 Kings 2:1-12",
+      "description": "David charges Solomon to keep the law of Moses, preserve loyalty toward Barzillai's family, and deal wisely with Joab and Shimei. David dies after forty years of rule and is buried in his city, leaving Solomon on the throne.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-adonijah-executed",
+      "title": "Adonijah Is Executed",
+      "start": "970 BC",
+      "category": "Solomon's Accession",
+      "reference": "1 Kings 2:13-25",
+      "description": "Adonijah asks Bathsheba to obtain Abishag as his wife, and she carries the request to Solomon. Solomon interprets it as another claim to the kingdom and orders Benaiah to execute his brother.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-abiathar-banished-joab-killed",
+      "title": "Abiathar Is Banished and Joab Is Killed",
+      "start": "970 BC",
+      "category": "Solomon's Accession",
+      "reference": "1 Kings 2:26-35",
+      "description": "Solomon removes Abiathar from the priesthood but spares his life because he shared David's hardships. Joab takes refuge at the altar, yet Benaiah executes him for the blood of Abner and Amasa and succeeds him over the army.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-shimei-executed",
+      "title": "Shimei Breaks His Restriction and Is Executed",
+      "start": "967 BC",
+      "category": "Solomon's Accession",
+      "reference": "1 Kings 2:36-46",
+      "description": "Solomon confines Shimei to Jerusalem under penalty of death. Three years later Shimei travels to Gath after runaway servants, and Benaiah executes him when he returns, completing Solomon's consolidation.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-solomon-dream-gibeon",
+      "title": "Solomon Asks for Wisdom at Gibeon",
+      "start": "969 BC",
+      "category": "Solomon's Wisdom",
+      "reference": "1 Kings 3:1-15",
+      "description": "After marrying Pharaoh's daughter, Solomon sacrifices at Gibeon and receives a divine invitation in a dream. He asks for discernment to govern Israel and is promised exceptional wisdom together with riches and honor.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-solomon-judges-two-mothers",
+      "title": "Solomon Judges between Two Mothers",
+      "start": "969 BC",
+      "category": "Solomon's Wisdom",
+      "reference": "1 Kings 3:16-28",
+      "description": "Two women each claim the same living infant after another child dies. Solomon proposes dividing the boy, revealing the true mother through her willingness to surrender him alive, and Israel recognizes divine wisdom in the judgment.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-solomon-organizes-kingdom",
+      "title": "Solomon Organizes the Kingdom",
+      "start": "969 BC",
+      "category": "Solomon's Wisdom",
+      "reference": "1 Kings 4:1-28",
+      "description": "Solomon appoints high officials and twelve regional governors who provision the court in monthly rotation. His rule extends from the Euphrates toward Egypt, and Judah and Israel live securely amid royal abundance.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-solomon-wisdom-fame",
+      "title": "Solomon's Wisdom Becomes Renowned",
+      "start": "969 BC",
+      "end": "930 BC",
+      "category": "Solomon's Wisdom",
+      "reference": "1 Kings 4:29-34",
+      "description": "Solomon's wisdom surpasses that of celebrated sages in Egypt and the east. He composes thousands of proverbs and songs, speaks about the natural world, and receives visitors sent by rulers from many nations.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-hiram-temple-preparations",
+      "title": "Solomon and Hiram Prepare for the Temple",
+      "start": "967 BC",
+      "category": "Building the Temple",
+      "reference": "1 Kings 5:1-18",
+      "description": "Solomon arranges with Hiram of Tyre for cedar and cypress from Lebanon in exchange for provisions. A large levy of laborers, stonecutters, carriers, and supervisors prepares dressed stone and timber for the sanctuary.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-temple-construction",
+      "title": "Solomon Builds the Temple",
+      "start": "966-02 BC",
+      "end": "959-08 BC",
+      "category": "Building the Temple",
+      "reference": "1 Kings 6:1-38",
+      "description": "In Solomon's fourth year, 480 years after the exodus, work begins on the house of the LORD. Stone dressed at the quarry, cedar paneling, gold overlay, carved cherubim, and an inner sanctuary are completed after seven years.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-solomon-palace-complex",
+      "title": "Solomon Builds the Palace Complex",
+      "start": "959 BC",
+      "end": "946 BC",
+      "category": "Building the Temple",
+      "reference": "1 Kings 7:1-12",
+      "description": "Over thirteen years Solomon builds his palace, the House of the Forest of Lebanon, halls of pillars and judgment, and a residence for Pharaoh's daughter, using costly dressed stone and cedar.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-hiram-temple-furnishings",
+      "title": "Hiram Crafts the Temple Furnishings",
+      "start": "960 BC",
+      "end": "959 BC",
+      "category": "Building the Temple",
+      "reference": "1 Kings 7:13-51",
+      "description": "The bronze worker Hiram fashions the pillars, capitals, sea, wheeled stands, basins, and utensils for the temple. Solomon also provides golden furnishings and stores David's dedicated treasures in the completed sanctuary.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-ark-brought-temple",
+      "title": "The Ark Is Brought into the Temple",
+      "start": "959-07 BC",
+      "category": "Temple Dedication",
+      "reference": "1 Kings 8:1-21",
+      "description": "During the seventh-month festival, Israel's leaders assemble as the priests carry the ark into the inner sanctuary beneath the cherubim. A cloud fills the house, preventing priestly service, and Solomon blesses the assembly for the fulfilled promise to David.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-solomon-dedication-prayer",
+      "title": "Solomon Prays at the Temple Dedication",
+      "start": "959-07 BC",
+      "category": "Temple Dedication",
+      "reference": "1 Kings 8:22-61",
+      "description": "Before the altar Solomon asks God to hear prayers directed toward the temple in cases of injustice, defeat, drought, famine, war, exile, and repentance. He includes the foreigner and concludes by calling Israel to wholehearted obedience.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-temple-dedicated",
+      "title": "The Temple Is Dedicated",
+      "start": "959-07 BC",
+      "category": "Temple Dedication",
+      "reference": "1 Kings 8:62-66",
+      "description": "Solomon and the great assembly dedicate the temple with an immense number of sacrifices. After the festival the people depart joyfully because of the good shown to David and Israel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-lord-appears-solomon-second",
+      "title": "The LORD Appears to Solomon Again",
+      "start": "946 BC",
+      "category": "Solomon's Glory",
+      "reference": "1 Kings 9:1-9",
+      "description": "After the temple and palace are complete, Solomon receives assurance that his prayer has been heard and the temple consecrated. The promise of dynasty remains conditional on faithfulness, while apostasy will bring exile and the ruin of the house.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-solomon-hiram-cities",
+      "title": "Solomon Gives Hiram Galilean Cities",
+      "start": "946 BC",
+      "category": "Solomon's Glory",
+      "reference": "1 Kings 9:10-14",
+      "description": "At the end of twenty years of construction, Solomon gives Hiram twenty towns in Galilee in return for timber and gold. Hiram finds the towns unsatisfactory and gives the district a disparaging name.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-solomon-building-forced-labor",
+      "title": "Solomon's Building Program and Forced Labor",
+      "start": "946 BC",
+      "end": "935 BC",
+      "category": "Solomon's Glory",
+      "reference": "1 Kings 9:15-25",
+      "description": "Solomon uses forced labor to build the temple, palace, Jerusalem's defenses, Hazor, Megiddo, Gezer, and numerous storage and chariot cities. The remaining non-Israelite populations supply the permanent labor force.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-solomon-fleet-ophir",
+      "title": "Solomon's Fleet Sails to Ophir",
+      "start": "945 BC",
+      "category": "Solomon's Glory",
+      "reference": "1 Kings 9:26-28",
+      "description": "Solomon builds a fleet at Ezion-geber on the Red Sea. Experienced sailors supplied by Hiram join Solomon's servants in bringing a large shipment of gold from Ophir.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-queen-sheba-visits",
+      "title": "The Queen of Sheba Visits Solomon",
+      "start": "940 BC",
+      "category": "Solomon's Glory",
+      "reference": "1 Kings 10:1-13",
+      "description": "The queen of Sheba comes to Jerusalem with spices, gold, precious stones, and difficult questions. Solomon answers her fully, and she marvels at his wisdom, court, prosperity, and worship before exchanging lavish gifts with him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-solomon-wealth-chariots",
+      "title": "Solomon Accumulates Wealth and Chariots",
+      "start": "940 BC",
+      "end": "932 BC",
+      "category": "Solomon's Glory",
+      "reference": "1 Kings 10:14-29",
+      "description": "Gold pours into Solomon's court from tribute, trade, and fleets, furnishing shields, vessels, and an ivory throne. He also amasses chariots and horses and becomes a broker of imported military equipment to neighboring kings.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-solomon-turns-other-gods",
+      "title": "Solomon Turns to Other Gods",
+      "start": "935 BC",
+      "category": "Solomon's Decline",
+      "reference": "1 Kings 11:1-13",
+      "description": "Solomon's many foreign wives turn his heart toward their gods in his old age, and he builds high places around Jerusalem. The LORD announces that most of the kingdom will be torn from his son, though one tribe will remain for David's sake.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-solomon-adversaries",
+      "title": "Adversaries Rise against Solomon",
+      "start": "934 BC",
+      "category": "Solomon's Decline",
+      "reference": "1 Kings 11:14-25",
+      "description": "Hadad the Edomite returns from Egyptian refuge as an adversary to Solomon, while Rezon establishes himself at Damascus and opposes Israel from the north.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-ahijah-promises-jeroboam",
+      "title": "Ahijah Promises Ten Tribes to Jeroboam",
+      "start": "932 BC",
+      "category": "Solomon's Decline",
+      "reference": "1 Kings 11:26-40",
+      "description": "The prophet Ahijah tears a new garment into twelve pieces and gives ten to Jeroboam, promising him Israel if he walks faithfully. Solomon seeks Jeroboam's death, and Jeroboam flees to Shishak in Egypt.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-solomon-dies",
+      "title": "Solomon Dies after Forty Years",
+      "start": "930 BC",
+      "category": "Solomon's Decline",
+      "reference": "1 Kings 11:41-43",
+      "description": "Solomon's forty-year reign ends with his death and burial in the City of David. His son Rehoboam succeeds him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-rehoboam-rejects-elders",
+      "title": "Rehoboam Rejects the Elders' Counsel",
+      "start": "930 BC",
+      "category": "The Divided Kingdom",
+      "reference": "1 Kings 12:1-15",
+      "description": "At Shechem the assembly asks Rehoboam to lighten Solomon's heavy service. He rejects the elders' advice to serve the people and instead follows younger counselors who urge an even harsher answer.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-kingdom-divides",
+      "title": "The Kingdom Divides",
+      "start": "930 BC",
+      "category": "The Divided Kingdom",
+      "reference": "1 Kings 12:16-24",
+      "description": "The northern tribes reject David's house, stone the forced-labor official, and make Jeroboam king, while Judah remains with Rehoboam. Shemaiah prevents Rehoboam's army from attacking Israel by declaring that the division comes from God.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-jeroboam-golden-calves",
+      "title": "Jeroboam Establishes Golden Calves",
+      "start": "930-08-15 BC",
+      "category": "The Divided Kingdom",
+      "reference": "1 Kings 12:25-33",
+      "description": "Fearing that worship in Jerusalem will restore allegiance to Rehoboam, Jeroboam builds shrines at Bethel and Dan with golden calves. He appoints non-Levitical priests and devises his own eighth-month festival.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-man-god-condemns-bethel",
+      "title": "A Man of God Condemns Bethel's Altar",
+      "start": "930 BC",
+      "category": "The Divided Kingdom",
+      "reference": "1 Kings 13:1-10",
+      "description": "A man of God from Judah predicts that Josiah will desecrate Bethel's altar. The altar splits and Jeroboam's outstretched hand withers, then is restored at the prophet's intercession.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-man-god-killed-lion",
+      "title": "The Man of God Is Killed by a Lion",
+      "start": "930 BC",
+      "category": "The Divided Kingdom",
+      "reference": "1 Kings 13:11-34",
+      "description": "An old Bethel prophet deceives the man of God into returning for a meal contrary to his command. A lion kills him on the road without consuming the body, and the old prophet buries him while affirming his word against the shrines.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-ahijah-condemns-jeroboam",
+      "title": "Ahijah Condemns Jeroboam's House",
+      "start": "910 BC",
+      "category": "Early Divided Kings",
+      "reference": "1 Kings 14:1-20",
+      "description": "Jeroboam sends his disguised wife to the blind prophet Ahijah regarding their sick son. Ahijah recognizes her, announces the destruction of Jeroboam's dynasty and the child's death, and the boy dies as she reaches Tirzah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-shishak-plunders-jerusalem",
+      "title": "Shishak Plunders Jerusalem",
+      "start": "925 BC",
+      "category": "Early Divided Kings",
+      "reference": "1 Kings 14:21-31",
+      "description": "Judah practices idolatry under Rehoboam, and in his fifth year Shishak of Egypt takes the temple and palace treasures, including Solomon's golden shields. Rehoboam replaces them with bronze as war with Jeroboam continues.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-abijam-reigns-judah",
+      "title": "Abijam Reigns in Judah",
+      "start": "913 BC",
+      "end": "910 BC",
+      "category": "Early Divided Kings",
+      "reference": "1 Kings 15:1-8",
+      "description": "Abijam reigns three years in Jerusalem and continues his father's sins, yet David's line retains a lamp in the city. War with Jeroboam continues until Asa succeeds him.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-asa-reforms-judah",
+      "title": "Asa Reforms Judah",
+      "start": "910 BC",
+      "end": "869 BC",
+      "category": "Early Divided Kings",
+      "reference": "1 Kings 15:9-15",
+      "description": "Asa removes cult prostitutes and idols and deposes the queen mother Maacah for her Asherah image. Though the high places remain, he stays devoted and brings dedicated gifts into the temple.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-asa-alliance-ben-hadad",
+      "title": "Asa Buys an Alliance against Baasha",
+      "start": "895 BC",
+      "category": "Early Divided Kings",
+      "reference": "1 Kings 15:16-24",
+      "description": "When Baasha fortifies Ramah to blockade Judah, Asa sends temple and palace silver and gold to Ben-hadad of Damascus. Aramean attacks draw Baasha away, and Asa dismantles Ramah to build Geba and Mizpah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-baasha-destroys-jeroboam-house",
+      "title": "Baasha Destroys Jeroboam's House",
+      "start": "909 BC",
+      "category": "Northern Dynasties",
+      "reference": "1 Kings 15:25-34",
+      "description": "After two years of Nadab's reign, Baasha assassinates him during the siege of Gibbethon and destroys every member of Jeroboam's house. Baasha then rules from Tirzah while perpetuating Jeroboam's sins.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-jehu-condemns-baasha",
+      "title": "Jehu Condemns Baasha's House",
+      "start": "886 BC",
+      "category": "Northern Dynasties",
+      "reference": "1 Kings 16:1-7",
+      "description": "The prophet Jehu announces that Baasha's dynasty will meet the same destruction it inflicted on Jeroboam's house because Baasha led Israel in the same sins.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-zimri-kills-elah",
+      "title": "Zimri Kills Elah and Baasha's House",
+      "start": "885 BC",
+      "category": "Northern Dynasties",
+      "reference": "1 Kings 16:8-14",
+      "description": "While Elah drinks himself drunk in Tirzah, the chariot commander Zimri assassinates him and takes the throne. Zimri immediately eliminates Baasha's whole family, fulfilling Jehu's word.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-zimri-seven-day-reign",
+      "title": "Zimri's Seven-Day Reign Ends",
+      "start": "885 BC",
+      "category": "Northern Dynasties",
+      "reference": "1 Kings 16:15-20",
+      "description": "The army at Gibbethon proclaims Omri king and besieges Tirzah. After only seven days on the throne, Zimri burns the palace over himself rather than be captured.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-omri-wins-civil-conflict",
+      "title": "Omri Prevails over Tibni",
+      "start": "885 BC",
+      "end": "880 BC",
+      "category": "Northern Dynasties",
+      "reference": "1 Kings 16:21-24",
+      "description": "Israel divides between supporters of Omri and Tibni until Omri's faction prevails. Omri buys the hill of Samaria, fortifies it, and establishes the new northern capital there.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-ahab-jezebel-baal",
+      "title": "Ahab and Jezebel Establish Baal Worship",
+      "start": "874 BC",
+      "category": "Ahab and Elijah",
+      "reference": "1 Kings 16:25-34",
+      "description": "Omri exceeds his predecessors in evil, and his son Ahab goes further after marrying Jezebel of Sidon. Ahab builds a temple and altar for Baal in Samaria, while Hiel rebuilds Jericho at the cost Joshua had foretold.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-elijah-announces-drought",
+      "title": "Elijah Announces a Drought",
+      "start": "864 BC",
+      "category": "Ahab and Elijah",
+      "reference": "1 Kings 17:1-7",
+      "description": "Elijah tells Ahab that rain and dew will cease except at his word. He then hides east of the Jordan at the Wadi Cherith, drinking from the stream and receiving food brought by ravens until it dries up.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-elijah-widow-zarephath",
+      "title": "Elijah Is Fed by the Widow of Zarephath",
+      "start": "864 BC",
+      "category": "Ahab and Elijah",
+      "reference": "1 Kings 17:8-16",
+      "description": "Elijah asks a destitute widow at Zarephath for food as she prepares a final meal for herself and her son. Her small supply of meal and oil then continues without failing throughout the drought.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-elijah-revives-widow-son",
+      "title": "Elijah Revives the Widow's Son",
+      "start": "863 BC",
+      "category": "Ahab and Elijah",
+      "reference": "1 Kings 17:17-24",
+      "description": "When the widow's son stops breathing, Elijah carries him to the upper room and cries to the LORD. The child's life returns, confirming to his mother that Elijah is a man of God whose word is true.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-elijah-meets-ahab-obadiah",
+      "title": "Elijah Returns to Ahab",
+      "start": "861 BC",
+      "category": "Carmel and Horeb",
+      "reference": "1 Kings 18:1-19",
+      "description": "In the third year of severe drought Elijah meets Obadiah, who has hidden a hundred prophets from Jezebel, and sends him to summon Ahab. Elijah rejects Ahab's accusation of troubling Israel and calls king, people, and Baal's prophets to Carmel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-elijah-carmel-contest",
+      "title": "Fire Falls on Mount Carmel",
+      "start": "861 BC",
+      "category": "Carmel and Horeb",
+      "reference": "1 Kings 18:20-40",
+      "description": "Baal's prophets call and cut themselves from morning into afternoon without receiving an answer. Elijah repairs the LORD's altar with twelve stones, drenches the offering, and prays; fire consumes sacrifice, altar, and water, and the people seize Baal's prophets.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-drought-ends",
+      "title": "The Drought Ends",
+      "start": "861 BC",
+      "category": "Carmel and Horeb",
+      "reference": "1 Kings 18:41-46",
+      "description": "Elijah prays on Carmel and sends his servant seven times to look toward the sea. A tiny cloud grows into a heavy storm, while Elijah runs ahead of Ahab's chariot to Jezreel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-elijah-flees-horeb",
+      "title": "Elijah Flees to Horeb",
+      "start": "861 BC",
+      "category": "Carmel and Horeb",
+      "reference": "1 Kings 19:1-18",
+      "description": "Threatened by Jezebel, Elijah flees into the wilderness and asks to die, but an angel feeds him for the journey to Horeb. After wind, earthquake, and fire, he encounters the LORD in quiet and receives new commissions concerning Hazael, Jehu, and Elisha.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-elijah-calls-elisha",
+      "title": "Elijah Calls Elisha",
+      "start": "861 BC",
+      "category": "Carmel and Horeb",
+      "reference": "1 Kings 19:19-21",
+      "description": "Elijah finds Elisha plowing with twelve yoke of oxen and throws his mantle over him. Elisha sacrifices his oxen, feeds the people, and leaves to become Elijah's servant.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-ben-hadad-besieges-samaria",
+      "title": "Ben-hadad Besieges Samaria",
+      "start": "857 BC",
+      "category": "Ahab's Wars",
+      "reference": "1 Kings 20:1-22",
+      "description": "Ben-hadad of Aram besieges Samaria with thirty-two allied kings and escalates his demands beyond Ahab's initial submission. Directed by a prophet, a small Israelite force attacks at noon while the allied kings drink and drives the Arameans away.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-arameans-defeated-aphek",
+      "title": "The Arameans Are Defeated at Aphek",
+      "start": "856 BC",
+      "category": "Ahab's Wars",
+      "reference": "1 Kings 20:23-34",
+      "description": "Believing Israel's God is limited to the hills, Aram returns in spring to fight on the plain at Aphek. Israel wins another overwhelming victory, but Ahab makes a treaty with Ben-hadad and releases him.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-prophet-condemns-ahab-treaty",
+      "title": "A Prophet Condemns Ahab's Treaty",
+      "start": "856 BC",
+      "category": "Ahab's Wars",
+      "reference": "1 Kings 20:35-43",
+      "description": "A wounded and disguised prophet presents Ahab with a story that draws the king into judging himself. He then announces that Ahab's life and people are forfeit because he released a man devoted to destruction.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-naboth-vineyard-seized",
+      "title": "Naboth Is Killed for His Vineyard",
+      "start": "855 BC",
+      "category": "Ahab's Fall",
+      "reference": "1 Kings 21:1-16",
+      "description": "Naboth refuses to surrender his ancestral vineyard to Ahab. Jezebel arranges false accusations and his execution by stoning, after which Ahab goes down to take possession of the property.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-elijah-condemns-ahab-house",
+      "title": "Elijah Condemns Ahab's House",
+      "start": "855 BC",
+      "category": "Ahab's Fall",
+      "reference": "1 Kings 21:17-29",
+      "description": "Elijah confronts Ahab in Naboth's vineyard and announces violent judgment on his dynasty and Jezebel. Ahab humbles himself in sackcloth and fasting, so the disaster on his house is deferred to his son's reign.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ki-micaiah-warns-ahab",
+      "title": "Micaiah Warns Ahab at Samaria",
+      "start": "853 BC",
+      "category": "Ahab's Fall",
+      "reference": "1 Kings 22:1-28",
+      "description": "Ahab recruits Jehoshaphat to retake Ramoth-gilead, while hundreds of prophets promise success. Micaiah alone describes Israel scattered without a shepherd and reveals that the favorable prophecies are leading Ahab toward disaster.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-ahab-dies-ramoth-gilead",
+      "title": "Ahab Dies at Ramoth-gilead",
+      "start": "853 BC",
+      "category": "Ahab's Fall",
+      "reference": "1 Kings 22:29-40",
+      "description": "Ahab enters battle in disguise while Jehoshaphat wears royal robes. A randomly shot arrow penetrates Ahab's armor; he dies that evening, and dogs lick his blood from the washed chariot as foretold.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-jehoshaphat-reign-summary",
+      "title": "Jehoshaphat Reigns in Judah",
+      "start": "873 BC",
+      "end": "848 BC",
+      "category": "Closing Regnal Notices",
+      "reference": "1 Kings 22:41-50",
+      "description": "Jehoshaphat follows Asa's generally faithful course, removes remaining cult prostitutes, and makes peace with Israel, though high places persist. His attempted Ophir fleet is wrecked at Ezion-geber before Jehoram succeeds him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ki-ahaziah-reigns-israel",
+      "title": "Ahaziah Reigns in Israel",
+      "start": "853 BC",
+      "end": "852 BC",
+      "category": "Closing Regnal Notices",
+      "reference": "1 Kings 22:51-53",
+      "description": "Ahab's son Ahaziah reigns briefly at Samaria and continues the worship and policies of Ahab, Jezebel, and Jeroboam, provoking the LORD as his father had done.",
+      "datingBasis": "traditional"
+    }
+  ]
+}

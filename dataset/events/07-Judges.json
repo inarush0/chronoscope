@@ -1,0 +1,516 @@
+{
+  "book": "Judges",
+  "order": 7,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "jdg-judah-and-simeon-campaign",
+      "title": "Judah and Simeon Campaign in the South",
+      "start": "1375 BC",
+      "category": "Incomplete Conquest",
+      "reference": "Judges 1:1-21",
+      "description": "After Joshua's death, Judah and Simeon defeat Adoni-bezek and campaign against Jerusalem, Hebron, Debir, Zephath, and the cities of the plain. Othniel captures Debir and marries Achsah, while Benjamin fails to expel the Jebusites from Jerusalem.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-joseph-takes-bethel",
+      "title": "The House of Joseph Takes Bethel",
+      "start": "1375 BC",
+      "category": "Incomplete Conquest",
+      "reference": "Judges 1:22-26",
+      "description": "The house of Joseph gains entrance to Bethel with the help of a man leaving the city. His family is spared, and he later builds another city named Luz in Hittite territory.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-tribes-fail-to-expel",
+      "title": "The Tribes Fail to Expel the Inhabitants",
+      "start": "1375 BC",
+      "category": "Incomplete Conquest",
+      "reference": "Judges 1:27-36",
+      "description": "Manasseh, Ephraim, Zebulun, Asher, and Naphtali leave Canaanite populations in their territories, sometimes subjecting them to forced labor. Amorite pressure confines Dan to the hill country.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-angel-at-bochim",
+      "title": "The Angel of the LORD at Bochim",
+      "start": "1375 BC",
+      "category": "Incomplete Conquest",
+      "reference": "Judges 2:1-5",
+      "description": "The angel of the LORD indicts Israel for making covenants with the land's inhabitants and leaving their altars intact. The people weep and sacrifice at the place consequently called Bochim.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jdg-generation-after-joshua",
+      "title": "A Generation Arises After Joshua",
+      "start": "1375 BC",
+      "end": "1360 BC",
+      "category": "Incomplete Conquest",
+      "reference": "Judges 2:6-23",
+      "description": "Joshua's generation dies, and those who follow abandon the LORD for the Baals and Astartes. Israel enters a recurring pattern of apostasy, oppression, deliverance through judges, and relapse after each judge's death.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-micahs-household-shrine",
+      "title": "Micah Establishes a Household Shrine",
+      "start": "1374 BC",
+      "category": "Israel's Disorder",
+      "reference": "Judges 17:1-13",
+      "description": "Micah returns silver stolen from his mother, and part of it becomes a cast idol for his private shrine. He first installs his son and then hires a wandering Levite from Bethlehem as his priest.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-danite-spies-laish",
+      "title": "Danite Spies Explore Laish",
+      "start": "1374 BC",
+      "category": "Israel's Disorder",
+      "reference": "Judges 18:1-10",
+      "description": "Five Danites seeking territory visit Micah's house and ask his Levite priest about their mission. They discover Laish to be prosperous, isolated, and unsuspecting, and urge their kinsmen to seize it.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-danites-seize-idols",
+      "title": "The Danites Seize Micah's Idols and Priest",
+      "start": "1374 BC",
+      "category": "Israel's Disorder",
+      "reference": "Judges 18:11-26",
+      "description": "Six hundred armed Danites stop at Micah's house on their migration north. They take his idol, ephod, household gods, and priest, and Micah abandons pursuit when he sees that they outnumber him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-danites-capture-laish",
+      "title": "The Danites Capture Laish",
+      "start": "1374 BC",
+      "category": "Israel's Disorder",
+      "reference": "Judges 18:27-31",
+      "description": "The Danites destroy isolated Laish, rebuild it, and rename it Dan. They establish Micah's idol there, with Jonathan and his descendants serving as tribal priests while the sanctuary remains at Shiloh.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-levite-and-concubine-gibeah",
+      "title": "A Levite and His Concubine Lodge at Gibeah",
+      "start": "1373 BC",
+      "category": "Benjaminite War",
+      "reference": "Judges 19:1-21",
+      "description": "A Levite retrieves his concubine from Bethlehem and begins the return journey late in the day. Passing Jebus, the party chooses Israelite Gibeah for the night, where an elderly Ephraimite finally takes them in.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-gibeah-outrage",
+      "title": "The Outrage at Gibeah",
+      "start": "1373 BC",
+      "category": "Benjaminite War",
+      "reference": "Judges 19:22-30",
+      "description": "Men of Gibeah surround the host's house and abuse the Levite's concubine throughout the night, leaving her dead at the threshold. The Levite divides her body into twelve pieces and sends them throughout Israel as a summons to respond.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-israel-assembles-against-gibeah",
+      "title": "Israel Assembles Against Gibeah",
+      "start": "1373 BC",
+      "category": "Benjaminite War",
+      "reference": "Judges 20:1-17",
+      "description": "The tribes assemble at Mizpah and resolve to punish Gibeah. Benjamin refuses to surrender the offenders and musters for war against the united Israelite force.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-benjamin-wins-two-battles",
+      "title": "Benjamin Wins the First Two Battles",
+      "start": "1373 BC",
+      "category": "Benjaminite War",
+      "reference": "Judges 20:18-28",
+      "description": "Israel inquires at Bethel but suffers severe losses in two assaults on Gibeah. The people weep, fast, offer sacrifices, and inquire again before the ark, where Phinehas ministers.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jdg-benjamin-nearly-destroyed",
+      "title": "Benjamin Is Nearly Destroyed",
+      "start": "1373 BC",
+      "category": "Benjaminite War",
+      "reference": "Judges 20:29-48",
+      "description": "On the third day Israel uses an ambush to capture and burn Gibeah, then overwhelms Benjamin's army. Only six hundred men escape to the rock of Rimmon as Israel destroys Benjaminite towns.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jdg-jabesh-gilead-destroyed",
+      "title": "Jabesh-gilead Is Destroyed",
+      "start": "1373 BC",
+      "category": "Benjaminite War",
+      "reference": "Judges 21:1-14",
+      "description": "Regretting Benjamin's impending extinction yet bound by an oath not to give it wives, the assembly attacks Jabesh-gilead for failing to attend at Mizpah. Four hundred surviving young women are given to the Benjaminites at Rimmon.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jdg-women-of-shiloh-abducted",
+      "title": "The Women of Shiloh Are Abducted",
+      "start": "1373 BC",
+      "category": "Benjaminite War",
+      "reference": "Judges 21:15-25",
+      "description": "To provide wives for the remaining Benjaminites without formally breaking their oath, Israel's elders permit them to seize women dancing at Shiloh's festival. Benjamin rebuilds its towns, and the tribes disperse to their inheritances.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jdg-nations-left-to-test-israel",
+      "title": "Nations Remain to Test Israel",
+      "start": "1360 BC",
+      "category": "Cycles of Deliverance",
+      "reference": "Judges 3:1-6",
+      "description": "Several peoples remain in the land to test and teach later Israelites. Israel lives among them, intermarries with them, and serves their gods.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-cushan-oppresses-israel",
+      "title": "Cushan-rishathaim Oppresses Israel",
+      "start": "1353 BC",
+      "end": "1345 BC",
+      "category": "Cycles of Deliverance",
+      "reference": "Judges 3:7-8",
+      "description": "After Israel serves the Baals and Asherahs, King Cushan-rishathaim of Aram-naharaim subjugates the people for eight years.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-othniel-delivers-israel",
+      "title": "Othniel Delivers Israel",
+      "start": "1345 BC",
+      "end": "1305 BC",
+      "category": "Cycles of Deliverance",
+      "reference": "Judges 3:9-11",
+      "description": "The spirit of the LORD comes upon Othniel, who defeats Cushan-rishathaim and judges Israel. The land then rests for forty years until Othniel's death.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-eglon-oppresses-israel",
+      "title": "Eglon of Moab Oppresses Israel",
+      "start": "1305 BC",
+      "end": "1287 BC",
+      "category": "Cycles of Deliverance",
+      "reference": "Judges 3:12-14",
+      "description": "Eglon of Moab joins with Ammon and Amalek, defeats Israel, and occupies the city of palms. Israel serves him for eighteen years.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-ehud-kills-eglon",
+      "title": "Ehud Kills King Eglon",
+      "start": "1287 BC",
+      "category": "Cycles of Deliverance",
+      "reference": "Judges 3:15-26",
+      "description": "Ehud, a left-handed Benjaminite, conceals a short double-edged sword while delivering tribute. Alone with Eglon in the roof chamber, he kills the Moabite king, locks the doors, and escapes while the servants delay.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-ehud-defeats-moab",
+      "title": "Ehud Defeats Moab",
+      "start": "1287 BC",
+      "end": "1207 BC",
+      "category": "Cycles of Deliverance",
+      "reference": "Judges 3:27-30",
+      "description": "Ehud rallies Israel in Ephraim, seizes the Jordan fords, and defeats about ten thousand Moabites. Moab is subdued and the land rests for eighty years.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-shamgar-delivers-israel",
+      "title": "Shamgar Delivers Israel",
+      "start": "1207 BC",
+      "category": "Cycles of Deliverance",
+      "reference": "Judges 3:31",
+      "description": "Shamgar son of Anath delivers Israel by killing six hundred Philistines with an oxgoad.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-jabin-oppresses-israel",
+      "title": "Jabin and Sisera Oppress Israel",
+      "start": "1207 BC",
+      "end": "1187 BC",
+      "category": "Deborah and Barak",
+      "reference": "Judges 4:1-3",
+      "description": "After Ehud's death, King Jabin of Hazor and his commander Sisera oppress Israel for twenty years with nine hundred iron chariots.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-deborah-summons-barak",
+      "title": "Deborah Summons Barak",
+      "start": "1187 BC",
+      "category": "Deborah and Barak",
+      "reference": "Judges 4:4-10",
+      "description": "Deborah the prophet and judge summons Barak to gather ten thousand men from Naphtali and Zebulun at Mount Tabor. Barak agrees to go only with Deborah, and she warns that a woman will receive the honor over Sisera.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-sisera-army-defeated",
+      "title": "Sisera's Army Is Defeated",
+      "start": "1187 BC",
+      "category": "Deborah and Barak",
+      "reference": "Judges 4:11-16",
+      "description": "Sisera brings his chariots to the Wadi Kishon, while Barak descends from Mount Tabor with his force. The LORD throws Sisera's army into panic, and Barak pursues it to Harosheth-ha-goiim.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-jael-kills-sisera",
+      "title": "Jael Kills Sisera",
+      "start": "1187 BC",
+      "category": "Deborah and Barak",
+      "reference": "Judges 4:17-24",
+      "description": "Sisera flees to Jael's tent, where she gives him milk and covers him. Once he is asleep, she drives a tent peg through his temple; Israel afterward presses King Jabin until he is destroyed.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-song-of-deborah",
+      "title": "Deborah and Barak Sing of the Victory",
+      "start": "1187 BC",
+      "end": "1147 BC",
+      "category": "Deborah and Barak",
+      "reference": "Judges 5:1-31",
+      "description": "Deborah and Barak celebrate the tribes that volunteered, recount the battle at the Kishon, praise Jael's deed, and rebuke those who stayed away. The land rests for forty years.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-midian-oppresses-israel",
+      "title": "Midian Devastates Israel",
+      "start": "1147 BC",
+      "end": "1140 BC",
+      "category": "Gideon",
+      "reference": "Judges 6:1-10",
+      "description": "For seven years Midianite, Amalekite, and eastern raiders consume Israel's crops and livestock, driving the people into mountain refuges. When Israel cries for help, a prophet reminds them that they have disregarded the LORD.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-gideon-called",
+      "title": "Gideon Is Called at Ophrah",
+      "start": "1140 BC",
+      "category": "Gideon",
+      "reference": "Judges 6:11-24",
+      "description": "An angel finds Gideon threshing wheat in a winepress and commissions him to deliver Israel. Fire consumes Gideon's offering on a rock, and he builds an altar after being assured that he will survive the encounter.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-gideon-tears-down-baal-altar",
+      "title": "Gideon Tears Down Baal's Altar",
+      "start": "1140 BC",
+      "category": "Gideon",
+      "reference": "Judges 6:25-32",
+      "description": "At night Gideon demolishes his father's altar to Baal and its sacred pole, then offers a bull on a new altar to the LORD. His father challenges Baal to defend his own cause, and Gideon receives the name Jerubbaal.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-gideon-fleece-signs",
+      "title": "Gideon Receives the Signs of the Fleece",
+      "start": "1140 BC",
+      "category": "Gideon",
+      "reference": "Judges 6:33-40",
+      "description": "As an eastern coalition gathers in the Jezreel Valley, Gideon summons troops from northern tribes. He asks for two signs, and dew appears first only on a fleece and then only on the surrounding ground.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-gideons-army-reduced",
+      "title": "Gideon's Army Is Reduced to Three Hundred",
+      "start": "1140 BC",
+      "category": "Gideon",
+      "reference": "Judges 7:1-15",
+      "description": "Gideon sends home the fearful and then retains only three hundred men selected at the water. A Midianite's dream of barley bread overturning a tent, interpreted as Gideon's victory, reassures him before the attack.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-gideon-routs-midian",
+      "title": "Gideon's Three Hundred Rout Midian",
+      "start": "1140 BC",
+      "category": "Gideon",
+      "reference": "Judges 7:16-25",
+      "description": "Three companies surround Midian's camp with trumpets, jars, and concealed torches. The sudden noise and light send the enemy fleeing and fighting one another, while Ephraim seizes the crossings and captures Oreb and Zeeb.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-gideon-pursues-kings",
+      "title": "Gideon Pursues Zebah and Zalmunna",
+      "start": "1140 BC",
+      "category": "Gideon",
+      "reference": "Judges 8:1-21",
+      "description": "Gideon placates Ephraim but punishes Succoth and Penuel for refusing bread to his exhausted force. He captures the Midianite kings Zebah and Zalmunna and kills them for the deaths of his brothers.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-gideons-ephod",
+      "title": "Gideon Makes an Ephod",
+      "start": "1140 BC",
+      "end": "1100 BC",
+      "category": "Gideon",
+      "reference": "Judges 8:22-35",
+      "description": "Gideon refuses hereditary rule but gathers gold from the spoils and fashions an ephod that becomes a snare at Ophrah. Midian remains subdued during forty years of rest, but after Gideon's death Israel returns to the Baals.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-abimelech-made-king",
+      "title": "Abimelech Is Made King at Shechem",
+      "start": "1100 BC",
+      "category": "Abimelech and Minor Judges",
+      "reference": "Judges 9:1-21",
+      "description": "Abimelech obtains silver from Shechem, hires followers, and kills his brothers on one stone, though Jotham escapes. Shechem makes Abimelech king, and Jotham answers with a fable warning that ruler and city will consume one another.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-abimelech-destroys-shechem",
+      "title": "Abimelech Destroys Shechem",
+      "start": "1097 BC",
+      "category": "Abimelech and Minor Judges",
+      "reference": "Judges 9:22-49",
+      "description": "After three years, Shechem turns against Abimelech and supports Gaal. Abimelech defeats Gaal's faction, razes and salts the city, and burns the stronghold where about a thousand people have taken refuge.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-abimelech-dies-thebez",
+      "title": "Abimelech Dies at Thebez",
+      "start": "1097 BC",
+      "category": "Abimelech and Minor Judges",
+      "reference": "Judges 9:50-57",
+      "description": "While Abimelech tries to burn Thebez's tower, a woman drops an upper millstone that crushes his skull. He orders his armor-bearer to finish him, bringing Jotham's warning against Abimelech and Shechem to fulfillment.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-tola-judges-israel",
+      "title": "Tola Judges Israel",
+      "start": "1097 BC",
+      "end": "1074 BC",
+      "category": "Abimelech and Minor Judges",
+      "reference": "Judges 10:1-2",
+      "description": "Tola of Issachar lives at Shamir in Ephraim, delivers Israel, and judges for twenty-three years before his death.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-jair-judges-israel",
+      "title": "Jair Judges Israel",
+      "start": "1074 BC",
+      "end": "1052 BC",
+      "category": "Abimelech and Minor Judges",
+      "reference": "Judges 10:3-5",
+      "description": "Jair the Gileadite judges Israel for twenty-two years. His thirty sons ride thirty donkeys and possess thirty towns in Gilead.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-ammonite-oppression",
+      "title": "Ammon Oppresses Gilead",
+      "start": "1052 BC",
+      "end": "1034 BC",
+      "category": "Jephthah and Minor Judges",
+      "reference": "Judges 10:6-18",
+      "description": "Israel serves the gods of surrounding peoples and suffers Philistine and Ammonite pressure, including eighteen years of oppression in Gilead. The people confess, put away foreign gods, and gather at Mizpah to confront Ammon.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-jephthah-made-commander",
+      "title": "Jephthah Is Made Commander",
+      "start": "1034 BC",
+      "category": "Jephthah and Minor Judges",
+      "reference": "Judges 11:1-11",
+      "description": "Previously driven from home by his brothers, Jephthah lives as a raider in Tob. When Ammon attacks, Gilead's elders recall him and make him their head and commander at Mizpah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-jephthah-disputes-ammon-claim",
+      "title": "Jephthah Disputes Ammon's Land Claim",
+      "start": "1034 BC",
+      "category": "Jephthah and Minor Judges",
+      "reference": "Judges 11:12-28",
+      "description": "Jephthah exchanges messages with Ammon's king, recounting Israel's route around Edom and Moab and its conquest of Amorite territory from Sihon. The king rejects his argument that Israel has held the land for three hundred years.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-jephthahs-vow-and-victory",
+      "title": "Jephthah's Vow and Victory",
+      "start": "1034 BC",
+      "category": "Jephthah and Minor Judges",
+      "reference": "Judges 11:29-40",
+      "description": "Jephthah vows to offer to the LORD whoever first comes from his house if he returns victorious, then defeats Ammon across twenty towns. His only daughter greets him, mourns her virginity for two months, and returns for him to carry out the vow.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-jephthah-fights-ephraim",
+      "title": "Jephthah Fights Ephraim",
+      "start": "1034 BC",
+      "category": "Jephthah and Minor Judges",
+      "reference": "Judges 12:1-7",
+      "description": "Ephraim confronts Jephthah for fighting without them, and Gilead defeats them. At the Jordan fords, pronunciation of a password identifies fleeing Ephraimites; Jephthah judges six years before his death.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-ibzan-elon-abdon",
+      "title": "Ibzan, Elon, and Abdon Judge Israel",
+      "start": "1028 BC",
+      "end": "1003 BC",
+      "category": "Jephthah and Minor Judges",
+      "reference": "Judges 12:8-15",
+      "description": "Ibzan judges seven years, Elon ten years, and Abdon eight years. Their notices record large households, marriages, and descendants riding donkeys.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-philistine-oppression",
+      "title": "Philistine Oppression Begins",
+      "start": "1118 BC",
+      "end": "1078 BC",
+      "category": "Samson",
+      "reference": "Judges 13:1",
+      "description": "After Israel again turns to evil, the Philistines dominate the people for forty years.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-birth-of-samson",
+      "title": "The Birth of Samson Is Announced",
+      "start": "1118 BC",
+      "category": "Samson",
+      "reference": "Judges 13:2-25",
+      "description": "The angel of the LORD announces to Manoah's childless wife that her son will be a Nazirite from birth and begin to deliver Israel from Philistine rule. The angel ascends in the altar flame, and the promised child Samson is born and blessed.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-samson-wedding-riddle",
+      "title": "Samson's Wedding and Riddle",
+      "start": "1098 BC",
+      "category": "Samson",
+      "reference": "Judges 14:1-20",
+      "description": "Samson seeks a Philistine wife at Timnah, kills a lion on the journey, and later finds honey in its carcass. His wedding companions obtain the answer to his riddle through his bride, so he kills thirty men at Ashkelon to pay the wager and departs in anger.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-samson-burns-philistine-crops",
+      "title": "Samson Burns the Philistines' Crops",
+      "start": "1098 BC",
+      "category": "Samson",
+      "reference": "Judges 15:1-8",
+      "description": "Finding that his wife has been given to another man, Samson releases three hundred foxes with torches among Philistine grain, vineyards, and olive groves. The Philistines burn the woman and her father, and Samson retaliates with a great slaughter.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-samson-jawbone-victory",
+      "title": "Samson's Victory at Lehi",
+      "start": "1098 BC",
+      "category": "Samson",
+      "reference": "Judges 15:9-20",
+      "description": "Judah binds Samson and hands him to the Philistines, but he breaks the ropes and kills a thousand men with a fresh donkey jawbone. God provides water when he cries out in thirst, and Samson judges Israel for twenty years.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-samson-carries-gaza-gates",
+      "title": "Samson Carries Away Gaza's Gates",
+      "start": "1088 BC",
+      "category": "Samson",
+      "reference": "Judges 16:1-3",
+      "description": "Surrounded in Gaza, Samson rises at midnight, tears the city gates from their posts, and carries them to a hill facing Hebron.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-delilah-betrays-samson",
+      "title": "Delilah Betrays Samson",
+      "start": "1078 BC",
+      "category": "Samson",
+      "reference": "Judges 16:4-22",
+      "description": "Philistine rulers pay Delilah to discover Samson's vulnerability. After three false answers he reveals his Nazirite consecration; she has his hair shaved, and the Philistines blind, shackle, and imprison him at Gaza.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "jdg-samson-destroys-dagon-temple",
+      "title": "Samson Destroys the Temple of Dagon",
+      "start": "1078 BC",
+      "category": "Samson",
+      "reference": "Judges 16:23-31",
+      "description": "The Philistine rulers bring Samson from prison to entertain a crowd assembled in Dagon's temple. He prays for strength, pushes apart the central pillars, and dies with the gathered rulers and people when the building collapses.",
+      "datingBasis": "traditional"
+    }
+  ]
+}
