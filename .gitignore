@@ -98,6 +98,9 @@ dist
 # Sveltekit cache directory
 .svelte-kit/
 
+# adapter-node build output (`bun run build`)
+build/
+
 # vitepress build output
 **/.vitepress/dist
 
