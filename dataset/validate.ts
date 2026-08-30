@@ -19,7 +19,7 @@ import { formatDate } from './lib/dates.ts';
 const args = process.argv.slice(2);
 const index = args.indexOf('--events');
 const eventsDir =
-  index === -1 ? resolve(import.meta.dir, 'events') : resolve(args[index + 1]);
+  index === -1 ? resolve(import.meta.dirname, 'events') : resolve(args[index + 1]);
 
 const { books, errors, spread } = loadAllBooks(eventsDir);
 
@@ -42,7 +42,7 @@ console.log(`${spread} event(s) share a date and are spread within their authore
 
 // Coverage against the target scope in dataset/books.json.
 try {
-  const manifest = JSON.parse(readFileSync(resolve(import.meta.dir, 'books.json'), 'utf-8')) as {
+  const manifest = JSON.parse(readFileSync(resolve(import.meta.dirname, 'books.json'), 'utf-8')) as {
     target: { book: string }[];
   };
   const done = new Set(books.map((book) => book.file.book));

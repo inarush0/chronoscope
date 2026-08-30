@@ -11,10 +11,9 @@ one JSON file per book in `dataset/events/`, which is the source of truth.
    `[Book N]` header and a one-line summary, which gives a usable skeleton.
 3. Write `dataset/events/<NN>-<Book>.json` in the format below.
 4. `bun run validate` — checks dates, duplicate ids, ordering.
-5. `bun run build-db` — regenerates `dataset/chronoscope.sqlite`. With
-   `DATASET_RELOAD=1` set, refresh the browser to see the new events; the dev
-   server re-opens the file on change.
-6. Commit the rebuilt `dataset/chronoscope.sqlite` alongside the event file — it
+5. `bun run build-db` — regenerates `static/chronoscope.json`. The dev server
+   serves `static/` directly, so a browser refresh shows the new events.
+6. Commit the rebuilt `static/chronoscope.json` alongside the event file — it
    is a committed artifact, and CI fails if the two drift apart. `bun run
    check:artifact` runs that same check locally.
 
