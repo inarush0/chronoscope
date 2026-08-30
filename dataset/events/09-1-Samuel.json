@@ -1,0 +1,517 @@
+{
+  "book": "1 Samuel",
+  "order": 9,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "1sa-hannah-prays-for-child",
+      "title": "Hannah Prays for a Child",
+      "start": "1106 BC",
+      "category": "Samuel and Eli",
+      "reference": "1 Samuel 1:1-18",
+      "description": "At the family's yearly sacrifice in Shiloh, childless Hannah weeps and vows to dedicate a son to the LORD. Eli initially mistakes her silent prayer for drunkenness, then sends her away with a blessing.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-birth-dedication-samuel",
+      "title": "Samuel Is Born and Dedicated",
+      "start": "1105 BC",
+      "end": "1102 BC",
+      "category": "Samuel and Eli",
+      "reference": "1 Samuel 1:19-28",
+      "description": "Hannah conceives and names her son Samuel. After weaning him, she brings him with an offering to Eli at Shiloh and gives him to lifelong service before the LORD.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-hannah-song",
+      "title": "Hannah Gives Thanks",
+      "start": "1102 BC",
+      "category": "Samuel and Eli",
+      "reference": "1 Samuel 2:1-11",
+      "description": "Hannah prays in celebration of God's holiness and his reversal of human fortunes, anticipating strength for his king and anointed one. Samuel remains at Shiloh to minister under Eli.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1sa-elis-sons-corrupt-priesthood",
+      "title": "Eli's Sons Corrupt the Priesthood",
+      "start": "1102 BC",
+      "end": "1095 BC",
+      "category": "Samuel and Eli",
+      "reference": "1 Samuel 2:12-26",
+      "description": "Hophni and Phinehas seize sacrificial meat and abuse women serving at the sanctuary, ignoring Eli's rebuke. In contrast, Samuel ministers in a linen ephod, receives a robe from Hannah each year, and grows in favor.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-eli-house-condemned",
+      "title": "The House of Eli Is Condemned",
+      "start": "1095 BC",
+      "category": "Samuel and Eli",
+      "reference": "1 Samuel 2:27-36",
+      "description": "A man of God condemns Eli for honoring his sons above the LORD and announces the fall of his priestly house. The deaths of Hophni and Phinehas on one day will confirm the judgment.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-samuel-called",
+      "title": "The LORD Calls Samuel",
+      "start": "1095 BC",
+      "category": "Samuel and Eli",
+      "reference": "1 Samuel 3:1-21",
+      "description": "Samuel repeatedly hears his name at night and runs to Eli, who finally recognizes that the LORD is calling the boy. Samuel receives and faithfully reports a judgment against Eli's house, and all Israel comes to recognize him as a prophet.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-ark-captured-ebenezer",
+      "title": "The Ark Is Captured at Ebenezer",
+      "start": "1088 BC",
+      "category": "The Ark among the Philistines",
+      "reference": "1 Samuel 4:1-11",
+      "description": "After an initial defeat by the Philistines, Israel brings the ark from Shiloh into battle as Hophni and Phinehas accompany it. Israel suffers a devastating second defeat, the priests are killed, and the ark is captured.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-death-of-eli",
+      "title": "Eli Dies at the News of the Ark",
+      "start": "1088 BC",
+      "category": "The Ark among the Philistines",
+      "reference": "1 Samuel 4:12-22",
+      "description": "A messenger carries news of the defeat to Shiloh. Eli falls backward and dies when he hears that the ark has been captured, and the wife of Phinehas dies giving birth to Ichabod amid the calamity.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-ark-afflicts-philistine-cities",
+      "title": "The Ark Afflicts the Philistine Cities",
+      "start": "1088 BC",
+      "category": "The Ark among the Philistines",
+      "reference": "1 Samuel 5:1-12",
+      "description": "At Ashdod, the image of Dagon twice falls before the ark and is found broken the second morning. Tumors and panic follow the ark as the Philistines move it from Ashdod to Gath and Ekron.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1sa-ark-returned-beth-shemesh",
+      "title": "The Ark Returns to Beth-shemesh",
+      "start": "1087 BC",
+      "category": "The Ark among the Philistines",
+      "reference": "1 Samuel 6:1-18",
+      "description": "After seven months the Philistines send the ark away on a new cart with golden guilt offerings. Two untrained cows carry it directly to Beth-shemesh, where the people sacrifice and the five Philistine rulers observe its return.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1sa-ark-kiriath-jearim",
+      "title": "The Ark Is Taken to Kiriath-jearim",
+      "start": "1087 BC",
+      "end": "1067 BC",
+      "category": "The Ark among the Philistines",
+      "reference": "1 Samuel 6:19-7:2",
+      "description": "After deaths at Beth-shemesh, the people ask Kiriath-jearim to receive the ark. It is placed in Abinadab's house under Eleazar's care, and twenty years pass while Israel laments before the LORD.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-samuel-victory-mizpah",
+      "title": "Samuel Leads Israel to Victory at Mizpah",
+      "start": "1067 BC",
+      "category": "Samuel Judges Israel",
+      "reference": "1 Samuel 7:3-14",
+      "description": "Israel puts away the Baals and Astartes and gathers to confess at Mizpah. As the Philistines attack, the LORD thunders against them; Samuel sets up the Ebenezer stone after Israel's victory and the recovery of lost towns.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-samuel-circuit",
+      "title": "Samuel Judges Israel on Circuit",
+      "start": "1067 BC",
+      "end": "1051 BC",
+      "category": "Samuel Judges Israel",
+      "reference": "1 Samuel 7:15-17",
+      "description": "Samuel judges Israel throughout his life, traveling annually among Bethel, Gilgal, and Mizpah before returning to his home and altar at Ramah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-israel-demands-king",
+      "title": "Israel Demands a King",
+      "start": "1051 BC",
+      "category": "Saul Becomes King",
+      "reference": "1 Samuel 8:1-22",
+      "description": "When Samuel's sons pervert justice, Israel's elders demand a king like those of other nations. Samuel warns that a king will conscript their children, appropriate their produce and property, and tax their flocks, but the people persist.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-samuel-meets-saul",
+      "title": "Samuel Meets Saul",
+      "start": "1051 BC",
+      "category": "Saul Becomes King",
+      "reference": "1 Samuel 9:1-27",
+      "description": "While searching for his father's lost donkeys, Saul goes to consult Samuel in the land of Zuph. Forewarned of Saul's arrival, Samuel gives the Benjaminite the place of honor at a sacrificial meal and prepares to reveal his calling.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-anointed-privately",
+      "title": "Samuel Privately Anoints Saul",
+      "start": "1051 BC",
+      "category": "Saul Becomes King",
+      "reference": "1 Samuel 10:1-16",
+      "description": "Samuel pours oil on Saul's head and gives him several confirming signs. Each occurs that day, including Saul joining a band of prophets when the spirit of God comes upon him, though he does not tell his uncle about the kingship.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-chosen-mizpah",
+      "title": "Saul Is Chosen by Lot at Mizpah",
+      "start": "1051 BC",
+      "category": "Saul Becomes King",
+      "reference": "1 Samuel 10:17-27",
+      "description": "Samuel assembles Israel and the lot identifies Saul, who is found hiding among the baggage. Samuel presents him to the people, records the rights and duties of kingship, and sends the assembly home.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-rescues-jabesh",
+      "title": "Saul Rescues Jabesh-gilead",
+      "start": "1050 BC",
+      "category": "Saul Becomes King",
+      "reference": "1 Samuel 10:27-11:13",
+      "description": "Nahash the Ammonite besieges Jabesh-gilead and threatens to mutilate its men. The spirit of God comes upon Saul, who summons Israel by sending pieces of oxen through the land and routs the Ammonites at the morning watch.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-kingship-renewed-gilgal",
+      "title": "The Kingship Is Renewed at Gilgal",
+      "start": "1050 BC",
+      "category": "Saul Becomes King",
+      "reference": "1 Samuel 11:14-12:25",
+      "description": "Israel publicly makes Saul king at Gilgal and celebrates with sacrifices. Samuel vindicates his own leadership, recounts the LORD's deliverances, and calls down thunder during the wheat harvest as a sign of the people's fault in demanding a king.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-jonathan-attacks-geba",
+      "title": "Jonathan Attacks the Philistine Garrison",
+      "start": "1048 BC",
+      "category": "Saul's Wars and Rejection",
+      "reference": "1 Samuel 13:1-7",
+      "description": "Jonathan strikes the Philistine garrison at Geba, provoking a massive force to assemble at Michmash. Israelite troops hide or flee across the Jordan while Saul waits at Gilgal with a trembling remnant.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-unlawful-offering",
+      "title": "Saul Offers Sacrifice at Gilgal",
+      "start": "1048 BC",
+      "category": "Saul's Wars and Rejection",
+      "reference": "1 Samuel 13:8-23",
+      "description": "As his troops scatter and Samuel delays, Saul offers the burnt offering himself. Samuel arrives immediately afterward and announces that Saul's dynasty will not continue; meanwhile Philistine control of metalworking leaves Israel almost without weapons.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-jonathan-michmash-attack",
+      "title": "Jonathan Climbs Against Michmash",
+      "start": "1048 BC",
+      "category": "Saul's Wars and Rejection",
+      "reference": "1 Samuel 14:1-23",
+      "description": "Jonathan and his armor-bearer climb the crags to the Philistine outpost and kill about twenty men. Panic and an earthquake throw the camp into confusion, allowing Saul's force, returning defectors, and hidden Israelites to join the rout.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-rash-oath",
+      "title": "Saul's Rash Oath Endangers Jonathan",
+      "start": "1048 BC",
+      "category": "Saul's Wars and Rejection",
+      "reference": "1 Samuel 14:24-46",
+      "description": "Saul forbids the troops to eat until evening, leaving them exhausted. Jonathan unknowingly tastes honey and is marked by lot for violating the oath, but the people ransom the victor and prevent Saul from killing him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-wars-surrounding-peoples",
+      "title": "Saul Wars Against Israel's Enemies",
+      "start": "1048 BC",
+      "end": "1026 BC",
+      "category": "Saul's Wars and Rejection",
+      "reference": "1 Samuel 14:47-52",
+      "description": "Saul fights Moab, Ammon, Edom, Zobah, Amalek, and the Philistines. Hard warfare with the Philistines continues, and Saul draws every strong warrior he sees into royal service.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-spares-agag",
+      "title": "Saul Spares Agag and the Best Spoil",
+      "start": "1026 BC",
+      "category": "Saul's Wars and Rejection",
+      "reference": "1 Samuel 15:1-9",
+      "description": "Samuel commissions Saul to execute judgment against Amalek. Saul defeats them from Havilah to Shur but preserves King Agag and the best livestock rather than carrying out the command fully.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-rejected-as-king",
+      "title": "Samuel Rejects Saul as King",
+      "start": "1026 BC",
+      "category": "Saul's Wars and Rejection",
+      "reference": "1 Samuel 15:10-35",
+      "description": "Samuel confronts Saul at Gilgal, where the surviving animals expose Saul's claim of obedience. Samuel announces the loss of the kingdom, executes Agag, and departs from Saul for the last time while continuing to grieve for him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-anointed-bethlehem",
+      "title": "David Is Anointed at Bethlehem",
+      "start": "1025 BC",
+      "category": "David Rises at Court",
+      "reference": "1 Samuel 16:1-13",
+      "description": "Samuel goes to Jesse's household under cover of a sacrifice and passes over seven older sons. The youngest, David, is summoned from the sheep and anointed, and the spirit of the LORD comes powerfully upon him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-serves-saul",
+      "title": "David Enters Saul's Service",
+      "start": "1025 BC",
+      "category": "David Rises at Court",
+      "reference": "1 Samuel 16:14-23",
+      "description": "As a harmful spirit torments Saul, his servants seek a skilled musician. David enters the royal service as armor-bearer and relieves Saul's distress by playing the lyre.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-goliath-defies-israel",
+      "title": "Goliath Defies Israel",
+      "start": "1024 BC",
+      "category": "David Rises at Court",
+      "reference": "1 Samuel 17:1-30",
+      "description": "The Philistines and Israel face one another across the Valley of Elah while Goliath challenges Israel for forty days. David arrives with provisions for his brothers and questions why the Philistine is permitted to defy Israel's God.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-kills-goliath",
+      "title": "David Kills Goliath",
+      "start": "1024 BC",
+      "category": "David Rises at Court",
+      "reference": "1 Samuel 17:31-58",
+      "description": "David declines Saul's unfamiliar armor and approaches Goliath with a staff, sling, and five stones. One stone strikes the champion's forehead, David kills him with his own sword, and Israel pursues the fleeing Philistines.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-jonathan-covenant-david",
+      "title": "Jonathan Makes a Covenant with David",
+      "start": "1024 BC",
+      "category": "David Rises at Court",
+      "reference": "1 Samuel 18:1-5",
+      "description": "Jonathan binds himself to David in covenant loyalty and gives him his robe and weapons. David succeeds in every assignment Saul gives him and is placed over the army.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-jealous-david",
+      "title": "Saul Grows Jealous of David",
+      "start": "1024 BC",
+      "category": "Saul Pursues David",
+      "reference": "1 Samuel 18:6-16",
+      "description": "Songs celebrating David's greater victories provoke Saul's jealousy. Saul twice hurls his spear at David and then sends him away as a military commander, but David's success only increases Saul's fear and Israel's affection.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-marries-michal",
+      "title": "David Marries Michal",
+      "start": "1023 BC",
+      "category": "Saul Pursues David",
+      "reference": "1 Samuel 18:17-30",
+      "description": "Saul tries to expose David to Philistine danger through marriage negotiations, first involving Merab and then Michal. David supplies the dangerous bride-price for Michal and becomes Saul's son-in-law, while his fame and Saul's hostility grow.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-jonathan-intercedes-david",
+      "title": "Jonathan Intercedes for David",
+      "start": "1023 BC",
+      "category": "Saul Pursues David",
+      "reference": "1 Samuel 19:1-7",
+      "description": "Jonathan warns David of Saul's order to kill him and reminds his father of David's faithful service and victory. Saul temporarily swears not to kill David, who returns to court.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-michal-helps-david-escape",
+      "title": "Michal Helps David Escape",
+      "start": "1022 BC",
+      "category": "Saul Pursues David",
+      "reference": "1 Samuel 19:8-17",
+      "description": "After another victory, David evades Saul's spear and flees home. Michal lowers him through a window, disguises a household idol in his bed, and delays Saul's agents while David escapes.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-prophesies-naioth",
+      "title": "Saul Prophesies at Naioth",
+      "start": "1022 BC",
+      "category": "Saul Pursues David",
+      "reference": "1 Samuel 19:18-24",
+      "description": "David takes refuge with Samuel at Naioth. Three groups sent to arrest him fall into prophetic frenzy, and when Saul comes himself the spirit of God also overwhelms him before Samuel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1sa-jonathan-warns-david",
+      "title": "Jonathan Warns David at the New Moon",
+      "start": "1022 BC",
+      "category": "Saul Pursues David",
+      "reference": "1 Samuel 20:1-42",
+      "description": "David and Jonathan renew their covenant and devise an arrow signal to test Saul's intentions. Saul's rage at David's absence confirms the danger, and the friends part after pledging lasting loyalty between their households.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1sa-david-receives-holy-bread",
+      "title": "David Receives Holy Bread at Nob",
+      "start": "1022 BC",
+      "category": "David in the Wilderness",
+      "reference": "1 Samuel 21:1-9",
+      "description": "David deceives the priest Ahimelech about his mission and receives the bread of the Presence and Goliath's sword. Doeg the Edomite, one of Saul's officials, witnesses the encounter.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-feigns-madness-gath",
+      "title": "David Feigns Madness at Gath",
+      "start": "1022 BC",
+      "category": "David in the Wilderness",
+      "reference": "1 Samuel 21:10-15",
+      "description": "David flees to King Achish at Gath but fears recognition as Israel's celebrated warrior. He pretends insanity at the city gate until Achish dismisses him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-gathers-adullam",
+      "title": "David Gathers Followers at Adullam",
+      "start": "1022 BC",
+      "category": "David in the Wilderness",
+      "reference": "1 Samuel 22:1-5",
+      "description": "David's family and about four hundred distressed, indebted, and discontented men join him at the cave of Adullam. He places his parents in Moab and, at Gad's direction, returns to Judah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-priests-nob-massacred",
+      "title": "The Priests of Nob Are Massacred",
+      "start": "1022 BC",
+      "category": "David in the Wilderness",
+      "reference": "1 Samuel 22:6-23",
+      "description": "Doeg reports Ahimelech's aid to David, and Saul orders the priests killed despite Ahimelech's defense. Doeg kills eighty-five priests and destroys Nob; only Abiathar escapes to David with news of the massacre.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-rescues-keilah",
+      "title": "David Rescues Keilah",
+      "start": "1021 BC",
+      "category": "David in the Wilderness",
+      "reference": "1 Samuel 23:1-14",
+      "description": "After twice inquiring of the LORD, David defeats Philistine raiders and saves Keilah. When he learns that Saul is approaching and the town would surrender him, David leaves with about six hundred men for wilderness strongholds.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-jonathan-meets-david-horesh",
+      "title": "Jonathan Meets David at Horesh",
+      "start": "1021 BC",
+      "category": "David in the Wilderness",
+      "reference": "1 Samuel 23:15-18",
+      "description": "Jonathan finds David in the Wilderness of Ziph and strengthens him in God, acknowledging that David will be king. They renew their covenant before separating for the last time.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-escapes-maon",
+      "title": "David Escapes Saul at Maon",
+      "start": "1021 BC",
+      "category": "David in the Wilderness",
+      "reference": "1 Samuel 23:19-29",
+      "description": "The Ziphites disclose David's position, and Saul nearly encloses him on a mountain in the wilderness of Maon. A report of a Philistine raid abruptly draws Saul away, and David escapes to En-gedi.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-spares-saul-cave",
+      "title": "David Spares Saul in the Cave",
+      "start": "1020 BC",
+      "category": "David Spares Saul",
+      "reference": "1 Samuel 24:1-22",
+      "description": "Saul enters a cave at En-gedi where David and his men are hidden. David cuts a corner from Saul's cloak but refuses to harm the anointed king, then proves his restraint and receives Saul's acknowledgment that he will reign.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-death-of-samuel",
+      "title": "Samuel Dies at Ramah",
+      "start": "1019 BC",
+      "category": "David in the Wilderness",
+      "reference": "1 Samuel 25:1",
+      "description": "Samuel dies and all Israel gathers to mourn him. He is buried at his home in Ramah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-abigail-prevents-bloodshed",
+      "title": "Abigail Prevents David from Killing Nabal",
+      "start": "1019 BC",
+      "category": "David in the Wilderness",
+      "reference": "1 Samuel 25:2-35",
+      "description": "Nabal insults David's messengers and refuses provisions despite David's protection of his shepherds. Abigail intercepts the armed company with a generous gift and persuades David not to incur bloodguilt through personal vengeance.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-marries-abigail",
+      "title": "Nabal Dies and David Marries Abigail",
+      "start": "1019 BC",
+      "category": "David in the Wilderness",
+      "reference": "1 Samuel 25:36-44",
+      "description": "After Abigail tells Nabal what happened, he becomes unresponsive and dies about ten days later. David then marries Abigail and also takes Ahinoam as wife, while Saul gives Michal to another man.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1sa-david-spares-saul-camp",
+      "title": "David Spares Saul in His Camp",
+      "start": "1018 BC",
+      "category": "David Spares Saul",
+      "reference": "1 Samuel 26:1-25",
+      "description": "David and Abishai enter Saul's camp at night while the army sleeps. David refuses to let Abishai kill Saul, takes the spear and water jar beside the king's head, and from a distant hill again demonstrates that he means Saul no harm.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-david-settles-ziklag",
+      "title": "David Settles at Ziklag",
+      "start": "1012 BC",
+      "end": "1010 BC",
+      "category": "Ziklag and Gilboa",
+      "reference": "1 Samuel 27:1-12",
+      "description": "David crosses to Achish of Gath with six hundred men and their households, ending Saul's pursuit. Given Ziklag, David raids southern peoples while misleading Achish about his targets during a stay of one year and four months.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-saul-consults-medium",
+      "title": "Saul Consults the Medium at Endor",
+      "start": "1010 BC",
+      "category": "Ziklag and Gilboa",
+      "reference": "1 Samuel 28:1-25",
+      "description": "Facing the Philistine army at Shunem without an answer from dreams, Urim, or prophets, Saul visits a medium in disguise. Samuel appears and announces that Israel will be defeated and Saul and his sons will die the next day.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-philistines-dismiss-david",
+      "title": "The Philistine Commanders Dismiss David",
+      "start": "1010 BC",
+      "category": "Ziklag and Gilboa",
+      "reference": "1 Samuel 29:1-11",
+      "description": "Although Achish trusts David, the other Philistine commanders refuse to let him accompany their army against Israel. David and his men are ordered back to Philistine territory while the army advances toward Jezreel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1sa-amalekites-burn-ziklag",
+      "title": "The Amalekites Burn Ziklag",
+      "start": "1010 BC",
+      "category": "Ziklag and Gilboa",
+      "reference": "1 Samuel 30:1-10",
+      "description": "Returning on the third day, David finds Ziklag burned and its families taken captive. Though his embittered men speak of stoning him, David seeks direction through Abiathar's ephod and sets out in pursuit.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1sa-david-recovers-ziklag-captives",
+      "title": "David Recovers the Ziklag Captives",
+      "start": "1010 BC",
+      "category": "Ziklag and Gilboa",
+      "reference": "1 Samuel 30:11-31",
+      "description": "An abandoned Egyptian servant guides David to the Amalekite camp, which he attacks from twilight into the next evening. David recovers every captive and possession, grants equal shares to those left with the baggage, and sends spoil to Judah's elders.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1sa-saul-sons-die-gilboa",
+      "title": "Saul and His Sons Die at Gilboa",
+      "start": "1010 BC",
+      "category": "Ziklag and Gilboa",
+      "reference": "1 Samuel 31:1-7",
+      "description": "The Philistines rout Israel on Mount Gilboa and kill Jonathan, Abinadab, and Malchishua. Badly wounded and fearing capture, Saul falls on his sword, and nearby Israelite towns are abandoned to Philistine occupation.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1sa-jabesh-recovers-saul-bodies",
+      "title": "Jabesh-gilead Recovers the Royal Bodies",
+      "start": "1010 BC",
+      "category": "Ziklag and Gilboa",
+      "reference": "1 Samuel 31:8-13",
+      "description": "The Philistines display Saul's body and those of his sons at Beth-shan after placing his armor in Astarte's temple. Warriors from Jabesh-gilead travel through the night to recover the bodies, burn them, bury the bones, and fast seven days.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

@@ -1,0 +1,592 @@
+{
+  "book": "2 Kings",
+  "order": 12,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "2ki-ahaziah-consults-ekron",
+      "title": "Elijah Condemns Ahaziah's Appeal to Ekron",
+      "start": "852 BC",
+      "category": "Elijah and Elisha",
+      "reference": "2 Kings 1:1-18",
+      "description": "After being injured in a fall, Ahaziah sends messengers to consult the god of Ekron about his recovery. Elijah intercepts them, survives the king's attempts to seize him, and announces that Ahaziah will die from the injury.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-elijah-taken-heaven",
+      "title": "Elijah Is Taken into Heaven",
+      "start": "852 BC",
+      "category": "Elijah and Elisha",
+      "reference": "2 Kings 2:1-18",
+      "description": "Elisha follows Elijah from Gilgal through Bethel and Jericho and across the divided Jordan. A fiery chariot separates them, Elijah ascends in a whirlwind, and Elisha returns across the river with his master's mantle as the prophetic communities recognize his succession.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-elisha-heals-jericho-water",
+      "title": "Elisha Heals Jericho's Water",
+      "start": "852 BC",
+      "category": "Elijah and Elisha",
+      "reference": "2 Kings 2:19-25",
+      "description": "Elisha uses salt to make Jericho's harmful spring wholesome. On the road to Bethel he curses a group that jeers at him, and two bears maul forty-two of them.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-moab-campaign",
+      "title": "Israel, Judah, and Edom Campaign against Moab",
+      "start": "851 BC",
+      "category": "Elisha and the Kings",
+      "reference": "2 Kings 3:1-27",
+      "description": "Jehoram of Israel joins Jehoshaphat and the king of Edom to suppress Moab's revolt. Elisha promises water and victory, but after the allies devastate Moab the besieged king sacrifices his heir on the wall and Israel withdraws.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-widow-oil-multiplied",
+      "title": "A Widow's Oil Is Multiplied",
+      "start": "850 BC",
+      "category": "Elisha's Miracles",
+      "reference": "2 Kings 4:1-7",
+      "description": "A prophet's widow faces the enslavement of her sons for debt. At Elisha's direction her small supply of oil fills every borrowed vessel, enabling her to pay the creditor and support her household.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-shunammite-son-restored",
+      "title": "Elisha Restores the Shunammite's Son",
+      "start": "849 BC",
+      "category": "Elisha's Miracles",
+      "reference": "2 Kings 4:8-37",
+      "description": "A woman at Shunem provides Elisha a room and later bears the son he foretells. When the child suddenly dies, she seeks the prophet at Carmel, and Elisha returns to stretch himself over the boy until life returns.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-elisha-feeds-prophets",
+      "title": "Elisha Feeds the Prophetic Community",
+      "start": "849 BC",
+      "category": "Elisha's Miracles",
+      "reference": "2 Kings 4:38-44",
+      "description": "During famine Elisha renders a poisoned stew harmless for the prophetic company. He then distributes a modest gift of firstfruits among a hundred people, and food remains after all have eaten.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-naaman-healed",
+      "title": "Naaman Is Healed in the Jordan",
+      "start": "848 BC",
+      "category": "Elisha's Miracles",
+      "reference": "2 Kings 5:1-19",
+      "description": "Naaman, commander of Aram's army, comes to Israel seeking relief from a skin disease. After resisting Elisha's simple direction, he washes seven times in the Jordan, is healed, and acknowledges Israel's God while Elisha refuses payment.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-gehazi-punished",
+      "title": "Gehazi Is Punished for Taking Naaman's Gifts",
+      "start": "848 BC",
+      "category": "Elisha's Miracles",
+      "reference": "2 Kings 5:20-27",
+      "description": "Gehazi secretly pursues Naaman and obtains silver and clothing by inventing a request from Elisha. When he conceals the act, Elisha exposes his greed and Naaman's disease comes upon him.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-axe-head-floats",
+      "title": "Elisha Recovers a Borrowed Axe Head",
+      "start": "847 BC",
+      "category": "Elisha's Miracles",
+      "reference": "2 Kings 6:1-7",
+      "description": "While the prophetic community cuts timber beside the Jordan, a borrowed iron axe head falls into the water. Elisha causes it to rise to the surface so its borrower can retrieve it.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-arameans-led-samaria",
+      "title": "Elisha Leads the Arameans into Samaria",
+      "start": "846 BC",
+      "category": "Elisha's Miracles",
+      "reference": "2 Kings 6:8-23",
+      "description": "Elisha repeatedly reveals Aramean military plans and is surrounded at Dothan. The attacking force is struck with impaired sight and led into Samaria, where Elisha persuades Israel's king to feed and release the captives rather than kill them.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-samaria-siege-lifted",
+      "title": "The Siege and Famine of Samaria End",
+      "start": "845 BC",
+      "category": "Elisha's Miracles",
+      "reference": "2 Kings 6:24-7:20",
+      "description": "Ben-hadad's siege produces desperate famine in Samaria, and the king blames Elisha. The Arameans abandon their camp after hearing an imagined army, four outcasts discover the flight, and the city's food supply is restored as Elisha predicted.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-shunammite-land-restored",
+      "title": "The Shunammite's Land Is Restored",
+      "start": "843 BC",
+      "category": "Elisha's Miracles",
+      "reference": "2 Kings 8:1-6",
+      "description": "After living in Philistia through a seven-year famine foretold by Elisha, the Shunammite woman returns to petition for her property. Her arrival coincides with Gehazi recounting her son's restoration, and the king orders her land and revenues returned.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-hazael-kills-ben-hadad",
+      "title": "Hazael Kills Ben-hadad and Becomes King",
+      "start": "842 BC",
+      "category": "Elisha and the Kings",
+      "reference": "2 Kings 8:7-15",
+      "description": "At Damascus Elisha tells Hazael that Ben-hadad's illness is survivable but that the king will nevertheless die, and he weeps over the harm Hazael will bring Israel. Hazael suffocates Ben-hadad the next day and succeeds him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jehoram-judah-reigns",
+      "title": "Jehoram Reigns in Judah",
+      "start": "848 BC",
+      "end": "841 BC",
+      "category": "Elisha and the Kings",
+      "reference": "2 Kings 8:16-24",
+      "description": "Jehoram rules Judah in alliance with Ahab's house and follows its practices. Edom and Libnah revolt during his reign, but Judah's Davidic dynasty is preserved and his son Ahaziah succeeds him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-ahaziah-judah-ramoth",
+      "title": "Ahaziah Joins Joram against Aram",
+      "start": "841 BC",
+      "category": "Elisha and the Kings",
+      "reference": "2 Kings 8:25-29",
+      "description": "Ahaziah of Judah joins Joram of Israel in battle against Hazael at Ramoth-gilead. Joram is wounded and returns to Jezreel, where Ahaziah visits him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jehu-anointed",
+      "title": "Jehu Is Anointed King",
+      "start": "841 BC",
+      "category": "Jehu's Revolution",
+      "reference": "2 Kings 9:1-13",
+      "description": "Elisha sends a young prophet to anoint the commander Jehu at Ramoth-gilead and commission him against Ahab's dynasty. Jehu's fellow officers spread their garments before him and proclaim him king.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jehu-kills-two-kings",
+      "title": "Jehu Kills Joram and Ahaziah",
+      "start": "841 BC",
+      "category": "Jehu's Revolution",
+      "reference": "2 Kings 9:14-29",
+      "description": "Jehu races to Jezreel and confronts the wounded Joram and his ally Ahaziah. He kills Joram on Naboth's former property and his forces fatally wound Ahaziah as the Judean king flees.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jezebel-killed",
+      "title": "Jezebel Is Killed at Jezreel",
+      "start": "841 BC",
+      "category": "Jehu's Revolution",
+      "reference": "2 Kings 9:30-37",
+      "description": "As Jehu enters Jezreel, palace eunuchs throw Jezebel from a window at his command. Horses trample her, and dogs consume most of her body before burial can be arranged, fulfilling Elijah's judgment.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-ahab-sons-killed",
+      "title": "Ahab's Sons Are Killed",
+      "start": "841 BC",
+      "category": "Jehu's Revolution",
+      "reference": "2 Kings 10:1-17",
+      "description": "Jehu challenges Samaria's guardians to defend Ahab's seventy sons, and they instead execute the princes and send their heads to Jezreel. Jehu also kills Ahab's remaining supporters and relatives of Ahaziah on his way to Samaria.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-jehu-destroys-baal",
+      "title": "Jehu Destroys Baal Worship in Israel",
+      "start": "841 BC",
+      "category": "Jehu's Revolution",
+      "reference": "2 Kings 10:18-36",
+      "description": "Pretending great devotion to Baal, Jehu gathers the cult's worshipers into its temple and has them killed. The temple is demolished, though Jehu retains Jeroboam's calf shrines, and Hazael begins cutting away Israelite territory during his reign.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-athaliah-seizes-throne",
+      "title": "Athaliah Seizes Judah's Throne",
+      "start": "841 BC",
+      "category": "Judah's Temple and Throne",
+      "reference": "2 Kings 11:1-3",
+      "description": "After Ahaziah's death, Athaliah attempts to destroy the royal family and rules Judah for six years. Jehosheba secretly rescues the infant Joash and hides him with his nurse in the temple.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-joash-crowned-athaliah-killed",
+      "title": "Joash Is Crowned and Athaliah Is Killed",
+      "start": "835 BC",
+      "category": "Judah's Temple and Throne",
+      "reference": "2 Kings 11:4-21",
+      "description": "In Joash's seventh year Jehoiada organizes guards around the hidden heir, crowns him, and renews covenant commitments among king and people. Athaliah is seized and killed, and the people destroy Baal's temple before seating Joash on the throne.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-joash-repairs-temple",
+      "title": "Joash Repairs the Temple",
+      "start": "813 BC",
+      "category": "Judah's Temple and Throne",
+      "reference": "2 Kings 12:1-16",
+      "description": "When earlier collection methods fail to repair the temple, Joash and Jehoiada establish a chest for contributions. The money is weighed and paid directly to trustworthy supervisors and craftsmen who restore the building.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-joash-pays-hazael",
+      "title": "Joash Pays Hazael to Spare Jerusalem",
+      "start": "800 BC",
+      "category": "Judah's Temple and Throne",
+      "reference": "2 Kings 12:17-21",
+      "description": "After capturing Gath, Hazael turns toward Jerusalem. Joash sends him sacred gifts and treasury wealth to avert the attack, and later two royal servants assassinate Joash.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jehoahaz-oppressed-aram",
+      "title": "Aram Oppresses Israel under Jehoahaz",
+      "start": "814 BC",
+      "end": "798 BC",
+      "category": "Israel's Fading Kingdom",
+      "reference": "2 Kings 13:1-9",
+      "description": "Jehoahaz continues Jeroboam's religious practices, and Hazael and Ben-hadad reduce Israel's army to a small remnant. When Jehoahaz seeks the LORD, Israel receives relief from Aramean domination, though its idolatry persists.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-elisha-final-prophecy",
+      "title": "Elisha Gives Joash a Final Prophecy",
+      "start": "798 BC",
+      "category": "Israel's Fading Kingdom",
+      "reference": "2 Kings 13:10-21",
+      "description": "As Elisha lies dying, Joash of Israel visits him and is promised victories over Aram. Because Joash strikes the ground only three times, Elisha says the victories will be limited; after Elisha's death, contact with his bones revives a dead man.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-joash-defeats-ben-hadad",
+      "title": "Joash Recovers Towns from Aram",
+      "start": "795 BC",
+      "category": "Israel's Fading Kingdom",
+      "reference": "2 Kings 13:22-25",
+      "description": "After Hazael's death, Joash defeats Ben-hadad three times and recovers towns that Aram had taken from Jehoahaz, matching Elisha's final prediction.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-amaziah-defeats-edom",
+      "title": "Amaziah Defeats Edom",
+      "start": "790 BC",
+      "category": "Judah's Temple and Throne",
+      "reference": "2 Kings 14:1-7",
+      "description": "Amaziah executes the servants who killed his father but spares their children in accordance with the law of Moses. He defeats Edom in the Valley of Salt and captures Sela.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-joash-defeats-amaziah",
+      "title": "Joash Defeats Amaziah at Beth-shemesh",
+      "start": "790 BC",
+      "category": "Judah's Temple and Throne",
+      "reference": "2 Kings 14:8-22",
+      "description": "Emboldened by victory over Edom, Amaziah challenges Joash of Israel despite a warning against pride. Judah is routed, Jerusalem's wall is breached, and Joash carries temple and palace treasures to Samaria; Amaziah is later killed in a conspiracy.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jeroboam-restores-borders",
+      "title": "Jeroboam II Restores Israel's Borders",
+      "start": "793 BC",
+      "end": "753 BC",
+      "category": "Israel's Fading Kingdom",
+      "reference": "2 Kings 14:23-29",
+      "description": "Jeroboam II continues the northern kingdom's established sins but recovers Israelite territory from Lebo-hamath to the Dead Sea. This restoration fulfills a word delivered through the prophet Jonah amid Israel's severe distress.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-azariah-reigns-leprosy",
+      "title": "Azariah Reigns while Afflicted with Disease",
+      "start": "792 BC",
+      "end": "740 BC",
+      "category": "Judah's Temple and Throne",
+      "reference": "2 Kings 15:1-7",
+      "description": "Azariah rules Judah for fifty-two years and generally follows his father's faithful course, though the high places remain. A lasting skin disease confines him to a separate house while his son Jotham governs the palace and people.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-zechariah-shallum",
+      "title": "Zechariah and Shallum Are Assassinated",
+      "start": "752 BC",
+      "category": "Israel's Fading Kingdom",
+      "reference": "2 Kings 15:8-15",
+      "description": "Shallum publicly assassinates Zechariah after a six-month reign, ending Jehu's dynasty in its fourth generation. One month later Menahem kills Shallum and takes Israel's throne.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-menahem-pays-pul",
+      "title": "Menahem Pays Tribute to Assyria",
+      "start": "752 BC",
+      "end": "742 BC",
+      "category": "Israel's Fading Kingdom",
+      "reference": "2 Kings 15:16-22",
+      "description": "Menahem secures power with brutal violence and continues Israel's idolatry. When Pul of Assyria invades, Menahem taxes the wealthy to pay a large tribute and obtain imperial support for his rule.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-pekah-kills-pekahiah",
+      "title": "Pekah Kills Pekahiah",
+      "start": "740 BC",
+      "category": "Israel's Fading Kingdom",
+      "reference": "2 Kings 15:23-31",
+      "description": "The officer Pekah assassinates Pekahiah in Samaria and seizes the northern throne. During Pekah's reign Tiglath-pileser captures much of northern Israel and deports its inhabitants before Hoshea kills Pekah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jotham-reigns-judah",
+      "title": "Jotham Reigns in Judah",
+      "start": "750 BC",
+      "end": "735 BC",
+      "category": "Judah's Temple and Throne",
+      "reference": "2 Kings 15:32-38",
+      "description": "Jotham follows a faithful course while leaving the high places in use and builds the temple's upper gate. Late in his reign Aram and Israel begin pressuring Judah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-ahaz-sacrifices-son",
+      "title": "Ahaz Adopts Idolatrous Practices",
+      "start": "735 BC",
+      "category": "Assyria and the Two Kingdoms",
+      "reference": "2 Kings 16:1-4",
+      "description": "Ahaz rejects the pattern of David and adopts the religious practices of surrounding nations. He even offers his son by fire and sacrifices throughout the high places.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-ahaz-appeals-assyria",
+      "title": "Ahaz Appeals to Assyria against Aram and Israel",
+      "start": "734 BC",
+      "category": "Assyria and the Two Kingdoms",
+      "reference": "2 Kings 16:5-9",
+      "description": "When Rezin and Pekah attack Jerusalem, Ahaz sends temple and palace treasure to Tiglath-pileser and submits to Assyria. The Assyrian king captures Damascus, deports its population, and kills Rezin.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-ahaz-damascus-altar",
+      "title": "Ahaz Installs a Damascus-Style Altar",
+      "start": "732 BC",
+      "category": "Assyria and the Two Kingdoms",
+      "reference": "2 Kings 16:10-20",
+      "description": "Ahaz sends Uriah the priest a model of an altar he sees in Damascus and has it installed before he returns. He shifts temple offerings to the new altar and alters other furnishings in deference to Assyria.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-hoshea-rebels-assyria",
+      "title": "Hoshea Rebels against Assyria",
+      "start": "725 BC",
+      "category": "Assyria and the Two Kingdoms",
+      "reference": "2 Kings 17:1-5",
+      "description": "Hoshea initially pays tribute to Assyria but secretly seeks Egyptian support and withholds payment. The Assyrian king imprisons him and begins a three-year siege of Samaria.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-samaria-falls",
+      "title": "Samaria Falls and Israel Is Exiled",
+      "start": "722 BC",
+      "category": "Assyria and the Two Kingdoms",
+      "reference": "2 Kings 17:6-23",
+      "description": "Assyria captures Samaria and deports Israel's population to imperial territories. The narrator traces the northern kingdom's fall to persistent idolatry, rejection of prophetic warnings, and abandonment of the covenant.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-assyria-resettles-samaria",
+      "title": "Assyria Resettles Samaria",
+      "start": "721 BC",
+      "category": "Assyria and the Two Kingdoms",
+      "reference": "2 Kings 17:24-41",
+      "description": "The Assyrian king settles people from several conquered regions in Samaria. After lion attacks, an exiled Israelite priest teaches them local worship, but the communities combine reverence for the LORD with service to their ancestral gods.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-hezekiah-reforms",
+      "title": "Hezekiah Reforms Judah's Worship",
+      "start": "715 BC",
+      "category": "Hezekiah and Assyria",
+      "reference": "2 Kings 18:1-8",
+      "description": "Hezekiah removes high places, breaks sacred pillars, cuts down the Asherah, and destroys the bronze serpent that had become an object of offerings. He resists Assyria and wins successes against the Philistines.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-sennacherib-invades-judah",
+      "title": "Sennacherib Invades Judah",
+      "start": "701 BC",
+      "category": "Hezekiah and Assyria",
+      "reference": "2 Kings 18:13-16",
+      "description": "Sennacherib captures Judah's fortified cities in Hezekiah's fourteenth year. Hezekiah submits and strips silver and gold from the temple and palace to meet the Assyrian king's demanded payment.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-rabshakeh-threatens-jerusalem",
+      "title": "The Rabshakeh Threatens Jerusalem",
+      "start": "701 BC",
+      "category": "Hezekiah and Assyria",
+      "reference": "2 Kings 18:17-37",
+      "description": "Assyrian officers confront Hezekiah's delegation at Jerusalem and publicly ridicule reliance on Egypt, Hezekiah, or the LORD. Speaking where the people can hear, the Rabshakeh urges surrender and promises deportation to another productive land.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-isaiah-assures-hezekiah",
+      "title": "Isaiah Assures Hezekiah",
+      "start": "701 BC",
+      "category": "Hezekiah and Assyria",
+      "reference": "2 Kings 19:1-19",
+      "description": "Hezekiah mourns the Assyrian threats and sends officials to consult Isaiah, who promises that the invader will withdraw. After receiving a further threatening letter, Hezekiah spreads it before the LORD in the temple and prays for deliverance.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-assyrian-army-struck",
+      "title": "Jerusalem Is Delivered from Assyria",
+      "start": "701 BC",
+      "category": "Hezekiah and Assyria",
+      "reference": "2 Kings 19:20-37",
+      "description": "Isaiah announces that Assyria's arrogance will be rebuked and Jerusalem preserved for David's sake. An angel strikes the Assyrian camp, Sennacherib returns to Nineveh, and years later his sons assassinate him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-hezekiah-healed",
+      "title": "Hezekiah Is Healed",
+      "start": "703 BC",
+      "category": "Hezekiah and Assyria",
+      "reference": "2 Kings 20:1-11",
+      "description": "Isaiah tells the gravely ill Hezekiah to prepare for death, but the king prays and weeps. He receives a promise of fifteen additional years, recovers after a fig poultice is applied, and sees the shadow retreat as a confirming sign.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-babylon-envoys-hezekiah",
+      "title": "Hezekiah Shows His Treasures to Babylon",
+      "start": "703 BC",
+      "category": "Hezekiah and Assyria",
+      "reference": "2 Kings 20:12-21",
+      "description": "Hezekiah welcomes Babylonian envoys and displays all the wealth and armaments of his kingdom. Isaiah announces that the treasures and some royal descendants will eventually be carried to Babylon.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-manasseh-idolatry-bloodshed",
+      "title": "Manasseh Fills Judah with Idolatry and Bloodshed",
+      "start": "697 BC",
+      "end": "642 BC",
+      "category": "Judah's Final Reforms",
+      "reference": "2 Kings 21:1-18",
+      "description": "Manasseh reverses Hezekiah's reforms, rebuilds high places, installs foreign worship in the temple, practices divination, and sheds much innocent blood. Prophets announce that Jerusalem will suffer disaster like Samaria because Judah has surpassed the nations in evil.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-amon-assassinated",
+      "title": "Amon Is Assassinated",
+      "start": "640 BC",
+      "category": "Judah's Final Reforms",
+      "reference": "2 Kings 21:19-26",
+      "description": "After two years of continuing Manasseh's idolatry, Amon is killed by servants in his palace. The people execute the conspirators and make his young son Josiah king.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-law-book-found",
+      "title": "The Book of the Law Is Found",
+      "start": "622 BC",
+      "category": "Judah's Final Reforms",
+      "reference": "2 Kings 22:1-13",
+      "description": "In Josiah's eighteenth year, temple repairs are funded through collected offerings. Hilkiah finds the book of the law, Shaphan reads it to the king, and Josiah tears his clothes upon realizing Judah's failure to obey it.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-huldah-confirms-judgment",
+      "title": "Huldah Confirms Coming Judgment",
+      "start": "622 BC",
+      "category": "Judah's Final Reforms",
+      "reference": "2 Kings 22:14-20",
+      "description": "Josiah's delegation consults the prophet Huldah about the discovered book. She confirms that Jerusalem faces disaster for its idolatry but promises that the penitent king will die before seeing it.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-josiah-renews-covenant",
+      "title": "Josiah Renews the Covenant",
+      "start": "622 BC",
+      "category": "Judah's Final Reforms",
+      "reference": "2 Kings 23:1-3",
+      "description": "Josiah gathers Judah's leaders and people at the temple, reads the covenant book publicly, and pledges wholehearted obedience. The assembled people join him in renewing the covenant.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-josiah-removes-idolatry",
+      "title": "Josiah Removes Idolatry from Judah and Bethel",
+      "start": "622 BC",
+      "category": "Judah's Final Reforms",
+      "reference": "2 Kings 23:4-20",
+      "description": "Josiah removes pagan vessels, priests, images, altars, and shrines from the temple, Jerusalem, and throughout Judah. At Bethel he destroys Jeroboam's altar and preserves the tomb of the prophet who had foretold its desecration.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-josiah-passover",
+      "title": "Josiah Celebrates the Passover",
+      "start": "622 BC",
+      "category": "Judah's Final Reforms",
+      "reference": "2 Kings 23:21-27",
+      "description": "Josiah commands a Passover in Jerusalem according to the covenant book and removes mediums, household gods, and other forbidden practices. Despite his exceptional reform, judgment on Judah remains because of Manasseh's provocations.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-josiah-killed-megiddo",
+      "title": "Josiah Is Killed at Megiddo",
+      "start": "609 BC",
+      "category": "Judah's Fall",
+      "reference": "2 Kings 23:28-30",
+      "description": "Josiah goes to meet Pharaoh Neco as the Egyptian army moves toward the Euphrates. Neco kills him at Megiddo, and Josiah's servants return his body to Jerusalem for burial.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jehoahaz-deposed",
+      "title": "Jehoahaz Is Deposed by Pharaoh Neco",
+      "start": "609 BC",
+      "category": "Judah's Fall",
+      "reference": "2 Kings 23:31-35",
+      "description": "After only three months as king, Jehoahaz is confined by Pharaoh Neco and taken to Egypt. Neco imposes tribute and installs Jehoahaz's brother Eliakim, renaming him Jehoiakim.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jehoiakim-serves-rebels-babylon",
+      "title": "Jehoiakim Serves and Rebels against Babylon",
+      "start": "605 BC",
+      "end": "598 BC",
+      "category": "Judah's Fall",
+      "reference": "2 Kings 23:36-24:7",
+      "description": "Jehoiakim rules under foreign pressure, serving Nebuchadnezzar for three years before rebelling. Babylonian and allied raiders then attack Judah, whose destruction is attributed to Manasseh's violence and sins.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jehoiachin-exiled",
+      "title": "Jehoiachin Surrenders and Is Exiled",
+      "start": "597 BC",
+      "category": "Judah's Fall",
+      "reference": "2 Kings 24:8-17",
+      "description": "After a three-month reign, Jehoiachin surrenders Jerusalem to Nebuchadnezzar. Babylon carries away the king, court, warriors, artisans, and temple and palace treasures, then installs his uncle Mattaniah under the name Zedekiah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ki-jerusalem-siege",
+      "title": "Nebuchadnezzar Besieges Jerusalem",
+      "start": "588-10-10 BC",
+      "end": "586-04-09 BC",
+      "category": "Judah's Fall",
+      "reference": "2 Kings 24:18-25:7",
+      "description": "After Zedekiah rebels, Nebuchadnezzar surrounds Jerusalem with siegeworks until famine overwhelms the city. Zedekiah flees through a breach but is captured near Jericho, sees his sons killed, is blinded, and is taken to Babylon.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-jerusalem-temple-burned",
+      "title": "Jerusalem and the Temple Are Burned",
+      "start": "586-05-07 BC",
+      "category": "Judah's Fall",
+      "reference": "2 Kings 25:8-21",
+      "description": "Nebuzaradan burns the temple, palace, and major houses, breaks Jerusalem's walls, and deports most survivors. Temple bronze and vessels are taken to Babylon, leading officials are executed at Riblah, and Judah goes into exile.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-gedaliah-killed",
+      "title": "Gedaliah Is Appointed and Killed",
+      "start": "586-07 BC",
+      "category": "Exile and Aftermath",
+      "reference": "2 Kings 25:22-26",
+      "description": "Babylon appoints Gedaliah governor over those remaining in Judah, and he urges military leaders to settle peacefully under imperial rule. Ishmael assassinates him at Mizpah, after which the surviving leaders and people flee to Egypt.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ki-jehoiachin-released",
+      "title": "Jehoiachin Is Released from Prison",
+      "start": "562-12-27 BC",
+      "category": "Exile and Aftermath",
+      "reference": "2 Kings 25:27-30",
+      "description": "In Jehoiachin's thirty-seventh year of exile, Evil-merodach releases him from prison. The former Judean king receives an honored place at the Babylonian court and a regular allowance for the rest of his life.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "book": "2 Chronicles",
+  "order": 14,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "2ch-solomon-gibeon-wisdom",
+      "title": "Solomon Receives Wisdom at Gibeon",
+      "start": "970 BC",
+      "category": "Solomon and the Temple",
+      "reference": "2 Chronicles 1:1-13",
+      "description": "Solomon leads Israel's leaders to the ancient sanctuary at Gibeon and offers abundant sacrifices. God grants his request for wisdom and knowledge and promises him extraordinary wealth and honor as well.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-solomon-prepares-temple",
+      "title": "Solomon Prepares to Build the Temple",
+      "start": "968 BC",
+      "category": "Solomon and the Temple",
+      "reference": "2 Chronicles 2:1-18",
+      "description": "Solomon organizes a large labor force and arranges with King Huram of Tyre for timber and a master artisan. He presents the planned sanctuary as a place of worship for the God whom no building can contain.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-temple-construction-begins",
+      "title": "Temple Construction Begins",
+      "start": "966-02-02 BC",
+      "category": "Solomon and the Temple",
+      "reference": "2 Chronicles 3:1-4:22",
+      "description": "In Solomon's fourth year, work begins on Mount Moriah at the site David had designated. The builders complete the sanctuary, its courts, bronze furnishings, golden vessels, and monumental cherubim.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-ark-enters-temple",
+      "title": "The Ark Is Brought into the Temple",
+      "start": "959-07 BC",
+      "category": "Solomon and the Temple",
+      "reference": "2 Chronicles 5:1-14",
+      "description": "At the seventh-month festival, priests and Levites bring the ark and sacred objects into the completed temple. Unified music and praise accompany the ceremony, and a cloud of divine glory fills the building so that the priests cannot continue ministering.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-solomon-dedicates-temple",
+      "title": "Solomon Dedicates the Temple",
+      "start": "959-07 BC",
+      "category": "Solomon and the Temple",
+      "reference": "2 Chronicles 6:1-7:10",
+      "description": "Solomon blesses the assembly and prays that God will hear petitions directed toward the temple, including prayers made in defeat, drought, exile, or by foreigners. Fire consumes the offerings, the people worship, and a fourteen-day national celebration follows.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-god-answers-solomon",
+      "title": "God Answers Solomon after the Dedication",
+      "start": "959 BC",
+      "category": "Solomon and the Temple",
+      "reference": "2 Chronicles 7:11-22",
+      "description": "God appears to Solomon and accepts the temple as a place for sacrifice and prayer. He promises restoration when a chastened people turn back, while warning that royal unfaithfulness would bring national ruin and make the temple an object of astonishment.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-solomon-building-program",
+      "title": "Solomon Completes His Building Program",
+      "start": "946 BC",
+      "category": "Solomon's Kingdom",
+      "reference": "2 Chronicles 8:1-16",
+      "description": "After twenty years of construction, Solomon fortifies cities, administers subject labor, orders temple service according to David's arrangements, and completes his palace. His wife is moved from David's city because places associated with the ark are holy.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-solomon-maritime-trade",
+      "title": "Solomon Sends a Fleet to Ophir",
+      "start": "945 BC",
+      "category": "Solomon's Kingdom",
+      "reference": "2 Chronicles 8:17-18",
+      "description": "With sailors supplied by Huram, Solomon launches a fleet from the Red Sea ports of Ezion-geber and Eloth. The expedition returns from Ophir with a great quantity of gold.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-queen-sheba-visits",
+      "title": "The Queen of Sheba Visits Solomon",
+      "start": "940 BC",
+      "category": "Solomon's Kingdom",
+      "reference": "2 Chronicles 9:1-12",
+      "description": "The queen of Sheba tests Solomon with difficult questions and is overwhelmed by his wisdom, prosperity, court, and worship. She exchanges lavish gifts with the king before returning home.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-solomon-reign-ends",
+      "title": "Solomon's Forty-Year Reign Ends",
+      "start": "930 BC",
+      "category": "Solomon's Kingdom",
+      "reference": "2 Chronicles 9:13-31",
+      "description": "The account surveys Solomon's immense revenues, golden furnishings, international trade, military resources, wisdom, and dominion. After forty years as king, he dies and Rehoboam succeeds him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-kingdom-divides",
+      "title": "The Kingdom Divides under Rehoboam",
+      "start": "930 BC",
+      "category": "Early Divided Kingdom",
+      "reference": "2 Chronicles 10:1-19",
+      "description": "Rehoboam rejects the elders' counsel and answers Israel's request for lighter service with threats of greater severity. The northern tribes rebel against David's house, leaving Rehoboam to rule Judah and Benjamin.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-shemaiah-stops-civil-war",
+      "title": "Shemaiah Prevents Civil War",
+      "start": "930 BC",
+      "category": "Early Divided Kingdom",
+      "reference": "2 Chronicles 11:1-4",
+      "description": "Rehoboam gathers an army to recover the northern kingdom, but the prophet Shemaiah declares that the division has come from God. Judah and Benjamin obey and abandon the campaign against their kindred.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-rehoboam-fortifies-judah",
+      "title": "Rehoboam Fortifies Judah",
+      "start": "929 BC",
+      "category": "Early Divided Kingdom",
+      "reference": "2 Chronicles 11:5-23",
+      "description": "Rehoboam strengthens a network of fortified cities and stocks them with supplies and weapons. Priests, Levites, and worshipers displaced by Jeroboam move south and strengthen his kingdom for three years.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-shishak-invades-judah",
+      "title": "Shishak Invades Judah",
+      "start": "925 BC",
+      "category": "Early Divided Kingdom",
+      "reference": "2 Chronicles 12:1-12",
+      "description": "After Rehoboam and Judah abandon the law, Shishak of Egypt captures fortified cities and advances on Jerusalem. The leaders humble themselves at Shemaiah's warning, so the city is spared destruction, though its temple and palace treasures are taken.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-abijah-defeats-jeroboam",
+      "title": "Abijah Defeats Jeroboam",
+      "start": "913 BC",
+      "category": "Early Divided Kingdom",
+      "reference": "2 Chronicles 13:1-22",
+      "description": "Surrounded by Jeroboam's larger force, Abijah appeals to the Davidic covenant and Judah's temple worship. Judah cries out, the priests sound their trumpets, and Abijah wins a decisive victory and captures several towns.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-asa-reforms-fortifies",
+      "title": "Asa Reforms and Fortifies Judah",
+      "start": "910 BC",
+      "category": "Asa and Jehoshaphat",
+      "reference": "2 Chronicles 14:1-8",
+      "description": "Asa removes foreign worship sites, directs Judah to seek God, and uses a decade of peace to strengthen fortified cities. He also organizes a large army from Judah and Benjamin.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-asa-defeats-zerah",
+      "title": "Asa Defeats Zerah's Army",
+      "start": "897 BC",
+      "category": "Asa and Jehoshaphat",
+      "reference": "2 Chronicles 14:9-15",
+      "description": "Zerah advances to Mareshah with an enormous army, and Asa appeals to God rather than Judah's strength. The invaders are routed toward Gerar, and Judah returns with extensive plunder.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-asa-covenant-renewal",
+      "title": "Asa Leads a Covenant Renewal",
+      "start": "895-03 BC",
+      "category": "Asa and Jehoshaphat",
+      "reference": "2 Chronicles 15:1-19",
+      "description": "Encouraged by Azariah's prophecy, Asa removes idols, repairs the altar, and gathers Judah with migrants from the northern tribes. In his fifteenth year the assembly sacrifices and enters a solemn covenant to seek God wholeheartedly.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-asa-allies-ben-hadad",
+      "title": "Asa Buys an Alliance with Aram",
+      "start": "875 BC",
+      "category": "Asa and Jehoshaphat",
+      "reference": "2 Chronicles 16:1-10",
+      "description": "When Baasha fortifies Ramah, Asa sends temple and palace treasure to Ben-hadad of Aram, inducing him to attack northern Israel. The seer Hanani rebukes Asa for relying on Aram, and the angry king imprisons him and oppresses others.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-asa-disease-death",
+      "title": "Asa's Reign Ends in Illness",
+      "start": "871 BC",
+      "category": "Asa and Jehoshaphat",
+      "reference": "2 Chronicles 16:11-14",
+      "description": "In his final years Asa develops a severe foot disease but seeks physicians without seeking God. He dies in the forty-first year of his reign and receives an elaborate royal burial.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-jehoshaphat-teaching-reform",
+      "title": "Jehoshaphat Sends Teachers through Judah",
+      "start": "870 BC",
+      "category": "Asa and Jehoshaphat",
+      "reference": "2 Chronicles 17:1-19",
+      "description": "Jehoshaphat strengthens Judah, removes illicit worship sites, and sends officials, Levites, and priests through the towns with the book of the law. Neighboring peoples fear Judah, while the king accumulates tribute, fortifications, and troops.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-jehoshaphat-ahab-campaign",
+      "title": "Jehoshaphat Joins Ahab at Ramoth-gilead",
+      "start": "853 BC",
+      "category": "Asa and Jehoshaphat",
+      "reference": "2 Chronicles 18:1-34",
+      "description": "Linked to Ahab by marriage, Jehoshaphat joins his campaign despite Micaiah's warning of disaster. Jehoshaphat is rescued when he cries out in battle, while a stray arrow mortally wounds the disguised Ahab.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-jehu-rebukes-jehoshaphat",
+      "title": "Jehu Rebukes Jehoshaphat",
+      "start": "853 BC",
+      "category": "Asa and Jehoshaphat",
+      "reference": "2 Chronicles 19:1-11",
+      "description": "The prophet Jehu condemns Jehoshaphat's alliance with the wicked but acknowledges the good found in him. The king then appoints judges across Judah and establishes a Jerusalem court for religious and royal cases.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-jehoshaphat-coalition-victory",
+      "title": "Judah Is Delivered from a Coalition Army",
+      "start": "850 BC",
+      "category": "Asa and Jehoshaphat",
+      "reference": "2 Chronicles 20:1-30",
+      "description": "Faced with Moabite, Ammonite, and allied forces, Jehoshaphat proclaims a fast and leads Judah in prayer at the temple. A prophetic message directs them to march without fighting, and singers lead the procession before the enemy coalition destroys itself.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-jehoshaphat-fleet-wrecked",
+      "title": "Jehoshaphat's Fleet Is Wrecked",
+      "start": "849 BC",
+      "category": "Asa and Jehoshaphat",
+      "reference": "2 Chronicles 20:31-37",
+      "description": "Jehoshaphat's generally faithful reign remains incomplete because high places persist. After he partners with Israel's Ahaziah to build trading ships, a prophet condemns the alliance and the fleet is wrecked before sailing.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-jehoram-kills-brothers",
+      "title": "Jehoram Secures His Throne by Bloodshed",
+      "start": "848 BC",
+      "category": "Dynastic Crisis",
+      "reference": "2 Chronicles 21:1-11",
+      "description": "Jehoram kills his brothers and some officials after becoming king and follows the practices of Ahab's house. Edom and Libnah revolt during his reign, while he promotes illicit worship in Judah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-elijah-letter-jehoram",
+      "title": "Elijah's Letter Condemns Jehoram",
+      "start": "845 BC",
+      "category": "Dynastic Crisis",
+      "reference": "2 Chronicles 21:12-20",
+      "description": "A letter from Elijah announces judgment for Jehoram's idolatry and murder of his brothers. Philistine and Arab raiders carry off his household, and after two years of painful disease he dies without honor.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-ahaziah-killed-jehu",
+      "title": "Ahaziah Is Killed during Jehu's Revolt",
+      "start": "841 BC",
+      "category": "Dynastic Crisis",
+      "reference": "2 Chronicles 22:1-9",
+      "description": "Guided by Ahab's family, Ahaziah joins Joram of Israel in war and later visits him while he recovers. The visit brings Ahaziah into Jehu's purge, and he is captured and killed.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-joash-hidden-athaliah",
+      "title": "Joash Is Hidden from Athaliah",
+      "start": "841 BC",
+      "end": "835 BC",
+      "category": "Dynastic Crisis",
+      "reference": "2 Chronicles 22:10-12",
+      "description": "Athaliah seizes power and attempts to destroy Judah's royal family. Jehoshabeath rescues the infant Joash and hides him with his nurse in the temple for six years.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-joash-crowned-athaliah-killed",
+      "title": "Joash Is Crowned and Athaliah Is Killed",
+      "start": "835 BC",
+      "category": "Dynastic Crisis",
+      "reference": "2 Chronicles 23:1-15",
+      "description": "In Athaliah's seventh year, Jehoiada organizes priests, Levites, commanders, and family heads to guard and crown Joash at the temple. Athaliah discovers the coronation and is taken outside the sanctuary and executed.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-jehoiada-reforms-worship",
+      "title": "Jehoiada Restores Covenant Worship",
+      "start": "835 BC",
+      "category": "Joash and Amaziah",
+      "reference": "2 Chronicles 23:16-21",
+      "description": "Jehoiada binds king and people to renewed covenant loyalty. The people tear down Baal's temple, kill its priest, restore ordered service at the temple, and install Joash on the royal throne.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-joash-restores-temple",
+      "title": "Joash Restores the Temple",
+      "start": "820 BC",
+      "category": "Joash and Amaziah",
+      "reference": "2 Chronicles 24:1-14",
+      "description": "Joash directs priests and Levites to repair damage done under Athaliah. When collection lags, a public chest produces abundant funds for artisans, restoration, and new sacred vessels.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-zechariah-martyred",
+      "title": "Joash Orders Zechariah's Death",
+      "start": "800 BC",
+      "category": "Joash and Amaziah",
+      "reference": "2 Chronicles 24:15-22",
+      "description": "After Jehoiada dies, Joash yields to officials who abandon temple worship for idols. When Jehoiada's son Zechariah publicly warns the people, they stone him in the temple court at the king's command.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-aram-invades-joash-dies",
+      "title": "Aram Invades and Joash Is Assassinated",
+      "start": "796 BC",
+      "category": "Joash and Amaziah",
+      "reference": "2 Chronicles 24:23-27",
+      "description": "A small Aramean force defeats Judah, destroys its officials, and leaves Joash badly wounded. His servants then kill him because of Zechariah's blood, and he is denied burial in the royal tombs.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-amaziah-defeats-edom",
+      "title": "Amaziah Defeats Edom",
+      "start": "790 BC",
+      "category": "Joash and Amaziah",
+      "reference": "2 Chronicles 25:1-13",
+      "description": "Amaziah dismisses hired Israelite soldiers at a prophet's instruction and leads Judah to victory over Edom in the Valley of Salt. The discharged troops retaliate by raiding towns in Judah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-amaziah-adopts-edom-gods",
+      "title": "Amaziah Adopts Edom's Gods",
+      "start": "790 BC",
+      "category": "Joash and Amaziah",
+      "reference": "2 Chronicles 25:14-16",
+      "description": "Returning from victory, Amaziah installs and worships the defeated Edomites' gods. He silences a prophet who challenges this act and is warned that his refusal has fixed his downfall.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-amaziah-defeated-israel",
+      "title": "Israel Defeats Amaziah",
+      "start": "789 BC",
+      "category": "Joash and Amaziah",
+      "reference": "2 Chronicles 25:17-28",
+      "description": "Amaziah challenges Joash of Israel despite a warning against pride. Judah is routed, Jerusalem's wall is breached, temple and palace treasures are seized, and Amaziah is eventually killed by conspirators after fleeing to Lachish.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-uzziah-prospers-builds",
+      "title": "Uzziah Strengthens Judah",
+      "start": "767 BC",
+      "category": "Uzziah and Jotham",
+      "reference": "2 Chronicles 26:1-15",
+      "description": "Uzziah seeks God during Zechariah's lifetime and prospers in war, agriculture, construction, and military organization. His fame spreads as he fortifies Jerusalem and equips a powerful army.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-uzziah-incense-leprosy",
+      "title": "Uzziah Is Struck with Leprosy",
+      "start": "750 BC",
+      "category": "Uzziah and Jotham",
+      "reference": "2 Chronicles 26:16-23",
+      "description": "Made proud by strength, Uzziah enters the temple to burn incense despite the priests' opposition. A skin disease appears on his forehead, and he lives in isolation while Jotham governs until his death.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-jotham-builds-prevails",
+      "title": "Jotham Builds and Prevails",
+      "start": "750 BC",
+      "end": "735 BC",
+      "category": "Uzziah and Jotham",
+      "reference": "2 Chronicles 27:1-9",
+      "description": "Jotham governs faithfully without intruding into the temple, though the people remain corrupt. He expands defenses, defeats Ammon, and grows powerful through his ordered conduct before God.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-ahaz-defeated-idolatry",
+      "title": "Ahaz Leads Judah into Idolatry and Defeat",
+      "start": "735 BC",
+      "category": "Ahaz and Hezekiah",
+      "reference": "2 Chronicles 28:1-8",
+      "description": "Ahaz promotes images, Baal worship, and child sacrifice. Aram and Israel inflict severe losses on Judah and carry away many captives as the kingdom suffers for its abandonment of God.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-oded-frees-judah-captives",
+      "title": "Oded Secures the Captives' Release",
+      "start": "734 BC",
+      "category": "Ahaz and Hezekiah",
+      "reference": "2 Chronicles 28:9-15",
+      "description": "The prophet Oded confronts Israel's returning army and warns against enslaving their Judean kindred. Ephraimite leaders support him, and the captives are clothed, fed, treated, and escorted to Jericho.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-ahaz-seeks-assyria",
+      "title": "Ahaz Appeals to Assyria",
+      "start": "732 BC",
+      "category": "Ahaz and Hezekiah",
+      "reference": "2 Chronicles 28:16-27",
+      "description": "Under attack from Edom and Philistia, Ahaz asks Assyria for help, but the alliance brings distress rather than rescue. He plunders and closes the temple, multiplies foreign altars, and dies without burial in the royal tombs.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-hezekiah-cleanses-temple",
+      "title": "Hezekiah Cleanses and Reopens the Temple",
+      "start": "715-01 BC",
+      "category": "Hezekiah's Renewal",
+      "reference": "2 Chronicles 29:1-36",
+      "description": "In his first year Hezekiah summons priests and Levites to remove defilement from the closed temple. After sixteen days of cleansing, sacrifices, music, and congregational worship restore its service.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-hezekiah-national-passover",
+      "title": "Hezekiah Calls Israel to Passover",
+      "start": "715-02-14 BC",
+      "category": "Hezekiah's Renewal",
+      "reference": "2 Chronicles 30:1-27",
+      "description": "Because the temple was not ready in the first month, Hezekiah invites Judah and the northern remnant to a second-month Passover. Some mock the couriers, but a great assembly comes to Jerusalem, removes illicit altars, celebrates for two weeks, and receives priestly blessing.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-hezekiah-organizes-worship",
+      "title": "Hezekiah Organizes Temple Support",
+      "start": "715 BC",
+      "category": "Hezekiah's Renewal",
+      "reference": "2 Chronicles 31:1-21",
+      "description": "The worshipers destroy unauthorized cult sites throughout Judah and neighboring territories. Hezekiah reestablishes priestly and Levitical divisions, and abundant contributions are carefully administered for temple servants and their families.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-sennacherib-invades",
+      "title": "Sennacherib Invades Judah",
+      "start": "701 BC",
+      "category": "Hezekiah's Renewal",
+      "reference": "2 Chronicles 32:1-19",
+      "description": "Sennacherib invades Judah and besieges its fortified cities, while Hezekiah blocks outside water, repairs Jerusalem's defenses, and encourages the people. Assyrian envoys mock Hezekiah's trust and compare Judah's God to conquered nations' gods.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-jerusalem-delivered-assyria",
+      "title": "Jerusalem Is Delivered from Assyria",
+      "start": "701 BC",
+      "category": "Hezekiah's Renewal",
+      "reference": "2 Chronicles 32:20-23",
+      "description": "Hezekiah and Isaiah pray in response to the Assyrian threats. An angel destroys the invading army's leaders, Sennacherib returns home in disgrace, and many nations thereafter honor Judah's king.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-hezekiah-illness-pride",
+      "title": "Hezekiah Recovers but Becomes Proud",
+      "start": "701 BC",
+      "category": "Hezekiah's Renewal",
+      "reference": "2 Chronicles 32:24-33",
+      "description": "Hezekiah becomes gravely ill, prays, and receives both healing and a sign. His pride later provokes wrath, but he and Jerusalem humble themselves, and he dies after years of wealth, building, and honor.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-manasseh-idolatry-captivity",
+      "title": "Manasseh Is Taken Captive",
+      "start": "697 BC",
+      "category": "Manasseh and Amon",
+      "reference": "2 Chronicles 33:1-11",
+      "description": "Manasseh reverses Hezekiah's reforms, promotes occult and foreign worship, places idols in the temple, and sheds innocent blood through child sacrifice. When warnings go unheeded, Assyrian commanders bind him and take him to Babylon.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-manasseh-repents-restores",
+      "title": "Manasseh Repents and Restores Worship",
+      "start": "680 BC",
+      "category": "Manasseh and Amon",
+      "reference": "2 Chronicles 33:12-20",
+      "description": "In distress Manasseh humbles himself and prays, and God restores him to Jerusalem. He fortifies the city, removes foreign gods from the temple, restores its altar, and commands Judah to worship Israel's God.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-amon-assassinated",
+      "title": "Amon Is Assassinated",
+      "start": "640 BC",
+      "category": "Manasseh and Amon",
+      "reference": "2 Chronicles 33:21-25",
+      "description": "Amon follows Manasseh's earlier idolatry without sharing his later humility. His servants assassinate him after two years, but the people kill the conspirators and make Josiah king.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-josiah-purges-idolatry",
+      "title": "Josiah Purges Idolatry",
+      "start": "628 BC",
+      "category": "Josiah's Reform",
+      "reference": "2 Chronicles 34:1-7",
+      "description": "Josiah begins seeking God in his eighth year and four years later destroys unauthorized altars, images, and cult objects. His purge extends beyond Judah into territories of the former northern kingdom.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-book-law-found",
+      "title": "The Book of the Law Is Found",
+      "start": "622 BC",
+      "category": "Josiah's Reform",
+      "reference": "2 Chronicles 34:8-21",
+      "description": "During repairs to the temple, Hilkiah finds the book of the law and Shaphan reads it to Josiah. The king tears his clothes and sends officials to seek divine guidance because Judah has not observed its commands.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-huldah-oracle-covenant",
+      "title": "Huldah's Oracle Leads to Covenant Renewal",
+      "start": "622 BC",
+      "category": "Josiah's Reform",
+      "reference": "2 Chronicles 34:22-33",
+      "description": "Huldah announces unavoidable judgment on Jerusalem but promises Josiah will not witness it because he humbled himself. Josiah gathers the people, reads the covenant book, renews the covenant, and removes idolatrous objects from Israelite territory.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-josiah-passover",
+      "title": "Josiah Celebrates Passover",
+      "start": "622-01-14 BC",
+      "category": "Josiah's Reform",
+      "reference": "2 Chronicles 35:1-19",
+      "description": "Josiah assigns priests and Levites their duties and supplies offerings for a national Passover at Jerusalem. The carefully ordered celebration surpasses every Passover since Samuel's time.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2ch-josiah-dies-megiddo",
+      "title": "Josiah Dies at Megiddo",
+      "start": "609 BC",
+      "category": "Josiah's Reform",
+      "reference": "2 Chronicles 35:20-27",
+      "description": "Josiah intercepts Pharaoh Neco despite the Egyptian king's warning and enters battle in disguise at Megiddo. Archers mortally wound him, Judah mourns, and Jeremiah composes a lament.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-jehoahaz-deposed",
+      "title": "Jehoahaz Is Deposed",
+      "start": "609 BC",
+      "category": "Fall and Exile",
+      "reference": "2 Chronicles 36:1-4",
+      "description": "The people make Josiah's son Jehoahaz king, but his reign lasts only three months. Pharaoh Neco removes him, imposes tribute, takes him to Egypt, and installs his brother Jehoiakim.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-jehoiakim-babylon-subjection",
+      "title": "Jehoiakim Falls under Babylon",
+      "start": "605 BC",
+      "category": "Fall and Exile",
+      "reference": "2 Chronicles 36:5-8",
+      "description": "Jehoiakim rules wickedly until Nebuchadnezzar attacks and binds him for removal to Babylon. The Babylonian king also carries temple vessels to his palace.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-jehoiachin-exiled",
+      "title": "Jehoiachin Is Exiled to Babylon",
+      "start": "597 BC",
+      "category": "Fall and Exile",
+      "reference": "2 Chronicles 36:9-10",
+      "description": "After a reign of three months and ten days, Jehoiachin is taken to Babylon in the spring along with precious temple vessels. Nebuchadnezzar appoints Zedekiah over Judah and Jerusalem.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-zedekiah-rebels",
+      "title": "Zedekiah Rebels and Judah Rejects the Prophets",
+      "start": "588 BC",
+      "category": "Fall and Exile",
+      "reference": "2 Chronicles 36:11-16",
+      "description": "Zedekiah refuses to humble himself before Jeremiah and breaks his sworn loyalty to Nebuchadnezzar. Priests and people defile the temple and repeatedly mock God's messengers until judgment can no longer be delayed.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-jerusalem-destroyed-exile",
+      "title": "Jerusalem Is Destroyed and Judah Exiled",
+      "start": "586 BC",
+      "category": "Fall and Exile",
+      "reference": "2 Chronicles 36:17-21",
+      "description": "Babylonian forces kill inhabitants, plunder the temple and royal treasures, burn the sanctuary and palaces, and break down Jerusalem's wall. Survivors are taken to Babylon, and the land lies desolate until Persian rule.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2ch-cyrus-proclaims-return",
+      "title": "Cyrus Proclaims the Return",
+      "start": "538 BC",
+      "category": "Fall and Exile",
+      "reference": "2 Chronicles 36:22-23",
+      "description": "In his first year over Babylon, Cyrus of Persia issues a realm-wide proclamation authorizing the temple's reconstruction in Jerusalem. He invites members of God's people to return to Judah.",
+      "datingBasis": "traditional"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "book": "Ezra",
+  "order": 15,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "ezr-cyrus-decree",
+      "title": "Cyrus Authorizes the Return and Rebuilding",
+      "start": "538 BC",
+      "category": "First Return",
+      "reference": "Ezra 1:1-4",
+      "description": "In his first year over Babylon, Cyrus issues an empire-wide proclamation permitting the people of the LORD to return to Jerusalem and rebuild the temple. Their neighbors are instructed to assist with goods, animals, and offerings.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-temple-vessels-restored",
+      "title": "Cyrus Restores the Temple Vessels",
+      "start": "538 BC",
+      "category": "First Return",
+      "reference": "Ezra 1:5-11",
+      "description": "The families of Judah and Benjamin, priests, and Levites prepare to return with gifts from their neighbors. Cyrus releases thousands of gold and silver temple vessels taken by Nebuchadnezzar and entrusts them to Sheshbazzar.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-returnees-settle-judah",
+      "title": "The First Returnees Settle in Their Towns",
+      "start": "537 BC",
+      "category": "First Return",
+      "reference": "Ezra 2:1-70",
+      "description": "A register records the families, townspeople, priests, Levites, singers, gatekeepers, temple servants, and others who return with Zerubbabel and Jeshua. The assembly contributes to the temple fund and settles throughout Jerusalem and Judah.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "ezr-altar-rebuilt",
+      "title": "The Altar Is Rebuilt",
+      "start": "537-07-01 BC",
+      "category": "Rebuilding the Temple",
+      "reference": "Ezra 3:1-7",
+      "description": "In the seventh month the returned community gathers at Jerusalem, rebuilds the altar on its foundation, and resumes morning and evening offerings. They keep the festival of booths and contract for cedar from Lebanon before the temple foundation is laid.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-second-temple-foundation",
+      "title": "The Second Temple Foundation Is Laid",
+      "start": "536-02 BC",
+      "category": "Rebuilding the Temple",
+      "reference": "Ezra 3:8-13",
+      "description": "In the second year after the return, Zerubbabel and Jeshua appoint Levites to supervise construction. At the laying of the foundation, younger worshipers shout for joy while elders who remember the former temple weep aloud.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-neighbors-obstruct-temple",
+      "title": "Neighboring Peoples Obstruct the Temple Work",
+      "start": "536 BC",
+      "end": "520 BC",
+      "category": "Opposition and Renewal",
+      "reference": "Ezra 4:1-5,24",
+      "description": "Zerubbabel and Israel's leaders refuse an offer of partnership from neighboring peoples, insisting that the returned community alone will carry out Cyrus's command. Opponents then intimidate the builders and bribe officials until work ceases through the early reign of Darius.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-later-opposition-jerusalem",
+      "title": "Officials Halt Work on Jerusalem",
+      "start": "465 BC",
+      "category": "Opposition and Renewal",
+      "reference": "Ezra 4:6-23",
+      "description": "In a later account of opposition, provincial officials accuse Jerusalem before Artaxerxes of being historically rebellious and threatening royal revenue. After an archive search, the king orders rebuilding stopped, and the officials enforce the decree by force.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "ezr-temple-work-resumes",
+      "title": "Temple Construction Resumes",
+      "start": "520 BC",
+      "category": "Opposition and Renewal",
+      "reference": "Ezra 5:1-17",
+      "description": "Encouraged by Haggai and Zechariah, Zerubbabel and Jeshua resume building. Governor Tattenai investigates but allows work to continue while asking Darius to verify the builders' appeal to Cyrus's original decree.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-darius-supports-temple",
+      "title": "Darius Confirms Support for the Temple",
+      "start": "519 BC",
+      "category": "Opposition and Renewal",
+      "reference": "Ezra 6:1-12",
+      "description": "A search at Ecbatana locates Cyrus's decree. Darius orders Tattenai not only to leave the work undisturbed but to pay construction and sacrificial expenses from provincial revenue and threatens anyone who alters the edict.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-second-temple-completed",
+      "title": "The Second Temple Is Completed and Dedicated",
+      "start": "516-12-03 BC",
+      "category": "Temple Restored",
+      "reference": "Ezra 6:13-18",
+      "description": "The elders prosper under prophetic encouragement and complete the temple in Darius's sixth year. The returned exiles dedicate it joyfully with sacrifices for all twelve tribes and organize priests and Levites for its service.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-returnees-passover",
+      "title": "The Returnees Celebrate Passover",
+      "start": "515-01-14 BC",
+      "end": "515-01-21 BC",
+      "category": "Temple Restored",
+      "reference": "Ezra 6:19-22",
+      "description": "The purified priests and Levites prepare the Passover for the returned exiles and those who have joined them in worship. The community follows it with seven joyful days of unleavened bread.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-artaxerxes-commissions-ezra",
+      "title": "Artaxerxes Commissions Ezra",
+      "start": "458 BC",
+      "category": "Ezra's Mission",
+      "reference": "Ezra 7:1-28",
+      "description": "Artaxerxes authorizes Ezra, a priest and scribe skilled in the law of Moses, to lead willing Israelites to Jerusalem. The decree supplies offerings, exempts temple personnel from taxes, and empowers Ezra to appoint judges and teach the law.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-caravan-gathers-ahava",
+      "title": "Ezra's Caravan Gathers at Ahava",
+      "start": "458-01-01 BC",
+      "category": "Ezra's Journey",
+      "reference": "Ezra 8:1-20",
+      "description": "Ezra registers the family leaders and men traveling from Babylon, then camps for three days at the river Ahava. Finding no Levites, he sends leaders to Casiphia and receives Levites and temple servants for the journey.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-fast-treasures-ahava",
+      "title": "The Caravan Fasts and Entrusts the Temple Gifts",
+      "start": "458-01 BC",
+      "category": "Ezra's Journey",
+      "reference": "Ezra 8:21-30",
+      "description": "Ashamed to request a military escort after affirming God's protection, Ezra proclaims a fast for a safe journey. He weighs the silver, gold, and sacred vessels into the care of twelve leading priests until their delivery at Jerusalem.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-caravan-reaches-jerusalem",
+      "title": "Ezra's Caravan Reaches Jerusalem",
+      "start": "458-05-01 BC",
+      "category": "Ezra's Journey",
+      "reference": "Ezra 8:31-36",
+      "description": "The caravan leaves Ahava on the twelfth day of the first month and arrives safely in Jerusalem. After three days the gifts are counted into temple custody, sacrifices are offered, and the king's commissions are delivered to provincial officials.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-mourns-intermarriage",
+      "title": "Ezra Mourns the Community's Intermarriages",
+      "start": "458 BC",
+      "category": "Community Crisis",
+      "reference": "Ezra 9:1-15",
+      "description": "Officials report that returned Israelites, including priests and leaders, have intermarried with surrounding peoples. Ezra tears his garments, pulls out hair, and at the evening sacrifice confesses the community's guilt in light of the mercy shown to the remnant.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-community-covenant-separation",
+      "title": "The Community Covenants to Address the Marriages",
+      "start": "458 BC",
+      "category": "Community Crisis",
+      "reference": "Ezra 10:1-8",
+      "description": "A large weeping assembly gathers during Ezra's prayer, and Shecaniah proposes a covenant to send away the foreign wives and their children according to the community's understanding of the law. Ezra makes the leaders swear and summons all returnees to Jerusalem within three days.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-assembly-heavy-rain",
+      "title": "The Assembly Meets in Heavy Rain",
+      "start": "458-09-20 BC",
+      "category": "Community Crisis",
+      "reference": "Ezra 10:9-15",
+      "description": "Judah and Benjamin assemble in the temple square trembling from the crisis and heavy rain. Because the cases are too numerous for immediate resolution, officials arrange for towns to appear in turn with their elders and judges.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "ezr-marriage-inquiry-completed",
+      "title": "The Marriage Inquiry Is Completed",
+      "start": "458-10-01 BC",
+      "end": "457-01-01 BC",
+      "category": "Community Crisis",
+      "reference": "Ezra 10:16-44",
+      "description": "Ezra and designated family heads examine the cases over three months. The book records priests, Levites, singers, gatekeepers, and other Israelites who pledge to separate from foreign wives, with priestly offenders also presenting guilt offerings.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

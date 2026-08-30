@@ -1,0 +1,676 @@
+{
+  "book": "Genesis",
+  "order": 1,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "gen-creation-six-days",
+      "title": "The Six Days of Creation",
+      "start": "4004 BC",
+      "category": "Primeval History",
+      "reference": "Genesis 1:1-31",
+      "description": "God creates light, sky, land and vegetation, the lights of the dome, the creatures of sea and air, and the animals of the earth, and makes humankind in his image, male and female, giving them dominion.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-sabbath",
+      "title": "God Rests on the Seventh Day",
+      "start": "4004 BC",
+      "category": "Primeval History",
+      "reference": "Genesis 2:1-3",
+      "description": "On the seventh day God finishes his work and rests, blessing the seventh day and hallowing it.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-garden-of-eden",
+      "title": "The Garden of Eden",
+      "start": "4004 BC",
+      "category": "Primeval History",
+      "reference": "Genesis 2:4-17",
+      "description": "The LORD God forms the man from the dust of the ground and breathes life into his nostrils, plants a garden in Eden watered by four rivers, and forbids the tree of the knowledge of good and evil.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-creation-of-woman",
+      "title": "The Creation of Woman",
+      "start": "4004 BC",
+      "category": "Primeval History",
+      "reference": "Genesis 2:18-25",
+      "description": "The man names every animal but finds no partner, so God causes a deep sleep to fall on him and makes a woman from his rib, whom the man greets as bone and flesh of his own body.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-the-fall",
+      "title": "The Fall",
+      "start": "4004 BC",
+      "category": "Primeval History",
+      "reference": "Genesis 3:1-24",
+      "description": "The serpent persuades the woman that she will not die; she eats and gives to her husband. Their eyes are opened, God curses the serpent and the ground, and they are driven from the garden, guarded by cherubim and a flaming sword.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-cain-kills-abel",
+      "title": "Cain Murders Abel",
+      "start": "3875 BC",
+      "category": "Primeval History",
+      "reference": "Genesis 4:1-16",
+      "description": "The LORD has regard for Abel's offering but not Cain's. Cain kills his brother in the field, is cursed from the ground to be a fugitive and a wanderer, and is given a mark so no one who meets him will kill him.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-line-of-cain",
+      "title": "The Line of Cain and the Song of Lamech",
+      "start": "3800 BC",
+      "category": "Primeval History",
+      "reference": "Genesis 4:17-24",
+      "description": "Cain builds a city named for his son Enoch. His descendants include Jabal, ancestor of herders, Jubal of musicians, and Tubal-cain, maker of bronze and iron tools. Lamech boasts of seventy-sevenfold vengeance.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-birth-of-seth",
+      "title": "The Birth of Seth",
+      "start": "3874 BC",
+      "category": "Primeval History",
+      "reference": "Genesis 4:25-5:8",
+      "description": "Adam and Eve have another son, Seth, appointed in place of Abel. To Seth is born Enosh, and at that time people begin to invoke the name of the LORD.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-enoch-taken",
+      "title": "Enoch Walks with God and Is Taken",
+      "start": "3017 BC",
+      "category": "Primeval History",
+      "reference": "Genesis 5:21-24",
+      "description": "Enoch walks with God three hundred years after the birth of Methuselah; then he was no more, because God took him. All his days were three hundred sixty-five years.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-death-of-adam",
+      "title": "The Death of Adam",
+      "start": "3074 BC",
+      "category": "Primeval History",
+      "reference": "Genesis 5:3-5",
+      "description": "All the days that Adam lived were nine hundred thirty years; and he died.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-sons-of-god-nephilim",
+      "title": "The Sons of God and the Nephilim",
+      "start": "2500 BC",
+      "category": "The Flood",
+      "reference": "Genesis 6:1-4",
+      "description": "The sons of God take wives from the daughters of humans. The LORD limits mortal life to one hundred twenty years, and the Nephilim, heroes of old and warriors of renown, are on the earth in those days.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-command-to-build-ark",
+      "title": "God Commands Noah to Build the Ark",
+      "start": "2468 BC",
+      "category": "The Flood",
+      "reference": "Genesis 6:5-22",
+      "description": "Seeing that the earth is corrupt and filled with violence, God resolves to blot out all flesh, but Noah finds favor. He is told to build an ark of cypress wood, three hundred cubits long, and to bring two of every kind aboard.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-flood-begins",
+      "title": "The Fountains of the Deep Burst Forth",
+      "start": "2348-02-17 BC",
+      "category": "The Flood",
+      "reference": "Genesis 7:1-24",
+      "description": "In the six hundredth year of Noah's life, in the second month on the seventeenth day, all the fountains of the great deep burst forth and the windows of the heavens are opened. Rain falls forty days, and the waters swell one hundred fifty days.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-ark-rests-ararat",
+      "title": "The Ark Rests on the Mountains of Ararat",
+      "start": "2348-07-17 BC",
+      "category": "The Flood",
+      "reference": "Genesis 8:1-5",
+      "description": "God remembers Noah and makes a wind blow over the earth. At the end of one hundred fifty days the waters abate, and in the seventh month on the seventeenth day the ark comes to rest on the mountains of Ararat.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-raven-and-dove",
+      "title": "The Raven and the Dove",
+      "start": "2347-01-01 BC",
+      "category": "The Flood",
+      "reference": "Genesis 8:6-14",
+      "description": "Noah sends out a raven, then a dove three times; the second returns with a freshly plucked olive leaf. In the six hundred first year, in the second month on the twenty-seventh day, the earth is dry.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-noah-leaves-ark",
+      "title": "Noah Leaves the Ark and Builds an Altar",
+      "start": "2347-02-27 BC",
+      "category": "The Flood",
+      "reference": "Genesis 8:15-22",
+      "description": "Noah goes out with his family and every living thing and builds an altar. Smelling the pleasing odor, the LORD resolves never again to curse the ground: as long as the earth endures, seedtime and harvest shall not cease.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-noahic-covenant",
+      "title": "The Covenant of the Rainbow",
+      "start": "2347 BC",
+      "category": "After the Flood",
+      "reference": "Genesis 9:1-17",
+      "description": "God blesses Noah, permits the eating of meat but not blood, requires a reckoning for human blood, and sets his bow in the clouds as the sign that never again will a flood destroy the earth.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-noah-vineyard",
+      "title": "Noah's Vineyard and the Curse of Canaan",
+      "start": "2347 BC",
+      "category": "After the Flood",
+      "reference": "Genesis 9:18-29",
+      "description": "Noah plants a vineyard, becomes drunk, and lies uncovered. Ham sees his father's nakedness while Shem and Japheth cover him walking backward. Noah curses Canaan and blesses Shem and Japheth.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-table-of-nations",
+      "title": "The Table of Nations",
+      "start": "2300 BC",
+      "category": "After the Flood",
+      "reference": "Genesis 10:1-32",
+      "description": "The descendants of Japheth, Ham, and Shem spread into their lands by families and languages. Nimrod becomes a mighty hunter whose kingdom begins at Babel in Shinar, and who builds Nineveh.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-tower-of-babel",
+      "title": "The Tower of Babel",
+      "start": "2242 BC",
+      "category": "After the Flood",
+      "reference": "Genesis 11:1-9",
+      "description": "The whole earth has one language. Settling in Shinar, the people build a city and a tower with its top in the heavens to make a name for themselves. The LORD confuses their language and scatters them over the face of the earth.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-terah-leaves-ur",
+      "title": "Terah Leaves Ur for Canaan",
+      "start": "1926 BC",
+      "category": "Abraham",
+      "reference": "Genesis 11:27-32",
+      "description": "Terah takes Abram, Sarai, and his grandson Lot out from Ur of the Chaldeans to go to Canaan, but they settle in Haran, where Terah dies at two hundred five years.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-call-of-abram",
+      "title": "The Call of Abram",
+      "start": "1921 BC",
+      "category": "Abraham",
+      "reference": "Genesis 12:1-9",
+      "description": "The LORD tells Abram to leave his country and kindred for a land he will be shown, promising to make of him a great nation in whom all families of the earth will be blessed. Seventy-five years old, he departs Haran and builds altars at Shechem and Bethel.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-abram-in-egypt",
+      "title": "Abram and Sarai in Egypt",
+      "start": "1920 BC",
+      "category": "Abraham",
+      "reference": "Genesis 12:10-20",
+      "description": "Driven by famine to Egypt, Abram calls Sarai his sister; she is taken into Pharaoh's house. The LORD afflicts Pharaoh with great plagues, and Pharaoh sends them away with all they have.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-abram-lot-separate",
+      "title": "Abram and Lot Separate",
+      "start": "1918 BC",
+      "category": "Abraham",
+      "reference": "Genesis 13:1-18",
+      "description": "Their possessions too great to dwell together, Abram offers Lot his choice. Lot takes the well-watered plain of the Jordan and moves his tent toward Sodom, while Abram settles by the oaks of Mamre at Hebron.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-rescue-of-lot",
+      "title": "Abram Rescues Lot and Meets Melchizedek",
+      "start": "1913 BC",
+      "category": "Abraham",
+      "reference": "Genesis 14:1-24",
+      "description": "Four eastern kings defeat the kings of the plain and carry Lot off. Abram leads three hundred eighteen trained men, routs them near Damascus, and is blessed by Melchizedek king of Salem, priest of God Most High, giving him a tenth of everything.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-covenant-of-pieces",
+      "title": "The Covenant Between the Pieces",
+      "start": "1913 BC",
+      "category": "Abraham",
+      "reference": "Genesis 15:1-21",
+      "description": "Told to count the stars, Abram believes the LORD, and it is reckoned to him as righteousness. In a deep and terrifying darkness he learns his offspring will be aliens and slaves four hundred years; a smoking fire pot and flaming torch pass between the divided animals.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-hagar-and-ishmael",
+      "title": "Hagar Flees and Ishmael Is Born",
+      "start": "1910 BC",
+      "category": "Abraham",
+      "reference": "Genesis 16:1-16",
+      "description": "Sarai gives her Egyptian slave-girl Hagar to Abram. Pregnant and treated harshly, Hagar flees to a spring in the wilderness, where the angel of the LORD sends her back with a promise. She names the LORD El-roi. Abram is eighty-six when Ishmael is born.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-covenant-circumcision",
+      "title": "The Covenant of Circumcision",
+      "start": "1897 BC",
+      "category": "Abraham",
+      "reference": "Genesis 17:1-27",
+      "description": "When Abram is ninety-nine, God renames him Abraham and Sarai Sarah, promises a son by her, and gives circumcision as the sign of an everlasting covenant. Abraham and Ishmael are circumcised that very day.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-three-visitors",
+      "title": "The Three Visitors and Sarah's Laughter",
+      "start": "1897 BC",
+      "category": "Abraham",
+      "reference": "Genesis 18:1-15",
+      "description": "Three men appear by the oaks of Mamre in the heat of the day. Abraham hurries to prepare curds, milk, and a calf. Told she will bear a son, Sarah laughs to herself and is asked whether anything is too wonderful for the LORD.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-abraham-intercedes-sodom",
+      "title": "Abraham Bargains for Sodom",
+      "start": "1897 BC",
+      "category": "Abraham",
+      "reference": "Genesis 18:16-33",
+      "description": "Abraham presses the LORD from fifty righteous down to ten, appealing to him as the judge of all the earth who must surely do what is just. The LORD agrees not to destroy the city for the sake of ten.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-destruction-of-sodom",
+      "title": "The Destruction of Sodom and Gomorrah",
+      "start": "1897 BC",
+      "category": "Abraham",
+      "reference": "Genesis 19:1-29",
+      "description": "Two angels are sheltered by Lot and besieged by the men of the city, who are struck blind. Lot lingers and is seized by the hand and brought out. The LORD rains sulfur and fire on the cities; Lot's wife looks back and becomes a pillar of salt.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-lot-and-daughters",
+      "title": "Lot and His Daughters in the Cave",
+      "start": "1897 BC",
+      "category": "Abraham",
+      "reference": "Genesis 19:30-38",
+      "description": "Afraid to stay in Zoar, Lot lives in a cave with his two daughters, who make him drink wine and lie with him. Their sons Moab and Ben-ammi become the ancestors of the Moabites and Ammonites.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-abraham-and-abimelech",
+      "title": "Abraham and Sarah at Gerar",
+      "start": "1897 BC",
+      "category": "Abraham",
+      "reference": "Genesis 20:1-18",
+      "description": "Residing in Gerar, Abraham again calls Sarah his sister, and King Abimelech takes her. Warned in a dream by night, Abimelech restores her with sheep, oxen, and a thousand pieces of silver, and Abraham prays for his healing.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-birth-of-isaac",
+      "title": "The Birth of Isaac",
+      "start": "1896 BC",
+      "category": "Abraham",
+      "reference": "Genesis 21:1-7",
+      "description": "The LORD does for Sarah as he had promised. Abraham is a hundred years old when Isaac is born, and circumcises him at eight days. Sarah says that God has brought her laughter, and that all who hear will laugh with her.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-hagar-sent-away",
+      "title": "Hagar and Ishmael Sent Away",
+      "start": "1892 BC",
+      "category": "Abraham",
+      "reference": "Genesis 21:8-21",
+      "description": "At the feast for Isaac's weaning Sarah demands the slave woman and her son be cast out. In the wilderness of Beer-sheba, when the water is gone, God hears the boy's voice and opens Hagar's eyes to a well.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-covenant-beersheba",
+      "title": "The Covenant at Beer-Sheba",
+      "start": "1892 BC",
+      "category": "Abraham",
+      "reference": "Genesis 21:22-34",
+      "description": "Abimelech and Phicol swear an oath with Abraham over a disputed well. Abraham sets apart seven ewe lambs as witness that he dug it, names the place Beer-sheba, and plants a tamarisk tree there.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-binding-of-isaac",
+      "title": "The Binding of Isaac",
+      "start": "1871 BC",
+      "category": "Abraham",
+      "reference": "Genesis 22:1-19",
+      "description": "God tests Abraham, telling him to offer Isaac in the land of Moriah. On the third day he builds the altar and binds his son, but the angel of the LORD stops him, and he offers a ram caught in a thicket. He names the place for the LORD's provision.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-death-of-sarah",
+      "title": "The Death of Sarah and the Cave of Machpelah",
+      "start": "1859 BC",
+      "category": "Abraham",
+      "reference": "Genesis 23:1-20",
+      "description": "Sarah dies at a hundred twenty-seven at Kiriath-arba. Abraham, a stranger and alien among the Hittites, weighs out four hundred shekels of silver to Ephron for the field and cave of Machpelah as a burying place.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-rebekah-at-the-well",
+      "title": "A Wife for Isaac: Rebekah at the Well",
+      "start": "1856 BC",
+      "category": "Isaac",
+      "reference": "Genesis 24:1-67",
+      "description": "Abraham's servant swears not to take a Canaanite wife for Isaac and goes to the city of Nahor. He asks for a sign, and Rebekah offers to water his ten camels. Laban receives him, Rebekah agrees to go, and Isaac brings her into Sarah's tent.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-death-of-abraham",
+      "title": "The Death of Abraham",
+      "start": "1821 BC",
+      "category": "Abraham",
+      "reference": "Genesis 25:1-11",
+      "description": "Abraham takes Keturah as wife and sends the sons of his concubines eastward with gifts. He dies at a hundred seventy-five, an old man and full of years, and Isaac and Ishmael bury him with Sarah at Machpelah.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-birth-jacob-esau",
+      "title": "The Birth of Jacob and Esau",
+      "start": "1836 BC",
+      "category": "Isaac",
+      "reference": "Genesis 25:19-28",
+      "description": "Rebekah is barren until Isaac prays. The children struggle in her womb and she is told two nations are within her, the elder to serve the younger. Esau comes out red and hairy, Jacob gripping his heel. Isaac is sixty years old.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-birthright-sold",
+      "title": "Esau Sells His Birthright",
+      "start": "1805 BC",
+      "category": "Isaac",
+      "reference": "Genesis 25:29-34",
+      "description": "Esau comes in from the field famished and sells his birthright to Jacob for bread and lentil stew. Thus Esau despised his birthright.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-isaac-in-gerar",
+      "title": "Isaac in Gerar and the Wells",
+      "start": "1804 BC",
+      "category": "Isaac",
+      "reference": "Genesis 26:1-33",
+      "description": "Famine drives Isaac to Gerar, where he calls Rebekah his sister. He sows and reaps a hundredfold and grows rich. Quarrels over wells give the names Esek and Sitnah before he digs Rehoboth, and he swears an oath with Abimelech at Beer-sheba.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-stolen-blessing",
+      "title": "Jacob Steals Esau's Blessing",
+      "start": "1760 BC",
+      "category": "Jacob",
+      "reference": "Genesis 27:1-40",
+      "description": "Isaac, old and dim-sighted, sends Esau to hunt game. Rebekah dresses Jacob in Esau's garments with kidskins on his hands and neck. Isaac says 'The voice is Jacob's voice, but the hands are the hands of Esau,' and blesses him. Esau cries out bitterly.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-jacobs-ladder",
+      "title": "Jacob's Dream at Bethel",
+      "start": "1760 BC",
+      "category": "Jacob",
+      "reference": "Genesis 27:41-28:22",
+      "description": "Fleeing Esau's anger toward Haran, Jacob dreams of a ladder set on earth reaching to heaven with angels ascending and descending. He wakes astonished that the LORD was in that place without his knowing it, sets up the stone as a pillar, and names it Bethel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-jacob-marries",
+      "title": "Jacob Marries Leah and Rachel",
+      "start": "1753 BC",
+      "category": "Jacob",
+      "reference": "Genesis 29:1-30",
+      "description": "Jacob rolls the stone from the well for Rachel and serves Laban seven years for her, which seem but a few days. In the evening Laban gives him Leah instead; he completes her week and serves another seven years for Rachel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-birth-of-sons",
+      "title": "The Birth of Jacob's Sons",
+      "start": "1752 BC",
+      "end": "1745 BC",
+      "category": "Jacob",
+      "reference": "Genesis 29:31-30:24",
+      "description": "Leah bears Reuben, Simeon, Levi, and Judah; Bilhah bears Dan and Naphtali; Zilpah bears Gad and Asher; Leah bears Issachar, Zebulun, and Dinah. Then God remembers Rachel, and she bears Joseph.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-jacobs-flocks",
+      "title": "Jacob's Flocks Increase",
+      "start": "1745 BC",
+      "end": "1739 BC",
+      "category": "Jacob",
+      "reference": "Genesis 30:25-43",
+      "description": "Jacob agrees to take the speckled and spotted animals as his wages. He peels white streaks in rods of poplar, almond, and plane and sets them in the watering troughs, and the stronger of the flock become his; he grows exceedingly rich.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-jacob-flees-laban",
+      "title": "Jacob Flees from Laban",
+      "start": "1739 BC",
+      "category": "Jacob",
+      "reference": "Genesis 31:1-55",
+      "description": "Told by the LORD to return, Jacob leaves secretly; Rachel steals her father's household gods and hides them in a camel's saddle. Laban overtakes him in Gilead, searches in vain, and they raise a heap of stones called Galeed and Mizpah as a witness.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-wrestling-at-peniel",
+      "title": "Jacob Wrestles at Peniel",
+      "start": "1739 BC",
+      "category": "Jacob",
+      "reference": "Genesis 32:1-32",
+      "description": "Hearing Esau approaches with four hundred men, Jacob divides his company and sends droves ahead as a present. Left alone at the ford of the Jabbok, he wrestles till daybreak, his hip is put out of joint, and he is renamed Israel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-reunion-with-esau",
+      "title": "Jacob and Esau Are Reconciled",
+      "start": "1739 BC",
+      "category": "Jacob",
+      "reference": "Genesis 33:1-20",
+      "description": "Bowing seven times, Jacob approaches his brother. Esau runs to meet him, embraces him, and they weep. Jacob presses his gift on him, likening his brother's welcome to seeing the face of God, then journeys to Succoth and camps before Shechem.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-dinah-and-shechem",
+      "title": "Dinah and the Slaughter at Shechem",
+      "start": "1732 BC",
+      "category": "Jacob",
+      "reference": "Genesis 34:1-31",
+      "description": "Shechem son of Hamor seizes Dinah. Jacob's sons answer deceitfully, requiring every male be circumcised; on the third day, while they are in pain, Simeon and Levi kill all the males and plunder the city. Jacob fears he has been made odious in the land.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-return-to-bethel",
+      "title": "Jacob Returns to Bethel",
+      "start": "1732 BC",
+      "category": "Jacob",
+      "reference": "Genesis 35:1-15",
+      "description": "Jacob buries the foreign gods under the oak near Shechem and goes up to Bethel to build an altar. God appears again, confirms the name Israel, and renews the promise of land and descendants.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-death-of-rachel",
+      "title": "The Birth of Benjamin and the Death of Rachel",
+      "start": "1732 BC",
+      "category": "Jacob",
+      "reference": "Genesis 35:16-21",
+      "description": "On the way from Bethel, Rachel has hard labor near Ephrath. As her soul departs she names the child Ben-oni, but his father calls him Benjamin. She is buried on the way to Ephrath, and Jacob sets a pillar at her grave.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-death-of-isaac",
+      "title": "The Death of Isaac",
+      "start": "1716 BC",
+      "category": "Isaac",
+      "reference": "Genesis 35:27-29",
+      "description": "Jacob comes to his father at Mamre. Isaac dies at a hundred eighty years, old and full of days, and his sons Esau and Jacob bury him.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-descendants-of-esau",
+      "title": "The Descendants of Esau in Edom",
+      "start": "1716 BC",
+      "category": "Isaac",
+      "reference": "Genesis 36:1-43",
+      "description": "Esau moves to the hill country of Seir because their possessions are too great for them to live together. His clans and the kings who reigned in Edom before any king reigned over the Israelites are recorded.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "gen-josephs-dreams",
+      "title": "Joseph's Dreams",
+      "start": "1728 BC",
+      "category": "Joseph",
+      "reference": "Genesis 37:1-11",
+      "description": "Joseph, seventeen years old and wearing the long robe with sleeves his father made him, dreams of sheaves bowing to his sheaf and of the sun, moon, and eleven stars bowing to him. His brothers hate him and his father keeps the matter in mind.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-joseph-sold",
+      "title": "Joseph Sold into Egypt",
+      "start": "1728 BC",
+      "category": "Joseph",
+      "reference": "Genesis 37:12-36",
+      "description": "Sent to his brothers at Dothan, Joseph is stripped of his robe and thrown into a dry pit. At Judah's suggestion he is sold for twenty pieces of silver to traders bound for Egypt. His robe is dipped in goat's blood, and Jacob mourns, refusing comfort.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-judah-and-tamar",
+      "title": "Judah and Tamar",
+      "start": "1727 BC",
+      "category": "Joseph",
+      "reference": "Genesis 38:1-30",
+      "description": "Judah's sons Er and Onan die, and he withholds Shelah from Tamar. Veiled at the entrance to Enaim, she takes Judah's signet, cord, and staff as pledge. Told she is pregnant, he orders her burned until she produces them, then acknowledges that she has been more in the right than he.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-joseph-and-potiphars-wife",
+      "title": "Joseph and Potiphar's Wife",
+      "start": "1720 BC",
+      "category": "Joseph",
+      "reference": "Genesis 39:1-23",
+      "description": "The LORD is with Joseph and he is made overseer of Potiphar's house. His master's wife propositions him day after day and at last seizes his garment; he flees, leaving it in her hand, and is accused and imprisoned, where the chief jailer again puts everything in his care.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-cupbearer-and-baker",
+      "title": "The Dreams of the Cupbearer and the Baker",
+      "start": "1718 BC",
+      "category": "Joseph",
+      "reference": "Genesis 40:1-23",
+      "description": "Imprisoned with Joseph, Pharaoh's chief cupbearer and chief baker each dream. Joseph interprets the three branches and three baskets as three days: the cupbearer is restored and the baker hanged. Yet the cupbearer forgets him.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-pharaohs-dreams",
+      "title": "Joseph Interprets Pharaoh's Dreams",
+      "start": "1715 BC",
+      "category": "Joseph",
+      "reference": "Genesis 41:1-36",
+      "description": "After two whole years Pharaoh dreams of seven fat cows devoured by seven lean ones, and seven full ears swallowed by seven blighted ears. Brought from the dungeon, Joseph declares seven years of plenty followed by seven of famine, and urges storing a fifth.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-joseph-made-governor",
+      "title": "Joseph Set Over All Egypt",
+      "start": "1715 BC",
+      "category": "Joseph",
+      "reference": "Genesis 41:37-57",
+      "description": "Pharaoh gives Joseph his signet ring, fine linen, and a gold chain, names him Zaphenath-paneah, and gives him Asenath as wife. Thirty years old, he stores grain like the sand of the sea, and his sons Manasseh and Ephraim are born before the famine.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-brothers-first-journey",
+      "title": "The Brothers' First Journey to Egypt",
+      "start": "1707 BC",
+      "category": "Joseph",
+      "reference": "Genesis 42:1-38",
+      "description": "Ten brothers come to buy grain and bow before Joseph, who recognizes them but speaks harshly, charging them as spies. He keeps Simeon bound, demands Benjamin, and secretly returns their money in their sacks, dismaying them.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-brothers-second-journey",
+      "title": "The Brothers Return with Benjamin",
+      "start": "1706 BC",
+      "category": "Joseph",
+      "reference": "Genesis 43:1-34",
+      "description": "Judah offers himself as surety and Jacob sends Benjamin with a present of balm, honey, gum, resin, pistachio nuts, and almonds. Joseph, overcome at the sight of his brother, weeps in a private room, then seats them in order of birth and gives Benjamin five portions.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-silver-cup-test",
+      "title": "The Silver Cup and Judah's Plea",
+      "start": "1706 BC",
+      "category": "Joseph",
+      "reference": "Genesis 44:1-34",
+      "description": "Joseph hides his silver cup in Benjamin's sack. When it is found the brothers tear their clothes and return. Judah offers to remain as a slave in the boy's place rather than see his father's gray hairs brought down to Sheol in sorrow.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-joseph-reveals-himself",
+      "title": "Joseph Makes Himself Known",
+      "start": "1706 BC",
+      "category": "Joseph",
+      "reference": "Genesis 45:1-28",
+      "description": "Unable to control himself, Joseph sends everyone out and weeps so loudly the Egyptians hear. He tells his brothers who he is — the one they sold into Egypt — and insists it was God who sent him ahead to preserve life. Pharaoh invites the family to the best of the land.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-jacob-goes-to-egypt",
+      "title": "Jacob Goes Down to Egypt",
+      "start": "1706 BC",
+      "category": "Joseph",
+      "reference": "Genesis 46:1-47:12",
+      "description": "At Beer-sheba God tells Jacob not to fear going down to Egypt. Seventy persons of his house come; Joseph meets him in Goshen and weeps on his neck. Jacob, a hundred thirty years old, blesses Pharaoh and the family settles in the land of Rameses.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-famine-and-land-of-egypt",
+      "title": "Joseph's Administration of the Famine",
+      "start": "1706 BC",
+      "end": "1701 BC",
+      "category": "Joseph",
+      "reference": "Genesis 47:13-26",
+      "description": "As the famine deepens Joseph collects all the money, then the livestock, then the land itself for Pharaoh, and makes the people servants, giving them seed and setting a statute that a fifth of the harvest goes to Pharaoh. Only the priests' land is not bought.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-blessing-ephraim-manasseh",
+      "title": "Jacob Blesses Ephraim and Manasseh",
+      "start": "1689 BC",
+      "category": "Joseph",
+      "reference": "Genesis 47:27-48:22",
+      "description": "Jacob makes Joseph swear not to bury him in Egypt. Claiming Ephraim and Manasseh as his own, he crosses his hands to lay his right hand on the younger, refusing Joseph's correction and declaring that the younger brother will become the greater.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-blessing-of-twelve-sons",
+      "title": "Jacob Blesses His Twelve Sons",
+      "start": "1689 BC",
+      "category": "Joseph",
+      "reference": "Genesis 49:1-28",
+      "description": "Jacob tells his sons what will happen in days to come: Reuben unstable as water, Simeon and Levi scattered for their violence, Judah a lion's whelp from whom the scepter shall not depart, Joseph a fruitful bough, Benjamin a ravenous wolf.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-death-and-burial-of-jacob",
+      "title": "The Death and Burial of Jacob",
+      "start": "1689 BC",
+      "category": "Joseph",
+      "reference": "Genesis 49:29-50:14",
+      "description": "Charging his sons to bury him at Machpelah, Jacob draws up his feet and dies. The physicians embalm him forty days and Egypt weeps seventy. A great company goes up to Canaan, mourning seven days at the threshing floor of Atad.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-joseph-forgives-brothers",
+      "title": "Joseph Forgives His Brothers",
+      "start": "1689 BC",
+      "category": "Joseph",
+      "reference": "Genesis 50:15-21",
+      "description": "Fearing Joseph now bears a grudge, the brothers fall down before him as slaves. He weeps and reassures them that though they intended harm, God intended it for good, to preserve a numerous people alive.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "gen-death-of-joseph",
+      "title": "The Death of Joseph",
+      "start": "1635 BC",
+      "category": "Joseph",
+      "reference": "Genesis 50:22-26",
+      "description": "Joseph lives a hundred ten years and sees Ephraim's children of the third generation. He makes the Israelites swear to carry up his bones when God comes to them, and is embalmed and placed in a coffin in Egypt.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

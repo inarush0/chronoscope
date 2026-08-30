@@ -1,0 +1,297 @@
+{
+  "book": "Joshua",
+  "order": 6,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "jos-commission-of-joshua",
+      "title": "The LORD Commissions Joshua",
+      "start": "1406-01 BC",
+      "category": "Entering the Land",
+      "reference": "Joshua 1:1-9",
+      "description": "After the death of Moses the LORD tells Joshua to cross the Jordan, promising every place the sole of his foot treads, and charging him three times to be strong and courageous.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-orders-to-cross",
+      "title": "Orders to Prepare to Cross",
+      "start": "1406-01 BC",
+      "category": "Entering the Land",
+      "reference": "Joshua 1:10-18",
+      "description": "Joshua commands the officers to ready provisions for crossing in three days, and reminds Reuben, Gad, and half of Manasseh to cross over armed ahead of their kindred.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-spies-and-rahab",
+      "title": "The Spies and Rahab at Jericho",
+      "start": "1406-01 BC",
+      "category": "Entering the Land",
+      "reference": "Joshua 2:1-24",
+      "description": "Two spies sent from Shittim lodge with Rahab, who hides them under stalks of flax on her roof and lets them down by a rope, asking to be spared for the crimson cord in her window.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-jordan-crossing",
+      "title": "Israel Crosses the Jordan",
+      "start": "1406-01-10 BC",
+      "category": "Entering the Land",
+      "reference": "Joshua 3:1-17",
+      "description": "The priests carrying the ark step into the Jordan at flood stage; the waters coming down stand in a heap far off at Adam, and all Israel crosses over on dry ground opposite Jericho.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-twelve-stones",
+      "title": "The Twelve Stones at Gilgal",
+      "start": "1406-01-10 BC",
+      "category": "Entering the Land",
+      "reference": "Joshua 4:1-24",
+      "description": "One man from each tribe carries a stone from the riverbed, and Joshua sets them up at Gilgal as a memorial, so that when children ask in time to come what the stones mean, the crossing will be told.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-circumcision-and-passover",
+      "title": "Circumcision at Gilgal and the Passover",
+      "start": "1406-01-14 BC",
+      "category": "Entering the Land",
+      "reference": "Joshua 5:1-12",
+      "description": "The generation born in the wilderness is circumcised at Gibeath-haaraloth. Israel keeps the passover on the fourteenth day on the plains of Jericho, and the manna ceases the day after they eat the produce of the land.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-commander-of-the-army",
+      "title": "The Commander of the Army of the LORD",
+      "start": "1406-01 BC",
+      "category": "Entering the Land",
+      "reference": "Joshua 5:13-15",
+      "description": "Near Jericho Joshua sees a man with a drawn sword who declares himself commander of the army of the LORD, and tells Joshua to remove his sandals, for the place is holy.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-fall-of-jericho",
+      "title": "The Fall of Jericho",
+      "start": "1406 BC",
+      "category": "The Central Campaign",
+      "reference": "Joshua 6:1-27",
+      "description": "For six days Israel marches once around the shut-up city with seven priests blowing rams' horns before the ark; on the seventh day they march seven times, the people shout, and the wall falls flat. Only Rahab's household is spared.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-achans-sin",
+      "title": "Achan's Sin and the First Defeat at Ai",
+      "start": "1406 BC",
+      "category": "The Central Campaign",
+      "reference": "Joshua 7:1-26",
+      "description": "Israel is routed at Ai because Achan took devoted things from Jericho. Chosen by lot, he confesses to a mantle from Shinar, silver, and a bar of gold hidden in his tent, and is stoned in the Valley of Achor.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-capture-of-ai",
+      "title": "The Capture of Ai",
+      "start": "1406 BC",
+      "category": "The Central Campaign",
+      "reference": "Joshua 8:1-29",
+      "description": "Joshua sets an ambush behind the city, draws its defenders out by feigning flight, and takes Ai; its king is hanged on a tree until evening and buried under a heap of stones at the gate.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-altar-on-ebal",
+      "title": "The Altar on Mount Ebal and the Reading of the Law",
+      "start": "1406 BC",
+      "category": "The Central Campaign",
+      "reference": "Joshua 8:30-35",
+      "description": "Joshua builds an altar of unhewn stones on Mount Ebal, writes a copy of the law of Moses on the stones, and reads all the blessings and curses before the whole assembly, including women, children, and the aliens among them.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-gibeonite-deception",
+      "title": "The Deception of the Gibeonites",
+      "start": "1406 BC",
+      "category": "The Southern Campaign",
+      "reference": "Joshua 9:1-27",
+      "description": "The Gibeonites come with worn sacks, patched sandals, and dry crumbling bread, claiming to be from a far country. Israel makes a treaty without asking direction from the LORD, and afterward makes them hewers of wood and drawers of water.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-sun-stands-still",
+      "title": "The Amorite Coalition Defeated at Gibeon",
+      "start": "1406 BC",
+      "category": "The Southern Campaign",
+      "reference": "Joshua 10:1-15",
+      "description": "Five Amorite kings besiege Gibeon; Joshua marches all night from Gilgal, the LORD throws down huge hailstones, and Joshua calls on the sun to stand still over Gibeon — it stops in midheaven for about a whole day.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-five-kings-cave",
+      "title": "The Five Kings in the Cave at Makkedah",
+      "start": "1406 BC",
+      "category": "The Southern Campaign",
+      "reference": "Joshua 10:16-27",
+      "description": "The five kings hide in a cave at Makkedah and are shut in with large stones. After the pursuit, Joshua has them brought out, has his commanders put their feet on their necks, and hangs them on five trees until evening.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-southern-cities",
+      "title": "The Conquest of the Southern Cities",
+      "start": "1406 BC",
+      "end": "1405 BC",
+      "category": "The Southern Campaign",
+      "reference": "Joshua 10:28-43",
+      "description": "Joshua takes Makkedah, Libnah, Lachish, Eglon, Hebron, and Debir, defeating the whole land of the hill country, the Negeb, the lowland, and the slopes, because the LORD fought for Israel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-waters-of-merom",
+      "title": "The Northern Coalition Defeated at Merom",
+      "start": "1405 BC",
+      "category": "The Northern Campaign",
+      "reference": "Joshua 11:1-15",
+      "description": "Jabin king of Hazor gathers a great army with horses and chariots at the waters of Merom. Israel falls on them suddenly, hamstrings their horses, burns their chariots, and burns Hazor itself.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-summary-of-conquest",
+      "title": "Summary of the Conquest",
+      "start": "1405 BC",
+      "end": "1400 BC",
+      "category": "The Northern Campaign",
+      "reference": "Joshua 11:16-23",
+      "description": "Joshua takes the whole land — hill country, Negeb, Goshen, lowland, Arabah — making war a long time with all those kings. The Anakim are cut off except in Gaza, Gath, and Ashdod, and the land has rest from war.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-list-of-kings",
+      "title": "The List of Defeated Kings",
+      "start": "1400 BC",
+      "category": "The Northern Campaign",
+      "reference": "Joshua 12:1-24",
+      "description": "A register of the kings defeated east of the Jordan under Moses — Sihon and Og — and the thirty-one kings west of the Jordan defeated under Joshua.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-land-remaining",
+      "title": "The Land Still to Be Possessed",
+      "start": "1400 BC",
+      "category": "Dividing the Land",
+      "reference": "Joshua 13:1-7",
+      "description": "Joshua is now old and advanced in years, yet very much of the land remains: the regions of the Philistines and Geshurites, Lebanon, and the territory of the Sidonians.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-transjordan-inheritance",
+      "title": "The Inheritance East of the Jordan",
+      "start": "1400 BC",
+      "category": "Dividing the Land",
+      "reference": "Joshua 13:8-33",
+      "description": "The allotments of Reuben, Gad, and half of Manasseh east of the Jordan are recorded. To the tribe of Levi Moses gave no inheritance: the offerings to the LORD are their inheritance.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-caleb-receives-hebron",
+      "title": "Caleb Receives Hebron",
+      "start": "1400 BC",
+      "category": "Dividing the Land",
+      "reference": "Joshua 14:1-15",
+      "description": "Caleb, eighty-five years old and as strong as the day Moses sent him, claims the hill country promised him forty-five years earlier, and Joshua gives him Hebron as an inheritance.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-judah-allotment",
+      "title": "The Allotment of Judah",
+      "start": "1400 BC",
+      "category": "Dividing the Land",
+      "reference": "Joshua 15:1-63",
+      "description": "Judah's borders and towns are recorded. Othniel takes Kiriath-sepher and wins Achsah, who asks her father for springs of water. The Jebusites remain in Jerusalem alongside Judah.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-joseph-allotment",
+      "title": "The Allotment of Ephraim and Manasseh",
+      "start": "1400 BC",
+      "category": "Dividing the Land",
+      "reference": "Joshua 16:1-17:18",
+      "description": "The tribes of Joseph receive their territory. The daughters of Zelophehad receive an inheritance among their father's brothers, and the Josephites, complaining of a single lot, are told to clear the forested hill country.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-shiloh-assembly",
+      "title": "The Assembly at Shiloh and the Survey of the Land",
+      "start": "1399 BC",
+      "category": "Dividing the Land",
+      "reference": "Joshua 18:1-10",
+      "description": "The tent of meeting is set up at Shiloh. Joshua rebukes the seven tribes still without an inheritance and sends three men from each to write a description of the land in seven divisions, then casts lots for them.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-remaining-allotments",
+      "title": "The Allotments of the Seven Remaining Tribes",
+      "start": "1399 BC",
+      "category": "Dividing the Land",
+      "reference": "Joshua 18:11-19:48",
+      "description": "Benjamin, Simeon, Zebulun, Issachar, Asher, Naphtali, and Dan receive their territories by lot at Shiloh before the LORD, Simeon's lying within the portion of Judah.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-joshua-inheritance",
+      "title": "Joshua Receives Timnath-Serah",
+      "start": "1399 BC",
+      "category": "Dividing the Land",
+      "reference": "Joshua 19:49-51",
+      "description": "When the land is finished being apportioned, Israel gives Joshua the town he asked for, Timnath-serah in the hill country of Ephraim, which he rebuilds and settles in.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-cities-of-refuge",
+      "title": "The Cities of Refuge Appointed",
+      "start": "1399 BC",
+      "category": "Dividing the Land",
+      "reference": "Joshua 20:1-9",
+      "description": "Kedesh, Shechem, Kiriath-arba, Bezer, Ramoth, and Golan are set apart so that anyone who kills a person without intent may flee there and stand trial before the congregation.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-levitical-cities",
+      "title": "The Levitical Cities Assigned",
+      "start": "1399 BC",
+      "category": "Dividing the Land",
+      "reference": "Joshua 21:1-45",
+      "description": "Forty-eight towns with their pasture lands are given to the Levites out of the tribal inheritances. Not one word of all the good promises of the LORD to Israel has failed.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-eastern-tribes-altar",
+      "title": "The Altar of the Eastern Tribes",
+      "start": "1398 BC",
+      "category": "Epilogue",
+      "reference": "Joshua 22:1-34",
+      "description": "Reuben, Gad, and half of Manasseh return home and build a great altar by the Jordan. Israel gathers for war until Phinehas learns the altar is a witness, not for sacrifice, and they name it as a witness between them.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-joshuas-farewell",
+      "title": "Joshua's Farewell to the Leaders",
+      "start": "1376 BC",
+      "category": "Epilogue",
+      "reference": "Joshua 23:1-16",
+      "description": "Long afterward, old and advanced in years, Joshua summons the elders and judges to hold fast to the LORD, warning that if they intermarry with the remaining nations they will be a snare and a trap.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-covenant-at-shechem",
+      "title": "The Covenant Renewal at Shechem",
+      "start": "1375 BC",
+      "category": "Epilogue",
+      "reference": "Joshua 24:1-28",
+      "description": "Joshua recounts Israel's history from Terah onward and calls them to choose whom they will serve, pledging that he and his household will serve the LORD. He makes a covenant and sets up a great stone under the oak.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "jos-death-of-joshua",
+      "title": "The Death of Joshua and the Burial of Joseph's Bones",
+      "start": "1375 BC",
+      "category": "Epilogue",
+      "reference": "Joshua 24:29-33",
+      "description": "Joshua dies at a hundred and ten and is buried at Timnath-serah. Joseph's bones, brought up from Egypt, are buried at Shechem, and Eleazar son of Aaron dies and is buried in the hill country of Ephraim.",
+      "datingBasis": "narrative"
+    }
+  ]
+}
