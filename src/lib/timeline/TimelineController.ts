@@ -37,9 +37,17 @@ export interface BinInfo {
   /** Theoretical time range of the bin column. */
   timeStart: Time;
   timeEnd: Time;
-  /** Actual extent of events assigned to this bin (used for zooming). */
-  eventStart: Time;
-  eventEnd: Time;
+  /**
+   * Range to zoom to when drilling into this bin: the extent of its events'
+   * start times, which is what assigned them here. Taking the extent of their
+   * end times instead stretches the view across one long interval and leaves
+   * the events themselves crushed into a corner of it.
+   *
+   * Falls back to the column's own range when every event in the bin shares a
+   * start time, since there is then no extent to zoom to.
+   */
+  zoomStart: Time;
+  zoomEnd: Time;
   count: number;
   /** Sorted descending by count. */
   categories: { name: string; count: number }[];
@@ -372,8 +380,8 @@ export class TimelineController {
     // Count events assigned to this bin (same assignment logic as renderLODA).
     const votes: Record<string, number> = {};
     let count = 0;
-    let eventStart = Infinity;
-    let eventEnd = -Infinity;
+    let firstStart = Infinity;
+    let lastStart = -Infinity;
     for (const event of this.events) {
       if (event.start > this._viewEnd) break;
       const end = event.end ?? event.start;
@@ -386,8 +394,8 @@ export class TimelineController {
       );
       if (idx === binIdx) {
         count++;
-        if (event.start < eventStart) eventStart = event.start;
-        if (end > eventEnd) eventEnd = end;
+        if (event.start < firstStart) firstStart = event.start;
+        if (event.start > lastStart) lastStart = event.start;
         const cat = event.category ?? "Uncategorized";
         votes[cat] = (votes[cat] ?? 0) + 1;
       }
@@ -399,11 +407,13 @@ export class TimelineController {
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => b.count - a.count);
 
+    const coincident = firstStart === lastStart;
+
     return {
       timeStart: binStart,
       timeEnd: binEnd,
-      eventStart,
-      eventEnd,
+      zoomStart: coincident ? binStart : firstStart,
+      zoomEnd: coincident ? binEnd : lastStart,
       count,
       categories,
     };
@@ -731,7 +741,7 @@ export class TimelineController {
     if (this.lod !== "A") return;
     const bin = this.getBinAt(e.offsetX, e.offsetY);
     if (!bin) return;
-    this.selectedBinRange = { start: bin.eventStart, end: bin.eventEnd };
+    this.selectedBinRange = { start: bin.zoomStart, end: bin.zoomEnd };
     this.selectedId = null;
     this.onSelectionChange(null);
     this.zoomToSelection();
@@ -741,7 +751,7 @@ export class TimelineController {
     if (this.lod === "A") {
       const bin = this.getBinAt(x, y);
       this.selectedBinRange = bin
-        ? { start: bin.eventStart, end: bin.eventEnd }
+        ? { start: bin.zoomStart, end: bin.zoomEnd }
         : null;
       this.selectedId = null;
       this.onSelectionChange(null);
