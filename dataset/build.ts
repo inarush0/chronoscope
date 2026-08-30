@@ -25,7 +25,7 @@ const outPath = resolve(getFlag('--out', 'data/chronoscope.sqlite'));
 const datasetSlug = getFlag('--slug', 'bible');
 const datasetName = getFlag('--name', 'The Bible');
 
-const { books, errors } = loadAllBooks(eventsDir);
+const { books, errors, spread } = loadAllBooks(eventsDir);
 
 if (errors.length > 0) {
   console.error(`Refusing to build — ${errors.length} problem(s) in the event files:\n`);
@@ -122,7 +122,7 @@ db.close();
 console.log(`Built ${outPath}`);
 console.log(`  dataset: ${datasetSlug} (${datasetName})`);
 console.log(`  books:   ${books.length}`);
-console.log(`  events:  ${totalEvents}`);
+console.log(`  events:  ${totalEvents} (${spread} spread within their authored year or month)`);
 for (const { file, events } of books) {
   console.log(`    ${String(file.order).padStart(2)} ${file.book.padEnd(24)} ${events.length}`);
 }

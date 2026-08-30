@@ -43,6 +43,14 @@ precision you actually have: `"1406 BC"` is honest, `"1406-01-10 BC"` claims a
 day the text may not support. `end` is optional and only for events that span
 time.
 
+Keep events in narrative order within a file. Dozens of events routinely share
+a year-only date, and events at an identical timestamp can never be told apart
+by the timeline however far it zooms — so `scripts/lib/spread.ts` distributes
+each set of coincident events across the year (or month) their date asserts,
+in book order and then file order. The offsets are layout only and never leave
+the period the authored date already covers, but they do mean the sequence you
+write events in is the sequence the timeline shows.
+
 ## Conventions
 
 - **id** — `<3-4 letter book prefix>-<slug>`, unique across the whole dataset.

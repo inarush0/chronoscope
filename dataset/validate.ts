@@ -18,7 +18,7 @@ const args = process.argv.slice(2);
 const index = args.indexOf('--events');
 const eventsDir = resolve(index === -1 ? 'data/events' : args[index + 1]);
 
-const { books, errors } = loadAllBooks(eventsDir);
+const { books, errors, spread } = loadAllBooks(eventsDir);
 
 for (const { file, events } of books) {
   if (events.length === 0) {
@@ -35,6 +35,7 @@ for (const { file, events } of books) {
 
 const total = books.reduce((sum, book) => sum + book.events.length, 0);
 console.log(`\n${books.length} book file(s), ${total} event(s)`);
+console.log(`${spread} event(s) share a date and are spread within their authored year or month`);
 
 // Coverage against the target scope in data/books.json.
 try {

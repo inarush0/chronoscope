@@ -8,6 +8,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseDate, type Precision } from './dates.ts';
+import { spreadCoincidentDates } from './spread.ts';
 
 export interface AuthoredEvent {
   id: string;
@@ -43,6 +44,9 @@ export interface ResolvedEvent {
   category: string | null;
   lane: string | null;
   meta: Record<string, unknown> | null;
+  /** How exact the authored dates were — see lib/spread.ts. */
+  precision: Precision;
+  endPrecision: Precision | null;
 }
 
 const VALID_DATING_BASES = new Set([
@@ -130,9 +134,10 @@ export function resolveBook(file: BookFile, path: string) {
     }
 
     let end: number | null = null;
+    let endPrecision: Precision | null = null;
     if (event.end !== undefined) {
       try {
-        end = parseDate(event.end).ms;
+        ({ ms: end, precision: endPrecision } = parseDate(event.end));
       } catch (error) {
         errors.push(`${where}: ${(error as Error).message}`);
         return;
@@ -154,7 +159,9 @@ export function resolveBook(file: BookFile, path: string) {
       book: file.book,
       category: event.category ?? null,
       lane: event.lane ?? null,
-      meta
+      meta,
+      precision,
+      endPrecision
     });
   });
 
@@ -187,5 +194,9 @@ export function loadAllBooks(dir: string) {
   }
 
   books.sort((a, b) => a.file.order - b.file.order);
-  return { books, errors };
+
+  // After sorting, so the offsets follow canonical order across books.
+  const spread = spreadCoincidentDates(books.flatMap((book) => book.events));
+
+  return { books, errors, spread };
 }

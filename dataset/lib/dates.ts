@@ -52,6 +52,23 @@ export function parseDate(input: string): ParsedDate {
   };
 }
 
+/**
+ * Length in ms of the calendar period an authored date of this precision
+ * asserts: the whole year for "30 AD", the whole month for "30-04 AD". A day
+ * precision date asserts a single day and so spans nothing to place within.
+ *
+ * `ms` must be the start of that period, which is what parseDate returns.
+ */
+export function precisionSpan(ms: number, precision: Precision): number {
+  if (precision === 'day') return 0;
+
+  const next = new Date(ms);
+  if (precision === 'year') next.setUTCFullYear(next.getUTCFullYear() + 1);
+  else next.setUTCMonth(next.getUTCMonth() + 1);
+
+  return next.getTime() - ms;
+}
+
 /** Inverse of parseDate, used when converting legacy epoch-ms datasets. */
 export function formatDate(ms: number, precision: Precision = 'day'): string {
   const date = new Date(ms);
