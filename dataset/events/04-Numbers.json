@@ -1,0 +1,530 @@
+{
+  "book": "Numbers",
+  "order": 4,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "num-tabernacle-dedication-offerings",
+      "title": "Offerings of the Twelve Tribal Leaders",
+      "start": "1445-01-01 BC",
+      "end": "1445-01-12 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 7:1-89",
+      "description": "On the day Moses finishes setting up the tabernacle, the leaders of the twelve tribes bring wagons and oxen, and present identical dedication offerings for the altar, one leader on each of twelve days.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-lampstand-and-levites",
+      "title": "The Lampstand and the Dedication of the Levites",
+      "start": "1445-01 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 8:1-26",
+      "description": "Aaron sets up the seven lamps to give light in front of the lampstand, and the Levites are cleansed, presented as an elevation offering, and given to Aaron in place of the firstborn of Israel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-passover-sinai",
+      "title": "The Passover Kept in the Wilderness of Sinai",
+      "start": "1445-01-14 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 9:1-14",
+      "description": "Israel keeps the passover in the first month of the second year after leaving Egypt. For those unclean or on a journey, a second passover is appointed in the second month on the fourteenth day.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-first-census",
+      "title": "The First Census of Israel",
+      "start": "1445-02-01 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 1:1-46",
+      "description": "On the first day of the second month of the second year, the LORD commands a census of all Israelite men twenty years and older able to go to war; the total is 603,550.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-levites-exempted",
+      "title": "The Levites Set Apart for the Tabernacle",
+      "start": "1445-02 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 1:47-54",
+      "description": "The Levites are not enrolled with the other tribes but appointed over the tabernacle of the covenant, to carry it, care for it, and camp around it.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-camp-arrangement",
+      "title": "The Arrangement of the Camp",
+      "start": "1445-02 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 2:1-34",
+      "description": "The tribes are assigned positions around the tent of meeting by standard and ancestral house — Judah east, Reuben south, Ephraim west, Dan north — and the order of march is set.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-levite-census",
+      "title": "The Census of the Levites",
+      "start": "1445-02 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 3:1-51",
+      "description": "The Levites are counted from a month old and upward and taken by the LORD in place of the firstborn of Israel, with the surplus firstborn redeemed at five shekels each.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-levitical-duties",
+      "title": "The Duties of the Levitical Clans",
+      "start": "1445-02 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 4:1-49",
+      "description": "The Kohathites, Gershonites, and Merarites are counted from thirty to fifty years old and assigned their loads for carrying the sanctuary and its furnishings.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-camp-purity",
+      "title": "Purity of the Camp and Restitution",
+      "start": "1445-02 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 5:1-10",
+      "description": "The unclean are put outside the camp, and those who wrong a neighbor must confess and make full restitution with a fifth added.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-ordeal-of-jealousy",
+      "title": "The Ordeal for a Suspected Wife",
+      "start": "1445-02 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 5:11-31",
+      "description": "The ritual of the water of bitterness, by which a husband's suspicion of his wife is brought before the priest for decision.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-nazirite-vow",
+      "title": "The Nazirite Vow",
+      "start": "1445-02 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 6:1-21",
+      "description": "Those who separate themselves to the LORD abstain from wine, leave the hair uncut, and avoid contact with the dead, with offerings prescribed for completing or interrupting the vow.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-priestly-blessing",
+      "title": "The Priestly Blessing",
+      "start": "1445-02 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 6:22-27",
+      "description": "Aaron and his sons are given the words with which to bless Israel, invoking the LORD's blessing and keeping, the shining of his face, and the gift of peace.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-cloud-over-tabernacle",
+      "title": "The Cloud Over the Tabernacle",
+      "start": "1445-02 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 9:15-23",
+      "description": "A cloud covers the tabernacle by day and the appearance of fire by night; Israel sets out or remains in camp only as the cloud lifts or settles.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-silver-trumpets",
+      "title": "The Two Silver Trumpets",
+      "start": "1445-02 BC",
+      "category": "At Sinai",
+      "reference": "Numbers 10:1-10",
+      "description": "Moses makes two trumpets of hammered silver for summoning the congregation, breaking camp, sounding the alarm in war, and marking festivals.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-departure-from-sinai",
+      "title": "Israel Departs from Sinai",
+      "start": "1445-02-20 BC",
+      "category": "Departure and Complaints",
+      "reference": "Numbers 10:11-36",
+      "description": "On the twentieth day of the second month of the second year the cloud lifts from the tabernacle and Israel sets out from the wilderness of Sinai toward the wilderness of Paran, tribe by tribe.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-fire-at-taberah",
+      "title": "Fire at Taberah",
+      "start": "1445 BC",
+      "category": "Departure and Complaints",
+      "reference": "Numbers 11:1-3",
+      "description": "The people complain in the hearing of the LORD, fire burns among them and consumes the outskirts of the camp, and the place is named Taberah.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-craving-for-meat",
+      "title": "Craving for Meat and the Complaint of Moses",
+      "start": "1445 BC",
+      "category": "Departure and Complaints",
+      "reference": "Numbers 11:4-15",
+      "description": "The rabble crave meat and remember the fish of Egypt, weary of the manna; Moses protests to the LORD that he cannot carry this people alone.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-seventy-elders",
+      "title": "The Seventy Elders Receive the Spirit",
+      "start": "1445 BC",
+      "category": "Departure and Complaints",
+      "reference": "Numbers 11:16-30",
+      "description": "The LORD takes some of the spirit on Moses and puts it on seventy elders, who prophesy. Eldad and Medad prophesy in the camp, and Moses wishes that all the LORD's people were prophets.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-quail-kibroth",
+      "title": "The Quail and the Plague at Kibroth-hattaavah",
+      "start": "1445 BC",
+      "category": "Departure and Complaints",
+      "reference": "Numbers 11:31-35",
+      "description": "A wind brings quail from the sea in vast quantity; while the meat is still between their teeth the LORD strikes the people with a great plague, and the place is called Kibroth-hattaavah, the graves of craving.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-miriam-aaron-oppose-moses",
+      "title": "Miriam and Aaron Speak Against Moses",
+      "start": "1445 BC",
+      "category": "Departure and Complaints",
+      "reference": "Numbers 12:1-16",
+      "description": "Miriam and Aaron object to Moses' Cushite wife and to his unique standing. The LORD vindicates Moses; Miriam becomes leprous and is shut outside the camp for seven days at Hazeroth.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-spies-sent",
+      "title": "Twelve Spies Sent into Canaan",
+      "start": "1445 BC",
+      "category": "The Spies and the Rebellion",
+      "reference": "Numbers 13:1-25",
+      "description": "One leader from each tribe is sent from the wilderness of Paran to scout Canaan. They go up through the Negeb to Hebron and cut a branch with a single cluster of grapes at the Wadi Eshcol, returning after forty days.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-spies-report",
+      "title": "The Report of the Spies",
+      "start": "1445 BC",
+      "category": "The Spies and the Rebellion",
+      "reference": "Numbers 13:26-33",
+      "description": "The scouts report a land flowing with milk and honey but fortified cities and the descendants of Anak. Caleb urges going up at once, while the others spread a bad report of the land.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-people-rebel",
+      "title": "The People Refuse to Enter the Land",
+      "start": "1445 BC",
+      "category": "The Spies and the Rebellion",
+      "reference": "Numbers 14:1-12",
+      "description": "The congregation weeps and demands a captain to return to Egypt. Joshua and Caleb tear their clothes and plead with the people, who threaten to stone them.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-forty-years-decreed",
+      "title": "Forty Years in the Wilderness Decreed",
+      "start": "1445 BC",
+      "category": "The Spies and the Rebellion",
+      "reference": "Numbers 14:13-38",
+      "description": "Moses intercedes and the LORD pardons, but decrees that no one counted in the census over twenty years old will enter the land except Caleb and Joshua; Israel will wander forty years, a year for each day the scouts spent in the land.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-defeat-at-hormah",
+      "title": "Defeat at Hormah",
+      "start": "1445 BC",
+      "category": "The Spies and the Rebellion",
+      "reference": "Numbers 14:39-45",
+      "description": "Presuming to go up without Moses or the ark, the people are beaten down by the Amalekites and Canaanites as far as Hormah.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-offering-laws",
+      "title": "Laws of Offerings in the Land",
+      "start": "1444 BC",
+      "category": "Wilderness Wandering",
+      "reference": "Numbers 15:1-31",
+      "description": "Grain and drink offerings to accompany sacrifices when Israel enters the land, provision for unintentional sin by the congregation or an individual, and the penalty for sinning high-handedly.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "num-sabbath-breaker",
+      "title": "The Sabbath-Breaker Stoned",
+      "start": "1444 BC",
+      "category": "Wilderness Wandering",
+      "reference": "Numbers 15:32-36",
+      "description": "A man found gathering sticks on the sabbath is held in custody until the LORD's decision, then stoned outside the camp.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "num-fringes",
+      "title": "Fringes on the Garments",
+      "start": "1444 BC",
+      "category": "Wilderness Wandering",
+      "reference": "Numbers 15:37-41",
+      "description": "Israel is commanded to make fringes with a blue cord on the corners of their garments, to look at and remember all the commandments of the LORD.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "num-korah-rebellion",
+      "title": "The Rebellion of Korah, Dathan, and Abiram",
+      "start": "1443 BC",
+      "category": "Korah's Rebellion",
+      "reference": "Numbers 16:1-35",
+      "description": "Korah with 250 leaders challenges the authority of Moses and Aaron. The earth opens and swallows Dathan and Abiram with their households, and fire consumes the 250 men offering incense.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "num-plague-censers",
+      "title": "The Plague Stopped by Aaron's Censer",
+      "start": "1443 BC",
+      "category": "Korah's Rebellion",
+      "reference": "Numbers 16:36-50",
+      "description": "The censers of the dead are hammered into a covering for the altar. When the congregation blames Moses and a plague breaks out, Aaron runs among the people with incense and stands between the dead and the living.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "num-aarons-rod",
+      "title": "Aaron's Rod Buds",
+      "start": "1443 BC",
+      "category": "Korah's Rebellion",
+      "reference": "Numbers 17:1-13",
+      "description": "A rod for each ancestral house is placed in the tent of meeting; Aaron's rod for the house of Levi sprouts, buds, blossoms, and bears almonds, confirming his priesthood.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "num-priestly-dues",
+      "title": "The Dues of Priests and Levites",
+      "start": "1443 BC",
+      "category": "Wilderness Wandering",
+      "reference": "Numbers 18:1-32",
+      "description": "Aaron's house bears responsibility for the sanctuary. The priests receive the offerings, the Levites receive the tithe as their inheritance in place of land, and the Levites tithe in turn.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "num-red-heifer",
+      "title": "The Red Heifer and Corpse Impurity",
+      "start": "1443 BC",
+      "category": "Wilderness Wandering",
+      "reference": "Numbers 19:1-22",
+      "description": "A red heifer without defect is burned outside the camp and its ashes kept for the water for cleansing, which purifies anyone who has touched a corpse.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "num-death-of-miriam",
+      "title": "The Death of Miriam at Kadesh",
+      "start": "1407-01 BC",
+      "category": "Toward the Promised Land",
+      "reference": "Numbers 20:1",
+      "description": "In the first month the congregation comes into the wilderness of Zin and stays at Kadesh, where Miriam dies and is buried.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-waters-of-meribah",
+      "title": "Moses Strikes the Rock at Meribah",
+      "start": "1407 BC",
+      "category": "Toward the Promised Land",
+      "reference": "Numbers 20:2-13",
+      "description": "With no water, the people quarrel with Moses. Told to command the rock, Moses strikes it twice; water comes out, but the LORD tells Moses and Aaron they will not bring the assembly into the land.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-edom-refuses-passage",
+      "title": "Edom Refuses Israel Passage",
+      "start": "1407 BC",
+      "category": "Toward the Promised Land",
+      "reference": "Numbers 20:14-21",
+      "description": "Moses sends messengers to the king of Edom asking to pass along the King's Highway. Edom comes out with a heavy force, and Israel turns away.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-death-of-aaron",
+      "title": "The Death of Aaron on Mount Hor",
+      "start": "1407-05-01 BC",
+      "category": "Toward the Promised Land",
+      "reference": "Numbers 20:22-29",
+      "description": "At Mount Hor, Aaron's vestments are stripped from him and put on his son Eleazar. Aaron dies on the mountain top, and Israel mourns him thirty days.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-arad-hormah",
+      "title": "Victory Over the King of Arad",
+      "start": "1406 BC",
+      "category": "Toward the Promised Land",
+      "reference": "Numbers 21:1-3",
+      "description": "The Canaanite king of Arad takes some Israelites captive. Israel vows to devote their towns to destruction, the LORD gives them victory, and the place is named Hormah.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-bronze-serpent",
+      "title": "The Bronze Serpent",
+      "start": "1406 BC",
+      "category": "Toward the Promised Land",
+      "reference": "Numbers 21:4-9",
+      "description": "The people speak against God and Moses on the way around Edom; poisonous serpents bite them, and Moses makes a serpent of bronze on a pole so that those who look at it live.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-journey-transjordan",
+      "title": "Through Moab and the Song of the Well",
+      "start": "1406 BC",
+      "category": "Toward the Promised Land",
+      "reference": "Numbers 21:10-20",
+      "description": "Israel journeys by Oboth, Iye-abarim, and the Wadi Zered to the wilderness east of Moab, singing at Beer the song of the well that the leaders dug.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-defeat-sihon",
+      "title": "The Defeat of Sihon King of the Amorites",
+      "start": "1406 BC",
+      "category": "Toward the Promised Land",
+      "reference": "Numbers 21:21-31",
+      "description": "Sihon refuses passage and attacks Israel at Jahaz. Israel defeats him and takes possession of his land from the Arnon to the Jabbok, settling in Heshbon and its villages.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-defeat-og",
+      "title": "The Defeat of Og King of Bashan",
+      "start": "1406 BC",
+      "category": "Toward the Promised Land",
+      "reference": "Numbers 21:32-35",
+      "description": "Israel turns north toward Bashan; Og comes out against them at Edrei and is struck down with his sons and all his people, and Israel takes possession of his land.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-balak-summons-balaam",
+      "title": "Balak Summons Balaam",
+      "start": "1406 BC",
+      "category": "Balaam and Moab",
+      "reference": "Numbers 22:1-20",
+      "description": "Camped on the plains of Moab across the Jordan from Jericho, Israel alarms Balak son of Zippor, who sends elders of Moab and Midian with fees for divination to bring Balaam son of Beor to curse Israel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-balaams-donkey",
+      "title": "Balaam's Donkey and the Angel",
+      "start": "1406 BC",
+      "category": "Balaam and Moab",
+      "reference": "Numbers 22:21-35",
+      "description": "As Balaam rides to Moab, his donkey sees the angel of the LORD standing in the road with a drawn sword and turns aside three times. The LORD opens the donkey's mouth, and then Balaam's eyes.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-balaam-first-oracles",
+      "title": "Balaam's First and Second Oracles",
+      "start": "1406 BC",
+      "category": "Balaam and Moab",
+      "reference": "Numbers 23:1-30",
+      "description": "At Bamoth-baal and the field of Zophim, seven altars are built and bulls and rams offered. Twice Balaam blesses Israel instead of cursing them, to Balak's fury.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-balaam-final-oracles",
+      "title": "Balaam's Final Oracles",
+      "start": "1406 BC",
+      "category": "Balaam and Moab",
+      "reference": "Numbers 24:1-25",
+      "description": "The spirit of God comes upon Balaam and he blesses Israel a third time, praising the beauty of their tents and encampments, then prophesies a star coming out of Jacob before returning home.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-baal-peor",
+      "title": "Apostasy at Baal-Peor and the Zeal of Phinehas",
+      "start": "1406 BC",
+      "category": "Balaam and Moab",
+      "reference": "Numbers 25:1-18",
+      "description": "Israel joins itself to the Baal of Peor through the women of Moab. A plague kills twenty-four thousand and is stopped when Phinehas son of Eleazar spears an Israelite man and a Midianite woman.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-second-census",
+      "title": "The Second Census on the Plains of Moab",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 26:1-65",
+      "description": "After the plague, a new census counts 601,730 men of war. Not one remains of those counted at Sinai except Caleb and Joshua, and the land is to be apportioned by lot according to these numbers.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-daughters-zelophehad",
+      "title": "The Daughters of Zelophehad",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 27:1-11",
+      "description": "Mahlah, Noah, Hoglah, Milcah, and Tirzah ask for their father's inheritance since he left no son. The LORD grants their request and establishes it as a statute of judgment for Israel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-joshua-commissioned",
+      "title": "Joshua Commissioned to Succeed Moses",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 27:12-23",
+      "description": "Moses is told to view the land from the mountains of Abarim, since he will not enter it. He lays his hands on Joshua son of Nun before Eleazar and the congregation, giving him some of his authority.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-offering-calendar",
+      "title": "The Calendar of Public Offerings",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 28:1-29:40",
+      "description": "The daily, sabbath, new moon, and festival offerings are set out in full for passover, weeks, trumpets, the day of atonement, and the seven days of booths.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-vows",
+      "title": "Laws Concerning Vows",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 30:1-16",
+      "description": "A man who makes a vow must keep it; the vows of a daughter or wife stand unless annulled by her father or husband on the day he hears of it.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-war-against-midian",
+      "title": "The War Against Midian",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 31:1-54",
+      "description": "A thousand from each tribe go out against Midian and kill its five kings and Balaam son of Beor. The spoil is divided between the warriors and the congregation, with a levy for the LORD.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-transjordan-settlement",
+      "title": "Reuben, Gad, and Half of Manasseh Settle in Transjordan",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 32:1-42",
+      "description": "Seeing good grazing land at Jazer and Gilead, Reuben and Gad ask to settle east of the Jordan. Moses agrees on condition that their fighting men cross over armed until Israel takes possession of Canaan.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-wilderness-itinerary",
+      "title": "The Record of the Wilderness Journey",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 33:1-49",
+      "description": "Moses writes down the stages of the journey from Rameses, set out on the fifteenth day of the first month, through forty-two encampments to the plains of Moab by the Jordan.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-boundaries-of-canaan",
+      "title": "The Boundaries of Canaan and the Tribal Leaders",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 33:50-34:29",
+      "description": "Israel is commanded to drive out the inhabitants and destroy their idols. The borders of the land are drawn, and Eleazar, Joshua, and one leader from each tribe are named to apportion it.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-levitical-cities",
+      "title": "Levitical Cities and Cities of Refuge",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 35:1-34",
+      "description": "Forty-eight towns with pasture lands are assigned to the Levites, six of them cities of refuge where one who kills without intent may flee from the avenger of blood until the death of the high priest.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "num-zelophehad-marriage",
+      "title": "The Marriage of Zelophehad's Daughters",
+      "start": "1406 BC",
+      "category": "Preparing for the Land",
+      "reference": "Numbers 36:1-13",
+      "description": "So that no inheritance passes from tribe to tribe, heiresses must marry within their father's tribe; Zelophehad's daughters marry sons of their father's brothers in Manasseh.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

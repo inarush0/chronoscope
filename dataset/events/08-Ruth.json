@@ -1,0 +1,89 @@
+{
+  "book": "Ruth",
+  "order": 8,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "rut-elimelech-family-moab",
+      "title": "Elimelech's Family Moves to Moab",
+      "start": "1298 BC",
+      "end": "1288 BC",
+      "category": "Loss and Return",
+      "reference": "Ruth 1:1-5",
+      "description": "During a famine in the time of the judges, Elimelech and Naomi leave Bethlehem with their sons and settle in Moab. Elimelech dies, the sons marry Ruth and Orpah, and after about ten years the sons also die.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "rut-ruth-clings-to-naomi",
+      "title": "Ruth Clings to Naomi",
+      "start": "1288 BC",
+      "category": "Loss and Return",
+      "reference": "Ruth 1:6-18",
+      "description": "Hearing that food is again available in Judah, Naomi sets out for home with her daughters-in-law. Orpah eventually returns to Moab, but Ruth binds her future to Naomi, Naomi's people, and Naomi's God.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "rut-naomi-ruth-bethlehem",
+      "title": "Naomi and Ruth Arrive in Bethlehem",
+      "start": "1288 BC",
+      "category": "Loss and Return",
+      "reference": "Ruth 1:19-22",
+      "description": "Naomi and Ruth reach Bethlehem at the beginning of the barley harvest. The town is stirred by Naomi's return, while she describes the contrast between the fullness of her departure and the emptiness of her homecoming.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "rut-gleans-boaz-field",
+      "title": "Ruth Gleans in Boaz's Field",
+      "start": "1288 BC",
+      "category": "Ruth and Boaz",
+      "reference": "Ruth 2:1-16",
+      "description": "Ruth goes out to glean and happens upon a field belonging to Boaz, a wealthy relative of Elimelech. Having heard of her loyalty to Naomi, Boaz protects her, welcomes her at his meal, and orders his workers to leave extra grain for her.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "rut-gleans-through-harvest",
+      "title": "Ruth Gleans Through the Harvest",
+      "start": "1288 BC",
+      "category": "Ruth and Boaz",
+      "reference": "Ruth 2:17-23",
+      "description": "Ruth returns with an abundant quantity of barley and food left from Boaz's table. Naomi identifies Boaz as one of their family redeemers, and Ruth continues with his workers through the barley and wheat harvests.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "rut-threshing-floor-request",
+      "title": "Ruth Appeals to Boaz at the Threshing Floor",
+      "start": "1288 BC",
+      "category": "Redemption at Bethlehem",
+      "reference": "Ruth 3:1-18",
+      "description": "Following Naomi's instructions, Ruth approaches Boaz privately at the threshing floor and asks him to act as family redeemer. Boaz commends her loyalty and promises to settle the matter after first consulting a nearer relative.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "rut-boaz-redeems-family",
+      "title": "Boaz Redeems the Family Property and Marries Ruth",
+      "start": "1288 BC",
+      "category": "Redemption at Bethlehem",
+      "reference": "Ruth 4:1-12",
+      "description": "At Bethlehem's gate, Boaz presents Naomi's property before the nearer redeemer and ten elders. When the other man relinquishes his right with the customary sandal exchange, Boaz acquires the land and takes Ruth as his wife to preserve the dead man's family line.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "rut-birth-of-obed",
+      "title": "The Birth of Obed",
+      "start": "1287 BC",
+      "category": "David's Family Line",
+      "reference": "Ruth 4:13-17",
+      "description": "Ruth bears a son named Obed, and Naomi embraces the child as her family's life and future. Obed later becomes the father of Jesse and grandfather of David.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "rut-genealogy-to-david",
+      "title": "The Genealogy from Perez to David",
+      "start": "1085 BC",
+      "category": "David's Family Line",
+      "reference": "Ruth 4:18-22",
+      "description": "The book closes with a ten-generation lineage running from Perez through Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz, Obed, and Jesse to David.",
+      "datingBasis": "composition"
+    }
+  ]
+}

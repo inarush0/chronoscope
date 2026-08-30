@@ -1,0 +1,14 @@
+// The dataset build tooling runs on bun, not in the SvelteKit app, so it
+// type-checks itself rather than extending the src-scoped app config.
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "types": ["node", "bun-types"],
+    "allowImportingTsExtensions": true,
+    "noEmit": true
+  },
+  "include": ["**/*.ts"]
+}

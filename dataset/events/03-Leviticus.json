@@ -1,0 +1,260 @@
+{
+  "book": "Leviticus",
+  "order": 3,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "lev-burnt-offering-law",
+      "title": "The Law of the Burnt Offering",
+      "start": "1445 BC",
+      "category": "Sacrificial Law",
+      "reference": "Leviticus 1:1-17",
+      "description": "The LORD calls to Moses from the tent of meeting and gives the prescriptions for the burnt offering from the herd, the flock, and birds.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-grain-offering-law",
+      "title": "The Law of the Grain Offering",
+      "start": "1445 BC",
+      "category": "Sacrificial Law",
+      "reference": "Leviticus 2:1-16",
+      "description": "Regulations for the grain offering of choice flour with oil and frankincense, unleavened and salted with the salt of the covenant.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-wellbeing-offering-law",
+      "title": "The Law of the Offering of Well-Being",
+      "start": "1445 BC",
+      "category": "Sacrificial Law",
+      "reference": "Leviticus 3:1-17",
+      "description": "Regulations for the sacrifice of well-being from herd or flock, with a perpetual statute that Israel eat neither fat nor blood.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-sin-offering-law",
+      "title": "The Law of the Sin Offering",
+      "start": "1445 BC",
+      "category": "Sacrificial Law",
+      "reference": "Leviticus 4:1-35",
+      "description": "Graded sin offerings for unintentional sin by the anointed priest, the whole congregation, a ruler, or an ordinary person.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-guilt-offering-law",
+      "title": "The Law of the Guilt Offering",
+      "start": "1445 BC",
+      "category": "Sacrificial Law",
+      "reference": "Leviticus 5:1-6:7",
+      "description": "Offerings graded by means for those who withhold testimony, touch what is unclean, or defraud a neighbor, with restitution plus a fifth.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-priestly-offering-duties",
+      "title": "Instructions for the Priests",
+      "start": "1445 BC",
+      "category": "Sacrificial Law",
+      "reference": "Leviticus 6:8-7:38",
+      "description": "The priests' handling of each offering: the perpetual fire on the altar, the priestly portions, and the prohibition of fat and blood.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-ordination-begins",
+      "title": "The Ordination of Aaron and His Sons",
+      "start": "1445-01-01 BC",
+      "end": "1445-01-07 BC",
+      "category": "Consecration of the Priesthood",
+      "reference": "Leviticus 8:1-36",
+      "description": "Moses assembles the congregation, washes and vests Aaron, anoints the tabernacle and the altar, and offers the bull and the two rams. Aaron and his sons remain at the entrance of the tent of meeting for seven days.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-aarons-first-sacrifice",
+      "title": "Aaron Offers the First Sacrifices",
+      "start": "1445-01-08 BC",
+      "category": "Consecration of the Priesthood",
+      "reference": "Leviticus 9:1-21",
+      "description": "On the eighth day Aaron draws near to the altar and sacrifices the sin offering, burnt offering, grain offering, and offering of well-being for himself and for the people.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-glory-appears-fire",
+      "title": "Fire from the LORD Consumes the Offering",
+      "start": "1445-01-08 BC",
+      "category": "Consecration of the Priesthood",
+      "reference": "Leviticus 9:22-24",
+      "description": "Aaron blesses the people, the glory of the LORD appears to all of them, and fire comes out from the LORD and consumes the burnt offering; the people shout and fall on their faces.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-nadab-abihu",
+      "title": "The Death of Nadab and Abihu",
+      "start": "1445-01-08 BC",
+      "category": "Consecration of the Priesthood",
+      "reference": "Leviticus 10:1-7",
+      "description": "Aaron's sons Nadab and Abihu offer unholy fire that the LORD had not commanded; fire comes out from the presence of the LORD and consumes them. Aaron is silent, and is forbidden to mourn.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-priestly-conduct-ruling",
+      "title": "Rulings for the Surviving Priests",
+      "start": "1445-01-08 BC",
+      "category": "Consecration of the Priesthood",
+      "reference": "Leviticus 10:8-20",
+      "description": "Priests are forbidden strong drink in the tent of meeting and charged to distinguish holy from common. Moses is angry that the sin offering was burned, but accepts Aaron's answer.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-clean-unclean-animals",
+      "title": "Clean and Unclean Animals",
+      "start": "1445 BC",
+      "category": "Purity Law",
+      "reference": "Leviticus 11:1-47",
+      "description": "The dietary laws distinguishing clean from unclean land animals, water creatures, birds, and swarming things, and the impurity conveyed by carcasses.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-childbirth-purification",
+      "title": "Purification After Childbirth",
+      "start": "1445 BC",
+      "category": "Purity Law",
+      "reference": "Leviticus 12:1-8",
+      "description": "The period of a mother's impurity and the offerings she brings at its completion, with a lesser offering permitted to those who cannot afford a lamb.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-skin-disease-law",
+      "title": "Laws Concerning Skin Disease",
+      "start": "1445 BC",
+      "category": "Purity Law",
+      "reference": "Leviticus 13:1-59",
+      "description": "The priest's examination and quarantine of surface afflictions in skin, hair, garments, and leather, and the pronouncement of clean or unclean.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-cleansing-rites",
+      "title": "Rites for Cleansing the Healed",
+      "start": "1445 BC",
+      "category": "Purity Law",
+      "reference": "Leviticus 14:1-57",
+      "description": "The ritual of the two birds, cedar, crimson yarn, and hyssop for one healed of a skin disease, and the procedure for an infected house.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-bodily-discharges",
+      "title": "Laws Concerning Bodily Discharges",
+      "start": "1445 BC",
+      "category": "Purity Law",
+      "reference": "Leviticus 15:1-33",
+      "description": "Impurity arising from male and female discharges, the washing required, and the offerings that restore cleanness.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-day-of-atonement",
+      "title": "The Day of Atonement Instituted",
+      "start": "1445 BC",
+      "category": "The Day of Atonement",
+      "reference": "Leviticus 16:1-34",
+      "description": "After the death of Aaron's sons, the LORD sets the one day each year when the high priest enters the holy of holies, and appoints the two goats — one for the LORD, one sent into the wilderness for Azazel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-slaughter-and-blood",
+      "title": "Slaughter at the Sanctuary and the Blood Prohibition",
+      "start": "1445 BC",
+      "category": "The Holiness Code",
+      "reference": "Leviticus 17:1-16",
+      "description": "All sacrifice is centralized at the tent of meeting, and eating blood is forbidden, for the life of the flesh is in the blood.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-sexual-prohibitions",
+      "title": "Prohibited Sexual Relations",
+      "start": "1445 BC",
+      "category": "The Holiness Code",
+      "reference": "Leviticus 18:1-30",
+      "description": "Israel is forbidden the practices of Egypt and Canaan, with a catalogue of forbidden degrees of kinship, lest the land vomit them out.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-holiness-laws",
+      "title": "You Shall Be Holy",
+      "start": "1445 BC",
+      "category": "The Holiness Code",
+      "reference": "Leviticus 19:1-37",
+      "description": "Laws on reverence for parents, gleaning for the poor, honest weights, impartial justice, and the command to love your neighbor as yourself.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-penalties",
+      "title": "Penalties for Violations",
+      "start": "1445 BC",
+      "category": "The Holiness Code",
+      "reference": "Leviticus 20:1-27",
+      "description": "Capital and other penalties for child sacrifice to Molech, consulting mediums, cursing parents, and the forbidden sexual unions.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-priestly-restrictions",
+      "title": "Restrictions on the Priesthood",
+      "start": "1445 BC",
+      "category": "The Holiness Code",
+      "reference": "Leviticus 21:1-22:33",
+      "description": "Rules for priestly mourning, marriage, and bodily wholeness, and the requirement that offerings be without blemish.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-festival-calendar",
+      "title": "The Festival Calendar",
+      "start": "1445 BC",
+      "category": "Sacred Times",
+      "reference": "Leviticus 23:1-44",
+      "description": "The appointed festivals: sabbath, Passover and unleavened bread, first fruits, weeks, trumpets, the day of atonement, and booths.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-lamp-and-bread",
+      "title": "The Lamp and the Bread of the Presence",
+      "start": "1445 BC",
+      "category": "Sacred Times",
+      "reference": "Leviticus 24:1-9",
+      "description": "Pure oil is brought for the lamp that burns regularly, and twelve loaves are set in two rows on the table of pure gold every sabbath.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-blasphemer-stoned",
+      "title": "The Blasphemer Is Stoned",
+      "start": "1445 BC",
+      "category": "The Holiness Code",
+      "reference": "Leviticus 24:10-23",
+      "description": "The son of an Israelite woman and an Egyptian father blasphemes the Name during a fight and is held in custody; at the LORD's word he is taken outside the camp and stoned.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-sabbatical-jubilee",
+      "title": "The Sabbatical and Jubilee Years",
+      "start": "1445 BC",
+      "category": "Sacred Times",
+      "reference": "Leviticus 25:1-55",
+      "description": "Every seventh year the land rests, and every fiftieth year liberty is proclaimed: property returns to its family and Israelite slaves go free.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-blessings-curses",
+      "title": "Blessings and Curses of the Covenant",
+      "start": "1445 BC",
+      "category": "Blessings and Curses",
+      "reference": "Leviticus 26:1-46",
+      "description": "Rain, harvest, and peace are promised for obedience; disease, defeat, famine, and exile among the nations are threatened for disobedience, with a promise to remember the covenant.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "lev-vows-and-tithes",
+      "title": "Laws on Vows and Tithes",
+      "start": "1445 BC",
+      "category": "Sacred Times",
+      "reference": "Leviticus 27:1-34",
+      "description": "Valuations for persons, animals, houses, and fields dedicated to the LORD, the redemption price of a fifth added, and the tithe of the land as holy to the LORD.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

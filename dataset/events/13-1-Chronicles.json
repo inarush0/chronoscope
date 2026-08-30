@@ -1,0 +1,370 @@
+{
+  "book": "1 Chronicles",
+  "order": 13,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "1ch-transjordan-tribes-defeat-hagrites",
+      "title": "The Transjordan Tribes Defeat the Hagrites",
+      "start": "1045 BC",
+      "category": "Tribal Histories",
+      "reference": "1 Chronicles 5:10,18-22",
+      "description": "In Saul's reign, warriors from Reuben, Gad, and eastern Manasseh fight the Hagrites and their allies. They call on God during the battle, capture large herds and many prisoners, and occupy the conquered territory until the exile.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-warriors-join-david-ziklag",
+      "title": "Warriors Join David at Ziklag",
+      "start": "1011 BC",
+      "category": "David's Rise",
+      "reference": "1 Chronicles 12:1-22",
+      "description": "Skilled fighters from Benjamin, Gad, Judah, and Manasseh join David while Saul still threatens him. Their numbers grow daily, and David appoints trusted arrivals as officers of his forces.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-saul-dies-gilboa",
+      "title": "Saul and His Sons Die on Mount Gilboa",
+      "start": "1010 BC",
+      "category": "David's Rise",
+      "reference": "1 Chronicles 10:1-7",
+      "description": "The Philistines rout Israel on Mount Gilboa and kill Jonathan, Abinadab, and Malchishua. Wounded and fearing capture, Saul falls on his own sword, and the Israelites abandon nearby towns to the Philistines.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-jabesh-buries-saul",
+      "title": "The People of Jabesh Bury Saul",
+      "start": "1010 BC",
+      "category": "David's Rise",
+      "reference": "1 Chronicles 10:8-14",
+      "description": "The Philistines display Saul's head and armor after stripping the fallen, but warriors from Jabesh recover the bodies of Saul and his sons. They bury the bones and fast for seven days, while the account attributes the transfer of the kingdom to Saul's unfaithfulness.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-all-israel-anoints-david",
+      "title": "All Israel Anoints David at Hebron",
+      "start": "1003 BC",
+      "category": "David's Rise",
+      "reference": "1 Chronicles 11:1-3; 12:23-40",
+      "description": "Representatives and armed divisions from every tribe gather at Hebron and acknowledge David as Israel's shepherd and ruler. The elders make a covenant with him, anoint him king, and celebrate together for three days.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-david-captures-jerusalem",
+      "title": "David Captures Jerusalem",
+      "start": "1003 BC",
+      "category": "David's Rise",
+      "reference": "1 Chronicles 11:4-9",
+      "description": "David and Israel take the Jebusite stronghold of Zion. Joab leads the first attack and becomes commander, while David settles in the stronghold and develops the city around it.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-davids-warriors-remembered",
+      "title": "David's Mighty Warriors Are Remembered",
+      "start": "1003 BC",
+      "category": "David's Rise",
+      "reference": "1 Chronicles 11:10-47",
+      "description": "A register preserves the names and exploits of the warriors who helped establish David's kingdom. It recalls exceptional victories, the dangerous retrieval of water from Bethlehem, and David's refusal to treat his men's lives lightly.",
+      "datingBasis": "composition"
+    },
+    {
+      "id": "1ch-hiram-builds-david-house",
+      "title": "Hiram Supplies David's Royal House",
+      "start": "1003 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "1 Chronicles 14:1-7",
+      "description": "Hiram of Tyre sends cedar, masons, and carpenters to build David a house in Jerusalem. David recognizes that his kingdom has been established, and his household grows in the capital.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-david-defeats-philistines-rephaim",
+      "title": "David Defeats the Philistines in Rephaim",
+      "start": "1003 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "1 Chronicles 14:8-17",
+      "description": "The Philistines twice raid the Valley of Rephaim after learning of David's accession. David seeks God's direction before each engagement, defeats them at Baal-perazim, and drives the second force from Gibeon to Gezer.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-uzzah-dies-ark",
+      "title": "Uzzah Dies during the First Ark Procession",
+      "start": "1002 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "1 Chronicles 13:1-14",
+      "description": "David gathers Israel to bring the ark from Kiriath-jearim on a new cart. Uzzah dies after reaching toward it when the oxen stumble, so David leaves the ark in Obed-edom's house for three months.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-ark-brought-jerusalem",
+      "title": "The Ark Is Brought to Jerusalem",
+      "start": "1002 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "1 Chronicles 15:1-16:3",
+      "description": "David prepares a tent and directs consecrated Levites to carry the ark with poles, accompanied by singers, instruments, sacrifices, and public rejoicing. The ark is placed in its tent, offerings are made, and gifts of food are distributed throughout Israel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-david-appoints-ark-ministers",
+      "title": "David Appoints Ministers before the Ark",
+      "start": "1002 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "1 Chronicles 16:4-43",
+      "description": "David appoints Asaph and other Levites to lead regular praise and remembrance before the ark. He maintains a second priestly ministry under Zadok at Gibeon, ordering worship at both sanctuaries before the assembly returns home.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-davidic-promise",
+      "title": "God Promises David an Enduring Dynasty",
+      "start": "1002 BC",
+      "category": "Davidic Covenant",
+      "reference": "1 Chronicles 17:1-15",
+      "description": "David proposes replacing the ark's tent with a temple, but Nathan receives a message that David will not build it. Instead, David's son will build the house, and God promises to establish that son's throne and David's dynasty.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-david-prays-dynasty",
+      "title": "David Responds to the Dynastic Promise",
+      "start": "1002 BC",
+      "category": "Davidic Covenant",
+      "reference": "1 Chronicles 17:16-27",
+      "description": "David marvels that God has promised a future to his household. He praises Israel's redeemer and asks that the blessing spoken over his dynasty be firmly established.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-david-expands-kingdom",
+      "title": "David Expands His Kingdom",
+      "start": "1001 BC",
+      "end": "995 BC",
+      "category": "Wars and Kingdom",
+      "reference": "1 Chronicles 18:1-13",
+      "description": "David subdues Philistia, Moab, Zobah, Damascus, and Edom, installing garrisons and receiving tribute. He dedicates captured precious metals for sacred use, including bronze later used in Solomon's temple furnishings.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-david-administers-israel",
+      "title": "David Establishes His Administration",
+      "start": "995 BC",
+      "category": "Wars and Kingdom",
+      "reference": "1 Chronicles 18:14-17",
+      "description": "David governs Israel with justice and equity. The account names the commanders, recorder, priests, secretary, royal guard leader, and chief officials serving his kingdom.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-ammon-humiliates-envoys",
+      "title": "Ammon Humiliates David's Envoys",
+      "start": "994 BC",
+      "category": "War with Ammon",
+      "reference": "1 Chronicles 19:1-5",
+      "description": "David sends envoys to console Hanun after the death of his father Nahash. Ammonite officials accuse them of espionage, and Hanun shaves them and cuts their garments, forcing the disgraced men to wait at Jericho before returning.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-joab-defeats-ammon-allies",
+      "title": "Joab Defeats Ammon and Its Allies",
+      "start": "994 BC",
+      "category": "War with Ammon",
+      "reference": "1 Chronicles 19:6-15",
+      "description": "The Ammonites hire a large allied force from Aramean territories. Surrounded on two fronts, Joab divides Israel's army with Abishai, and both the Arameans and Ammonites retreat before them.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-david-defeats-arameans",
+      "title": "David Defeats the Arameans",
+      "start": "994 BC",
+      "category": "War with Ammon",
+      "reference": "1 Chronicles 19:16-19",
+      "description": "Aramean forces arrive from beyond the Euphrates under Shophach, but David gathers Israel and defeats them after crossing the Jordan. Hadadezer's subjects make peace with David and cease supporting Ammon.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-rabbah-captured",
+      "title": "Rabbah Is Captured",
+      "start": "991 BC",
+      "category": "War with Ammon",
+      "reference": "1 Chronicles 20:1-3",
+      "description": "Joab ravages Ammon and overthrows Rabbah while David remains in Jerusalem. David takes the royal crown and extensive spoil, imposes labor on the inhabitants, and returns with the army.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-warriors-defeat-gath-giants",
+      "title": "David's Warriors Defeat the Giants of Gath",
+      "start": "990 BC",
+      "end": "980 BC",
+      "category": "Wars and Kingdom",
+      "reference": "1 Chronicles 20:4-8",
+      "description": "During successive Philistine conflicts at Gezer and Gath, Sibbecai, Elhanan, and Jonathan defeat prominent descendants of the giants. These victories complete the brief record of David's later Philistine wars.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-david-orders-census",
+      "title": "David Orders a Census of Israel",
+      "start": "971 BC",
+      "end": "970 BC",
+      "category": "Census and Temple Site",
+      "reference": "1 Chronicles 21:1-8",
+      "description": "David commands Joab to count Israel despite the commander's objection. Joab omits Levi and Benjamin, and David confesses his guilt after receiving the totals.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-pestilence-strikes-israel",
+      "title": "Pestilence Strikes Israel",
+      "start": "970 BC",
+      "category": "Census and Temple Site",
+      "reference": "1 Chronicles 21:9-17",
+      "description": "Gad offers David a choice among three judgments, and David places himself in God's mercy. A three-day pestilence kills seventy thousand before the destroying angel is halted at Ornan's threshing floor outside Jerusalem.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-david-buys-ornan-floor",
+      "title": "David Buys Ornan's Threshing Floor",
+      "start": "970 BC",
+      "category": "Census and Temple Site",
+      "reference": "1 Chronicles 21:18-22:1",
+      "description": "At Gad's instruction David buys Ornan's threshing floor at full price, builds an altar, and offers sacrifices. Fire answers from heaven, the plague ends, and David identifies the site as the future location of the temple and its altar.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-david-prepares-temple-materials",
+      "title": "David Prepares Materials for the Temple",
+      "start": "970 BC",
+      "category": "Preparing the Temple",
+      "reference": "1 Chronicles 22:2-5",
+      "description": "Knowing that Solomon is young, David gathers stonecutters and amasses dressed stone, iron, bronze, and cedar. He intends the future temple to be renowned even though he will not build it himself.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-david-charges-solomon-temple",
+      "title": "David Charges Solomon to Build the Temple",
+      "start": "970 BC",
+      "category": "Preparing the Temple",
+      "reference": "1 Chronicles 22:6-19",
+      "description": "David tells Solomon that his wars and bloodshed prevent him from building the temple, while his son has been chosen for the work during a reign of peace. He transfers extensive resources and urges Solomon and Israel's leaders to begin construction faithfully.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-solomon-made-king-first-time",
+      "title": "David Makes Solomon King",
+      "start": "970 BC",
+      "category": "Succession and Worship",
+      "reference": "1 Chronicles 23:1",
+      "description": "As David reaches old age, he makes Solomon king over Israel. The brief accession notice introduces David's final organization of the nation's worship and administration.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-david-organizes-levites",
+      "title": "David Organizes the Levites",
+      "start": "970 BC",
+      "category": "Organizing Worship",
+      "reference": "1 Chronicles 23:2-32",
+      "description": "David counts the Levites and assigns divisions to temple work, civil offices, gatekeeping, and music. Their responsibilities are adapted for a permanent sanctuary in Jerusalem rather than a portable tabernacle.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-david-organizes-priests-musicians",
+      "title": "David Organizes Priests and Musicians",
+      "start": "970 BC",
+      "category": "Organizing Worship",
+      "reference": "1 Chronicles 24:1-25:31",
+      "description": "David, Zadok, Ahimelech, and other leaders assign priestly households to twenty-four courses by lot. Musicians descended from Asaph, Heman, and Jeduthun are likewise arranged into twenty-four trained groups for sanctuary service.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-david-appoints-gatekeepers-officials",
+      "title": "David Appoints Gatekeepers and Officials",
+      "start": "970 BC",
+      "category": "Organizing Worship",
+      "reference": "1 Chronicles 26:1-32",
+      "description": "Levitical families receive gate assignments by lot, while others oversee sacred treasuries and dedicated gifts. David also appoints officers and judges for regions west and east of the Jordan.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-david-organizes-royal-administration",
+      "title": "David Organizes the Royal Administration",
+      "start": "970 BC",
+      "category": "Organizing Worship",
+      "reference": "1 Chronicles 27:1-34",
+      "description": "Twelve rotating military divisions are assigned to serve one month each, and leaders are named for Israel's tribes. Other stewards manage the crown's lands, produce, herds, property, counselors, and army.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-david-presents-solomon-temple-plan",
+      "title": "David Presents Solomon and the Temple Plan",
+      "start": "970 BC",
+      "category": "Succession and Worship",
+      "reference": "1 Chronicles 28:1-21",
+      "description": "Before Israel's assembled leaders, David identifies Solomon as the chosen successor and temple builder. He charges both people and son to remain faithful, then gives Solomon detailed plans, service divisions, and specifications for the sanctuary furnishings.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-leaders-give-temple",
+      "title": "Israel's Leaders Give for the Temple",
+      "start": "970 BC",
+      "category": "Succession and Worship",
+      "reference": "1 Chronicles 29:1-9",
+      "description": "David dedicates royal resources and his personal gold and silver to the future temple, then invites Israel's leaders to contribute. They respond with large voluntary gifts of metals and precious stones, producing widespread rejoicing.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-david-farewell-prayer",
+      "title": "David Offers His Farewell Prayer",
+      "start": "970 BC",
+      "category": "Succession and Worship",
+      "reference": "1 Chronicles 29:10-20",
+      "description": "David blesses God before the assembly, acknowledging that power, wealth, and the people's offerings all come from God. He asks that Israel retain its willing devotion and that Solomon receive an undivided heart for obedience and temple building.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-solomon-anointed-second-time",
+      "title": "Solomon Is Anointed a Second Time",
+      "start": "970 BC",
+      "category": "Succession and Worship",
+      "reference": "1 Chronicles 29:21-25",
+      "description": "After abundant sacrifices and a communal feast, the assembly again makes Solomon king and anoints Zadok as priest. Israel's leaders, warriors, and David's sons pledge allegiance, and Solomon assumes the throne with broad support.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "1ch-david-dies",
+      "title": "David Dies and Solomon Succeeds Him",
+      "start": "970 BC",
+      "category": "Succession and Worship",
+      "reference": "1 Chronicles 29:26-30",
+      "description": "David dies after a forty-year reign, including seven years at Hebron and thirty-three at Jerusalem. Solomon succeeds him, and the chronicler points to prophetic records for the fuller account of David's reign.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-transjordan-tribes-exiled",
+      "title": "The Transjordan Tribes Are Exiled",
+      "start": "734 BC",
+      "category": "Exile and Return",
+      "reference": "1 Chronicles 5:23-26",
+      "description": "The Reubenites, Gadites, and eastern half of Manasseh abandon Israel's God for the gods of neighboring peoples. Assyria carries them away to settlements in the empire, ending their occupation east of the Jordan.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "1ch-simeonites-expand-hezekiah",
+      "title": "Simeonite Clans Expand in Hezekiah's Reign",
+      "start": "715 BC",
+      "category": "Tribal Histories",
+      "reference": "1 Chronicles 4:34-43",
+      "description": "Simeonite leaders seek pasture near Gedor during Hezekiah's reign, defeat the inhabitants, and settle their land. Another group moves to Mount Seir and destroys a surviving Amalekite community there.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "1ch-returnees-settle-jerusalem",
+      "title": "Returnees Resettle Jerusalem",
+      "start": "538 BC",
+      "category": "Exile and Return",
+      "reference": "1 Chronicles 9:1-34",
+      "description": "After Judah's Babylonian exile, Israelites, priests, Levites, and temple servants again live in their towns and in Jerusalem. The record identifies leading families and describes the renewed duties of priests, gatekeepers, singers, and other sanctuary workers.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "1ch-genealogies-compiled",
+      "title": "Israel's Genealogies Are Compiled",
+      "start": "450 BC",
+      "category": "Genealogical Record",
+      "reference": "1 Chronicles 1:1-9:44",
+      "description": "The chronicler assembles genealogies from Adam through Israel's tribes, with particular attention to Judah, David's dynasty, Levi, Benjamin, and the families associated with Jerusalem. The record links the restored community with its ancestral, royal, and priestly past.",
+      "datingBasis": "composition"
+    }
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "book": "2 Samuel",
+  "order": 10,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "2sa-david-hears-saul-death",
+      "title": "David Hears of Saul and Jonathan's Deaths",
+      "start": "1010 BC",
+      "category": "David at Hebron",
+      "reference": "2 Samuel 1:1-16",
+      "description": "An Amalekite arrives at Ziklag with Saul's crown and claims to have killed the wounded king. David and his men mourn until evening, after which David executes the messenger for saying that he killed the LORD's anointed.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-david-laments-saul-jonathan",
+      "title": "David Laments Saul and Jonathan",
+      "start": "1010 BC",
+      "category": "David at Hebron",
+      "reference": "2 Samuel 1:17-27",
+      "description": "David composes a lament for Saul and Jonathan and orders Judah to learn it. The song grieves Israel's fallen warriors and David's profound loss of Jonathan.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-david-king-judah",
+      "title": "David Becomes King of Judah",
+      "start": "1010 BC",
+      "end": "1003 BC",
+      "category": "David at Hebron",
+      "reference": "2 Samuel 2:1-7",
+      "description": "At the LORD's direction David moves his household and followers to Hebron, where Judah anoints him king. He commends the people of Jabesh-gilead for burying Saul and asks them to remain loyal and courageous.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-ishbaal-king-israel",
+      "title": "Abner Makes Ishbaal King over Israel",
+      "start": "1010 BC",
+      "end": "1008 BC",
+      "category": "David at Hebron",
+      "reference": "2 Samuel 2:8-11",
+      "description": "Abner takes Saul's son Ishbaal to Mahanaim and establishes him over the northern tribes, while Judah follows David. Ishbaal reigns two years amid David's seven-and-a-half-year rule from Hebron.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-battle-pool-gibeon",
+      "title": "The Houses of Saul and David Fight at Gibeon",
+      "start": "1009 BC",
+      "category": "David at Hebron",
+      "reference": "2 Samuel 2:12-32",
+      "description": "Forces led by Abner and Joab meet beside Gibeon's pool, where a contest between twelve men from each side becomes a fierce battle. Asahel pursues Abner and is killed, planting the cause of Joab's later vengeance.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-abner-defects-david",
+      "title": "Abner Defects to David",
+      "start": "1004 BC",
+      "category": "David at Hebron",
+      "reference": "2 Samuel 3:1-21",
+      "description": "As David's house grows stronger, Ishbaal accuses Abner concerning Saul's concubine Rizpah. Offended, Abner arranges to transfer Israel's allegiance to David, who requires the return of Michal before receiving him at Hebron.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-joab-murders-abner",
+      "title": "Joab Murders Abner",
+      "start": "1004 BC",
+      "category": "David at Hebron",
+      "reference": "2 Samuel 3:22-39",
+      "description": "Joab recalls Abner after David has dismissed him in peace and kills him at Hebron to avenge Asahel. David publicly disavows the murder, mourns at Abner's grave, and refuses food, convincing Israel that he had no part in the killing.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-ishbaal-assassinated",
+      "title": "Ishbaal Is Assassinated",
+      "start": "1003 BC",
+      "category": "David at Hebron",
+      "reference": "2 Samuel 4:1-12",
+      "description": "Rechab and Baanah murder Ishbaal during his midday rest and carry his head to David. Instead of rewarding them, David executes the assassins and buries Ishbaal's head in Abner's tomb.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-david-king-all-israel",
+      "title": "David Becomes King over All Israel",
+      "start": "1003 BC",
+      "end": "970 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "2 Samuel 5:1-5",
+      "description": "All Israel's tribes come to Hebron, acknowledge David as their kin and shepherd, and anoint him king. David is thirty years old at his accession and reigns forty years in Hebron and Jerusalem.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-david-captures-jerusalem",
+      "title": "David Captures Jerusalem",
+      "start": "1003 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "2 Samuel 5:6-16",
+      "description": "David captures the Jebusite stronghold of Zion and makes it the City of David. He builds up Jerusalem, receives a cedar house through Hiram of Tyre, and establishes a growing royal household.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-philistines-defeated-rephaim",
+      "title": "David Defeats the Philistines in Rephaim",
+      "start": "1003 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "2 Samuel 5:17-25",
+      "description": "The Philistines twice spread through the Valley of Rephaim after David's anointing. David inquires of the LORD before both battles, breaking through them at Baal-perazim and then striking from Geba to Gezer.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-uzzah-dies-ark",
+      "title": "Uzzah Dies beside the Ark",
+      "start": "1002 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "2 Samuel 6:1-11",
+      "description": "David gathers Israel to bring the ark from Abinadab's house on a new cart. When Uzzah reaches out as the oxen shake it, he dies beside the ark, and David leaves it for three months at the house of Obed-edom.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-ark-enters-jerusalem",
+      "title": "The Ark Enters Jerusalem",
+      "start": "1002 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "2 Samuel 6:12-23",
+      "description": "Hearing that Obed-edom has prospered, David brings the ark into Jerusalem with sacrifices, shouting, and dancing. Michal despises his exuberance and confronts him afterward, remaining childless for the rest of her life.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-davidic-covenant",
+      "title": "The LORD Promises David a Dynasty",
+      "start": "1002 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "2 Samuel 7:1-17",
+      "description": "David proposes building a house for the ark, but Nathan receives a different word: David's offspring will build the temple, while the LORD will build David a lasting house and establish his throne.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-david-prayer-covenant",
+      "title": "David Prays over the Dynastic Promise",
+      "start": "1002 BC",
+      "category": "Jerusalem and the Ark",
+      "reference": "2 Samuel 7:18-29",
+      "description": "David sits before the LORD in wonder at the promise to his house, praises God's uniqueness and Israel's redemption, and asks that the promised blessing endure forever.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-david-expands-kingdom",
+      "title": "David Expands the Kingdom",
+      "start": "1001 BC",
+      "end": "995 BC",
+      "category": "David's Kingdom",
+      "reference": "2 Samuel 8:1-14",
+      "description": "David subdues Philistines, Moabites, Arameans, and Edomites, placing garrisons and receiving tribute. He dedicates captured silver, gold, and bronze to the LORD as his power extends toward the Euphrates.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-david-administration",
+      "title": "David Establishes His Administration",
+      "start": "995 BC",
+      "category": "David's Kingdom",
+      "reference": "2 Samuel 8:15-18",
+      "description": "David administers justice and equity throughout Israel. Joab commands the army, Jehoshaphat serves as recorder, Zadok and Ahimelech as priests, Seraiah as secretary, and Benaiah leads the royal guard.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-david-welcomes-mephibosheth",
+      "title": "David Welcomes Mephibosheth",
+      "start": "995 BC",
+      "category": "David's Kingdom",
+      "reference": "2 Samuel 9:1-13",
+      "description": "For Jonathan's sake David seeks a survivor of Saul's house and summons Jonathan's disabled son Mephibosheth. He restores Saul's lands to him, assigns Ziba's household to cultivate them, and gives Mephibosheth a permanent place at the royal table.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-ammon-humiliates-envoys",
+      "title": "Ammon Humiliates David's Envoys",
+      "start": "994 BC",
+      "category": "War with Ammon",
+      "reference": "2 Samuel 10:1-5",
+      "description": "David sends condolences to Hanun after the death of his father, Nahash. Suspecting espionage, Ammon's leaders shave half the envoys' beards and cut their garments, and David lets the humiliated men remain at Jericho until their beards regrow.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-joab-defeats-ammon-arameans",
+      "title": "Joab Defeats Ammon and Its Aramean Allies",
+      "start": "994 BC",
+      "category": "War with Ammon",
+      "reference": "2 Samuel 10:6-14",
+      "description": "The Ammonites hire a large Aramean force and confront Joab from two directions. Joab and Abishai divide the army between the threats, and both enemy forces retreat.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-david-defeats-arameans-helam",
+      "title": "David Defeats the Arameans at Helam",
+      "start": "994 BC",
+      "category": "War with Ammon",
+      "reference": "2 Samuel 10:15-19",
+      "description": "Hadadezer gathers Arameans from beyond the Euphrates, but David crosses the Jordan and defeats them at Helam. Their subject kings make peace with Israel and refuse further aid to Ammon.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-david-bathsheba",
+      "title": "David Takes Bathsheba",
+      "start": "993 BC",
+      "category": "David and Bathsheba",
+      "reference": "2 Samuel 11:1-5",
+      "description": "While Joab besieges Rabbah in the spring, David remains in Jerusalem, sees Bathsheba bathing, and has her brought to him. She later sends word that she is pregnant.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-david-arranges-uriah-death",
+      "title": "David Arranges Uriah's Death",
+      "start": "993 BC",
+      "category": "David and Bathsheba",
+      "reference": "2 Samuel 11:6-27",
+      "description": "Unable to induce Uriah to go home from the siege, David sends him back carrying orders that expose him to death in battle. After Bathsheba mourns, David marries her and she bears his son.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-nathan-confronts-david",
+      "title": "Nathan Confronts David",
+      "start": "992 BC",
+      "category": "David and Bathsheba",
+      "reference": "2 Samuel 12:1-15",
+      "description": "Nathan tells David of a rich man who took a poor man's beloved lamb, drawing the king's own condemnation before identifying his guilt. David confesses, and Nathan announces forgiveness alongside continuing consequences within his house.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-bathsheba-first-child-dies",
+      "title": "Bathsheba's First Child Dies",
+      "start": "992 BC",
+      "category": "David and Bathsheba",
+      "reference": "2 Samuel 12:15-23",
+      "description": "David fasts and lies on the ground while the child is gravely ill, but the boy dies on the seventh day. David then washes, worships, and eats, explaining that his fasting can no longer bring the child back.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-birth-of-solomon",
+      "title": "Solomon Is Born",
+      "start": "991 BC",
+      "category": "David and Bathsheba",
+      "reference": "2 Samuel 12:24-25",
+      "description": "David comforts Bathsheba, and she gives birth to Solomon. The LORD loves the child and sends word through Nathan, who gives him another name expressing that favor.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-rabbah-captured",
+      "title": "Rabbah Is Captured",
+      "start": "991 BC",
+      "category": "War with Ammon",
+      "reference": "2 Samuel 12:26-31",
+      "description": "Joab captures Rabbah's water supply and summons David to complete the conquest. David takes the royal city, its crown, and extensive spoil, then subjects the Ammonite population to forced labor.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-amnon-rapes-tamar",
+      "title": "Amnon Rapes Tamar",
+      "start": "988 BC",
+      "category": "Absalom's Rise",
+      "reference": "2 Samuel 13:1-22",
+      "description": "On Jonadab's advice Amnon feigns illness to isolate his half-sister Tamar, then assaults and expels her despite her pleas. Tamar lives desolate in Absalom's house, David is angry but does not punish Amnon, and Absalom conceals his hatred.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-absalom-kills-amnon",
+      "title": "Absalom Has Amnon Killed",
+      "start": "986 BC",
+      "category": "Absalom's Rise",
+      "reference": "2 Samuel 13:23-39",
+      "description": "Two years after Tamar's assault, Absalom invites the royal sons to a sheep-shearing feast and orders his servants to kill Amnon. Absalom flees to his grandfather Talmai in Geshur and remains there three years.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-wise-woman-tekoa",
+      "title": "The Wise Woman of Tekoa Appeals for Absalom",
+      "start": "983 BC",
+      "category": "Absalom's Rise",
+      "reference": "2 Samuel 14:1-24",
+      "description": "Joab sends a wise woman to tell David a fabricated case about her endangered surviving son. She turns the king's judgment toward his banished son, and David permits Joab to bring Absalom back to Jerusalem without admitting him to court.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-absalom-reconciled-david",
+      "title": "Absalom Is Reconciled to David",
+      "start": "981 BC",
+      "category": "Absalom's Rise",
+      "reference": "2 Samuel 14:25-33",
+      "description": "After two years in Jerusalem without seeing David, Absalom burns Joab's barley field to force his attention. Joab carries his demand to the king, and Absalom is summoned, bows before David, and receives his kiss.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-absalom-steals-hearts",
+      "title": "Absalom Steals Israel's Allegiance",
+      "start": "981 BC",
+      "end": "977 BC",
+      "category": "Absalom's Revolt",
+      "reference": "2 Samuel 15:1-12",
+      "description": "Absalom cultivates public favor at Jerusalem's gate for four years, presenting himself as a better source of justice. He then goes to Hebron under cover of a vow, proclaims himself king, and recruits David's counselor Ahithophel.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-david-flees-jerusalem",
+      "title": "David Flees Jerusalem",
+      "start": "977 BC",
+      "category": "Absalom's Revolt",
+      "reference": "2 Samuel 15:13-37",
+      "description": "David evacuates his household and loyal forces as Absalom's conspiracy grows, crossing the Kidron toward the wilderness. He returns the ark and priests to Jerusalem as informants and sends Hushai back to frustrate Ahithophel's advice.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-ziba-shimei-meet-david",
+      "title": "Ziba and Shimei Meet the Fugitive King",
+      "start": "977 BC",
+      "category": "Absalom's Revolt",
+      "reference": "2 Samuel 16:1-14",
+      "description": "Ziba supplies David's party and accuses Mephibosheth of remaining behind to recover Saul's kingdom, prompting David to award him the estate. At Bahurim, Shimei curses and stones David, who refuses to let Abishai kill him.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-absalom-enters-jerusalem",
+      "title": "Absalom Enters Jerusalem",
+      "start": "977 BC",
+      "category": "Absalom's Revolt",
+      "reference": "2 Samuel 16:15-23",
+      "description": "Hushai presents himself as Absalom's servant while Ahithophel advises Absalom to take David's concubines publicly. Absalom follows the counsel on the palace roof, asserting his complete break with his father.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-hushai-defeats-ahithophel",
+      "title": "Hushai Defeats Ahithophel's Counsel",
+      "start": "977 BC",
+      "category": "Absalom's Revolt",
+      "reference": "2 Samuel 17:1-23",
+      "description": "Hushai persuades Absalom to reject Ahithophel's plan for an immediate strike against David. The priests' sons carry warning through danger to David, who crosses the Jordan, while Ahithophel returns home and takes his own life.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-david-musters-mahanaim",
+      "title": "David Musters at Mahanaim",
+      "start": "977 BC",
+      "category": "Absalom's Revolt",
+      "reference": "2 Samuel 17:24-18:5",
+      "description": "David reaches Mahanaim and receives abundant provisions from allies as Absalom crosses the Jordan. David divides his army under Joab, Abishai, and Ittai but remains at the city after charging them to spare Absalom.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-absalom-killed",
+      "title": "Absalom Is Defeated and Killed",
+      "start": "977 BC",
+      "category": "Absalom's Revolt",
+      "reference": "2 Samuel 18:6-18",
+      "description": "David's troops defeat Absalom's army in the forest of Ephraim. Absalom is caught by the head in an oak while his mule continues on, and Joab ignores David's order by killing him and ending the pursuit.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-david-mourns-absalom",
+      "title": "David Mourns Absalom",
+      "start": "977 BC",
+      "category": "Absalom's Revolt",
+      "reference": "2 Samuel 18:19-19:8",
+      "description": "Ahimaaz and a Cushite race to report the victory, but David asks only about his son and collapses in grief on learning of Absalom's death. Joab rebukes him for shaming the troops, and David returns to the city gate to receive them.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-david-returns-jordan",
+      "title": "David Returns across the Jordan",
+      "start": "977 BC",
+      "category": "Restoration and Revolt",
+      "reference": "2 Samuel 19:9-40",
+      "description": "David secures Judah's invitation to return and promises Amasa command of the army. At the Jordan he pardons Shimei, hears Mephibosheth's answer to Ziba's accusation, rewards Barzillai through Chimham, and crosses toward Jerusalem.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-sheba-revolts",
+      "title": "Sheba Leads Israel Away from David",
+      "start": "976 BC",
+      "category": "Restoration and Revolt",
+      "reference": "2 Samuel 19:41-20:7",
+      "description": "A fierce dispute between Israel and Judah over escorting the king gives Sheba the opportunity to call the northern tribes away. When Amasa delays mustering Judah, David sends Abishai and the royal troops in pursuit.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-joab-kills-amasa",
+      "title": "Joab Kills Amasa",
+      "start": "976 BC",
+      "category": "Restoration and Revolt",
+      "reference": "2 Samuel 20:8-13",
+      "description": "Joab meets Amasa at Gibeon, takes him by the beard as if to greet him, and kills him with a concealed sword. The pursuing force then resumes following Joab after Sheba.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-sheba-killed-abel",
+      "title": "Sheba Is Killed at Abel",
+      "start": "976 BC",
+      "category": "Restoration and Revolt",
+      "reference": "2 Samuel 20:14-26",
+      "description": "Joab besieges Sheba at Abel of Beth-maacah until a wise woman negotiates the city's safety. The inhabitants execute Sheba and throw his head over the wall, ending the revolt and restoring Joab to command.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2sa-gibeonite-famine-expiation",
+      "title": "David Makes Expiation for Saul's Attack on Gibeon",
+      "start": "1000 BC",
+      "end": "997 BC",
+      "category": "Closing Accounts",
+      "reference": "2 Samuel 21:1-14",
+      "description": "A three-year famine is attributed to Saul's bloodshed against the Gibeonites. David hands over seven of Saul's descendants while sparing Jonathan's son; after Rizpah guards the bodies, David gathers their bones with those of Saul and Jonathan for burial at Zela.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-wars-philistine-giants",
+      "title": "David's Warriors Defeat Philistine Giants",
+      "start": "996 BC",
+      "end": "985 BC",
+      "category": "Closing Accounts",
+      "reference": "2 Samuel 21:15-22",
+      "description": "In several battles David and his warriors defeat four descendants of the giants from Gath. After Abishai saves an exhausted David from Ishbi-benob, the troops no longer permit the king to enter battle with them.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-david-song-deliverance",
+      "title": "David Sings of Deliverance",
+      "start": "971 BC",
+      "category": "Closing Accounts",
+      "reference": "2 Samuel 22:1-51",
+      "description": "David praises the LORD as his refuge and rescuer from Saul and every enemy. He recounts divine intervention in his distress, strength in battle, victory over hostile peoples, and enduring loyalty to the anointed king and his descendants.",
+      "datingBasis": "composition"
+    },
+    {
+      "id": "2sa-david-last-words",
+      "title": "David's Last Words",
+      "start": "971 BC",
+      "category": "Closing Accounts",
+      "reference": "2 Samuel 23:1-7",
+      "description": "David's final oracle describes just rule in the fear of God as morning light and affirms the secure covenant made with his house, while comparing the godless to thorns destined for fire.",
+      "datingBasis": "composition"
+    },
+    {
+      "id": "2sa-davids-mighty-warriors",
+      "title": "David's Mighty Warriors Are Remembered",
+      "start": "971 BC",
+      "category": "Closing Accounts",
+      "reference": "2 Samuel 23:8-39",
+      "description": "A register honors the deeds of David's Three and Thirty, including the defense of a field, a hazardous retrieval of water from Bethlehem, and the exploits of Abishai and Benaiah. Uriah the Hittite closes the list of thirty-seven.",
+      "datingBasis": "composition"
+    },
+    {
+      "id": "2sa-david-orders-census",
+      "title": "David Orders a Census",
+      "start": "971 BC",
+      "end": "970 BC",
+      "category": "The Census and Altar",
+      "reference": "2 Samuel 24:1-10",
+      "description": "Despite Joab's objection, David orders the commanders to number Israel and Judah from Dan to Beer-sheba. They return after nine months and twenty days, and David is stricken with remorse after hearing the count.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-pestilence-israel",
+      "title": "Pestilence Falls on Israel",
+      "start": "970 BC",
+      "category": "The Census and Altar",
+      "reference": "2 Samuel 24:11-17",
+      "description": "Through Gad, David must choose among famine, flight, and pestilence as consequences for the census. He chooses to fall into divine mercy; seventy thousand die before the destroying angel is halted beside Araunah's threshing floor.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "2sa-altar-arunah-floor",
+      "title": "David Builds an Altar on Araunah's Threshing Floor",
+      "start": "970 BC",
+      "category": "The Census and Altar",
+      "reference": "2 Samuel 24:18-25",
+      "description": "At Gad's direction David buys Araunah's threshing floor rather than accepting it as a gift. He builds an altar and presents sacrifices there, after which the plague is averted from Israel.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

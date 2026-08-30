@@ -1,0 +1,214 @@
+{
+  "book": "Daniel",
+  "order": 27,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "dan-jerusalem-besieged-exiles-taken",
+      "title": "Nebuchadnezzar Besieges Jerusalem and Takes Exiles",
+      "start": "605 BC",
+      "category": "Exile and Formation",
+      "reference": "Daniel 1:1-7",
+      "description": "In Jehoiakim's third year, Nebuchadnezzar besieges Jerusalem and carries temple vessels to Babylon. Daniel, Hananiah, Mishael, and Azariah are selected from the Judean elite for three years of court education and receive Babylonian names.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "dan-food-test",
+      "title": "Daniel and His Companions Undertake a Food Test",
+      "start": "605 BC",
+      "category": "Exile and Formation",
+      "reference": "Daniel 1:8-17",
+      "description": "Daniel obtains permission for the four Judeans to eat vegetables and drink water for ten days rather than consume the royal provisions. Their condition satisfies the guard, and they continue their diet while gaining knowledge and skill.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-nebuchadnezzar-demands-dream",
+      "title": "Nebuchadnezzar Demands His Dream Be Revealed",
+      "start": "603 BC",
+      "category": "Dream of the Kingdoms",
+      "reference": "Daniel 2:1-16",
+      "description": "In Nebuchadnezzar's second year, a troubling dream leads him to demand both its content and interpretation from Babylon's experts. When they cannot comply, he orders the wise men killed, but Daniel secures time to seek an answer.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-dream-revealed-at-night",
+      "title": "The Mystery Is Revealed to Daniel",
+      "start": "603 BC",
+      "category": "Dream of the Kingdoms",
+      "reference": "Daniel 2:17-24",
+      "description": "Daniel and his companions seek divine mercy concerning the king's demand. The mystery is disclosed to Daniel in a night vision, and he asks Arioch to spare the wise men and bring him before the king.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-statue-dream-interpreted",
+      "title": "Daniel Interprets the Statue Dream",
+      "start": "603 BC",
+      "category": "Dream of the Kingdoms",
+      "reference": "Daniel 2:25-45",
+      "description": "Daniel recounts a dream of a statue composed of successive materials and a stone that destroys it and fills the earth. He explains the image as a sequence of kingdoms ultimately displaced by an enduring kingdom established by God.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-promoted-over-babylon",
+      "title": "Daniel and His Companions Are Promoted",
+      "start": "603 BC",
+      "category": "Dream of the Kingdoms",
+      "reference": "Daniel 2:46-49",
+      "description": "Nebuchadnezzar honors Daniel with gifts and authority over the province and its wise men. At Daniel's request, Shadrach, Meshach, and Abednego receive provincial appointments while Daniel remains at court.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-four-enter-royal-service",
+      "title": "The Four Judeans Enter Royal Service",
+      "start": "602 BC",
+      "category": "Exile and Formation",
+      "reference": "Daniel 1:18-21",
+      "description": "At the end of their appointed education, the king examines the young men and finds Daniel and his three companions preeminent. They are stationed at court, where their wisdom surpasses that of the royal experts.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-golden-statue-dedicated",
+      "title": "Nebuchadnezzar Dedicates a Golden Statue",
+      "start": "600 BC",
+      "category": "Faithfulness under Threat",
+      "reference": "Daniel 3:1-12",
+      "description": "Nebuchadnezzar gathers imperial officials to dedicate a great golden statue on the plain of Dura and commands worship under threat of death. Chaldean officials accuse Shadrach, Meshach, and Abednego of refusing to comply.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "dan-three-delivered-from-furnace",
+      "title": "The Three Judeans Are Delivered from the Furnace",
+      "start": "600 BC",
+      "category": "Faithfulness under Threat",
+      "reference": "Daniel 3:13-30",
+      "description": "The three men refuse the king's demand and are cast into an overheated furnace. Nebuchadnezzar sees them walking unharmed with a fourth figure, then calls them out, acknowledges their deliverance, protects their worship, and promotes them.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "dan-tree-dream-interpreted",
+      "title": "Daniel Interprets Nebuchadnezzar's Tree Dream",
+      "start": "570 BC",
+      "category": "Nebuchadnezzar Humbled",
+      "reference": "Daniel 4:1-27",
+      "description": "Nebuchadnezzar dreams of a vast tree cut down at a heavenly decree, with its stump left in the earth. Daniel identifies the tree with the king and warns that he will lose human society and royal power until he acknowledges divine sovereignty.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "dan-nebuchadnezzar-humbled",
+      "title": "Nebuchadnezzar Is Driven from Society",
+      "start": "569 BC",
+      "category": "Nebuchadnezzar Humbled",
+      "reference": "Daniel 4:28-33",
+      "description": "Twelve months after the dream, Nebuchadnezzar boasts over Babylon and immediately loses his kingdom and ordinary human life. He lives outdoors and eats grass as the announced judgment takes effect.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "dan-nebuchadnezzar-restored",
+      "title": "Nebuchadnezzar's Reason and Kingdom Are Restored",
+      "start": "562 BC",
+      "category": "Nebuchadnezzar Humbled",
+      "reference": "Daniel 4:34-37",
+      "description": "At the close of the appointed period, Nebuchadnezzar's reason returns as he acknowledges the sovereignty of the Most High. His officials receive him again, his kingdom is restored, and he publicly recounts his humbling.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "dan-four-beasts-vision",
+      "title": "Daniel Sees Four Beasts and the Heavenly Court",
+      "start": "553 BC",
+      "category": "Visions under Belshazzar",
+      "reference": "Daniel 7:1-28",
+      "description": "In Belshazzar's first year, Daniel dreams of four beasts arising from the sea, followed by a heavenly judgment and the grant of lasting dominion to a humanlike figure. An attendant explains the beasts as kingdoms and promises that the holy ones will finally receive the kingdom.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-ram-goat-vision",
+      "title": "Daniel Sees the Ram and the Goat",
+      "start": "551 BC",
+      "category": "Visions under Belshazzar",
+      "reference": "Daniel 8:1-27",
+      "description": "In Belshazzar's third year, Daniel sees a two-horned ram overcome by a swift goat whose great horn gives way to four others. Gabriel identifies the empires represented and explains the rise of a destructive ruler who attacks the sanctuary before being broken.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-belshazzar-feast-writing",
+      "title": "Writing Appears at Belshazzar's Feast",
+      "start": "539 BC",
+      "category": "Babylon Falls",
+      "reference": "Daniel 5:1-16",
+      "description": "Belshazzar holds a great feast and uses vessels taken from the Jerusalem temple while honoring Babylonian gods. A hand writes on the palace wall, terrifying the king, and the queen directs him to summon Daniel when the court experts cannot explain it.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "dan-writing-interpreted-babylon-falls",
+      "title": "Daniel Interprets the Writing and Babylon Falls",
+      "start": "539 BC",
+      "category": "Babylon Falls",
+      "reference": "Daniel 5:17-31",
+      "description": "Daniel rebukes Belshazzar's pride and explains that the writing announces the end and division of his kingdom. Daniel is elevated to third rank, but Belshazzar is killed that night and Darius the Mede receives the realm.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-officials-plot-prayer-ban",
+      "title": "Officials Entrap Daniel with a Prayer Ban",
+      "start": "538 BC",
+      "category": "Daniel under Darius",
+      "reference": "Daniel 6:1-15",
+      "description": "Darius appoints Daniel among the kingdom's chief administrators and considers placing him over the whole realm. Rival officials induce the king to prohibit petitions to anyone but himself for thirty days, then accuse Daniel when he continues his regular prayers.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "dan-delivered-from-lions",
+      "title": "Daniel Is Delivered from the Lions",
+      "start": "538 BC",
+      "category": "Daniel under Darius",
+      "reference": "Daniel 6:16-28",
+      "description": "Darius reluctantly has Daniel sealed in a lions' den, but finds him unharmed the next morning. The king punishes Daniel's accusers, decrees reverence for Daniel's God, and Daniel prospers into the reign of Cyrus.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "dan-prays-over-seventy-years",
+      "title": "Daniel Prays over Jerusalem's Desolation",
+      "start": "538 BC",
+      "category": "Visions of Restoration",
+      "reference": "Daniel 9:1-19",
+      "description": "In the first year of Darius, Daniel studies Jeremiah's reference to seventy years of Jerusalem's desolation. He fasts, confesses the sins of Israel, and petitions for mercy upon Jerusalem and its ruined sanctuary.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-gabriel-seventy-weeks",
+      "title": "Gabriel Explains the Seventy Weeks",
+      "start": "538 BC",
+      "category": "Visions of Restoration",
+      "reference": "Daniel 9:20-27",
+      "description": "Gabriel comes while Daniel is praying and gives him a timetable concerning his people and holy city. The message describes Jerusalem's rebuilding, an anointed figure, renewed destruction, and a final desolation.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-tigris-vision-begins",
+      "title": "Daniel Receives a Vision beside the Tigris",
+      "start": "536-01-24 BC",
+      "category": "Final Vision",
+      "reference": "Daniel 10:1-11:1",
+      "description": "In Cyrus's third year, after three weeks of mourning, Daniel sees a radiant figure beside the Tigris on the twenty-fourth day of the first month. A heavenly messenger strengthens him and explains that spiritual opposition delayed his arrival.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-kings-and-antiochus-revealed",
+      "title": "The Messenger Reveals Conflicts of Future Kings",
+      "start": "536-01-24 BC",
+      "category": "Final Vision",
+      "reference": "Daniel 11:2-45",
+      "description": "The messenger describes coming Persian and Greek rulers, struggles between northern and southern kingdoms, and the campaigns of rulers associated with Antiochus. The revelation culminates in persecution of the covenant people and the oppressor's downfall.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "dan-final-deliverance-revealed",
+      "title": "Daniel Hears of Final Deliverance",
+      "start": "536-01-24 BC",
+      "category": "Final Vision",
+      "reference": "Daniel 12:1-13",
+      "description": "The vision closes with a time of unparalleled distress, deliverance for Daniel's people, and the awakening of the dead to differing destinies. Daniel hears measured periods for the ordeal, is told to seal the words, and receives assurance that he will rest and rise at the appointed end.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

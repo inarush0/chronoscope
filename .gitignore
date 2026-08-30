@@ -101,6 +101,10 @@ dist
 # adapter-node build output (`bun run build`)
 build/
 
+# Transient rollback journal from `bun run build-db`. The dataset itself
+# (dataset/chronoscope.sqlite) is a committed artifact and stays tracked.
+dataset/*.sqlite-journal
+
 # vitepress build output
 **/.vitepress/dist
 

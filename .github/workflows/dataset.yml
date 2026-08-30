@@ -1,0 +1,26 @@
+# dataset/events/*.json is the source of truth; dataset/chronoscope.sqlite is a
+# committed build artifact. Nothing else stops the two drifting apart, so this
+# rebuilds and compares. The comparison is on schema and rows, not bytes:
+# SQLite's on-disk encoding varies between bun versions, so a byte check would
+# fail on a bun upgrade without the data having changed at all.
+name: dataset
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  artifact-is-current:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Validate the authored event files
+        run: bun run validate
+
+      - name: Fail if the committed artifact is stale
+        run: bun run check:artifact

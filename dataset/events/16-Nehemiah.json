@@ -1,0 +1,279 @@
+{
+  "book": "Nehemiah",
+  "order": 16,
+  "testament": "Old Testament",
+  "events": [
+    {
+      "id": "neh-hanani-reports-jerusalem",
+      "title": "Hanani Reports Jerusalem's Distress",
+      "start": "445-09 BC",
+      "category": "Nehemiah's Commission",
+      "reference": "Nehemiah 1:1-3",
+      "description": "At Susa in Artaxerxes's twentieth year, Hanani tells Nehemiah that the survivors in Judah are suffering disgrace and that Jerusalem's wall and gates remain ruined.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-prays-for-jerusalem",
+      "title": "Nehemiah Prays for Jerusalem",
+      "start": "445-09 BC",
+      "category": "Nehemiah's Commission",
+      "reference": "Nehemiah 1:4-11",
+      "description": "Nehemiah mourns, fasts, and confesses Israel's sins before God. He appeals to the covenant promise of restoration and asks for favor before the king whom he serves as cupbearer.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-artaxerxes-commissions-nehemiah",
+      "title": "Artaxerxes Commissions Nehemiah",
+      "start": "444-01 BC",
+      "category": "Nehemiah's Commission",
+      "reference": "Nehemiah 2:1-8",
+      "description": "The king notices Nehemiah's grief and grants him leave to rebuild Jerusalem. He supplies letters for safe passage and authorizes timber for the city gates, wall, and Nehemiah's residence.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-arrives-in-judah",
+      "title": "Nehemiah Arrives in Judah",
+      "start": "444 BC",
+      "category": "Nehemiah's Commission",
+      "reference": "Nehemiah 2:9-11",
+      "description": "Escorted by royal officers and cavalry, Nehemiah presents the king's letters to the provincial governors and reaches Jerusalem. Sanballat and Tobiah resent his mission on Israel's behalf.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-inspects-walls-at-night",
+      "title": "Nehemiah Inspects the Walls at Night",
+      "start": "444 BC",
+      "category": "Rebuilding the Wall",
+      "reference": "Nehemiah 2:12-16",
+      "description": "After three days in Jerusalem, Nehemiah secretly surveys the ruined walls and burned gates at night with a small group. He initially conceals his plans from the city's leaders and workers.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-people-commit-to-rebuild",
+      "title": "The People Commit to Rebuild",
+      "start": "444 BC",
+      "category": "Rebuilding the Wall",
+      "reference": "Nehemiah 2:17-20",
+      "description": "Nehemiah tells Jerusalem's leaders of royal support and urges them to end the city's disgrace by rebuilding. The people agree, while Sanballat, Tobiah, and Geshem mock the project and allege rebellion.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-families-repair-wall",
+      "title": "Families and Guilds Repair the Wall",
+      "start": "444 BC",
+      "category": "Rebuilding the Wall",
+      "reference": "Nehemiah 3:1-32",
+      "description": "Priests, rulers, artisans, merchants, families, and residents of nearby towns rebuild successive gates and wall sections around Jerusalem. Eliashib and the priests begin at the Sheep Gate, and the assignments continue around the city.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-builders-resist-intimidation",
+      "title": "The Builders Resist Intimidation",
+      "start": "444 BC",
+      "category": "Opposition and Reform",
+      "reference": "Nehemiah 4:1-9",
+      "description": "Sanballat and Tobiah ridicule the builders as the wall reaches half its height, then a wider coalition plots an attack. The community responds with prayer and posts a continuous guard.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-arms-wall-builders",
+      "title": "Nehemiah Arms the Wall Builders",
+      "start": "444 BC",
+      "category": "Opposition and Reform",
+      "reference": "Nehemiah 4:10-23",
+      "description": "With workers exhausted and enemies threatening surprise attack, Nehemiah stations armed families at vulnerable places. Work resumes under guard, with laborers carrying weapons and remaining inside Jerusalem overnight.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-confronts-debt-crisis",
+      "title": "Nehemiah Confronts the Debt Crisis",
+      "start": "444 BC",
+      "category": "Opposition and Reform",
+      "reference": "Nehemiah 5:1-13",
+      "description": "Families protest that famine, taxation, debt, and enslavement are costing them their land and children. Nehemiah rebukes the nobles for exacting interest and binds them by oath to restore property and cancel their claims.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-governs-without-allowance",
+      "title": "Nehemiah Waives the Governor's Allowance",
+      "start": "444 BC",
+      "end": "433 BC",
+      "category": "Opposition and Reform",
+      "reference": "Nehemiah 5:14-19",
+      "description": "During twelve years as governor, Nehemiah refuses the customary food allowance because of the people's burden. He supports a large household at his own expense, acquires no land, and continues working on the wall.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-refuses-ono-meetings",
+      "title": "Nehemiah Refuses the Meetings at Ono",
+      "start": "444 BC",
+      "category": "Opposition and Reform",
+      "reference": "Nehemiah 6:1-9",
+      "description": "Sanballat and Geshem repeatedly invite Nehemiah away from the work and circulate an accusation that he plans to become king. Recognizing their intent to harm and frighten him, Nehemiah refuses to leave Jerusalem.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-rejects-shemaiah-plot",
+      "title": "Nehemiah Rejects Shemaiah's Plot",
+      "start": "444 BC",
+      "category": "Opposition and Reform",
+      "reference": "Nehemiah 6:10-14",
+      "description": "Shemaiah urges Nehemiah to hide inside the temple from an alleged assassination attempt. Nehemiah recognizes that his opponents hired the prophet to frighten him into an act that could discredit him.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-wall-completed",
+      "title": "Jerusalem's Wall Is Completed",
+      "start": "444-06-25 BC",
+      "category": "Rebuilding the Wall",
+      "reference": "Nehemiah 6:15-19",
+      "description": "The wall is finished on the twenty-fifth day of Elul after fifty-two days of work, alarming the surrounding peoples. Tobiah nevertheless maintains influential family ties in Judah and continues sending intimidating letters.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-appoints-city-guards",
+      "title": "Nehemiah Appoints Jerusalem's Guards",
+      "start": "444 BC",
+      "category": "Restoring Jerusalem",
+      "reference": "Nehemiah 7:1-5",
+      "description": "With the gates installed, Nehemiah appoints gatekeepers, singers, and Levites, places Hanani and Hananiah over Jerusalem, and establishes strict guarding procedures. He then prepares to register the sparsely populated city.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-reviews-returnee-register",
+      "title": "Nehemiah Reviews the Returnee Register",
+      "start": "444 BC",
+      "category": "Restoring Jerusalem",
+      "reference": "Nehemiah 7:6-73",
+      "description": "Nehemiah finds the genealogy of the first return under Zerubbabel and records its families, temple personnel, possessions, and gifts. People lacking proof of descent are restricted from priestly privileges pending a priestly ruling.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-ezra-reads-law",
+      "title": "Ezra Reads the Law to the Assembly",
+      "start": "444-07-01 BC",
+      "category": "Covenant Renewal",
+      "reference": "Nehemiah 7:73-8:12",
+      "description": "The people gather at the Water Gate and ask Ezra to read the law. Levites explain it to the assembly, and the leaders turn the people's weeping into a communal celebration with provisions shared among those in need.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-community-keeps-booths",
+      "title": "The Community Keeps the Festival of Booths",
+      "start": "444-07-15 BC",
+      "end": "444-07-22 BC",
+      "category": "Covenant Renewal",
+      "reference": "Nehemiah 8:13-18",
+      "description": "After leaders study the law, the returned community builds shelters throughout Jerusalem and observes the seven-day festival with great rejoicing. Ezra reads from the law each day, followed by a solemn assembly.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-assembly-confesses-sins",
+      "title": "The Assembly Confesses Israel's Sins",
+      "start": "444-07-24 BC",
+      "category": "Covenant Renewal",
+      "reference": "Nehemiah 9:1-37",
+      "description": "The Israelites assemble in fasting and mourning, hear the law, and confess their own sins and those of their ancestors. The Levites recount God's care from creation through the patriarchs, exodus, wilderness, conquest, monarchy, exile, and the community's present subjection.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-community-seals-covenant",
+      "title": "The Community Seals a Covenant",
+      "start": "444 BC",
+      "category": "Covenant Renewal",
+      "reference": "Nehemiah 9:38-10:39",
+      "description": "Nehemiah, priests, Levites, leaders, and the wider community bind themselves by a written agreement to obey the law. Their commitments address intermarriage, sabbath commerce, debt release, offerings, tithes, and support for temple service.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-repopulates-jerusalem",
+      "title": "Jerusalem Is Repopulated",
+      "start": "444 BC",
+      "category": "Restoring Jerusalem",
+      "reference": "Nehemiah 11:1-36",
+      "description": "The leaders settle in Jerusalem, and lots select one in ten of the remaining people to join them, while volunteers are commended. A census records the city's residents and the communities occupied throughout Judah and Benjamin.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-records-priests-levites",
+      "title": "Priestly and Levitical Lines Are Recorded",
+      "start": "444 BC",
+      "category": "Restoring Jerusalem",
+      "reference": "Nehemiah 12:1-26",
+      "description": "A record traces priests and Levites from the return with Zerubbabel through later high-priestly generations. It also identifies leaders responsible for praise, thanksgiving, and guarding temple storehouses in Nehemiah's time.",
+      "datingBasis": "composition"
+    },
+    {
+      "id": "neh-wall-dedicated",
+      "title": "Jerusalem's Wall Is Dedicated",
+      "start": "444 BC",
+      "category": "Dedication and Worship",
+      "reference": "Nehemiah 12:27-43",
+      "description": "Levites and singers gather for the wall's dedication after priests, people, gates, and wall are purified. Two thanksgiving processions circle the wall in opposite directions and meet at the temple for sacrifices and a celebration heard far away.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-organizes-temple-contributions",
+      "title": "Temple Contributions Are Organized",
+      "start": "444 BC",
+      "category": "Dedication and Worship",
+      "reference": "Nehemiah 12:44-47",
+      "description": "Officials are appointed over storerooms for contributions, first fruits, and tithes. Judah provides the prescribed portions for priests, Levites, singers, and gatekeepers who conduct the temple service.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-returns-to-artaxerxes",
+      "title": "Nehemiah Returns to Artaxerxes",
+      "start": "433 BC",
+      "category": "Nehemiah's Later Reforms",
+      "reference": "Nehemiah 13:4-6",
+      "description": "In Artaxerxes's thirty-second year, Nehemiah leaves Jerusalem and returns to the royal court. During his absence, Eliashib converts a temple storeroom for the use of his relative Tobiah.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "neh-expels-tobiah-from-temple",
+      "title": "Nehemiah Expels Tobiah from the Temple Rooms",
+      "start": "432 BC",
+      "category": "Nehemiah's Later Reforms",
+      "reference": "Nehemiah 13:7-9",
+      "description": "After obtaining leave to return to Jerusalem, Nehemiah discovers Tobiah's quarters in the temple courts. He removes Tobiah's belongings, orders the rooms purified, and restores the sacred vessels and offerings.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "neh-restores-levite-support",
+      "title": "Nehemiah Restores Support for the Levites",
+      "start": "432 BC",
+      "category": "Nehemiah's Later Reforms",
+      "reference": "Nehemiah 13:10-14",
+      "description": "Nehemiah learns that unpaid Levites and singers have abandoned their posts for their fields. He rebukes the officials, restores the ministers to duty, resumes tithes, and appoints reliable treasurers.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "neh-enforces-sabbath-rest",
+      "title": "Nehemiah Enforces Sabbath Rest",
+      "start": "432 BC",
+      "category": "Nehemiah's Later Reforms",
+      "reference": "Nehemiah 13:15-22",
+      "description": "Seeing agricultural work and commerce on the sabbath, Nehemiah rebukes Judah's nobles and closes Jerusalem's gates to merchandise. He posts guards and assigns purified Levites to preserve the weekly rest.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "neh-confronts-intermarriage",
+      "title": "Nehemiah Confronts Intermarriage",
+      "start": "432 BC",
+      "category": "Nehemiah's Later Reforms",
+      "reference": "Nehemiah 13:23-29",
+      "description": "Nehemiah discovers Judeans married to women from neighboring peoples and children unable to speak Judah's language. He confronts the offenders, compels an oath against further marriages, and drives away a high priest's relative allied by marriage to Sanballat.",
+      "datingBasis": "traditional"
+    },
+    {
+      "id": "neh-orders-priestly-service",
+      "title": "Nehemiah Orders the Priestly Service",
+      "start": "432 BC",
+      "category": "Nehemiah's Later Reforms",
+      "reference": "Nehemiah 13:30-31",
+      "description": "Nehemiah purifies the community from foreign influence, assigns priests and Levites to their duties, and establishes regular provision for wood offerings and first fruits.",
+      "datingBasis": "traditional"
+    }
+  ]
+}

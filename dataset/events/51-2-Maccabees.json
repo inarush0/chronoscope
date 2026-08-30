@@ -1,0 +1,369 @@
+{
+  "book": "2 Maccabees",
+  "order": 51,
+  "testament": "Deuterocanon",
+  "events": [
+    {
+      "id": "2mc-heliodorus-sent-treasury",
+      "title": "Heliodorus Is Sent to Seize the Temple Treasury",
+      "start": "178 BC",
+      "category": "Temple under Seleucus",
+      "reference": "2 Maccabees 3:1-14",
+      "description": "Simon disputes with the high priest Onias and reports Jerusalem's deposits to the royal governor. Seleucus sends Heliodorus to confiscate the funds despite Onias's explanation that much of the money belongs to widows and orphans.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-heliodorus-repelled",
+      "title": "Heliodorus Is Repelled from the Treasury",
+      "start": "178 BC",
+      "category": "Temple under Seleucus",
+      "reference": "2 Maccabees 3:15-40",
+      "description": "Jerusalem prays while Heliodorus approaches the treasury. A terrifying horseman and two young men strike him down; Onias intercedes for his recovery, and Heliodorus returns to the king testifying that the temple is divinely protected.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-jason-buys-high-priesthood",
+      "title": "Jason Buys the High Priesthood",
+      "start": "175 BC",
+      "category": "Corrupt High Priests",
+      "reference": "2 Maccabees 4:1-17",
+      "description": "After Seleucus dies and Antiochus IV succeeds him, Onias's brother Jason purchases the high priesthood. Jason establishes a gymnasium and promotes Greek civic customs in Jerusalem, drawing priests and young elites away from ancestral practices.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-antiochus-welcomed-jerusalem",
+      "title": "Jason Welcomes Antiochus to Jerusalem",
+      "start": "174 BC",
+      "category": "Corrupt High Priests",
+      "reference": "2 Maccabees 4:18-22",
+      "description": "Jason sends money to the games at Tyre, though his envoys redirect it from sacrifice to shipbuilding. During regional maneuvering involving Egypt, Antiochus visits Jerusalem and receives an elaborate welcome before proceeding into Phoenicia.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-menelaus-buys-high-priesthood",
+      "title": "Menelaus Supplants Jason as High Priest",
+      "start": "172 BC",
+      "category": "Corrupt High Priests",
+      "reference": "2 Maccabees 4:23-29",
+      "description": "Three years after Jason's appointment, Menelaus outbids him for the high priesthood while carrying royal payments. Jason flees to Ammon, and Menelaus falls behind on the sums he promised the crown.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-onias-murdered",
+      "title": "Andronicus Murders Onias",
+      "start": "171 BC",
+      "category": "Corrupt High Priests",
+      "reference": "2 Maccabees 4:30-38",
+      "description": "Menelaus steals temple vessels and induces the royal deputy Andronicus to lure Onias from sanctuary and kill him. After Jews and Greeks protest, Antiochus orders Andronicus executed at the place of the murder.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-lysimachus-killed",
+      "title": "Jerusalem's Crowd Kills Lysimachus",
+      "start": "170 BC",
+      "category": "Corrupt High Priests",
+      "reference": "2 Maccabees 4:39-50",
+      "description": "Lysimachus carries out further thefts from the temple under Menelaus's direction and attacks an angry crowd with armed men. The crowd kills him, but bribery secures Menelaus's acquittal and the execution of Jerusalem's three advocates.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-jason-attacks-jerusalem",
+      "title": "Jason Attacks Jerusalem",
+      "start": "168 BC",
+      "category": "Persecution",
+      "reference": "2 Maccabees 5:1-10",
+      "description": "During Antiochus's second Egyptian campaign, a false report of the king's death prompts Jason to assault Jerusalem and drive Menelaus into the citadel. Jason fails to regain power and again flees, eventually dying in exile.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-antiochus-sacks-jerusalem",
+      "title": "Antiochus Sacks Jerusalem and Plunders the Temple",
+      "start": "168 BC",
+      "end": "167 BC",
+      "category": "Persecution",
+      "reference": "2 Maccabees 5:11-27",
+      "description": "Antiochus interprets Jason's attack as a general revolt, storms Jerusalem, massacres and enslaves its inhabitants, and removes the temple vessels and treasury. Apollonius later attacks on a sabbath, while Judas and a small group escape into the wilderness.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-judaism-suppressed",
+      "title": "Royal Agents Suppress Jewish Worship",
+      "start": "167 BC",
+      "category": "Martyrdoms",
+      "reference": "2 Maccabees 6:1-11",
+      "description": "A royal agent dedicates the Jerusalem temple to Olympian Zeus and prohibits sabbaths, festivals, and public Jewish identity. Jews are compelled to participate in foreign rites, and those who circumcise children or secretly keep the sabbath are killed.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-eleazar-martyred",
+      "title": "Eleazar Is Martyred",
+      "start": "167 BC",
+      "category": "Martyrdoms",
+      "reference": "2 Maccabees 6:18-31",
+      "description": "The elderly scribe Eleazar refuses both prohibited food and a plan to pretend compliance. He accepts torture and death so that younger Jews will not be misled by his example.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-seven-brothers-martyred",
+      "title": "Seven Brothers and Their Mother Are Martyred",
+      "start": "167 BC",
+      "category": "Martyrdoms",
+      "reference": "2 Maccabees 7:1-42",
+      "description": "A mother and her seven sons refuse the king's demand that they eat prohibited meat. The brothers endure torture while affirming confidence in divine restoration and judgment, and their mother encourages the youngest before she too dies.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-judas-organizes-revolt",
+      "title": "Judas Organizes the Revolt",
+      "start": "167 BC",
+      "category": "Judas's Revolt",
+      "reference": "2 Maccabees 8:1-7",
+      "description": "Judas Maccabeus gathers about six thousand faithful Jews from villages and conducts surprise attacks. His force captures strategic positions, defeats local opponents, and gains a widening reputation.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-nicanor-first-defeated",
+      "title": "Judas Defeats Nicanor's Slave-Taking Army",
+      "start": "166 BC",
+      "category": "Judas's Revolt",
+      "reference": "2 Maccabees 8:8-29",
+      "description": "Nicanor and Gorgias bring a large army and merchants expecting to buy Jewish captives. Judas divides his smaller force, defeats the invaders, captures the slave purchasers' money, and halts pursuit to observe the sabbath.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-judas-wins-further-victories",
+      "title": "Judas Wins Further Victories",
+      "start": "166 BC",
+      "category": "Judas's Revolt",
+      "reference": "2 Maccabees 8:30-36",
+      "description": "Judas's forces defeat troops associated with Timothy and Bacchides, seize strongholds, and distribute plunder among the vulnerable. Nicanor escapes to Antioch after the collapse of his expedition.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-antiochus-iv-dies",
+      "title": "Antiochus IV Dies during His Eastern Retreat",
+      "start": "164 BC",
+      "category": "Temple Restoration",
+      "reference": "2 Maccabees 9:1-29",
+      "description": "After being repelled in Persia, Antiochus learns of defeats in Judea and sets out against Jerusalem. A painful illness overtakes him; he promises concessions and restitution, names his son as successor, and dies in a foreign land.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-temple-purified",
+      "title": "Judas Purifies and Rededicates the Temple",
+      "start": "164-09-25 BC",
+      "end": "164-10-02 BC",
+      "category": "Temple Restoration",
+      "reference": "2 Maccabees 10:1-8",
+      "description": "Judas and his followers recover Jerusalem and the temple, remove foreign cult installations, build a new altar, and resume sacrifice after a two-year interruption. Beginning on the twenty-fifth of Chislev, the people celebrate for eight days and establish an annual observance.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-eupator-succeeds-antiochus",
+      "title": "Antiochus V Eupator Succeeds His Father",
+      "start": "164 BC",
+      "category": "War under Eupator",
+      "reference": "2 Maccabees 10:9-13",
+      "description": "The young Antiochus V succeeds Antiochus IV, with Lysias governing on his behalf. Ptolemy Macron seeks a just settlement with the Jews but, accused of betrayal by rival courtiers, dies by poison.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-idumean-strongholds-taken",
+      "title": "Judas Takes Idumean Strongholds",
+      "start": "164 BC",
+      "category": "Regional Campaigns",
+      "reference": "2 Maccabees 10:14-23",
+      "description": "Judas attacks Idumean fortresses used to harass Judea. After besiegers accept bribes to release some defenders, Judas executes the collaborators and captures the remaining towers.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-timothy-defeated-gazara",
+      "title": "Judas Defeats Timothy and Captures Gazara",
+      "start": "164 BC",
+      "category": "Regional Campaigns",
+      "reference": "2 Maccabees 10:24-38",
+      "description": "Timothy advances with mercenaries and cavalry, but Judas defeats his army after a fierce battle. The Jewish force then storms Gazara on the fifth day of its siege and kills Timothy and the fortress commanders.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-lysias-defeated-beth-zur",
+      "title": "Judas Defeats Lysias near Beth-zur",
+      "start": "164 BC",
+      "category": "War under Eupator",
+      "reference": "2 Maccabees 11:1-15",
+      "description": "Lysias invades Judea with a large combined force and presses the fortress at Beth-zur. Judas marches from Jerusalem, routs the royal army, and accepts Lysias's proposal for negotiated terms.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-royal-settlement-148",
+      "title": "Royal and Roman Letters Confirm a Settlement",
+      "start": "164-04 BC",
+      "category": "War under Eupator",
+      "reference": "2 Maccabees 11:16-38",
+      "description": "Letters dated to the 148th Seleucid year record negotiations by Lysias, permission from Antiochus V for Jewish customs and temple restoration, and Roman support for the settlement. The correspondence grants an amnesty and provides for further consultation.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-joppa-jamnia-retaliation",
+      "title": "Judas Retaliates against Joppa and Jamnia",
+      "start": "163 BC",
+      "category": "Regional Campaigns",
+      "reference": "2 Maccabees 12:1-9",
+      "description": "After people at Joppa drown Jewish families whom they invited onto boats, Judas burns the harbor and attacks those responsible. Learning of a similar plan at Jamnia, he burns its harbor and fleet as well.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-caspin-captured",
+      "title": "Judas Defeats Arab Attackers and Captures Caspin",
+      "start": "163 BC",
+      "category": "Regional Campaigns",
+      "reference": "2 Maccabees 12:10-16",
+      "description": "Judas defeats an attacking Arab force and makes peace when the survivors offer aid. His army then assaults the fortified town of Caspin and captures it.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-timothy-northeast-campaign",
+      "title": "Judas Pursues Timothy through the Northeast",
+      "start": "163 BC",
+      "category": "Regional Campaigns",
+      "reference": "2 Maccabees 12:17-31",
+      "description": "Judas's commanders destroy a garrison left by Timothy, and Judas pursues the larger army toward Carnaim. Timothy is released to secure Jewish hostages, while Judas captures Carnaim and Ephron before peacefully passing through Scythopolis and returning for the festival of weeks.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-gorgias-defeated",
+      "title": "Judas Defeats Gorgias in Idumea",
+      "start": "163 BC",
+      "category": "Regional Campaigns",
+      "reference": "2 Maccabees 12:32-38",
+      "description": "After the festival of weeks, Judas fights Gorgias's infantry and cavalry. Gorgias escapes an attempted capture, but Judas rallies his weary force and drives the enemy troops away before keeping the sabbath at Adullam.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-offering-for-fallen",
+      "title": "Judas Provides an Offering for the Fallen",
+      "start": "163 BC",
+      "category": "Regional Campaigns",
+      "reference": "2 Maccabees 12:39-45",
+      "description": "While recovering the Jewish dead, Judas's men discover prohibited cultic tokens beneath their clothing. The army prays, and Judas sends a collection to Jerusalem for a sin offering on behalf of those who fell.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-menelaus-executed",
+      "title": "Antiochus V Executes Menelaus",
+      "start": "163 BC",
+      "category": "War under Eupator",
+      "reference": "2 Maccabees 13:1-8",
+      "description": "In the 149th Seleucid year, Antiochus V and Lysias invade Judea with a large army. Menelaus joins the expedition, but the king holds him responsible for the unrest and has him executed in a tower filled with ashes.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-night-raid-modein",
+      "title": "Judas Raids the Royal Camp near Modein",
+      "start": "163 BC",
+      "category": "War under Eupator",
+      "reference": "2 Maccabees 13:9-17",
+      "description": "After three days of communal prayer, Judas camps near Modein and leads selected troops in a predawn assault. They kill many soldiers, strike a leading elephant and its rider, and withdraw after throwing the royal camp into confusion.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-eupator-peace-treaty",
+      "title": "Antiochus V Makes Peace with the Jews",
+      "start": "163 BC",
+      "category": "War under Eupator",
+      "reference": "2 Maccabees 13:18-26",
+      "description": "The king fails to take Beth-zur by force and negotiates with its defenders. News of Philip's revolt in Antioch leads him to settle with Judas, affirm Jewish rights, honor the sanctuary, and return north despite opposition at Ptolemais.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-demetrius-seizes-throne",
+      "title": "Demetrius I Seizes the Seleucid Throne",
+      "start": "161 BC",
+      "category": "Nicanor's Campaign",
+      "reference": "2 Maccabees 14:1-10",
+      "description": "Three years after Eupator's campaign, Demetrius lands at Tripolis and removes Antiochus V and Lysias. In about the 151st Seleucid year, Alcimus approaches the new king and portrays Judas as the cause of continuing unrest.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-nicanor-appointed-governor",
+      "title": "Demetrius Sends Nicanor against Judas",
+      "start": "161 BC",
+      "category": "Nicanor's Campaign",
+      "reference": "2 Maccabees 14:11-17",
+      "description": "Demetrius appoints Nicanor governor of Judea with orders to kill Judas, scatter his forces, and install Alcimus as high priest. Simon encounters Nicanor's army near Dessau but is temporarily checked.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-nicanor-befriends-judas",
+      "title": "Nicanor Makes Peace with Judas",
+      "start": "161 BC",
+      "category": "Nicanor's Campaign",
+      "reference": "2 Maccabees 14:18-25",
+      "description": "Nicanor hesitates to decide the conflict by battle and negotiates a covenant with Judas. He remains peaceably in Jerusalem, develops a friendship with Judas, and encourages him to establish a household.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-nicanor-breaks-covenant",
+      "title": "Nicanor Breaks the Covenant and Threatens the Temple",
+      "start": "161 BC",
+      "category": "Nicanor's Campaign",
+      "reference": "2 Maccabees 14:26-36",
+      "description": "Alcimus persuades Demetrius that Nicanor's accord is disloyal, and the king orders Judas sent to Antioch. Judas goes into hiding when Nicanor's behavior changes, after which Nicanor threatens the priests and the recently purified temple.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-razis-dies",
+      "title": "Razis Dies rather than Be Captured",
+      "start": "161 BC",
+      "category": "Nicanor's Campaign",
+      "reference": "2 Maccabees 14:37-46",
+      "description": "Nicanor sends more than five hundred soldiers to arrest Razis, a respected Jerusalem elder known for his commitment to Judaism. Surrounded in a tower, Razis takes his own life rather than submit to capture and abuse.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-judas-vision-before-battle",
+      "title": "Judas Encourages His Army with a Vision",
+      "start": "161-12 BC",
+      "category": "Nicanor's Campaign",
+      "reference": "2 Maccabees 15:1-24",
+      "description": "Nicanor plans a sabbath attack, while Judas prepares his troops to defend the city and sanctuary. Judas recounts a dream in which the former high priest Onias prays for the people and Jeremiah gives him a sword for the coming battle.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-nicanor-killed",
+      "title": "Judas Defeats and Kills Nicanor",
+      "start": "161-12-13 BC",
+      "category": "Nicanor's Campaign",
+      "reference": "2 Maccabees 15:25-36",
+      "description": "Judas's army defeats Nicanor's force and finds Nicanor dead after the battle. His head and arm are displayed at Jerusalem, and the people establish an annual celebration on the thirteenth of Adar, the day before Purim.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-first-egypt-letter",
+      "title": "Judean Jews Write to Their Kindred in Egypt",
+      "start": "143 BC",
+      "category": "Festival Letters",
+      "reference": "2 Maccabees 1:1-9",
+      "description": "In the 169th Seleucid year, Jews in Jerusalem and Judea write to Jewish communities in Egypt during distress associated with Jason's revolt. They report restored worship and urge their recipients to observe the festival in Chislev.",
+      "datingBasis": "narrative"
+    },
+    {
+      "id": "2mc-antiochus-killed-nanea-temple",
+      "title": "Antiochus Is Killed at the Temple of Nanea",
+      "start": "129 BC",
+      "category": "Festival Letters",
+      "reference": "2 Maccabees 1:10-17",
+      "description": "A letter to Aristobulus recounts how Antiochus and his companions entered the temple of Nanea in Persia seeking its treasure. The temple priests trapped and killed the party, an account distinct from the book's earlier narrative of Antiochus IV's death.",
+      "datingBasis": "scholarly-estimate"
+    },
+    {
+      "id": "2mc-purification-letter-188",
+      "title": "Jerusalem Announces the Festival of Purification",
+      "start": "124 BC",
+      "category": "Festival Letters",
+      "reference": "2 Maccabees 1:18-2:18",
+      "description": "In the 188th Seleucid year, Jerusalem's leaders invite Egyptian Jews to celebrate the temple's purification. The letter supports the observance with traditions about Nehemiah's altar fire, Jeremiah's concealment of sacred objects, and collections of ancestral writings.",
+      "datingBasis": "narrative"
+    }
+  ]
+}

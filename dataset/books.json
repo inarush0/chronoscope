@@ -1,0 +1,33 @@
+{
+  "comment": "Extraction coverage manifest. 'target' books are the narrative-first scope; each becomes dataset/events/<order>-<Book>.json. Run `bun run validate` to see status.",
+  "source": "../bible/books",
+  "chronology": "Traditional (Ussher-style) dating, consistent across books: Creation 4004 BC, Exodus 1446 BC, Conquest 1406 BC, United Monarchy 1050-930 BC, Fall of Jerusalem 586 BC, Return 538 BC, Crucifixion 30 AD.",
+  "target": [
+    { "order": 1, "book": "Genesis", "source": "01-Genesis.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 2, "book": "Exodus", "source": "02-Exodus.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 3, "book": "Leviticus", "source": "03-Leviticus.txt", "testament": "Old Testament", "kind": "law" },
+    { "order": 4, "book": "Numbers", "source": "04-Numbers.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 5, "book": "Deuteronomy", "source": "05-Deuteronomy.txt", "testament": "Old Testament", "kind": "law" },
+    { "order": 6, "book": "Joshua", "source": "06-Joshua.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 7, "book": "Judges", "source": "07-Judges.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 8, "book": "Ruth", "source": "08-Ruth.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 9, "book": "1 Samuel", "source": "09-1-Samuel.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 10, "book": "2 Samuel", "source": "10-2-Samuel.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 11, "book": "1 Kings", "source": "11-1-Kings.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 12, "book": "2 Kings", "source": "12-2-Kings.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 13, "book": "1 Chronicles", "source": "13-1-Chronicles.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 14, "book": "2 Chronicles", "source": "14-2-Chronicles.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 15, "book": "Ezra", "source": "15-Ezra.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 16, "book": "Nehemiah", "source": "16-Nehemiah.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 17, "book": "Esther", "source": "17-Esther.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 27, "book": "Daniel", "source": "27-Daniel.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 32, "book": "Jonah", "source": "32-Jonah.txt", "testament": "Old Testament", "kind": "narrative" },
+    { "order": 50, "book": "1 Maccabees", "source": "50-1-Maccabees.txt", "testament": "Deuterocanon", "kind": "narrative" },
+    { "order": 51, "book": "2 Maccabees", "source": "51-2-Maccabees.txt", "testament": "Deuterocanon", "kind": "narrative" },
+    { "order": 58, "book": "Matthew", "source": "58-Matthew.txt", "testament": "New Testament", "kind": "narrative" },
+    { "order": 59, "book": "Mark", "source": "59-Mark.txt", "testament": "New Testament", "kind": "narrative" },
+    { "order": 60, "book": "Luke", "source": "60-Luke.txt", "testament": "New Testament", "kind": "narrative" },
+    { "order": 61, "book": "John", "source": "61-John.txt", "testament": "New Testament", "kind": "narrative" },
+    { "order": 62, "book": "Acts", "source": "62-Acts.txt", "testament": "New Testament", "kind": "narrative" }
+  ]
+}
