@@ -6,8 +6,8 @@
  *   bun run build-db [--out dataset/chronoscope.sqlite] [--events dataset/events]
  *
  * The output is a committed artifact, not a throwaway: the app opens it at a
- * fixed path and CI fails if it drifts from the event files. The build is
- * deterministic, so rebuilding without editing produces no diff.
+ * fixed path and CI fails if it drifts from the event files. Rebuild and commit
+ * the result whenever an event file changes — see check-artifact.ts.
  */
 
 import { Database } from 'bun:sqlite';

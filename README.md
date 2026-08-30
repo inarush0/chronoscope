@@ -49,6 +49,7 @@ build or configure first.
 | `bun run format`       | Format source files with Prettier                   |
 | `bun run validate`     | Check the authored event files without building     |
 | `bun run build-db`     | Rebuild `dataset/chronoscope.sqlite` from `events/` |
+| `bun run check:artifact`| Fail if the committed dataset has drifted from `events/` |
 
 ## Dataset
 
@@ -67,12 +68,16 @@ Everything about it lives under `dataset/`:
 | `dataset/validate.ts`       | Schema, dates, duplicate ids, coverage           |
 
 The artifact is committed rather than built on demand, so a fresh clone runs with
-no build step. The build is deterministic, and CI rebuilds on every PR and fails
-if the committed file drifts from the event files. The authoring loop is:
+no build step. CI rebuilds on every PR and fails if the committed file has
+drifted from the event files. That comparison is on schema and rows rather than
+bytes — SQLite's on-disk encoding varies between bun versions, so two builds of
+identical data are logically equal without being byte-equal. The authoring loop
+is:
 
 ```sh
-bun run validate     # schema, dates, duplicate ids, coverage
-bun run build-db     # regenerate the dataset, then commit it
+bun run validate        # schema, dates, duplicate ids, coverage
+bun run build-db        # regenerate the dataset, then commit it
+bun run check:artifact  # what CI runs: is the committed file current?
 ```
 
 With `DATASET_RELOAD=1` the running dev server re-opens the database when the

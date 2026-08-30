@@ -15,7 +15,8 @@ one JSON file per book in `dataset/events/`, which is the source of truth.
    `DATASET_RELOAD=1` set, refresh the browser to see the new events; the dev
    server re-opens the file on change.
 6. Commit the rebuilt `dataset/chronoscope.sqlite` alongside the event file — it
-   is a committed artifact, and CI fails if the two drift apart.
+   is a committed artifact, and CI fails if the two drift apart. `bun run
+   check:artifact` runs that same check locally.
 
 ## File format
 
