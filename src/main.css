@@ -1,0 +1,46 @@
+/* Scaffold styles. Imported from main.ts so the build proves CSS is extracted
+   into dist/assets/ rather than injected at runtime. */
+
+:root {
+  color-scheme: light;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #f5f5f5;
+  color: #22223a;
+}
+
+.scaffold-banner {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: #22223a;
+  color: #d8d8ee;
+}
+
+.timeline-wrapper {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.timeline-wrapper canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
