@@ -2,18 +2,20 @@
 
 Events are written by Claude reading the book text directly in a Claude Code
 session — there is no API-calling extraction script. The output of a session is
-one JSON file per book in `data/events/`, which is the source of truth.
+one JSON file per book in `dataset/events/`, which is the source of truth.
 
 ## Workflow
 
-1. Pick the next book with no file in `data/events/` (see `data/books.json`).
+1. Pick the next book with no file in `dataset/events/` (see `dataset/books.json`).
 2. Read `../bible/books/<NN>-<Book>.txt`. Each chapter is preceded by a
    `[Book N]` header and a one-line summary, which gives a usable skeleton.
-3. Write `data/events/<NN>-<Book>.json` in the format below.
+3. Write `dataset/events/<NN>-<Book>.json` in the format below.
 4. `bun run validate` — checks dates, duplicate ids, ordering.
-5. `bun run build-db` — regenerates `data/chronoscope.sqlite`. With the compose
-   stack running, refresh the browser to see the new events; `DATASET_RELOAD`
-   makes the app re-open the file on change.
+5. `bun run build-db` — regenerates `dataset/chronoscope.sqlite`. With
+   `DATASET_RELOAD=1` set, refresh the browser to see the new events; the dev
+   server re-opens the file on change.
+6. Commit the rebuilt `dataset/chronoscope.sqlite` alongside the event file — it
+   is a committed artifact, and CI fails if the two drift apart.
 
 ## File format
 

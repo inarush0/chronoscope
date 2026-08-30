@@ -1,0 +1,33 @@
+# dataset/events/*.json is the source of truth; dataset/chronoscope.sqlite is a
+# committed build artifact. Nothing else stops the two drifting apart, so this
+# rebuilds and fails if the result differs. The build is deterministic, which is
+# what makes a plain byte comparison a valid check.
+name: dataset
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  artifact-is-current:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Validate the authored event files
+        run: bun run validate
+
+      - name: Rebuild the dataset
+        run: bun run build-db
+
+      - name: Fail if the committed artifact is stale
+        run: |
+          if ! git diff --quiet -- dataset/chronoscope.sqlite; then
+            echo "::error::dataset/chronoscope.sqlite is out of date with dataset/events/."
+            echo "Run 'bun run build-db' and commit the result."
+            exit 1
+          fi

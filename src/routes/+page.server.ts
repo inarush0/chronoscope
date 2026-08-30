@@ -16,7 +16,7 @@ interface EventRow {
 
 export const load: PageServerLoad = async ({ url }) => {
   const slug = url.searchParams.get('dataset') ?? env.DEFAULT_DATASET ?? 'bible';
-  const db = await getDb();
+  const db = getDb();
 
   const rows = db
     .prepare(

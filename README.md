@@ -28,45 +28,60 @@ zoom across large temporal datasets to explore scale, sequence, and causality.
 
 ## Getting Started
 
-The app reads its dataset from a SQLite file built by the companion
-[`chronoscope-infra`](../chronoscope-infra) repository, so build that first:
-
-```sh
-cd ../chronoscope-infra && bun install && bun run build-db
-```
-
-Then install and run:
-
 ```sh
 bun install
 cp .env.example .env
 bun run dev
 ```
 
-`.env.example` already points `DATABASE_FILE` at
-`../chronoscope-infra/data/chronoscope.sqlite`.
+The dataset is committed at `dataset/chronoscope.sqlite`, so there is nothing to
+build or configure first.
 
 ## Scripts
 
-| Command           | Description                          |
-| ----------------- | ------------------------------------ |
-| `bun run dev`     | Start dev server and open in browser |
-| `bun run build`   | Create production build              |
-| `bun run preview` | Preview the production build         |
-| `bun run check`   | Type-check with `svelte-check`       |
-| `bun run format`  | Format source files with Prettier    |
+| Command                | Description                                         |
+| ---------------------- | --------------------------------------------------- |
+| `bun run dev`          | Start dev server and open in browser                |
+| `bun run build`        | Create production build                             |
+| `bun run preview`      | Preview the production build                        |
+| `bun run check`        | Type-check the app with `svelte-check`              |
+| `bun run check:dataset`| Type-check the dataset build tooling                |
+| `bun run format`       | Format source files with Prettier                   |
+| `bun run validate`     | Check the authored event files without building     |
+| `bun run build-db`     | Rebuild `dataset/chronoscope.sqlite` from `events/` |
 
 ## Dataset
 
 The dataset is a static, read-only SQLite file — there is no database server.
-It currently holds **287 events across 6 books** (Genesis, Exodus, Leviticus,
-Numbers, Deuteronomy, Joshua) spanning 4004–1375 BC on traditional
-(Ussher-style) chronology.
+It currently holds **1181 events across 26 books**, spanning 4004 BC to 62 AD on
+traditional (Ussher-style) chronology.
 
-The events themselves are authored as JSON in `chronoscope-infra/data/events/`
-and compiled into the SQLite file by `bun run build-db` there — see
-`chronoscope-infra/docs/extraction.md` for the authoring format and the shared
-chronology. This repository only renders the dataset.
+Everything about it lives under `dataset/`:
+
+| Path                        | Role                                             |
+| --------------------------- | ------------------------------------------------ |
+| `dataset/events/*.json`     | Authored events, one file per book. **Source of truth.** |
+| `dataset/books.json`        | Coverage manifest — which books are in scope     |
+| `dataset/chronoscope.sqlite`| Committed build artifact, opened by the app      |
+| `dataset/build.ts`          | Compiles the event files into the SQLite dataset |
+| `dataset/validate.ts`       | Schema, dates, duplicate ids, coverage           |
+
+The artifact is committed rather than built on demand, so a fresh clone runs with
+no build step. The build is deterministic, and CI rebuilds on every PR and fails
+if the committed file drifts from the event files. The authoring loop is:
+
+```sh
+bun run validate     # schema, dates, duplicate ids, coverage
+bun run build-db     # regenerate the dataset, then commit it
+```
+
+With `DATASET_RELOAD=1` the running dev server re-opens the database when the
+file changes, so a rebuild shows up on refresh without a restart.
+
+Authored dates are human-readable (`"1446-04-15 BC"`, `"57 AD"`) and converted to
+epoch milliseconds at build time, so nobody hand-computes offsets. See
+[`docs/extraction.md`](docs/extraction.md) for the authoring format, the id and
+category conventions, and the shared chronology.
 
 ### Scripture text and copyright
 
@@ -87,25 +102,10 @@ not an option.
 
 ## Configuration
 
-| Variable            | Description                                                          |
-| ------------------- | -------------------------------------------------------------------- |
-| `DATABASE_FILE`     | Path to the built SQLite dataset. Takes precedence over `DATABASE_URL`. |
-| `DATABASE_URL`      | HTTPS URL to fetch the dataset from object storage instead.          |
-| `DATASET_CACHE_DIR` | Where a fetched dataset is cached. Defaults to `$TMPDIR/chronoscope`. |
-| `DATASET_RELOAD`    | Set to `1` to re-open the file when it changes. Local iteration only. |
-| `DEFAULT_DATASET`   | Dataset slug when no `?dataset=` is given. Defaults to `bible`.       |
-| `ORIGIN`            | Public origin, required by adapter-node behind a proxy.              |
-
-## Deployment
-
-The app builds with `@sveltejs/adapter-node`. The included `Dockerfile`
-produces a `node:24-alpine` image that serves the built app on port 3000; see
-`chronoscope-infra/compose.yml` for a working configuration.
-
-For a hosted instance, upload the SQLite file to object storage and set
-`DATABASE_URL` instead of `DATABASE_FILE`. The app fetches it once on the first
-request, caches it on local disk, and opens it read-only — so the deployment is
-a single stateless container with no database attached.
+| Variable          | Description                                                          |
+| ----------------- | -------------------------------------------------------------------- |
+| `DATASET_RELOAD`  | Set to `1` to re-open the dataset when it changes. Local iteration only. |
+| `DEFAULT_DATASET` | Dataset slug when no `?dataset=` is given. Defaults to `bible`.       |
 
 ## Copyright
 

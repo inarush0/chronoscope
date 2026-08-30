@@ -1,7 +1,7 @@
 /**
  * Authored event-file format and its validation.
  *
- * One file per book under data/events/. These files are the source of truth
+ * One file per book under dataset/events/. These files are the source of truth
  * and live in version control; the SQLite database is a build artifact.
  */
 

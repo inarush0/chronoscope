@@ -1,5 +1,5 @@
 {
-  "comment": "Extraction coverage manifest. 'target' books are the narrative-first scope; each becomes data/events/<order>-<Book>.json. Run `bun run validate` to see status.",
+  "comment": "Extraction coverage manifest. 'target' books are the narrative-first scope; each becomes dataset/events/<order>-<Book>.json. Run `bun run validate` to see status.",
   "source": "../bible/books",
   "chronology": "Traditional (Ussher-style) dating, consistent across books: Creation 4004 BC, Exodus 1446 BC, Conquest 1406 BC, United Monarchy 1050-930 BC, Fall of Jerusalem 586 BC, Return 538 BC, Crucifixion 30 AD.",
   "target": [

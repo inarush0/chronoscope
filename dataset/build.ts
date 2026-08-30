@@ -3,10 +3,11 @@
  * Builds the read-only SQLite dataset from the authored event files.
  *
  * Usage:
- *   bun scripts/build-db.ts [--out data/chronoscope.sqlite] [--events data/events]
+ *   bun run build-db [--out dataset/chronoscope.sqlite] [--events dataset/events]
  *
- * The output file is a build artifact: delete it and rebuild at any time.
- * It is what the app opens locally and what gets uploaded to object storage.
+ * The output is a committed artifact, not a throwaway: the app opens it at a
+ * fixed path and CI fails if it drifts from the event files. The build is
+ * deterministic, so rebuilding without editing produces no diff.
  */
 
 import { Database } from 'bun:sqlite';
@@ -20,8 +21,15 @@ const getFlag = (name: string, fallback: string) => {
   return index === -1 ? fallback : args[index + 1];
 };
 
-const eventsDir = resolve(getFlag('--events', 'data/events'));
-const outPath = resolve(getFlag('--out', 'data/chronoscope.sqlite'));
+// Defaults are anchored to this file so the script works from any cwd; an
+// explicit flag is resolved from the cwd, where the caller typed it.
+const anchored = (flag: string, fallback: string) => {
+  const value = getFlag(flag, '');
+  return value ? resolve(value) : resolve(import.meta.dir, fallback);
+};
+
+const eventsDir = anchored('--events', 'events');
+const outPath = anchored('--out', 'chronoscope.sqlite');
 const datasetSlug = getFlag('--slug', 'bible');
 const datasetName = getFlag('--name', 'The Bible');
 

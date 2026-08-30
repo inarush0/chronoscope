@@ -10,7 +10,10 @@
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "format": "prettier --write \"src/**/*.{ts,svelte}\""
+    "format": "prettier --write \"src/**/*.{ts,svelte}\"",
+    "check:dataset": "tsc -p dataset/tsconfig.json",
+    "build-db": "bun dataset/build.ts",
+    "validate": "bun dataset/validate.ts"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "^5.5.4",
@@ -19,6 +22,7 @@
     "@types/d3-scale": "^4.0.9",
     "@types/d3-time": "^3.0.4",
     "@types/node": "^25.6.0",
+    "bun-types": "^1.4.0",
     "prettier": "^3.8.1",
     "prettier-plugin-svelte": "^3.5.1",
     "svelte": "^5.51.0",
