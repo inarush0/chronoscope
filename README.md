@@ -6,11 +6,9 @@ zoom across large temporal datasets to explore scale, sequence, and causality.
 
 ## Tech Stack
 
-- **SvelteKit + TypeScript** — app shell and UI
+- **Vanilla TypeScript + Vite** — app shell and UI; no framework, no server
 - **PixiJS v8** — WebGL-accelerated canvas rendering
 - **d3-scale + d3-time** — tick generation and time math
-- **node:sqlite** — reads the dataset; a Node 24 builtin, so there are no
-  runtime dependencies beyond the rendering libraries
 - **bun** — package manager and dev tooling
 
 ## Features
@@ -30,11 +28,10 @@ zoom across large temporal datasets to explore scale, sequence, and causality.
 
 ```sh
 bun install
-cp .env.example .env
 bun run dev
 ```
 
-The dataset is committed at `dataset/chronoscope.sqlite`, so there is nothing to
+The dataset is committed at `static/chronoscope.json`, so there is nothing to
 build or configure first.
 
 ## Scripts
@@ -44,35 +41,32 @@ build or configure first.
 | `bun run dev`          | Start dev server and open in browser                |
 | `bun run build`        | Create production build                             |
 | `bun run preview`      | Preview the production build                        |
-| `bun run check`        | Type-check the app with `svelte-check`              |
+| `bun run check`        | Type-check the app with `tsc`                       |
 | `bun run check:dataset`| Type-check the dataset build tooling                |
 | `bun run format`       | Format source files with Prettier                   |
 | `bun run validate`     | Check the authored event files without building     |
-| `bun run build-db`     | Rebuild `dataset/chronoscope.sqlite` from `events/` |
+| `bun run build-db`     | Rebuild `static/chronoscope.json` from `events/`    |
 | `bun run check:artifact`| Fail if the committed dataset has drifted from `events/` |
 
 ## Dataset
 
-The dataset is a static, read-only SQLite file — there is no database server.
-It currently holds **1181 events across 26 books**, spanning 4004 BC to 62 AD on
-traditional (Ussher-style) chronology.
+The dataset is a static, read-only JSON file fetched by the browser — there is
+no database and no server. It currently holds **1181 events across 26 books**,
+spanning 4004 BC to 62 AD on traditional (Ussher-style) chronology.
 
-Everything about it lives under `dataset/`:
+Authoring lives under `dataset/`; the build artifact lands in `static/`:
 
 | Path                        | Role                                             |
 | --------------------------- | ------------------------------------------------ |
 | `dataset/events/*.json`     | Authored events, one file per book. **Source of truth.** |
 | `dataset/books.json`        | Coverage manifest — which books are in scope     |
-| `dataset/chronoscope.sqlite`| Committed build artifact, opened by the app      |
-| `dataset/build.ts`          | Compiles the event files into the SQLite dataset |
+| `static/chronoscope.json`   | Committed build artifact, fetched by the app     |
+| `dataset/build.ts`          | Compiles the event files into the JSON artifact  |
 | `dataset/validate.ts`       | Schema, dates, duplicate ids, coverage           |
 
 The artifact is committed rather than built on demand, so a fresh clone runs with
 no build step. CI rebuilds on every PR and fails if the committed file has
-drifted from the event files. That comparison is on schema and rows rather than
-bytes — SQLite's on-disk encoding varies between bun versions, so two builds of
-identical data are logically equal without being byte-equal. The authoring loop
-is:
+drifted from the event files. The authoring loop is:
 
 ```sh
 bun run validate        # schema, dates, duplicate ids, coverage
@@ -80,8 +74,8 @@ bun run build-db        # regenerate the dataset, then commit it
 bun run check:artifact  # what CI runs: is the committed file current?
 ```
 
-With `DATASET_RELOAD=1` the running dev server re-opens the database when the
-file changes, so a rebuild shows up on refresh without a restart.
+The dev server serves `static/` directly, so a rebuild shows up on refresh
+without a restart.
 
 Authored dates are human-readable (`"1446-04-15 BC"`, `"57 AD"`) and converted to
 epoch milliseconds at build time, so nobody hand-computes offsets. See
@@ -95,10 +89,10 @@ the dataset or rendered by the app**. Events carry a title, a short description
 written for the timeline, and a canonical reference such as `Genesis 3:1-24`.
 
 Passage text reaches the reader through BibleGateway's [Reference Tagging
-Tool](https://www.biblegateway.com/share/tooltips/), loaded in `src/app.html`:
+Tool](https://www.biblegateway.com/share/tooltips/), loaded in `index.html`:
 it converts each plain-text reference into a link whose hover pop-over is served
-by BibleGateway, under their license rather than ours. `Inspector.svelte`
-re-runs `BGLinks.linkVerses()` after the DOM updates so newly rendered
+by BibleGateway, under their license rather than ours. `src/inspector/inspector.ts`
+re-runs `BGLinks.linkVerses()` after each selection change so newly rendered
 references get tagged.
 
 This is why references must stay in a parseable canonical form, and why
@@ -107,10 +101,8 @@ not an option.
 
 ## Configuration
 
-| Variable          | Description                                                          |
-| ----------------- | -------------------------------------------------------------------- |
-| `DATASET_RELOAD`  | Set to `1` to re-open the dataset when it changes. Local iteration only. |
-| `DEFAULT_DATASET` | Dataset slug when no `?dataset=` is given. Defaults to `bible`.       |
+None. The app is fully static and reads no environment variables; the one
+dataset is served as a file and fetched by the browser.
 
 ## Copyright
 

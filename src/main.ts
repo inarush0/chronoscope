@@ -1,99 +1,145 @@
 /**
- * Vanilla-TS entry point for the scaffold (wayfinder ticket #11).
- *
- * Scope: prove PixiJS bundles under plain Vite and that the *unmodified*
- * `TimelineController` renders in a page with no SvelteKit, no SSR and no
- * routing. The real shell — toolbar, inspector, tooltips, tick labels, theme
- * toggle — is ticket #13; everything below the controller call is throwaway.
+ * App shell: toolbar, theme, selection wiring. Replaces `+page.svelte` and
+ * `+layout.svelte`.
  *
  * NO TOP-LEVEL AWAIT IN THIS FILE. Pixi 8 resolves its environment and
  * renderer through dynamic `import()`s. In a production build those land in
- * sibling chunks of the entry chunk, so awaiting `Application.init()` at the
- * top level deadlocks: the import waits for the entry module to finish
- * evaluating, and the entry module is blocked on the import. It fails silently
- * — no error, just a canvas that never initialises — and only in `vite build`,
- * never in `vite dev`. Keep the async work inside `main()`.
+ * sibling chunks of the entry chunk, so awaiting anything that reaches
+ * `Application.init()` at the top level deadlocks: the import waits for the
+ * entry module to finish evaluating, and the entry module is blocked on the
+ * import. It fails silently — no error, just a canvas that never initialises —
+ * and only in `vite build`, never in `vite dev`. Keep the async work inside
+ * `main()`.
  */
 
 import "./main.css";
-import {
-  TimelineController,
-  THEME_COLORS,
-} from "./lib/timeline/TimelineController.js";
-import { FIXTURE_EVENTS } from "./fixture.js";
+import { THEME_COLORS } from "./timeline/TimelineController.js";
+import { createTimelineView } from "./timeline/timelineView.js";
+import type { TimelineView } from "./timeline/timelineView.js";
+import { createInspector } from "./inspector/inspector.js";
+import { loadDataset, initialView } from "./dataset.js";
+import type { TimelineEvent } from "./timeline/types.js";
 
-function mount(root: HTMLElement): {
-  banner: HTMLElement;
-  wrapper: HTMLElement;
-  canvas: HTMLCanvasElement;
-} {
-  const banner = document.createElement("div");
-  banner.className = "scaffold-banner";
+type Theme = "light" | "dark";
 
-  const wrapper = document.createElement("div");
-  wrapper.className = "timeline-wrapper";
-  const canvas = document.createElement("canvas");
-  wrapper.append(canvas);
+const SUN_ICON = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+  stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+  <circle cx="8" cy="8" r="3" fill="currentColor" stroke="none" />
+  <line x1="8" y1="1" x2="8" y2="3" />
+  <line x1="8" y1="13" x2="8" y2="15" />
+  <line x1="1" y1="8" x2="3" y2="8" />
+  <line x1="13" y1="8" x2="15" y2="8" />
+  <line x1="3.05" y1="3.05" x2="4.46" y2="4.46" />
+  <line x1="11.54" y1="11.54" x2="12.95" y2="12.95" />
+  <line x1="12.95" y1="3.05" x2="11.54" y2="4.46" />
+  <line x1="4.46" y1="11.54" x2="3.05" y2="12.95" />
+</svg>`;
 
-  root.append(banner, wrapper);
-  return { banner, wrapper, canvas };
-}
+const MOON_ICON = `<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+  <path d="M6 2a6 6 0 1 0 8 8 4.5 4.5 0 1 1-8-8z" />
+</svg>`;
 
-/** Full extent of the fixture plus 5% padding — same rule as `+page.svelte`. */
-function defaultView(): { start: number; end: number } {
-  const times = FIXTURE_EVENTS.flatMap((e) =>
-    e.end != null ? [e.start, e.end] : [e.start],
-  );
-  const min = Math.min(...times);
-  const max = Math.max(...times);
-  const pad = (max - min) * 0.05;
-  return { start: min - pad, end: max + pad };
-}
-
-function year(ms: number): string {
-  const y = new Date(ms).getUTCFullYear();
-  return y <= 0 ? `${1 - y} BC` : `${y} AD`;
+function button(label: string, onClick: () => void): HTMLButtonElement {
+  const el = document.createElement("button");
+  el.type = "button";
+  el.textContent = label;
+  el.addEventListener("click", onClick);
+  return el;
 }
 
 async function main(): Promise<void> {
   const root = document.querySelector<HTMLDivElement>("#app");
   if (!root) throw new Error("#app not found");
+  root.classList.add("app");
 
-  const { banner, wrapper, canvas } = mount(root);
-  const { start, end } = defaultView();
+  const dataset = await loadDataset();
+  const events: TimelineEvent[] = dataset.events;
+  const byId = new Map(events.map((e) => [e.id, e]));
 
-  let selectedId: string | null = null;
+  // ─── Theme ───────────────────────────────────────────────────────────────
+  //
+  // Resolved before the controller exists so the canvas and the DOM chrome are
+  // never a frame out of step (parity item 10.6).
 
-  const ctrl = await TimelineController.create(canvas, {
-    initialViewStart: start,
-    initialViewEnd: end,
-    colors: THEME_COLORS.light,
-    onSelectionChange: (id) => {
-      selectedId = id;
-    },
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  let systemTheme: Theme = mq.matches ? "dark" : "light";
+  // Once the user picks a theme by hand, OS changes stop applying for the rest
+  // of the session (parity item 10.4). Nothing is persisted (10.5).
+  let manualOverride: Theme | null = null;
+  const theme = (): Theme => manualOverride ?? systemTheme;
+
+  // Assigned at the end of `main`; the toolbar handlers below can fire before
+  // Pixi has finished initialising, hence the optional calls.
+  let timeline: TimelineView | undefined;
+
+  // ─── Toolbar ─────────────────────────────────────────────────────────────
+
+  const toolbar = document.createElement("header");
+  toolbar.className = "toolbar";
+
+  const logo = document.createElement("span");
+  logo.className = "logo";
+  logo.textContent = "Chronoscope";
+
+  const actions = document.createElement("div");
+  actions.className = "toolbar-actions";
+
+  const themeBtn = document.createElement("button");
+  themeBtn.type = "button";
+  themeBtn.className = "icon-btn";
+  themeBtn.setAttribute("aria-label", "Toggle theme");
+
+  function applyTheme(): void {
+    document.documentElement.setAttribute("data-theme", theme());
+    themeBtn.innerHTML = theme() === "dark" ? SUN_ICON : MOON_ICON;
+    timeline?.setColors(THEME_COLORS[theme()]);
+  }
+
+  themeBtn.addEventListener("click", () => {
+    manualOverride = theme() === "dark" ? "light" : "dark";
+    applyTheme();
   });
 
-  ctrl.setDataset(FIXTURE_EVENTS);
+  mq.addEventListener("change", (e) => {
+    if (manualOverride !== null) return;
+    systemTheme = e.matches ? "dark" : "light";
+    applyTheme();
+  });
 
-  new ResizeObserver(([entry]) => {
-    if (!entry) return;
-    const { width, height } = entry.contentRect;
-    if (width > 0 && height > 0) ctrl.resize(width, height);
-  }).observe(wrapper);
+  actions.append(
+    button("Reset View", () => timeline?.resetView()),
+    button("Zoom to Selection", () => timeline?.zoomToSelection()),
+    themeBtn,
+  );
+  toolbar.append(logo, actions);
 
-  // Surface the render state every frame so the scaffold is judgeable by eye.
-  const tick = (): void => {
-    const { viewStart, viewEnd } = ctrl.getViewState();
-    banner.textContent = [
-      `SCAFFOLD — ${FIXTURE_EVENTS.length} fixture events`,
-      `view ${year(viewStart)} → ${year(viewEnd)}`,
-      `LOD ${ctrl.lod}`,
-      `gaps ${ctrl.getGaps().length}`,
-      `selected ${selectedId ?? "—"}`,
-    ].join("  |  ");
-    requestAnimationFrame(tick);
-  };
-  tick();
+  // ─── Layout ──────────────────────────────────────────────────────────────
+
+  const contentArea = document.createElement("div");
+  contentArea.className = "content-area";
+  const timelineArea = document.createElement("main");
+  timelineArea.className = "timeline-area";
+  contentArea.append(timelineArea);
+  root.append(toolbar, contentArea);
+
+  // Closing the panel clears the app-level selection only; the controller
+  // keeps its `selectedId`, so the event stays outlined on the canvas and
+  // Zoom to Selection still targets it. That is quirk Q3 — preserved.
+  const inspector = createInspector(contentArea, () => inspector.show(null));
+
+  applyTheme();
+
+  // ─── Timeline ────────────────────────────────────────────────────────────
+
+  const { start, end } = initialView(events);
+  timeline = await createTimelineView(timelineArea, {
+    initialViewStart: start,
+    initialViewEnd: end,
+    colors: THEME_COLORS[theme()],
+    dataset: events,
+    onSelectionChange: (id) =>
+      inspector.show(id ? (byId.get(id) ?? null) : null),
+  });
 }
 
 void main();

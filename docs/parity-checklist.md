@@ -211,7 +211,7 @@ LOD A is active when `canvas width ÷ visible event count < 40px`. On a
       only at page load.
 - [ ] **9.4** No verse text is stored in the app's own data — the passage text
       only ever arrives from BibleGateway's script (see the comment in
-      `src/app.html`; this is a licensing constraint, not a preference).
+      `index.html`; this is a licensing constraint, not a preference).
 
 ## 10. Theme
 
@@ -264,10 +264,20 @@ LOD A is active when `canvas width ÷ visible event count < 40px`. On a
 
 Reproduce these; do not fix them during the port.
 
-- **Q1 — the click threshold is horizontal-only.** `pointerup` compares
-  `offsetX` alone, so a drag of any vertical distance with <4px horizontal
-  movement still registers as a click and selects. Check: press on an event,
-  drag straight down 100px, release — it selects.
+- **Q1 — the click threshold is horizontal-only, but the hit test is not.**
+  `pointerup` compares `offsetX` alone, so a drag of any vertical distance with
+  <4px horizontal movement still registers as a *click*. What that click hits is
+  then resolved at the **release** point, not the press point, so a long
+  vertical drag clicks empty canvas and **clears** the selection. Check: press
+  on an event and release without moving — it selects; press on an event, drag
+  straight down 100px and release — the selection clears and the inspector
+  closes.
+
+  > Corrected on 2026-08-30 while porting the shell (#13). The original entry
+  > claimed the vertical drag still selected the event, which
+  > `TimelineController.handleClick(e.offsetX, e.offsetY)` does not do. The
+  > controller is byte-identical between `main` and the port, so this is a
+  > mis-reading in this document, not a behavioural difference.
 - **Q2 — double-click also fires a single-click first.** A double-click on a bin
   runs the click handler (selecting the bin) and then the `dblclick` handler
   (zooming). Visible as a brief selection outline before the zoom.
