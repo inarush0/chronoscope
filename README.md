@@ -62,8 +62,8 @@ rather than bare `go build`.
 The server does no routing, reads no environment and opens no files at runtime.
 It sets one cache policy per URL class: everything under `/assets/` is
 content-hashed by Vite and cached immutably for a year, while `index.html`,
-`favicon.svg`, `robots.txt` and `chronoscope.json` ship under stable URLs and so
-must revalidate. Those four carry a SHA-256 `ETag` computed at startup, which
+`robots.txt` and `chronoscope.json` ship under stable URLs and so must
+revalidate. Those three carry a SHA-256 `ETag` computed at startup, which
 makes revalidation a 304 — without one, embedded files have a zero modification
 time and every reload would re-download the 531 KB dataset in full.
 

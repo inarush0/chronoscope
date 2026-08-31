@@ -29,9 +29,9 @@ import (
 var distFS embed.FS
 
 // Everything under assets/ is content-hashed by Vite, so its URL changes
-// whenever its bytes do and it can be cached forever. index.html, favicon.svg,
-// robots.txt and chronoscope.json ship under stable URLs and must revalidate —
-// otherwise a rebuilt dataset is served stale from the browser cache.
+// whenever its bytes do and it can be cached forever. index.html, robots.txt
+// and chronoscope.json ship under stable URLs and must revalidate — otherwise
+// a rebuilt dataset is served stale from the browser cache.
 const (
 	immutableCacheControl  = "public, max-age=31536000, immutable"
 	revalidateCacheControl = "no-cache"
@@ -81,8 +81,8 @@ func handler(fsys fs.FS) http.Handler {
 	})
 }
 
-// etags hashes every embedded file once at startup — 13 files, so the cost is
-// paid before the listener opens and never again.
+// etags hashes every embedded file once at startup — a dozen-odd files, so the
+// cost is paid before the listener opens and never again.
 func etags(fsys fs.FS) map[string]string {
 	tags := make(map[string]string)
 
