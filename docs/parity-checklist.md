@@ -22,7 +22,7 @@ therefore phrased so a human gets an unambiguous yes/no by eye.
 
 | | Old build | New build |
 | --- | --- | --- |
-| Run | `bun run dev` | (per the port tickets) |
+| Run | `bun run dev`, on `main` | `npm run dev`, or `npm run build:binary && ./chronoscope` |
 | Data | `dataset/chronoscope.sqlite` via `+page.server.ts` | embedded JSON, `fetch`ed |
 
 Run both side by side, in the **same browser at the same window size** — several

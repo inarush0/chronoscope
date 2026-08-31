@@ -1,9 +1,9 @@
-#!/usr/bin/env bun
+#!/usr/bin/env node
 /**
  * Builds the shipped dataset JSON from the authored event files.
  *
  * Usage:
- *   bun run build-db [--out static/chronoscope.json] [--events dataset/events]
+ *   npm run build-db [--out static/chronoscope.json] [--events dataset/events]
  *
  * The output is a committed artifact, not a throwaway: the browser fetches it
  * at a fixed URL and CI fails if it drifts from the event files. Rebuild and
@@ -14,9 +14,13 @@
  * puts it in `dist/` for `//go:embed`. One committed copy, no copy step.
  */
 
-import { mkdirSync, writeFileSync } from 'node:fs';
-import { dirname, resolve } from 'node:path';
-import { BuildError, buildArtifact, serializeArtifact } from './lib/artifact.ts';
+import { mkdirSync, writeFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import {
+  BuildError,
+  buildArtifact,
+  serializeArtifact,
+} from "./lib/artifact.ts";
 
 const args = process.argv.slice(2);
 const getFlag = (name: string, fallback: string) => {
@@ -27,13 +31,13 @@ const getFlag = (name: string, fallback: string) => {
 // Defaults are anchored to this file so the script works from any cwd; an
 // explicit flag is resolved from the cwd, where the caller typed it.
 const anchored = (flag: string, fallback: string) => {
-  const value = getFlag(flag, '');
+  const value = getFlag(flag, "");
   return value ? resolve(value) : resolve(import.meta.dirname, fallback);
 };
 
-const eventsDir = anchored('--events', 'events');
-const outPath = anchored('--out', '../static/chronoscope.json');
-const datasetSlug = getFlag('--slug', 'bible');
+const eventsDir = anchored("--events", "events");
+const outPath = anchored("--out", "../static/chronoscope.json");
+const datasetSlug = getFlag("--slug", "bible");
 
 let built;
 try {
@@ -56,8 +60,10 @@ console.log(`Built ${outPath} (${(json.length / 1024).toFixed(0)}KB)`);
 console.log(`  dataset: ${datasetSlug}`);
 console.log(`  books:   ${books.length}`);
 console.log(
-  `  events:  ${artifact.events.length} (${spread} spread within their authored year or month)`
+  `  events:  ${artifact.events.length} (${spread} spread within their authored year or month)`,
 );
 for (const { file, events } of books) {
-  console.log(`    ${String(file.order).padStart(2)} ${file.book.padEnd(24)} ${events.length}`);
+  console.log(
+    `    ${String(file.order).padStart(2)} ${file.book.padEnd(24)} ${events.length}`,
+  );
 }

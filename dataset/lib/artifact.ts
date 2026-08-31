@@ -13,7 +13,7 @@
  * schema-and-rows fingerprint SQLite's unstable encoding forced on us.
  */
 
-import { loadAllBooks } from './events.ts';
+import { loadAllBooks } from "./events.ts";
 
 /** One event, in the shape `src/lib/timeline/types.ts` declares. */
 export interface ArtifactEvent {
@@ -50,7 +50,7 @@ export interface BuildOptions {
  */
 export function buildArtifact({ eventsDir, datasetSlug }: BuildOptions): {
   artifact: Artifact;
-  books: ReturnType<typeof loadAllBooks>['books'];
+  books: ReturnType<typeof loadAllBooks>["books"];
   spread: number;
 } {
   const { books, errors, spread } = loadAllBooks(eventsDir);
@@ -58,7 +58,7 @@ export function buildArtifact({ eventsDir, datasetSlug }: BuildOptions): {
   if (errors.length > 0) {
     throw new BuildError(
       `Refusing to build — ${errors.length} problem(s) in the event files:\n\n` +
-        errors.map((error) => `  ${error}`).join('\n')
+        errors.map((error) => `  ${error}`).join("\n"),
     );
   }
 
@@ -71,11 +71,12 @@ export function buildArtifact({ eventsDir, datasetSlug }: BuildOptions): {
       book: event.book ?? undefined,
       category: event.category ?? undefined,
       lane: event.lane ?? undefined,
-      meta: event.meta ?? undefined
-    }))
+      meta: event.meta ?? undefined,
+    })),
   );
 
-  if (events.length === 0) throw new BuildError(`No events found in ${eventsDir}`);
+  if (events.length === 0)
+    throw new BuildError(`No events found in ${eventsDir}`);
 
   // The old SQL ordered by start_time; the renderer's binary search depends on
   // it. Ties keep canonical book order, which loadAllBooks already applied.
@@ -86,9 +87,9 @@ export function buildArtifact({ eventsDir, datasetSlug }: BuildOptions): {
     // Canonical order, as `ORDER BY b.book_order` gave.
     books: books.map(({ file, events: resolved }) => ({
       name: file.book,
-      eventCount: resolved.length
+      eventCount: resolved.length,
     })),
-    events
+    events,
   };
 
   return { artifact, books, spread };

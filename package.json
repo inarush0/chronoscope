@@ -10,17 +10,19 @@
     "build:linux": "npm run build && GOOS=linux GOARCH=amd64 go build -o chronoscope-linux-amd64 .",
     "preview": "vite preview",
     "check": "tsc -p tsconfig.json",
-    "format": "prettier --write \"src/**/*.{ts,css}\"",
+    "format": "prettier --write \"src/**/*.{ts,css}\" \"dataset/**/*.ts\" package.json tsconfig.json vite.config.ts",
     "check:dataset": "tsc -p dataset/tsconfig.json",
-    "build-db": "bun dataset/build.ts",
-    "validate": "bun dataset/validate.ts",
-    "check:artifact": "bun dataset/check-artifact.ts"
+    "build-db": "node dataset/build.ts",
+    "validate": "node dataset/validate.ts",
+    "check:artifact": "node dataset/check-artifact.ts"
+  },
+  "engines": {
+    "node": ">=24"
   },
   "devDependencies": {
     "@types/d3-scale": "^4.0.9",
     "@types/d3-time": "^3.0.4",
     "@types/node": "^25.6.0",
-    "bun-types": "^1.4.0",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.1"

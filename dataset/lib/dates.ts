@@ -9,7 +9,7 @@
  * and dates are interpreted as proleptic Gregorian UTC.
  */
 
-export type Precision = 'year' | 'month' | 'day';
+export type Precision = "year" | "month" | "day";
 
 export interface ParsedDate {
   ms: number;
@@ -23,7 +23,7 @@ export function parseDate(input: string): ParsedDate {
   const match = DATE_RE.exec(input.trim());
   if (!match) {
     throw new Error(
-      `Invalid date "${input}" (expected "<year>[-<month>[-<day>]] BC|AD", e.g. "1446-04-15 BC")`
+      `Invalid date "${input}" (expected "<year>[-<month>[-<day>]] BC|AD", e.g. "1446-04-15 BC")`,
     );
   }
 
@@ -32,12 +32,17 @@ export function parseDate(input: string): ParsedDate {
   const month = monthStr ? Number(monthStr) : 1;
   const day = dayStr ? Number(dayStr) : 1;
 
-  if (year === 0) throw new Error(`Invalid date "${input}": there is no year 0 in BC/AD notation`);
-  if (month < 1 || month > 12) throw new Error(`Invalid date "${input}": month out of range`);
-  if (day < 1 || day > 31) throw new Error(`Invalid date "${input}": day out of range`);
+  if (year === 0)
+    throw new Error(
+      `Invalid date "${input}": there is no year 0 in BC/AD notation`,
+    );
+  if (month < 1 || month > 12)
+    throw new Error(`Invalid date "${input}": month out of range`);
+  if (day < 1 || day > 31)
+    throw new Error(`Invalid date "${input}": day out of range`);
 
   // 1 BC is astronomical year 0, 2 BC is -1, and so on.
-  const astronomicalYear = era === 'BC' ? 1 - year : year;
+  const astronomicalYear = era === "BC" ? 1 - year : year;
 
   const date = new Date(Date.UTC(2000, month - 1, day));
   date.setUTCFullYear(astronomicalYear);
@@ -48,7 +53,7 @@ export function parseDate(input: string): ParsedDate {
 
   return {
     ms: date.getTime(),
-    precision: dayStr ? 'day' : monthStr ? 'month' : 'year'
+    precision: dayStr ? "day" : monthStr ? "month" : "year",
   };
 }
 
@@ -60,24 +65,25 @@ export function parseDate(input: string): ParsedDate {
  * `ms` must be the start of that period, which is what parseDate returns.
  */
 export function precisionSpan(ms: number, precision: Precision): number {
-  if (precision === 'day') return 0;
+  if (precision === "day") return 0;
 
   const next = new Date(ms);
-  if (precision === 'year') next.setUTCFullYear(next.getUTCFullYear() + 1);
+  if (precision === "year") next.setUTCFullYear(next.getUTCFullYear() + 1);
   else next.setUTCMonth(next.getUTCMonth() + 1);
 
   return next.getTime() - ms;
 }
 
 /** Inverse of parseDate, used when converting legacy epoch-ms datasets. */
-export function formatDate(ms: number, precision: Precision = 'day'): string {
+export function formatDate(ms: number, precision: Precision = "day"): string {
   const date = new Date(ms);
   const astronomicalYear = date.getUTCFullYear();
-  const era = astronomicalYear <= 0 ? 'BC' : 'AD';
+  const era = astronomicalYear <= 0 ? "BC" : "AD";
   const year = astronomicalYear <= 0 ? 1 - astronomicalYear : astronomicalYear;
 
-  const pad = (n: number) => String(n).padStart(2, '0');
-  if (precision === 'year') return `${year} ${era}`;
-  if (precision === 'month') return `${year}-${pad(date.getUTCMonth() + 1)} ${era}`;
+  const pad = (n: number) => String(n).padStart(2, "0");
+  if (precision === "year") return `${year} ${era}`;
+  if (precision === "month")
+    return `${year}-${pad(date.getUTCMonth() + 1)} ${era}`;
   return `${year}-${pad(date.getUTCMonth() + 1)}-${pad(date.getUTCDate())} ${era}`;
 }

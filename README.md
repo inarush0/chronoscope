@@ -10,7 +10,8 @@ zoom across large temporal datasets to explore scale, sequence, and causality.
 - **Go** — a single binary that serves the embedded frontend and dataset
 - **PixiJS v8** — WebGL-accelerated canvas rendering
 - **d3-scale + d3-time** — tick generation and time math
-- **bun** — package manager and dev tooling
+- **npm + node 24** — package manager and dev tooling; the dataset build scripts
+  are `.ts` files node runs directly by stripping their types
 
 ## Features
 
@@ -28,12 +29,16 @@ zoom across large temporal datasets to explore scale, sequence, and causality.
 ## Getting Started
 
 ```sh
-bun install
-bun run dev
+npm install
+npm run dev
 ```
 
 The dataset is committed at `static/chronoscope.json`, so there is nothing to
 build or configure first.
+
+Node 24 or newer is required and enforced at install time: the dataset scripts
+under `dataset/` are TypeScript that node executes directly, without a build
+step or a loader. Go 1.27+ is needed only to build the binary.
 
 ## Deploying
 
@@ -63,17 +68,17 @@ time and every reload would re-download the 531 KB dataset in full.
 
 | Command                | Description                                         |
 | ---------------------- | --------------------------------------------------- |
-| `bun run dev`          | Start dev server and open in browser                |
-| `bun run build`        | Create production build                             |
+| `npm run dev`          | Start dev server and open in browser                |
+| `npm run build`        | Create production build                             |
 | `npm run build:binary` | Build the frontend, then the Go binary that serves it |
 | `npm run build:linux`  | The same, cross-compiled for `linux/amd64`          |
-| `bun run preview`      | Preview the production build                        |
-| `bun run check`        | Type-check the app with `tsc`                       |
-| `bun run check:dataset`| Type-check the dataset build tooling                |
-| `bun run format`       | Format source files with Prettier                   |
-| `bun run validate`     | Check the authored event files without building     |
-| `bun run build-db`     | Rebuild `static/chronoscope.json` from `events/`    |
-| `bun run check:artifact`| Fail if the committed dataset has drifted from `events/` |
+| `npm run preview`      | Preview the production build                        |
+| `npm run check`        | Type-check the app with `tsc`                       |
+| `npm run check:dataset`| Type-check the dataset build tooling                |
+| `npm run format`       | Format source files with Prettier                   |
+| `npm run validate`     | Check the authored event files without building     |
+| `npm run build-db`     | Rebuild `static/chronoscope.json` from `events/`    |
+| `npm run check:artifact`| Fail if the committed dataset has drifted from `events/` |
 
 ## Dataset
 
@@ -96,9 +101,9 @@ no build step. CI rebuilds on every PR and fails if the committed file has
 drifted from the event files. The authoring loop is:
 
 ```sh
-bun run validate        # schema, dates, duplicate ids, coverage
-bun run build-db        # regenerate the dataset, then commit it
-bun run check:artifact  # what CI runs: is the committed file current?
+npm run validate        # schema, dates, duplicate ids, coverage
+npm run build-db        # regenerate the dataset, then commit it
+npm run check:artifact  # what CI runs: is the committed file current?
 ```
 
 The dev server serves `static/` directly, so a rebuild shows up on refresh

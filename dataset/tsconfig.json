@@ -1,13 +1,18 @@
-// The dataset build tooling runs on bun, not in the SvelteKit app, so it
-// type-checks itself rather than extending the src-scoped app config.
+// The dataset build tooling runs on node (which strips the types and runs the
+// .ts files directly), not in the browser, so it type-checks itself rather than
+// extending the src-scoped app config.
 {
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
     "strict": true,
-    "types": ["node", "bun-types"],
+    "types": ["node"],
     "allowImportingTsExtensions": true,
+    // Node strips types rather than compiling them, so anything that needs code
+    // generation — enums, namespaces, parameter properties — fails at runtime.
+    // This turns that constraint into a type error instead.
+    "erasableSyntaxOnly": true,
     "noEmit": true
   },
   "include": ["**/*.ts"]

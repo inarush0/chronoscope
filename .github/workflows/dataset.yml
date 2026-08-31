@@ -14,12 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      # No `npm ci`: the dataset scripts import nothing outside node's stdlib,
+      # and node 24 runs the .ts files directly by stripping their types.
+      - uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: 24
 
       - name: Validate the authored event files
-        run: bun run validate
+        run: npm run validate
 
       - name: Fail if the committed artifact is stale
-        run: bun run check:artifact
+        run: npm run check:artifact
