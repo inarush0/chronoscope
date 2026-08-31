@@ -5,10 +5,10 @@
  * and live in version control; the SQLite database is a build artifact.
  */
 
-import { readFileSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
-import { parseDate, type Precision } from './dates.ts';
-import { spreadCoincidentDates } from './spread.ts';
+import { readFileSync, readdirSync } from "node:fs";
+import { join } from "node:path";
+import { parseDate, type Precision } from "./dates.ts";
+import { spreadCoincidentDates } from "./spread.ts";
 
 export interface AuthoredEvent {
   id: string;
@@ -24,13 +24,14 @@ export interface AuthoredEvent {
    * How the date was arrived at. Non-narrative books are dated by composition
    * or historical setting rather than by a narrated sequence of events.
    */
-  datingBasis?: 'narrative' | 'traditional' | 'composition' | 'scholarly-estimate';
+  datingBasis?:
+    "narrative" | "traditional" | "composition" | "scholarly-estimate";
 }
 
 export interface BookFile {
   book: string;
   order: number;
-  testament: 'Old Testament' | 'New Testament' | 'Deuterocanon';
+  testament: "Old Testament" | "New Testament" | "Deuterocanon";
   events: AuthoredEvent[];
 }
 
@@ -50,10 +51,10 @@ export interface ResolvedEvent {
 }
 
 const VALID_DATING_BASES = new Set([
-  'narrative',
-  'traditional',
-  'composition',
-  'scholarly-estimate'
+  "narrative",
+  "traditional",
+  "composition",
+  "scholarly-estimate",
 ]);
 
 /**
@@ -73,17 +74,19 @@ function quotedSpans(text: string): string[] {
 export function loadBookFile(path: string): BookFile {
   let parsed: unknown;
   try {
-    parsed = JSON.parse(readFileSync(path, 'utf-8'));
+    parsed = JSON.parse(readFileSync(path, "utf-8"));
   } catch (error) {
     throw new Error(`${path}: not valid JSON — ${(error as Error).message}`);
   }
 
   const file = parsed as BookFile;
-  if (!file || typeof file.book !== 'string' || !file.book) {
+  if (!file || typeof file.book !== "string" || !file.book) {
     throw new Error(`${path}: missing "book"`);
   }
-  if (typeof file.order !== 'number') throw new Error(`${path}: missing numeric "order"`);
-  if (!Array.isArray(file.events)) throw new Error(`${path}: missing "events" array`);
+  if (typeof file.order !== "number")
+    throw new Error(`${path}: missing numeric "order"`);
+  if (!Array.isArray(file.events))
+    throw new Error(`${path}: missing "events" array`);
 
   return file;
 }
@@ -98,9 +101,9 @@ export function resolveBook(file: BookFile, path: string) {
   const seen = new Set<string>();
 
   file.events.forEach((event, index) => {
-    const where = `${path} [${index}] ${event?.id ?? '<no id>'}`;
+    const where = `${path} [${index}] ${event?.id ?? "<no id>"}`;
 
-    if (!event?.id || typeof event.id !== 'string') {
+    if (!event?.id || typeof event.id !== "string") {
       errors.push(`${where}: missing "id"`);
       return;
     }
@@ -113,13 +116,13 @@ export function resolveBook(file: BookFile, path: string) {
     }
 
     for (const [field, text] of [
-      ['title', event.title],
-      ['description', event.description]
+      ["title", event.title],
+      ["description", event.description],
     ] as const) {
-      for (const span of quotedSpans(text ?? '')) {
+      for (const span of quotedSpans(text ?? "")) {
         errors.push(
           `${where}: ${field} quotes the translation ("${span.slice(0, 48)}") — ` +
-            `use reported speech instead (docs/extraction.md)`
+            `use reported speech instead (docs/extraction.md)`,
         );
       }
     }
@@ -142,7 +145,10 @@ export function resolveBook(file: BookFile, path: string) {
         errors.push(`${where}: ${(error as Error).message}`);
         return;
       }
-      if (end < start) errors.push(`${where}: end (${event.end}) precedes start (${event.start})`);
+      if (end < start)
+        errors.push(
+          `${where}: end (${event.end}) precedes start (${event.start})`,
+        );
     }
 
     // The UI reads meta.reference and meta.description.
@@ -161,7 +167,7 @@ export function resolveBook(file: BookFile, path: string) {
       lane: event.lane ?? null,
       meta,
       precision,
-      endPrecision
+      endPrecision,
     });
   });
 
@@ -171,7 +177,7 @@ export function resolveBook(file: BookFile, path: string) {
 /** Loads and resolves every book file in a directory, in canonical order. */
 export function loadAllBooks(dir: string) {
   const files = readdirSync(dir)
-    .filter((name) => name.endsWith('.json'))
+    .filter((name) => name.endsWith(".json"))
     .sort();
 
   const books: { file: BookFile; events: ResolvedEvent[] }[] = [];
@@ -186,7 +192,8 @@ export function loadAllBooks(dir: string) {
 
     for (const event of resolved) {
       const previous = globalIds.get(event.id);
-      if (previous) errors.push(`${name}: id "${event.id}" already used in ${previous}`);
+      if (previous)
+        errors.push(`${name}: id "${event.id}" already used in ${previous}`);
       globalIds.set(event.id, name);
     }
 

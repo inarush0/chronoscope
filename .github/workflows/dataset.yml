@@ -1,8 +1,7 @@
-# dataset/events/*.json is the source of truth; dataset/chronoscope.sqlite is a
+# dataset/events/*.json is the source of truth; static/chronoscope.json is a
 # committed build artifact. Nothing else stops the two drifting apart, so this
-# rebuilds and compares. The comparison is on schema and rows, not bytes:
-# SQLite's on-disk encoding varies between bun versions, so a byte check would
-# fail on a bun upgrade without the data having changed at all.
+# rebuilds and compares. The comparison is a plain byte diff — JSON, unlike the
+# SQLite file this replaced, encodes the same data the same way every time.
 name: dataset
 
 on:
@@ -15,12 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      # No `npm ci`: the dataset scripts import nothing outside node's stdlib,
+      # and node 24 runs the .ts files directly by stripping their types.
+      - uses: actions/setup-node@v4
         with:
-          bun-version: latest
+          node-version: 24
 
       - name: Validate the authored event files
-        run: bun run validate
+        run: npm run validate
 
       - name: Fail if the committed artifact is stale
-        run: bun run check:artifact
+        run: npm run check:artifact

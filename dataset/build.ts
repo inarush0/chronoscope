@@ -1,19 +1,26 @@
-#!/usr/bin/env bun
+#!/usr/bin/env node
 /**
- * Builds the read-only SQLite dataset from the authored event files.
+ * Builds the shipped dataset JSON from the authored event files.
  *
  * Usage:
- *   bun run build-db [--out dataset/chronoscope.sqlite] [--events dataset/events]
+ *   npm run build-db [--out static/chronoscope.json] [--events dataset/events]
  *
- * The output is a committed artifact, not a throwaway: the app opens it at a
- * fixed path and CI fails if it drifts from the event files. Rebuild and commit
- * the result whenever an event file changes — see check-artifact.ts.
+ * The output is a committed artifact, not a throwaway: the browser fetches it
+ * at a fixed URL and CI fails if it drifts from the event files. Rebuild and
+ * commit the result whenever an event file changes — see check-artifact.ts.
+ *
+ * It lives in `static/` rather than beside this script because that is Vite's
+ * `publicDir`: the dataset is a served asset now, and landing there is what
+ * puts it in `dist/` for `//go:embed`. One committed copy, no copy step.
  */
 
-import { Database } from 'bun:sqlite';
-import { mkdirSync, rmSync } from 'node:fs';
-import { dirname, resolve } from 'node:path';
-import { loadAllBooks } from './lib/events.ts';
+import { mkdirSync, writeFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import {
+  BuildError,
+  buildArtifact,
+  serializeArtifact,
+} from "./lib/artifact.ts";
 
 const args = process.argv.slice(2);
 const getFlag = (name: string, fallback: string) => {
@@ -24,113 +31,39 @@ const getFlag = (name: string, fallback: string) => {
 // Defaults are anchored to this file so the script works from any cwd; an
 // explicit flag is resolved from the cwd, where the caller typed it.
 const anchored = (flag: string, fallback: string) => {
-  const value = getFlag(flag, '');
-  return value ? resolve(value) : resolve(import.meta.dir, fallback);
+  const value = getFlag(flag, "");
+  return value ? resolve(value) : resolve(import.meta.dirname, fallback);
 };
 
-const eventsDir = anchored('--events', 'events');
-const outPath = anchored('--out', 'chronoscope.sqlite');
-const datasetSlug = getFlag('--slug', 'bible');
-const datasetName = getFlag('--name', 'The Bible');
+const eventsDir = anchored("--events", "events");
+const outPath = anchored("--out", "../static/chronoscope.json");
+const datasetSlug = getFlag("--slug", "bible");
 
-const { books, errors, spread } = loadAllBooks(eventsDir);
-
-if (errors.length > 0) {
-  console.error(`Refusing to build — ${errors.length} problem(s) in the event files:\n`);
-  for (const error of errors) console.error(`  ${error}`);
-  process.exit(1);
+let built;
+try {
+  built = buildArtifact({ eventsDir, datasetSlug });
+} catch (error) {
+  if (error instanceof BuildError) {
+    console.error(error.message);
+    process.exit(1);
+  }
+  throw error;
 }
 
-const totalEvents = books.reduce((sum, book) => sum + book.events.length, 0);
-if (totalEvents === 0) {
-  console.error(`No events found in ${eventsDir}`);
-  process.exit(1);
-}
+const { artifact, books, spread } = built;
+const json = serializeArtifact(artifact);
 
 mkdirSync(dirname(outPath), { recursive: true });
-rmSync(outPath, { force: true });
-rmSync(`${outPath}-journal`, { force: true });
+writeFileSync(outPath, json);
 
-const db = new Database(outPath, { create: true });
-
-db.exec(`
-  PRAGMA journal_mode = DELETE;
-
-  CREATE TABLE datasets (
-    id          INTEGER PRIMARY KEY,
-    slug        TEXT    UNIQUE NOT NULL,
-    name        TEXT    NOT NULL,
-    description TEXT
-  );
-
-  CREATE TABLE events (
-    id         TEXT    NOT NULL,
-    dataset_id INTEGER NOT NULL REFERENCES datasets(id) ON DELETE CASCADE,
-    start_time INTEGER NOT NULL,
-    end_time   INTEGER,
-    title      TEXT    NOT NULL,
-    book       TEXT,
-    category   TEXT,
-    lane       TEXT,
-    meta       TEXT,
-    PRIMARY KEY (id, dataset_id)
-  );
-
-  CREATE INDEX idx_events_dataset_start ON events (dataset_id, start_time);
-  CREATE INDEX idx_events_dataset_book  ON events (dataset_id, book);
-
-  CREATE TABLE books (
-    dataset_id  INTEGER NOT NULL REFERENCES datasets(id) ON DELETE CASCADE,
-    name        TEXT    NOT NULL,
-    book_order  INTEGER NOT NULL,
-    testament   TEXT,
-    event_count INTEGER NOT NULL,
-    PRIMARY KEY (dataset_id, name)
-  );
-`);
-
-const datasetId = db
-  .query<{ id: number }, [string, string]>(
-    'INSERT INTO datasets (slug, name) VALUES (?, ?) RETURNING id'
-  )
-  .get(datasetSlug, datasetName)!.id;
-
-const insertEvent = db.prepare(
-  `INSERT INTO events (id, dataset_id, start_time, end_time, title, book, category, lane, meta)
-   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
-);
-const insertBook = db.prepare(
-  'INSERT INTO books (dataset_id, name, book_order, testament, event_count) VALUES (?, ?, ?, ?, ?)'
-);
-
-db.transaction(() => {
-  for (const { file, events } of books) {
-    insertBook.run(datasetId, file.book, file.order, file.testament ?? null, events.length);
-    for (const event of events) {
-      insertEvent.run(
-        event.id,
-        datasetId,
-        event.start,
-        event.end,
-        event.title,
-        event.book,
-        event.category,
-        event.lane,
-        event.meta ? JSON.stringify(event.meta) : null
-      );
-    }
-  }
-})();
-
-// Read-only consumers benefit from up-to-date planner statistics.
-db.exec('ANALYZE');
-db.exec('VACUUM');
-db.close();
-
-console.log(`Built ${outPath}`);
-console.log(`  dataset: ${datasetSlug} (${datasetName})`);
+console.log(`Built ${outPath} (${(json.length / 1024).toFixed(0)}KB)`);
+console.log(`  dataset: ${datasetSlug}`);
 console.log(`  books:   ${books.length}`);
-console.log(`  events:  ${totalEvents} (${spread} spread within their authored year or month)`);
+console.log(
+  `  events:  ${artifact.events.length} (${spread} spread within their authored year or month)`,
+);
 for (const { file, events } of books) {
-  console.log(`    ${String(file.order).padStart(2)} ${file.book.padEnd(24)} ${events.length}`);
+  console.log(
+    `    ${String(file.order).padStart(2)} ${file.book.padEnd(24)} ${events.length}`,
+  );
 }

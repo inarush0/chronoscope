@@ -11,14 +11,3 @@ export interface TimelineEvent {
   lane?: string;
   meta?: Record<string, unknown>;
 }
-
-export interface ViewState {
-  viewStart: Time;
-  viewEnd: Time;
-}
-
-export interface TickMark {
-  time: Time;
-  x: number; // CSS pixel position within the canvas
-  label: string;
-}

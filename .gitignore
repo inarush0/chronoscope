@@ -179,3 +179,8 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+
+# Compiled server binaries (`npm run build:binary` / `build:linux`). The
+# frontend they embed lives in the gitignored dist/, so both are build output.
+/chronoscope
+/chronoscope-linux-amd64

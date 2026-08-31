@@ -18,7 +18,7 @@
  * written in the file, which is narrative order.
  */
 
-import { precisionSpan, type Precision } from './dates.ts';
+import { precisionSpan, type Precision } from "./dates.ts";
 
 interface Spreadable {
   start: number;
@@ -36,7 +36,7 @@ export function spreadCoincidentDates(events: Spreadable[]): number {
   const groups = new Map<number, Spreadable[]>();
 
   for (const event of events) {
-    if (event.precision === 'day') continue;
+    if (event.precision === "day") continue;
     const group = groups.get(event.start);
     if (group) group.push(event);
     else groups.set(event.start, [event]);
@@ -51,10 +51,16 @@ export function spreadCoincidentDates(events: Spreadable[]): number {
       // Interior fractions only: an event never lands on the boundary it
       // shares with the neighbouring year, where it would collide again.
       const fraction = (index + 1) / (group.length + 1);
-      const start = event.start + Math.round(fraction * precisionSpan(event.start, event.precision));
+      const start =
+        event.start +
+        Math.round(fraction * precisionSpan(event.start, event.precision));
 
       let end = event.end;
-      if (end !== null && event.endPrecision !== null && event.endPrecision !== 'day') {
+      if (
+        end !== null &&
+        event.endPrecision !== null &&
+        event.endPrecision !== "day"
+      ) {
         // Offsetting both ends by the same fraction preserves the duration.
         end += Math.round(fraction * precisionSpan(end, event.endPrecision));
       }
