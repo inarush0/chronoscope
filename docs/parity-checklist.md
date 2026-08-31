@@ -13,6 +13,18 @@ Screenshot diffing was considered and rejected: WebGL canvas output varies with
 GPU and antialiasing settings, so it yields false diffs. Every check below is
 therefore phrased so a human gets an unambiguous yes/no by eye.
 
+> **Amended 2026-08-31 while walking the in-canvas half (#19).** That objection
+> holds for comparing across *machines*. It does not hold when both builds are
+> driven in one headless Chrome on one machine, forced onto the SwiftShader
+> software rasterizer at a fixed window size and device scale factor: the
+> rasterizer is deterministic there, and the two builds came out **byte-identical
+> — delta 0**, not "within tolerance", across every state captured. So the
+> in-canvas items below were confirmed mechanically rather than by eye. What
+> that setup still cannot see is real-GPU output, frame rate, live display
+> changes, and third-party network content, so **2.9**, the second half of
+> **12.5**, and **9.2** remain human-eye checks. Harness on
+> `prototype/19-canvas-parity-harness`.
+
 > Derived by reading the source, not by walking a running build. The first pass
 > against the old build is also this checklist's own proof-read: if a stated
 > expectation doesn't match what `main` actually does, correct **this file**
