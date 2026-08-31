@@ -13,14 +13,13 @@
  */
 
 import "./main.css";
-import { THEME_COLORS } from "./timeline/TimelineController.js";
+import { THEME_COLORS } from "./theme.js";
+import type { Theme } from "./theme.js";
 import { createTimelineView } from "./timeline/timelineView.js";
 import type { TimelineView } from "./timeline/timelineView.js";
 import { createInspector } from "./inspector/inspector.js";
 import { loadDataset, initialView } from "./dataset.js";
 import type { TimelineEvent } from "./timeline/types.js";
-
-type Theme = "light" | "dark";
 
 const SUN_ICON = `<svg width="16" height="16" viewBox="0 0 16 16" fill="none"
   stroke="currentColor" stroke-width="1.5" stroke-linecap="round">

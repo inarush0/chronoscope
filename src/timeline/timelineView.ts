@@ -12,11 +12,11 @@
 
 import { TimelineController } from "./TimelineController.js";
 import type {
-  TimelineColors,
   TimelineControllerOptions,
   BinInfo,
   GapInfo,
 } from "./TimelineController.js";
+import type { TimelineColors } from "../theme.js";
 import type { TimelineEvent } from "./types.js";
 import { formatYear } from "../format.js";
 
@@ -213,9 +213,10 @@ export async function createTimelineView(
 
   // ─── Gap indicators ────────────────────────────────────────────────────────
   //
-  // Gaps shift on every pan and zoom, and the controller has no change
-  // notification, so they are re-read once per frame off the same rAF cadence
-  // as the Pixi ticker.
+  // Gaps shift on every pan and zoom, so they are re-read once per frame. The
+  // read is driven by the controller's own ticker via `onFrame`, not a second
+  // `requestAnimationFrame` loop, so these DOM nodes and the canvas beneath
+  // them always show the same view state.
 
   function paintGaps(gaps: GapInfo[]): void {
     for (const gap of gaps) {
@@ -236,17 +237,14 @@ export async function createTimelineView(
     gapLabels.release();
   }
 
-  let rafId = requestAnimationFrame(function tick() {
-    paintGaps(ctrl.getGaps());
-    rafId = requestAnimationFrame(tick);
-  });
+  const stopPainting = ctrl.onFrame(() => paintGaps(ctrl.getGaps()));
 
   return {
     setColors: (colors) => ctrl.setColors(colors),
     resetView: () => ctrl.resetView(),
     zoomToSelection: () => ctrl.zoomToSelection(),
     destroy() {
-      cancelAnimationFrame(rafId);
+      stopPainting();
       ro.disconnect();
       canvas.removeEventListener("mousemove", onMouseMove);
       canvas.removeEventListener("mouseleave", hideTooltip);

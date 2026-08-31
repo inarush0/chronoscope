@@ -7,19 +7,7 @@
 
 import type { TimelineEvent } from "../timeline/types.js";
 import { formatYear } from "../format.js";
-
-/**
- * Mirrors `CATEGORY_COLORS` in `TimelineController.ts` as CSS strings. The
- * duplication is deliberate for now — see quirk Q6 in the parity checklist;
- * unifying the two is a controller-reshape decision, not a port decision.
- */
-const CATEGORY_COLORS: Record<string, string> = {
-  "Primeval History": "#6666cc",
-  Abraham: "#c8882a",
-  Jacob: "#3d8c3d",
-  Joseph: "#cc5533",
-};
-const DEFAULT_CATEGORY_COLOR = "#7777aa";
+import { CATEGORY_COLORS, DEFAULT_CATEGORY_COLOR } from "../theme.js";
 
 const CLOSE_ICON = `<svg width="14" height="14" viewBox="0 0 14 14" fill="none"
   stroke="currentColor" stroke-width="2" stroke-linecap="round">

@@ -14,7 +14,7 @@ GPU and antialiasing settings, so it yields false diffs. Every check below is
 therefore phrased so a human gets an unambiguous yes/no by eye.
 
 > **Amended 2026-08-31 while walking the in-canvas half (#19).** That objection
-> holds for comparing across *machines*. It does not hold when both builds are
+> holds for comparing across _machines_. It does not hold when both builds are
 > driven in one headless Chrome on one machine, forced onto the SwiftShader
 > software rasterizer at a fixed window size and device scale factor: the
 > rasterizer is deterministic there, and the two builds came out **byte-identical
@@ -32,10 +32,10 @@ therefore phrased so a human gets an unambiguous yes/no by eye.
 
 ## Setup
 
-| | Old build | New build |
-| --- | --- | --- |
-| Run | `bun run dev`, on `main` | `npm run dev`, or `npm run build:binary && ./chronoscope` |
-| Data | `dataset/chronoscope.sqlite` via `+page.server.ts` | embedded JSON, `fetch`ed |
+|      | Old build                                          | New build                                                 |
+| ---- | -------------------------------------------------- | --------------------------------------------------------- |
+| Run  | `bun run dev`, on `main`                           | `npm run dev`, or `npm run build:binary && ./chronoscope` |
+| Data | `dataset/chronoscope.sqlite` via `+page.server.ts` | embedded JSON, `fetch`ed                                  |
 
 Run both side by side, in the **same browser at the same window size** — several
 checks below are pixel-threshold dependent (LOD switch, gap labels), so a
@@ -218,7 +218,7 @@ LOD A is active when `canvas width ÷ visible event count < 40px`. On a
       colour, not as plain text.
 - [ ] **9.2** Hovering it opens the BibleGateway pop-over with NRSVUE text.
 - [ ] **9.3 Re-tagging on change.** Select a **second** event without closing
-      the panel: the new reference is *also* linked. This is the check that
+      the panel: the new reference is _also_ linked. This is the check that
       matters — `linkVerses()` must be re-run on every selection change, not
       only at page load.
 - [ ] **9.4** No verse text is stored in the app's own data — the passage text
@@ -248,7 +248,7 @@ LOD A is active when `canvas width ÷ visible event count < 40px`. On a
 - [ ] **11.2** Reset View does **not** clear the current selection (the event
       stays highlighted and the inspector stays open).
 - [ ] **11.3 Zoom to Selection, event.** Select an instant, press it: the view
-      centres on that event. Padding is 5% of the *current* view span (an
+      centres on that event. Padding is 5% of the _current_ view span (an
       instant has no span of its own), so the resulting zoom level depends on
       where you were when you pressed it — press it twice in a row and it zooms
       in further each time.
@@ -278,7 +278,7 @@ Reproduce these; do not fix them during the port.
 
 - **Q1 — the click threshold is horizontal-only, but the hit test is not.**
   `pointerup` compares `offsetX` alone, so a drag of any vertical distance with
-  <4px horizontal movement still registers as a *click*. What that click hits is
+  <4px horizontal movement still registers as a _click_. What that click hits is
   then resolved at the **release** point, not the press point, so a long
   vertical drag clicks empty canvas and **clears** the selection. Check: press
   on an event and release without moving — it selects; press on an event, drag
@@ -290,6 +290,7 @@ Reproduce these; do not fix them during the port.
   > `TimelineController.handleClick(e.offsetX, e.offsetY)` does not do. The
   > controller is byte-identical between `main` and the port, so this is a
   > mis-reading in this document, not a behavioural difference.
+
 - **Q2 — double-click also fires a single-click first.** A double-click on a bin
   runs the click handler (selecting the bin) and then the `dblclick` handler
   (zooming). Visible as a brief selection outline before the zoom.
@@ -306,6 +307,10 @@ Reproduce these; do not fix them during the port.
 - **Q6 — category colours are declared twice**, once as Pixi hex numbers in
   `TimelineController.ts` and once as CSS strings in `Inspector.svelte`. They
   agree today. Keep them agreeing; unifying them is a reshape decision.
+
+  **Resolved in #16.** `src/theme.ts` is now the single source: the palette is
+  authored as CSS strings and `toPixi()` derives the packed form at the Pixi
+  boundary. No longer a quirk to preserve — the two forms cannot drift.
 
 ## Out of parity scope
 

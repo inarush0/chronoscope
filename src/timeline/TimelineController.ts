@@ -1,6 +1,12 @@
 import { Application, Graphics } from "pixi.js";
-import { scaleTime } from "d3-scale";
-import type { Time, TimelineEvent, TickMark, ViewState } from "./types.js";
+import {
+  CATEGORY_COLORS,
+  DEFAULT_CATEGORY_COLOR,
+  THEME_COLORS,
+  toPixi,
+} from "../theme.js";
+import type { TimelineColors } from "../theme.js";
+import type { Time, TimelineEvent } from "./types.js";
 
 // ─── Layout constants ───────────────────────────────────────────────────────
 
@@ -16,13 +22,11 @@ const BAR_HEIGHT = 8; // px — height of interval bars
 const DOT_RADIUS = 3; // px — instant event dot radius
 const MIN_BAR_WIDTH = 3; // px — minimum rendered width for interval bars
 
-const CATEGORY_COLORS: Record<string, number> = {
-  "Primeval History": 0x6666cc,
-  Abraham: 0xc8882a,
-  Jacob: 0x3d8c3d,
-  Joseph: 0xcc5533,
-};
-const DEFAULT_EVENT_COLOR = 0x7777aa;
+/** `src/theme.ts` authors the palette in CSS form; Pixi needs it packed. */
+const CATEGORY_FILLS: Record<string, number> = Object.fromEntries(
+  Object.entries(CATEGORY_COLORS).map(([name, hex]) => [name, toPixi(hex)]),
+);
+const DEFAULT_EVENT_COLOR = toPixi(DEFAULT_CATEGORY_COLOR);
 
 // ─── Public data shapes ───────────────────────────────────────────────────────
 
@@ -68,18 +72,6 @@ const LOD_BIN_WIDTH = 24; // px
 /** Max bar height for a density bin (in px, measured from spine upward). */
 const LOD_MAX_BAR_HEIGHT = 60; // px
 
-// ─── Theme colors ────────────────────────────────────────────────────────────
-
-export interface TimelineColors {
-  background: number;
-  spine: number;
-}
-
-export const THEME_COLORS = {
-  light: { background: 0xf5f5f5, spine: 0x7777bb },
-  dark: { background: 0x13131f, spine: 0x5555aa },
-} satisfies Record<string, TimelineColors>;
-
 // ─── Public options ──────────────────────────────────────────────────────────
 
 export interface TimelineControllerOptions {
@@ -94,7 +86,7 @@ export interface TimelineControllerOptions {
 export class TimelineController {
   private readonly app: Application;
 
-  // --- Render state (owned here, never in Svelte) ---
+  // --- Render state (owned here, never in the DOM layer) ---
   private _viewStart: Time;
   private _viewEnd: Time;
 
@@ -118,11 +110,22 @@ export class TimelineController {
   // --- Dataset ---
   private events: TimelineEvent[] = [];
 
+  // --- LOD memo (see the `lod` getter) ---
+  // NaN never equals itself, so the first read always computes.
+  private lodStart = Number.NaN;
+  private lodEnd = Number.NaN;
+  private lodCount = -1;
+  private lodWidth = -1;
+  private lodValue: "A" | "B" = "B";
+
+  // --- Per-frame subscribers ---
+  private readonly frameSubscribers = new Set<() => void>();
+
   // --- Default view (for reset) ---
   private readonly defaultViewStart: Time;
   private readonly defaultViewEnd: Time;
 
-  // --- App-level callbacks (bridge to Svelte) ---
+  // --- App-level callbacks ---
   private readonly onSelectionChange: (id: string | null) => void;
 
   // ─── Private constructor — use TimelineController.create() ─────────────────
@@ -184,14 +187,14 @@ export class TimelineController {
     return this.app.screen.height;
   }
 
-  timeToPixel(time: Time): number {
+  private timeToPixel(time: Time): number {
     return (
       ((time - this._viewStart) / (this._viewEnd - this._viewStart)) *
       this.viewWidth
     );
   }
 
-  pixelToTime(px: number): number {
+  private pixelToTime(px: number): number {
     return (
       this._viewStart +
       (px / this.viewWidth) * (this._viewEnd - this._viewStart)
@@ -200,19 +203,13 @@ export class TimelineController {
 
   // ─── View manipulation ─────────────────────────────────────────────────────
 
-  zoom(factor: number, cursorX: number): void {
+  private zoom(factor: number, cursorX: number): void {
     const tCursor = this.pixelToTime(cursorX);
     const span = this._viewEnd - this._viewStart;
     const newSpan = span / factor;
     const fraction = cursorX / this.viewWidth;
     this._viewStart = tCursor - newSpan * fraction;
     this._viewEnd = tCursor + newSpan * (1 - fraction);
-  }
-
-  pan(dx: number): void {
-    const dt = (dx / this.viewWidth) * (this._viewEnd - this._viewStart);
-    this._viewStart -= dt;
-    this._viewEnd -= dt;
   }
 
   resetView(): void {
@@ -258,45 +255,46 @@ export class TimelineController {
 
   // ─── Selection ─────────────────────────────────────────────────────────────
 
-  selectEvent(id: string | null): void {
+  private selectEvent(id: string | null): void {
     this.selectedId = id;
     this.selectedBinRange = null;
     this.onSelectionChange(id);
   }
 
-  // ─── State queries for Svelte overlay ──────────────────────────────────────
+  // ─── State queries for the DOM overlay ─────────────────────────────────────
 
-  getTicks(): TickMark[] {
-    const scale = scaleTime()
-      .domain([new Date(this._viewStart), new Date(this._viewEnd)])
-      .range([0, this.viewWidth]);
-
-    const tickCount = Math.max(2, Math.floor(this.viewWidth / 80));
-    return scale.ticks(tickCount).map((date) => ({
-      time: date.getTime(),
-      x: this.timeToPixel(date.getTime()),
-      label: this.formatTickLabel(date),
-    }));
-  }
-
-  getViewState(): ViewState {
-    return {
-      viewStart: this._viewStart,
-      viewEnd: this._viewEnd,
-    };
-  }
-
-  /** Y pixel position of the spine line. */
-  getSpineY(): number {
-    return this.viewHeight * SPINE_Y_FRACTION;
-  }
-
-  /** 'A' = density-bin view (zoomed out), 'B' = individual event view. */
+  /**
+   * 'A' = density-bin view (zoomed out), 'B' = individual event view.
+   *
+   * Counting visible events is an O(n) scan, and this is read several times per
+   * frame — once by `render`, again by `getGaps`, and twice more per pointer
+   * move via `getEventAt`/`getBinAt`. The result is a pure function of the
+   * inputs memoised below, so the cache is exact rather than per-frame: a
+   * pointer move that pans between two renders still sees its own view state,
+   * not the last frame's.
+   */
   get lod(): "A" | "B" {
-    const visibleCount = this.events.filter((e) => {
+    if (
+      this._viewStart !== this.lodStart ||
+      this._viewEnd !== this.lodEnd ||
+      this.events.length !== this.lodCount ||
+      this.viewWidth !== this.lodWidth
+    ) {
+      this.lodStart = this._viewStart;
+      this.lodEnd = this._viewEnd;
+      this.lodCount = this.events.length;
+      this.lodWidth = this.viewWidth;
+      this.lodValue = this.computeLod();
+    }
+    return this.lodValue;
+  }
+
+  private computeLod(): "A" | "B" {
+    let visibleCount = 0;
+    for (const e of this.events) {
       const end = e.end ?? e.start;
-      return end >= this._viewStart && e.start <= this._viewEnd;
-    }).length;
+      if (end >= this._viewStart && e.start <= this._viewEnd) visibleCount += 1;
+    }
     if (visibleCount === 0) return "B";
     const pxPerEvent = this.viewWidth / visibleCount;
     return pxPerEvent < LOD_THRESHOLD ? "A" : "B";
@@ -454,58 +452,22 @@ export class TimelineController {
     return gaps;
   }
 
-  // ─── Tick label formatting ──────────────────────────────────────────────────
-
-  private formatTickLabel(date: Date): string {
-    const span = this._viewEnd - this._viewStart;
-    const MS = { sec: 1_000, min: 60_000, hour: 3_600_000, day: 86_400_000 };
-
-    if (span > 365 * MS.day) {
-      return date.toLocaleDateString(undefined, {
-        year: "numeric",
-        month: "short",
-      });
-    }
-    if (span > 30 * MS.day) {
-      return date.toLocaleDateString(undefined, {
-        month: "short",
-        day: "numeric",
-      });
-    }
-    if (span > MS.day) {
-      return (
-        date.toLocaleDateString(undefined, { month: "short", day: "numeric" }) +
-        " " +
-        date.toLocaleTimeString(undefined, {
-          hour: "2-digit",
-          minute: "2-digit",
-        })
-      );
-    }
-    if (span > MS.hour) {
-      return date.toLocaleTimeString(undefined, {
-        hour: "2-digit",
-        minute: "2-digit",
-      });
-    }
-    if (span > MS.min) {
-      return date.toLocaleTimeString(undefined, {
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-      });
-    }
-    return (
-      date.toLocaleTimeString(undefined, {
-        minute: "2-digit",
-        second: "2-digit",
-      }) +
-      "." +
-      String(date.getMilliseconds()).padStart(3, "0")
-    );
-  }
-
   // ─── Render loop ───────────────────────────────────────────────────────────
+
+  /**
+   * Run `cb` after every frame this controller draws. Returns an unsubscribe.
+   *
+   * The DOM overlay (gap indicators) has to repaint in lockstep with the
+   * canvas. It used to drive itself from its own `requestAnimationFrame` loop
+   * running alongside Pixi's ticker — two schedulers for one animation, which
+   * on a dropped frame could paint DOM from a different view state than the
+   * canvas underneath it. Subscribers run after the draw, so they observe
+   * exactly the state that was just rendered.
+   */
+  onFrame(cb: () => void): () => void {
+    this.frameSubscribers.add(cb);
+    return () => this.frameSubscribers.delete(cb);
+  }
 
   private render = (): void => {
     this.renderBackground();
@@ -514,6 +476,7 @@ export class TimelineController {
     } else {
       this.renderLODB();
     }
+    for (const cb of this.frameSubscribers) cb();
   };
 
   private renderBackground(): void {
@@ -593,7 +556,7 @@ export class TimelineController {
           dominantCat = cat;
         }
       }
-      const color = CATEGORY_COLORS[dominantCat] ?? DEFAULT_EVENT_COLOR;
+      const color = CATEGORY_FILLS[dominantCat] ?? DEFAULT_EVENT_COLOR;
       const isSelected = i === selectedBinIdx;
 
       const barH = Math.max(2, (bin.count / maxCount) * LOD_MAX_BAR_HEIGHT);
@@ -628,8 +591,7 @@ export class TimelineController {
       const eventEnd = event.end;
       if (eventEnd < this._viewStart || event.start > this._viewEnd) continue;
 
-      const color =
-        CATEGORY_COLORS[event.category ?? ""] ?? DEFAULT_EVENT_COLOR;
+      const color = CATEGORY_FILLS[event.category ?? ""] ?? DEFAULT_EVENT_COLOR;
       const isSelected = event.id === this.selectedId;
       const alpha = isSelected ? 1 : 0.8;
 
@@ -667,8 +629,7 @@ export class TimelineController {
       const x1 = this.timeToPixel(event.start);
       if (x1 < -DOT_RADIUS || x1 > w + DOT_RADIUS) continue;
 
-      const color =
-        CATEGORY_COLORS[event.category ?? ""] ?? DEFAULT_EVENT_COLOR;
+      const color = CATEGORY_FILLS[event.category ?? ""] ?? DEFAULT_EVENT_COLOR;
       const isSelected = event.id === this.selectedId;
       const alpha = isSelected ? 1 : 0.8;
 
@@ -776,6 +737,7 @@ export class TimelineController {
     canvas.removeEventListener("wheel", this.onWheel);
     canvas.removeEventListener("dblclick", this.onDblClick);
     this.app.ticker.remove(this.render);
+    this.frameSubscribers.clear();
     this.app.destroy(false, { children: true });
   }
 }
