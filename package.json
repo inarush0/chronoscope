@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite dev --open",
     "build": "vite build",
+    "build:binary": "npm run build && go build -o chronoscope .",
+    "build:linux": "npm run build && GOOS=linux GOARCH=amd64 go build -o chronoscope-linux-amd64 .",
     "preview": "vite preview",
     "check": "tsc -p tsconfig.json",
     "format": "prettier --write \"src/**/*.{ts,css}\"",

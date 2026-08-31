@@ -6,7 +6,8 @@ zoom across large temporal datasets to explore scale, sequence, and causality.
 
 ## Tech Stack
 
-- **Vanilla TypeScript + Vite** — app shell and UI; no framework, no server
+- **Vanilla TypeScript + Vite** — app shell and UI; no framework
+- **Go** — a single binary that serves the embedded frontend and dataset
 - **PixiJS v8** — WebGL-accelerated canvas rendering
 - **d3-scale + d3-time** — tick generation and time math
 - **bun** — package manager and dev tooling
@@ -34,12 +35,38 @@ bun run dev
 The dataset is committed at `static/chronoscope.json`, so there is nothing to
 build or configure first.
 
+## Deploying
+
+Chronoscope ships as **one file**. `main.go` embeds the built frontend and the
+dataset with `//go:embed`, so the binary is the whole deployment — nothing sits
+beside it, and there is nothing to configure:
+
+```sh
+npm run build:binary          # -> ./chronoscope, for this machine
+npm run build:linux           # -> ./chronoscope-linux-amd64, the server target
+./chronoscope -addr :8080     # -addr is the only flag
+```
+
+Both scripts build the frontend first: `//go:embed dist` reads `dist/`, which is
+gitignored, so `go build` on its own fails to compile in a fresh clone. Run them
+rather than bare `go build`.
+
+The server does no routing, reads no environment and opens no files at runtime.
+It sets one cache policy per URL class: everything under `/assets/` is
+content-hashed by Vite and cached immutably for a year, while `index.html`,
+`favicon.svg`, `robots.txt` and `chronoscope.json` ship under stable URLs and so
+must revalidate. Those four carry a SHA-256 `ETag` computed at startup, which
+makes revalidation a 304 — without one, embedded files have a zero modification
+time and every reload would re-download the 531 KB dataset in full.
+
 ## Scripts
 
 | Command                | Description                                         |
 | ---------------------- | --------------------------------------------------- |
 | `bun run dev`          | Start dev server and open in browser                |
 | `bun run build`        | Create production build                             |
+| `npm run build:binary` | Build the frontend, then the Go binary that serves it |
+| `npm run build:linux`  | The same, cross-compiled for `linux/amd64`          |
 | `bun run preview`      | Preview the production build                        |
 | `bun run check`        | Type-check the app with `tsc`                       |
 | `bun run check:dataset`| Type-check the dataset build tooling                |
