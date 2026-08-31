@@ -13,6 +13,9 @@ zoom across large temporal datasets to explore scale, sequence, and causality.
 - **npm + node 24** — package manager and dev tooling; the dataset build scripts
   are `.ts` files node runs directly by stripping their types
 
+Why a Go binary serves a TypeScript app, and why there is no server tier:
+[ADR-0001](docs/adr/0001-static-frontend-embedded-in-a-go-binary.md).
+
 ## Features
 
 - Cursor-anchored zoom and drift-free pan
