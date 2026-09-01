@@ -45,6 +45,12 @@ Two facts the commands hide:
 - **`go test` needs `dist/`.** `//go:embed all:dist` is a compile-time read, so
   the frontend must be built first; run `npm run build:binary`, then
   `go test ./...`.
+- **`npm run coverage` shows you less than it shows CI.** Vitest 4.1 detects AI
+  agents (`CLAUDECODE` / `CLAUDE_CODE` / `AI_AGENT`) and silently sets
+  `skipFull`, dropping every fully-covered file from the table. Don't conclude a
+  file is unmeasured because it is missing; clear those variables to reproduce
+  the CI table. The `coverage` workflow reports Go and TypeScript as two
+  numbers and enforces neither.
 
 Which layers are tested, which deliberately are not, and why the runner is
 Vitest: [ADR-0002](docs/adr/0002-vitest-and-a-deliberately-narrow-test-scope.md).

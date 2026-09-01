@@ -1,0 +1,157 @@
+# Reports coverage. It does not enforce it.
+#
+# The 80% figure in the summary is a goal to climb toward, not a gate: this job
+# is non-blocking *structurally*, by not being on any required-checks list,
+# rather than by a `continue-on-error` flag someone could flip. (As of writing
+# the repo has no branch protection at all, so nothing gates any merge; if that
+# changes, this job must stay off the required list.) A red check here is still
+# real signal — it means the tests or the build broke, which build.yml will be
+# saying too.
+#
+# Go and TypeScript are reported as two numbers, never blended: a healthy Go
+# percentage would otherwise mask a thin TypeScript one. They must be written
+# from a *single job* — GitHub orders multi-job step summaries by completion
+# time, so two jobs would swap places between runs.
+#
+# Deliberately self-hosted: a job summary plus an artifact, no Codecov or
+# equivalent. No external account, no CI secret, no coverage data leaving the
+# repo.
+name: coverage
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  report-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      # cache: false for the same reason build.yml gives — there is no go.sum
+      # to key a cache on, and setup-go warns when it globs for one and finds
+      # nothing.
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: false
+
+      - name: Install dependencies
+        run: npm ci
+
+      # `npm run build`, not `build:binary`: `go test` needs dist/ to exist for
+      # `//go:embed all:dist` to compile, and nothing here runs the binary. The
+      # Vite build takes about a second, which is cheaper than importing
+      # build.yml's dist/ as an artifact — that would cost a `needs:` edge and
+      # skip coverage entirely whenever the gating job failed.
+      - name: Build the frontend so `//go:embed all:dist` can compile
+        run: npm run build
+
+      # Both measurement steps continue past a failing test on purpose: a red
+      # suite is exactly when the numbers are worth reading, and both tools
+      # still emit a complete report when tests fail. (`go help testflag` claims
+      # the profile is only written once tests pass; measured on go1.27, that is
+      # stale.)
+      - name: Measure TypeScript coverage
+        id: ts
+        continue-on-error: true
+        run: npm run coverage
+
+      - name: Measure Go coverage
+        id: go
+        continue-on-error: true
+        run: |
+          go test -coverprofile="$RUNNER_TEMP/go-cover.out" ./...
+          # Into coverage/ so one artifact carries both languages. `go tool
+          # cover -html` writes a single self-contained file, so it travels and
+          # opens offline. mkdir because a TypeScript step that died before
+          # writing anything leaves no coverage/ to write into.
+          mkdir -p coverage
+          go tool cover -html="$RUNNER_TEMP/go-cover.out" -o coverage/go-coverage.html
+
+      # The two tables are not the same shape and the summary does not pretend
+      # they are: istanbul-reports has no per-function reporter, so the
+      # TypeScript table is row-per-file where `go tool cover -func` is
+      # row-per-function.
+      #
+      # `go tool cover` has only -func and -html — no JSON — so the Go table is
+      # reshaped from -func text. Its columns are separated by *runs* of tabs,
+      # the total: line has a different field count from the body rows, and the
+      # file column carries the full module import path, which is noise inside
+      # its own repo.
+      - name: Write the job summary
+        run: |
+          ts_pct="n/a"
+          if [ -f coverage/coverage-summary.json ]; then
+            ts_pct="$(node -e 'process.stdout.write(String(require("./coverage/coverage-summary.json").total.statements.pct))')%"
+          fi
+
+          go_pct="n/a"
+          if [ -f "$RUNNER_TEMP/go-cover.out" ]; then
+            go_pct=$(go tool cover -func="$RUNNER_TEMP/go-cover.out" | awk -F'\t+' '/^total:/ { print $NF }')
+          fi
+
+          {
+            echo "## Coverage"
+            echo
+            echo "Statements covered, against a goal this job displays and does not enforce."
+            echo
+            echo "| Language | Statements | Goal |"
+            echo "| --- | ---: | ---: |"
+            echo "| Go | ${go_pct} | 80% |"
+            echo "| TypeScript | ${ts_pct} | 80% |"
+            echo
+            echo "### Go, by function"
+            echo
+            if [ -f "$RUNNER_TEMP/go-cover.out" ]; then
+              echo "| Function | File:line | Coverage |"
+              echo "| --- | --- | ---: |"
+              go tool cover -func="$RUNNER_TEMP/go-cover.out" | awk -F'\t+' '
+                /^total:/ { next }
+                { loc = $1; sub(/:$/, "", loc); sub(/^.*\//, "", loc)
+                  printf "| `%s` | `%s` | %s |\n", $2, loc, $3 }'
+            else
+              echo "_No profile produced — the Go step failed before writing one._"
+            fi
+            echo
+            echo "### TypeScript, by file"
+            echo
+            if [ -f coverage/coverage.txt ]; then
+              echo '```'
+              cat coverage/coverage.txt
+              echo '```'
+            else
+              echo "_No report produced — the TypeScript step failed before writing one._"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          # An agent reproducing this table locally will not get this table.
+          # Vitest 4.1 detects AI agents (CLAUDECODE / CLAUDE_CODE / AI_AGENT
+          # via std-env) and silently turns on `skipFull`, dropping every
+          # fully-covered file from the text report. CI is unaffected.
+
+      # if-no-files-found: error rather than the default warn — a run that
+      # produced no report at all is precisely the failure this job exists to
+      # surface, and the default would hide it behind a green check.
+      - name: Upload the browsable reports
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage
+          path: coverage/
+          if-no-files-found: error
+
+      # The measurement steps swallow their own failures so the summary always
+      # gets written; this hands the failure back, so a broken suite is still a
+      # red check. It is the last step on purpose.
+      - name: Fail if either suite failed
+        if: steps.ts.outcome == 'failure' || steps.go.outcome == 'failure'
+        run: |
+          echo "TypeScript: ${{ steps.ts.outcome }}, Go: ${{ steps.go.outcome }}" >&2
+          echo "Coverage was still reported above; the suite itself failed." >&2
+          exit 1
