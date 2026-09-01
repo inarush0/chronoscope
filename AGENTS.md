@@ -15,6 +15,40 @@ needs the frontend built first and `dist/` is gitignored.
 
 The script table lives in `README.md`; don't duplicate it here.
 
+## Testing
+
+**New behaviour arrives test-first.** The loop, in order:
+
+1. **Find the seam that is already there** before building one. `handler`
+   already took an `fs.FS`; `resolveBook` was already pure over an in-memory
+   `BookFile`. Only the timeline needed a seam extracted, and it turned out to
+   be a value object hiding inside mutable state (`Viewport`). Extract when the
+   search comes up empty, not before.
+2. **Watch the test go red.** Break the code it covers, confirm the failure,
+   put it back. A test that has never failed is not yet evidence: all three
+   exemplar tests passed on the first run, and two of them passed for the wrong
+   reason — found only this way.
+3. **Assert the consequence, not just the complaint.** `resolveBook`'s
+   invariant is that a rejected event yields an error *and no resolved row*.
+   Asserting the error alone is the version that misses the bug.
+
+Tests colocate with what they test: `src/**/*.test.ts`, `dataset/**/*.test.ts`,
+and `main_test.go` beside `main.go`.
+
+Two facts the commands hide:
+
+- **Vitest never type-checks.** `npm run test` strips types via esbuild, so a
+  test can be nonsense to the type system and still run green.
+  `npm run check:tests` is the only thing that type-checks tests, and it owns
+  every test in the repo — the app and dataset configs both exclude
+  `*.test.ts`.
+- **`go test` needs `dist/`.** `//go:embed all:dist` is a compile-time read, so
+  the frontend must be built first; run `npm run build:binary`, then
+  `go test ./...`.
+
+Which layers are tested, which deliberately are not, and why the runner is
+Vitest: [ADR-0002](docs/adr/0002-vitest-and-a-deliberately-narrow-test-scope.md).
+
 ## Agent skills
 
 ### Issue tracker
