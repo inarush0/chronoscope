@@ -38,6 +38,14 @@ jobs:
       - name: Type-check the dataset tooling
         run: npm run check:dataset
 
+      # Separate from `npm run test`: Vitest strips types with esbuild and never
+      # checks them, so nothing else would catch a type error in a test file.
+      - name: Type-check the tests
+        run: npm run check:tests
+
+      - name: Run the TypeScript tests
+        run: npm run test
+
       # Same file set `npm run format` writes, so a contributor who ran the
       # script cannot be failed here. README.md and the JSON data files are
       # deliberately outside both.
@@ -63,3 +71,9 @@ jobs:
       # is why `build:linux` is not also run.
       - name: Build the binary
         run: npm run build:binary
+
+      # After the build, not with the other checks: `//go:embed dist` is read at
+      # compile time, so without the dist/ the step above produced this fails at
+      # setup with `pattern all:dist: no matching files found`.
+      - name: Run the Go tests
+        run: go test ./...
