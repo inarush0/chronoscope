@@ -33,7 +33,9 @@ The script table lives in `README.md`; don't duplicate it here.
    Asserting the error alone is the version that misses the bug.
 
 Tests colocate with what they test: `src/**/*.test.ts`, `dataset/**/*.test.ts`,
-and `main_test.go` beside `main.go`.
+and `server_test.go` beside `server.go`. `main.go` has no test file and is meant
+not to: it is flag-parse-and-listen, excluded from the coverage denominator by
+ADR-0003.
 
 Two facts the commands hide:
 

@@ -1,20 +1,24 @@
 package main
 
 import (
+	"io"
+	"io/fs"
 	"net/http"
 	"net/http/httptest"
+	"strings"
 	"testing"
 	"testing/fstest"
 )
 
-// handler takes an fs.FS rather than reaching for distFS directly, so these
-// tests run against a stand-in tree instead of the real build output. The names
-// mirror what Vite emits: content-hashed files under assets/, everything else
-// at a stable URL.
+// handler takes an fs.FS rather than reaching for distFS directly, so most of
+// these tests run against a stand-in tree instead of the real build output. The
+// names mirror what Vite emits: content-hashed files under assets/, everything
+// else at a stable URL. TestRealEmbedIsServed is the one exception, and the
+// only thing here that touches distFS.
 //
-// The package still needs a dist/ directory to compile at all — `//go:embed
-// dist` is a compile-time read — so `npm run build` has to have run before
-// `go test` will build this file.
+// The package still needs a dist/ directory to compile at all — server.go's
+// `//go:embed all:dist` is a compile-time read — so `npm run build` has to have
+// run before `go test` will build this file.
 func testFS() fstest.MapFS {
 	return fstest.MapFS{
 		"index.html":            {Data: []byte("<!doctype html>")},
@@ -84,6 +88,86 @@ func TestEtagsDistinguishContent(t *testing.T) {
 	if index == robots {
 		t.Errorf("index.html and robots.txt share the Etag %s", index)
 	}
+}
+
+// The embed itself, which every test above stands in for and none of them
+// exercises. Two ways it can be wrong while compiling clean and passing the
+// MapFS tests: an `//go:embed` pattern that does not reach assets/, and
+// `fs.Sub(distFS, "dist")` naming a subtree that is not there. Either one is
+// visible only when a human loads the page — unless this runs.
+//
+// Needs dist/ on disk like the rest of the package: `npm run build` first.
+func TestRealEmbedIsServed(t *testing.T) {
+	dist, err := fs.Sub(distFS, "dist")
+	if err != nil {
+		t.Fatalf("fs.Sub(distFS, %q): %v", "dist", err)
+	}
+	h := handler(dist)
+
+	t.Run("index.html", func(t *testing.T) {
+		res := get(t, h, "/", nil)
+		if res.StatusCode != http.StatusOK {
+			t.Fatalf("got %d, want 200", res.StatusCode)
+		}
+
+		// An empty 200 would satisfy the status check, so assert the shell is
+		// really there: #app is what src/main.ts mounts onto, and the module
+		// script is the bundle that does the mounting.
+		body, err := io.ReadAll(res.Body)
+		if err != nil {
+			t.Fatalf("reading body: %v", err)
+		}
+		for _, want := range []string{`<div id="app">`, `type="module"`} {
+			if !strings.Contains(string(body), want) {
+				t.Errorf("served index.html (%d bytes) contains no %s", len(body), want)
+			}
+		}
+	})
+
+	t.Run("assets", func(t *testing.T) {
+		// Discovered by walking rather than hardcoded: every name under
+		// assets/ is content-hashed, so it changes on every build.
+		name := firstAsset(t, dist)
+
+		res := get(t, h, "/"+name, nil)
+		if res.StatusCode != http.StatusOK {
+			t.Fatalf("GET /%s: got %d, want 200", name, res.StatusCode)
+		}
+		if n, err := io.Copy(io.Discard, res.Body); err != nil || n == 0 {
+			t.Errorf("GET /%s: %d bytes, err %v", name, n, err)
+		}
+	})
+}
+
+// firstAsset returns any one file under assets/, and fails the test if there is
+// none — an empty assets/ is itself the regression, since Vite always emits the
+// entry bundle there.
+//
+// A walk rather than a ReadDir of assets/ alone: Vite's output is flat today,
+// but a pattern that reached only the top level would be exactly the embed bug
+// this is here to catch.
+func firstAsset(t *testing.T, fsys fs.FS) string {
+	t.Helper()
+
+	var found string
+	err := fs.WalkDir(fsys, "assets", func(name string, d fs.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+		if !d.IsDir() {
+			found = name
+			return fs.SkipAll
+		}
+		return nil
+	})
+	if err != nil {
+		t.Fatalf("walking assets/ in the embed: %v", err)
+	}
+	if found == "" {
+		t.Fatal("assets/ is embedded but holds no files")
+	}
+
+	return found
 }
 
 // The two cache classes. Vite content-hashes everything under assets/, so its
