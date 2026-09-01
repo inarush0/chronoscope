@@ -9,12 +9,15 @@ zoom across large temporal datasets to explore scale, sequence, and causality.
 - **Vanilla TypeScript + Vite** — app shell and UI; no framework
 - **Go** — a single binary that serves the embedded frontend and dataset
 - **PixiJS v8** — WebGL-accelerated canvas rendering
-- **d3-scale + d3-time** — tick generation and time math
 - **npm + node 24** — package manager and dev tooling; the dataset build scripts
   are `.ts` files node runs directly by stripping their types
+- **Vitest + `go test`** — the test harness, over the three layers that have a
+  seam a test can reach
 
 Why a Go binary serves a TypeScript app, and why there is no server tier:
-[ADR-0001](docs/adr/0001-static-frontend-embedded-in-a-go-binary.md).
+[ADR-0001](docs/adr/0001-static-frontend-embedded-in-a-go-binary.md). Why
+Vitest, and why the renderer is deliberately untested:
+[ADR-0002](docs/adr/0002-vitest-and-a-deliberately-narrow-test-scope.md).
 
 ## Features
 
@@ -78,6 +81,8 @@ time and every reload would re-download the 531 KB dataset in full.
 | `npm run preview`      | Preview the production build                        |
 | `npm run check`        | Type-check the app with `tsc`                       |
 | `npm run check:dataset`| Type-check the dataset build tooling                |
+| `npm run test`         | Run the Vitest suite — it never type-checks         |
+| `npm run check:tests`  | Type-check every test in the repo                   |
 | `npm run format`       | Format source files with Prettier                   |
 | `npm run format:check` | Check that formatting is clean, without writing     |
 | `npm run validate`     | Check the authored event files without building     |
