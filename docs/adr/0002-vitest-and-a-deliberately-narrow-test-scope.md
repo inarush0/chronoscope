@@ -1,5 +1,11 @@
 # Vitest, and a deliberately narrow test scope
 
+**Status: superseded by
+[ADR-0003](0003-repo-wide-coverage-as-a-goal-that-never-blocks-a-merge.md).**
+The runner is still Vitest. The narrow scope below is not current: 0003 puts
+the render loop back in scope and answers the two questions this ADR left open.
+Kept unedited as history.
+
 ## Context
 
 Chronoscope had no tests. The repo is deliberately low-dependency — one runtime
