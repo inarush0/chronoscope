@@ -1,3 +1,4 @@
+import { UNCATEGORIZED } from "../theme.js";
 import type { Time, TimelineEvent } from "./types.js";
 
 /**
@@ -86,15 +87,6 @@ export class Viewport {
   }
 }
 
-/**
- * The category an event without one is counted under.
- *
- * Deliberately not a key in `CATEGORY_COLORS`, so a bin dominated by
- * uncategorised events falls through to `DEFAULT_CATEGORY_COLOR` — see
- * `viewport.test.ts`, which asserts that.
- */
-export const UNCATEGORIZED = "Uncategorized";
-
 /** What one column of a `BinGrid` contains, once the events are counted. */
 export interface BinTally {
   count: number;
@@ -108,6 +100,11 @@ export interface BinTally {
    */
   firstStart: Time;
   lastStart: Time;
+}
+
+/** The identity a column starts from: the extent sentinels lose to any start. */
+function emptyTally(): BinTally {
+  return { count: 0, votes: {}, firstStart: Infinity, lastStart: -Infinity };
 }
 
 /**
@@ -139,26 +136,63 @@ export class BinGrid {
    * `events` sorted by start, and stops at the first one past the right edge.
    */
   tally(events: readonly TimelineEvent[]): BinTally[] {
-    const bins: BinTally[] = Array.from({ length: this.count }, () => ({
-      count: 0,
-      votes: {},
-      firstStart: Infinity,
-      lastStart: -Infinity,
-    }));
+    const bins: BinTally[] = Array.from({ length: this.count }, emptyTally);
+    this.assign(events, (index) => bins[index]);
+    return bins;
+  }
 
+  /**
+   * Count `events` into column `index` alone.
+   *
+   * What `tally(events)[index]` means, without building and discarding the
+   * other columns: the hit-test wants one column and asks on every pointer
+   * move, and at ~33 columns that was 33 objects allocated per move for a
+   * single answer. Both routes share `assign`, so the answer cannot differ.
+   */
+  tallyAt(events: readonly TimelineEvent[], index: number): BinTally {
+    const bin = emptyTally();
+    this.assign(events, (i) => (i === index ? bin : null));
+    return bin;
+  }
+
+  /**
+   * The one place an event is assigned to a column. `pick` chooses which tally
+   * (if any) receives it; everything about *which* column, and about which
+   * events count at all, is here and nowhere else.
+   */
+  private assign(
+    events: readonly TimelineEvent[],
+    pick: (index: number) => BinTally | null,
+  ): void {
     for (const event of events) {
       if (event.start > this.view.end) break;
       if ((event.end ?? event.start) < this.view.start) continue;
 
-      const bin = bins[this.indexAt(event.start)];
+      const bin = pick(this.indexAt(event.start));
+      if (bin === null) continue;
+
       bin.count += 1;
       if (event.start < bin.firstStart) bin.firstStart = event.start;
       if (event.start > bin.lastStart) bin.lastStart = event.start;
       const category = event.category ?? UNCATEGORIZED;
       bin.votes[category] = (bin.votes[category] ?? 0) + 1;
     }
+  }
 
-    return bins;
+  /**
+   * The range to open when drilling into column `index`.
+   *
+   * The extent of the column's start times, since start time is what assigned
+   * the events here; taking their end times instead stretches the view across
+   * one long interval and leaves the events crushed into a corner of it.
+   *
+   * When every event in the column shares a start there is no extent, and
+   * zooming to it would open a zero-width window on an empty instant — so the
+   * column's own range is the fallback. A single event is that same case.
+   */
+  zoomRangeAt(index: number, bin: BinTally): { start: Time; end: Time } {
+    if (bin.firstStart === bin.lastStart) return this.rangeAt(index);
+    return { start: bin.firstStart, end: bin.lastStart };
   }
 
   /** The column `time` falls in, clamped to the grid. */

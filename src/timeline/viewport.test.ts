@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 
-import { CATEGORY_COLORS, DEFAULT_CATEGORY_COLOR } from "../theme.js";
+import { UNCATEGORIZED } from "../theme.js";
 import type { TimelineEvent } from "./types.js";
-import { UNCATEGORIZED, Viewport } from "./viewport.js";
+import { Viewport } from "./viewport.js";
 
 /**
  * The dataset's real extent: 4004 BCE to 62 CE, roughly 1.28e14 ms. Spans this
@@ -188,17 +188,6 @@ describe("Viewport", () => {
       expect(bins[2].lastStart).toBe(290);
     });
 
-    it("reports no extent when every event in a column shares a start", () => {
-      const grid = TEN_COLUMNS.bins(10);
-
-      const bins = grid.tally([ev(250), { ...ev(250), id: "twin" }]);
-
-      // A zero-width extent is the signal callers fall back on: drilling into
-      // this column has to open the column's own range, not an empty instant.
-      expect(bins[2].firstStart).toBe(bins[2].lastStart);
-      expect(grid.rangeAt(2)).toEqual({ start: 200, end: 300 });
-    });
-
     it("tallies category votes, defaulting an absent category", () => {
       const grid = TEN_COLUMNS.bins(10);
 
@@ -219,26 +208,77 @@ describe("Viewport", () => {
       expect(bins[5]).toMatchObject({ count: 0, votes: {} });
     });
   });
-});
 
-/**
- * The default category key is deliberately absent from the palette.
- *
- * Renderers look a bin's dominant category up in `CATEGORY_COLORS` and fall
- * through to `DEFAULT_CATEGORY_COLOR` on a miss. That fall-through is the only
- * reason stamping uncategorised events with a real label instead of `""`
- * changes no pixel — adding an `"Uncategorized"` entry to the palette would
- * silently recolour every such bin, and this is the assertion that catches it.
- */
-describe("the uncategorised key", () => {
-  it("is not a palette entry, so it falls through to the default colour", () => {
-    expect(CATEGORY_COLORS[UNCATEGORIZED]).toBeUndefined();
-    expect(CATEGORY_COLORS[UNCATEGORIZED] ?? DEFAULT_CATEGORY_COLOR).toBe(
-      DEFAULT_CATEGORY_COLOR,
-    );
+  /**
+   * The hit-test wants one column, not all of them, and it asks on every
+   * pointer move. Same assignment rule as `tally` — sharing that is the whole
+   * point of the grid — but without building and discarding the other columns.
+   */
+  describe("tallyAt", () => {
+    const TEN_COLUMNS = new Viewport(0, 1000, 100);
+    const ev = (start: number, category?: string): TimelineEvent => ({
+      id: `e${start}`,
+      title: `event at ${start}`,
+      start,
+      ...(category === undefined ? {} : { category }),
+    });
+
+    it("matches the column tally computes for the same events", () => {
+      const grid = TEN_COLUMNS.bins(10);
+      const events = [ev(210, "Abraham"), ev(290), ev(500)];
+
+      expect(grid.tallyAt(events, 2)).toEqual(grid.tally(events)[2]);
+      expect(grid.tallyAt(events, 5)).toEqual(grid.tally(events)[5]);
+      // Including the empty columns, which is where a divergence would hide.
+      expect(grid.tallyAt(events, 7)).toEqual(grid.tally(events)[7]);
+    });
   });
 
-  it("falls through exactly as the empty-string key it replaces did", () => {
-    expect(CATEGORY_COLORS[""]).toBeUndefined();
+  /**
+   * Where drilling into a density column takes you.
+   *
+   * This used to be a ternary inside the controller's hit-test, reachable only
+   * through a canvas. It is a fact about a column and its contents, so it lives
+   * on the grid and is assertable without one.
+   */
+  describe("zoomRangeAt", () => {
+    const TEN_COLUMNS = new Viewport(0, 1000, 100);
+    const ev = (id: string, start: number): TimelineEvent => ({
+      id,
+      title: id,
+      start,
+    });
+
+    it("opens the extent of the column's start times", () => {
+      const grid = TEN_COLUMNS.bins(10);
+      const events = [ev("a", 210), ev("b", 240), ev("c", 290)];
+
+      expect(grid.zoomRangeAt(2, grid.tallyAt(events, 2))).toEqual({
+        start: 210,
+        end: 290,
+      });
+    });
+
+    it("opens the column's own range when every event shares a start", () => {
+      const grid = TEN_COLUMNS.bins(10);
+      const events = [ev("a", 250), ev("twin", 250)];
+
+      // The zero-width case: zooming to 250–250 would open an empty instant,
+      // so the column's own range is what the caller gets instead.
+      expect(grid.zoomRangeAt(2, grid.tallyAt(events, 2))).toEqual({
+        start: 200,
+        end: 300,
+      });
+    });
+
+    it("opens the column's own range for a lone event", () => {
+      const grid = TEN_COLUMNS.bins(10);
+      const events = [ev("only", 250)];
+
+      expect(grid.zoomRangeAt(2, grid.tallyAt(events, 2))).toEqual({
+        start: 200,
+        end: 300,
+      });
+    });
   });
 });
