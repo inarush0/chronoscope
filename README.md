@@ -46,6 +46,16 @@ Node 24 or newer is required and enforced at install time: the dataset scripts
 under `dataset/` are TypeScript that node executes directly, without a build
 step or a loader. Go 1.27+ is needed only to build the binary.
 
+To run the tests you also need the browser they run in, once per clone:
+
+```sh
+npx playwright install chromium
+```
+
+`TimelineController` cannot be constructed without a canvas that lays out, so
+the tests covering it run in headless Chromium under Vitest browser mode while
+everything else stays on node. `npm run test` runs both.
+
 ## Deploying
 
 Chronoscope ships as **one file**. `main.go` embeds the built frontend and the

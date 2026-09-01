@@ -69,3 +69,11 @@ Temporary Items
 
 # Coverage reports (`npm run coverage`), regenerated on every run.
 /coverage/
+
+# Vitest browser mode screenshots a failing test. On 4.1 they land in
+# .vitest-attachments/ at the repo root — measured, not assumed; #63 predicted
+# src/**/__screenshots__/, which is where `screenshotDirectory` puts them under
+# other settings. Both are ignored so neither a red run nor a config change
+# offers a pile of PNGs up for commit.
+/.vitest-attachments/
+src/**/__screenshots__/

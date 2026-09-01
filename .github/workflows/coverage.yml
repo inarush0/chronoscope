@@ -45,6 +45,38 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # Part of the TypeScript suite runs in headless Chromium under Vitest
+      # browser mode (#42/#63) — TimelineController cannot be constructed
+      # without a real canvas. Uncached, downloading the browser is the
+      # dominant cost of a job otherwise measured at 46s, hence the cache.
+      #
+      # Keyed on the resolved playwright-core version rather than the
+      # lockfile hash, because the browser build only changes when that
+      # package does, and any other dependency bump would needlessly evict it.
+      - name: Resolve the Playwright version for the cache key
+        id: pw
+        run: |
+          version="$(node -p "require('playwright-core/package.json').version")"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Cache the Playwright browsers
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}
+
+      # --with-deps installs the apt packages headless Chromium needs. Every
+      # measurement behind the browser-mode decision was made on darwin/arm64,
+      # so this is the first time it runs on the ubuntu runner; if the apt
+      # payload does not install cleanly, report it on #52's map thread rather
+      # than switching to jsdom, which #42 ruled against on the merits.
+      #
+      # Runs even on a cache hit: the cache carries the browser under HOME,
+      # not the system libraries it links against.
+      - name: Install headless Chromium
+        run: npx playwright install --with-deps chromium
+
       # `npm run build`, not `build:binary`: `go test` needs dist/ to exist for
       # `//go:embed all:dist` to compile, and nothing here runs the binary. The
       # Vite build takes about a second, which is cheaper than importing

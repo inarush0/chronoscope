@@ -1,3 +1,4 @@
+import { playwright } from "@vitest/browser-playwright";
 import { defineConfig } from "vitest/config";
 
 /**
@@ -6,10 +7,44 @@ import { defineConfig } from "vitest/config";
  * defaults; nothing here changes how the tests run, only how they are measured.
  *
  * Coverage settings come from #40, which measured `v8` and `istanbul` as
- * byte-identical on this repo's source and picked `v8` on cost.
+ * byte-identical on this repo's source and picked `v8` on cost. Coverage is a
+ * root-only option: it spans both projects below and merges into one report.
  */
 export default defineConfig({
   test: {
+    // Two environments, one run. `TimelineController` cannot be constructed
+    // outside a browser — `create()` needs a canvas that lays out and a
+    // renderer to fall back on — so anything touching it runs under Playwright
+    // and everything else stays on node, which is an order of magnitude
+    // cheaper to start. ADR-0002 and #42 chose browser mode over jsdom +
+    // node-canvas; #43 chose to test the controller in place rather than
+    // extract a seam for it.
+    projects: [
+      {
+        test: {
+          name: "node",
+          include: ["src/**/*.test.ts", "dataset/**/*.test.ts"],
+          exclude: ["src/**/*.browser.test.ts"],
+        },
+      },
+      {
+        test: {
+          name: "browser",
+          include: ["src/**/*.browser.test.ts"],
+          browser: {
+            enabled: true,
+            headless: true,
+            provider: playwright(),
+            // Chromium only, and not merely as a default. `v8` collects
+            // coverage through the Chrome DevTools Protocol, so adding a
+            // firefox or webkit instance would force the whole run onto
+            // `istanbul` and move the number this repo reports (#40).
+            instances: [{ browser: "chromium" }],
+          },
+        },
+      },
+    ],
+
     coverage: {
       provider: "v8",
 
@@ -25,6 +60,11 @@ export default defineConfig({
         // Ruled out of scope on #38: its bugs are integration bugs a unit test
         // would not catch. ~144 lines of denominator, given up knowingly.
         "src/main.ts",
+        // Test scaffolding, not source. It lives under src/ so the tests can
+        // import it with the same relative-extension rules as everything else,
+        // but counting it would inflate the numerator with code that exists
+        // only to be executed by tests.
+        "src/test-support/**",
       ],
 
       // Four reporters, one run. `text` is redirected to a file so the CI job
