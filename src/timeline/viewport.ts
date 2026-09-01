@@ -1,4 +1,4 @@
-import type { Time } from "./types.js";
+import type { Time, TimelineEvent } from "./types.js";
 
 /**
  * The window of time on screen, and every transform that follows from it.
@@ -87,6 +87,30 @@ export class Viewport {
 }
 
 /**
+ * The category an event without one is counted under.
+ *
+ * Deliberately not a key in `CATEGORY_COLORS`, so a bin dominated by
+ * uncategorised events falls through to `DEFAULT_CATEGORY_COLOR` — see
+ * `viewport.test.ts`, which asserts that.
+ */
+export const UNCATEGORIZED = "Uncategorized";
+
+/** What one column of a `BinGrid` contains, once the events are counted. */
+export interface BinTally {
+  count: number;
+  /** Events per category, keyed by `category ?? UNCATEGORIZED`. */
+  votes: Record<string, number>;
+  /**
+   * The earliest and latest start time counted into this column. Both are
+   * meaningless when `count` is 0, and equal when every event in the column
+   * shares a start — the case a caller drilling into the column has to fall
+   * back from, since there is then no extent to zoom to.
+   */
+  firstStart: Time;
+  lastStart: Time;
+}
+
+/**
  * A fixed number of equal-time columns across a viewport, used by the
  * density-histogram level of detail.
  *
@@ -100,6 +124,42 @@ export class BinGrid {
     private readonly view: Viewport,
     readonly count: number,
   ) {}
+
+  /**
+   * Count `events` into the columns, one entry per column.
+   *
+   * This used to be two hand-maintained loops — one in the renderer, one in the
+   * hit-test — walking the same events under the same rules, and they had
+   * already drifted on the category key. One traversal is what actually makes
+   * the agreement above structural rather than a promise.
+   *
+   * Events are assigned by start time, so an interval is counted where it
+   * begins even when it stretches across half the grid; an interval that begins
+   * off the left edge clamps into column 0, which is where it is drawn. Expects
+   * `events` sorted by start, and stops at the first one past the right edge.
+   */
+  tally(events: readonly TimelineEvent[]): BinTally[] {
+    const bins: BinTally[] = Array.from({ length: this.count }, () => ({
+      count: 0,
+      votes: {},
+      firstStart: Infinity,
+      lastStart: -Infinity,
+    }));
+
+    for (const event of events) {
+      if (event.start > this.view.end) break;
+      if ((event.end ?? event.start) < this.view.start) continue;
+
+      const bin = bins[this.indexAt(event.start)];
+      bin.count += 1;
+      if (event.start < bin.firstStart) bin.firstStart = event.start;
+      if (event.start > bin.lastStart) bin.lastStart = event.start;
+      const category = event.category ?? UNCATEGORIZED;
+      bin.votes[category] = (bin.votes[category] ?? 0) + 1;
+    }
+
+    return bins;
+  }
 
   /** The column `time` falls in, clamped to the grid. */
   indexAt(time: Time): number {

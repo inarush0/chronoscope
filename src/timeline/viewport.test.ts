@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 
-import { Viewport } from "./viewport.js";
+import { CATEGORY_COLORS, DEFAULT_CATEGORY_COLOR } from "../theme.js";
+import type { TimelineEvent } from "./types.js";
+import { UNCATEGORIZED, Viewport } from "./viewport.js";
 
 /**
  * The dataset's real extent: 4004 BCE to 62 CE, roughly 1.28e14 ms. Spans this
@@ -106,5 +108,137 @@ describe("Viewport", () => {
       expect(grid.indexAt(FULL_VIEW.start - FULL_VIEW.span)).toBe(0);
       expect(grid.indexAt(FULL_VIEW.end + FULL_VIEW.span)).toBe(32);
     });
+  });
+
+  /**
+   * Round numbers rather than the real epoch here: 1000 ms across 100 px binned
+   * at 10 px is ten columns of exactly 100 ms, so a start time reads as its own
+   * column index and a miscounted bin is obvious rather than arithmetic.
+   */
+  describe("tally", () => {
+    const TEN_COLUMNS = new Viewport(0, 1000, 100);
+
+    /** `start` doubles as the id, so a failure names the event that moved. */
+    function ev(
+      start: number,
+      rest: Partial<TimelineEvent> = {},
+    ): TimelineEvent {
+      return { id: `e${start}`, title: `event at ${start}`, start, ...rest };
+    }
+
+    it("counts each event into the column indexAt assigns it", () => {
+      const grid = TEN_COLUMNS.bins(10);
+      const events = [ev(0), ev(50), ev(150), ev(950)];
+
+      const bins = grid.tally(events);
+
+      expect(bins).toHaveLength(grid.count);
+      expect(bins.map((b) => b.count)).toEqual([2, 1, 0, 0, 0, 0, 0, 0, 0, 1]);
+      // The invariant the grid exists to hold: the renderer draws a bar where
+      // tally counted it, and the hit-test asks indexAt where to look. They
+      // agree because there is now one assignment, not two loops of it.
+      for (const event of events) {
+        expect(bins[grid.indexAt(event.start)].count).toBeGreaterThan(0);
+      }
+    });
+
+    it("assigns an interval by its start, not by where it ends", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(50, { end: 950 })]);
+
+      expect(bins[0].count).toBe(1);
+      expect(bins[9].count).toBe(0);
+    });
+
+    it("keeps an interval that starts before the view but reaches into it", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      // Clamped into column 0, which is where the renderer draws it too.
+      const bins = grid.tally([ev(-5000, { end: 300 })]);
+
+      expect(bins[0].count).toBe(1);
+    });
+
+    it("drops an event that has finished before the view starts", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(-5000, { end: -4000 }), ev(500)]);
+
+      expect(bins.map((b) => b.count)).toEqual([0, 0, 0, 0, 0, 1, 0, 0, 0, 0]);
+    });
+
+    it("stops at the first event past the view end", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(500), ev(9000), ev(99000)]);
+
+      // Events arrive sorted, so the scan breaks rather than clamping the
+      // off-screen tail into the last column.
+      expect(bins[9].count).toBe(0);
+      expect(bins.reduce((n, b) => n + b.count, 0)).toBe(1);
+    });
+
+    it("records the extent of the start times in a column", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(210), ev(240), ev(290)]);
+
+      expect(bins[2].firstStart).toBe(210);
+      expect(bins[2].lastStart).toBe(290);
+    });
+
+    it("reports no extent when every event in a column shares a start", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(250), { ...ev(250), id: "twin" }]);
+
+      // A zero-width extent is the signal callers fall back on: drilling into
+      // this column has to open the column's own range, not an empty instant.
+      expect(bins[2].firstStart).toBe(bins[2].lastStart);
+      expect(grid.rangeAt(2)).toEqual({ start: 200, end: 300 });
+    });
+
+    it("tallies category votes, defaulting an absent category", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([
+        ev(210, { category: "Abraham" }),
+        ev(240, { category: "Abraham" }),
+        ev(290),
+      ]);
+
+      expect(bins[2].votes).toEqual({ Abraham: 2, [UNCATEGORIZED]: 1 });
+    });
+
+    it("leaves an empty column with zero votes", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(210)]);
+
+      expect(bins[5]).toMatchObject({ count: 0, votes: {} });
+    });
+  });
+});
+
+/**
+ * The default category key is deliberately absent from the palette.
+ *
+ * Renderers look a bin's dominant category up in `CATEGORY_COLORS` and fall
+ * through to `DEFAULT_CATEGORY_COLOR` on a miss. That fall-through is the only
+ * reason stamping uncategorised events with a real label instead of `""`
+ * changes no pixel — adding an `"Uncategorized"` entry to the palette would
+ * silently recolour every such bin, and this is the assertion that catches it.
+ */
+describe("the uncategorised key", () => {
+  it("is not a palette entry, so it falls through to the default colour", () => {
+    expect(CATEGORY_COLORS[UNCATEGORIZED]).toBeUndefined();
+    expect(CATEGORY_COLORS[UNCATEGORIZED] ?? DEFAULT_CATEGORY_COLOR).toBe(
+      DEFAULT_CATEGORY_COLOR,
+    );
+  });
+
+  it("falls through exactly as the empty-string key it replaces did", () => {
+    expect(CATEGORY_COLORS[""]).toBeUndefined();
   });
 });
