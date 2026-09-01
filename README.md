@@ -11,13 +11,16 @@ zoom across large temporal datasets to explore scale, sequence, and causality.
 - **PixiJS v8** — WebGL-accelerated canvas rendering
 - **npm + node 24** — package manager and dev tooling; the dataset build scripts
   are `.ts` files node runs directly by stripping their types
-- **Vitest + `go test`** — the test harness, over the three layers that have a
-  seam a test can reach
+- **Vitest + `go test`** — the test harness; Vitest runs as two projects, node
+  for most of it and headless Chromium for what needs a real canvas
 
 Why a Go binary serves a TypeScript app, and why there is no server tier:
-[ADR-0001](docs/adr/0001-static-frontend-embedded-in-a-go-binary.md). Why
-Vitest, and why the renderer is deliberately untested:
-[ADR-0002](docs/adr/0002-vitest-and-a-deliberately-narrow-test-scope.md).
+[ADR-0001](docs/adr/0001-static-frontend-embedded-in-a-go-binary.md). What is
+tested, what deliberately is not, and what the coverage number means:
+[ADR-0003](docs/adr/0003-repo-wide-coverage-as-a-goal-that-never-blocks-a-merge.md),
+which supersedes
+[ADR-0002](docs/adr/0002-vitest-and-a-deliberately-narrow-test-scope.md) and the
+narrow scope it set.
 
 ## Features
 

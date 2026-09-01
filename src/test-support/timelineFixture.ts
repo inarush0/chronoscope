@@ -23,7 +23,6 @@
  * Assert hits, and assert `lod` is "B" wherever the test assumes it.
  */
 import { TimelineController } from "../timeline/TimelineController.js";
-import type { TimelineControllerOptions } from "../timeline/TimelineController.js";
 import type { TimelineEvent } from "../timeline/types.js";
 
 export const DAY = 86_400_000;
@@ -58,15 +57,17 @@ export const BAR_Y = (BAR_TOP_Y + BAR_BOT_Y) / 2; // 162
 // ─── Dataset ─────────────────────────────────────────────────────────────────
 
 /**
- * Four events, laid out so that x in pixels equals the start day. Small enough
- * to keep `pxPerEvent` (800/4 = 200) well above the LOD threshold of 40, so
+ * Five events, laid out so that x in pixels equals the start day. Small enough
+ * to keep `pxPerEvent` (800/5 = 160) well above the LOD threshold of 40, so
  * the controller stays in LOD B.
  */
 export const events: TimelineEvent[] = [
   /** Instant, alone at x = 100. */
   { id: "instant-a", start: 100 * DAY, title: "Instant A", category: "Reign" },
-  /** Instant, alone at x = 400. */
+  /** Instant at x = 400, with `instant-e` 2 px to its right. */
   { id: "instant-b", start: 400 * DAY, title: "Instant B", category: "Reign" },
+  /** Instant at x = 402, close enough to `instant-b` to share hit targets. */
+  { id: "instant-e", start: 402 * DAY, title: "Instant E", category: "Reign" },
   /** Interval spanning x = 600..700. */
   {
     id: "interval-c",
@@ -83,10 +84,9 @@ export const events: TimelineEvent[] = [
 
 /**
  * A canvas laid out at the fixture's dimensions, appended to the document so
- * it actually gets a box. Returns it; the caller is expected to
- * `ctrl.destroy()`, which drops the canvas' listeners but not the element.
+ * it actually gets a box.
  */
-export function mountCanvas(): HTMLCanvasElement {
+function mountCanvas(): HTMLCanvasElement {
   const canvas = document.createElement("canvas");
   canvas.style.width = `${WIDTH}px`;
   canvas.style.height = `${HEIGHT}px`;
@@ -100,35 +100,32 @@ export function mountCanvas(): HTMLCanvasElement {
  * subclassed: `create()` runs as written, Pixi picks a renderer, and the
  * caller hit-tests through the public surface.
  */
-export async function createFixtureController(
-  overrides: Partial<TimelineControllerOptions> = {},
-): Promise<{ ctrl: TimelineController; canvas: HTMLCanvasElement }> {
+export async function createFixtureController(): Promise<{
+  ctrl: TimelineController;
+  canvas: HTMLCanvasElement;
+}> {
   const canvas = mountCanvas();
   const ctrl = await TimelineController.create(canvas, {
     initialViewStart: VIEW_START,
     initialViewEnd: VIEW_END,
-    ...overrides,
   });
   ctrl.setDataset(events);
   return { ctrl, canvas };
 }
 
 /**
- * Resolves after `count` animation frames have been painted.
+ * Resolves after two animation frames have been painted.
  *
  * Nothing in a test drives Pixi's ticker: `create()` registers `render` on it
  * and returns, and a test that constructs and asserts synchronously tears the
  * controller down before the browser has painted once — so the controller
- * never draws unless a test explicitly yields to the frame loop.
+ * never draws unless a test explicitly yields to the frame loop. Two frames
+ * rather than one because the ticker's first callback can land in the same
+ * frame that scheduled it.
  */
-export function nextFrames(count = 2): Promise<void> {
+export function nextFrames(): Promise<void> {
   return new Promise((resolve) => {
-    const tick = (): void => {
-      count -= 1;
-      if (count <= 0) resolve();
-      else requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
+    requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
   });
 }
 

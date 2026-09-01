@@ -104,6 +104,19 @@ describe("TimelineController.getEventAt", () => {
     expect(ctrl.getEventAt(650, overlapY)?.id).toBe("instant-d");
   });
 
+  /**
+   * Two instants whose hit targets overlap: instant-b at x = 400, instant-e at
+   * x = 402. x = 403 is nearer to instant-e (1 px) than to instant-b (3 px),
+   * and the answer is still instant-b — `getEventAt` returns the first match
+   * in the dataset's sort order, which is by start time, and does not compare
+   * distances. Pinned because "nearest" is the intuitive reading and the wrong
+   * one; a future change to prefer the closer target should fail here and be a
+   * decision, not an accident.
+   */
+  it("resolves two overlapping instants to the earlier, not the nearer", () => {
+    expect(ctrl.getEventAt(403, DOT_Y)?.id).toBe("instant-b");
+  });
+
   // Empty stretches of the timeline: before the first event and after the last.
   it.each([20, 760])("returns null at x=%i, where nothing is drawn", (x) => {
     expect(ctrl.getEventAt(x, DOT_Y)).toBeNull();

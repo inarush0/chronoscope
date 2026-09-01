@@ -50,13 +50,16 @@ jobs:
       # without a real canvas. Uncached, downloading the browser is the
       # dominant cost of a job otherwise measured at 46s, hence the cache.
       #
-      # Keyed on the resolved playwright-core version rather than the
-      # lockfile hash, because the browser build only changes when that
-      # package does, and any other dependency bump would needlessly evict it.
+      # Keyed on the resolved playwright version rather than the lockfile
+      # hash, because the browser build only changes when that package does
+      # and any other dependency bump would needlessly evict it. `playwright`
+      # is a declared devDependency precisely so this read and the `npx`
+      # invocation below both resolve something the lockfile pins — as an
+      # undeclared transitive it would be a hoisting change away from failing.
       - name: Resolve the Playwright version for the cache key
         id: pw
         run: |
-          version="$(node -p "require('playwright-core/package.json').version")"
+          version="$(node -p "require('playwright/package.json').version")"
           echo "version=$version" >> "$GITHUB_OUTPUT"
 
       - name: Cache the Playwright browsers

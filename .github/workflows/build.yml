@@ -50,7 +50,7 @@ jobs:
       - name: Resolve the Playwright version for the cache key
         id: pw
         run: |
-          version="$(node -p "require('playwright-core/package.json').version")"
+          version="$(node -p "require('playwright/package.json').version")"
           echo "version=$version" >> "$GITHUB_OUTPUT"
 
       - name: Cache the Playwright browsers

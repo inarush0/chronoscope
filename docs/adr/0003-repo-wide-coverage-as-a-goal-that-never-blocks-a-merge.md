@@ -184,6 +184,16 @@ import — so it would require a `main(argv)` extraction, which buys 4 of the 22
 points that excluding them buys. `dataset/lib/` stays measured, and is where
 the remaining 151 statements live.
 
+**`src/test-support/` (added #63).** Not a shrug and not a narrowing of the
+denominator this ADR defends: the directory holds no production code at all,
+only the shared rig the browser-mode tests build a controller with. Counting it
+would inflate the numerator with code whose entire purpose is to be executed by
+tests, which is the flattering number in a different disguise. Named here
+because it is the one exclusion added after this ADR was written, and the rule
+above — anything that quietly narrows the globs re-creates what this ADR
+rejects — means a new one has to be argued rather than dropped into a config
+comment.
+
 **Pixel-snapshot and visual-regression testing.** The highest-maintenance,
 flakiest option, over a canvas rendering 1181 events across 4000 years. Ruled
 out on scope, not deferred.
