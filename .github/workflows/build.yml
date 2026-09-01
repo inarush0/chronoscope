@@ -43,6 +43,25 @@ jobs:
       - name: Type-check the tests
         run: npm run check:tests
 
+      # Part of the suite runs in headless Chromium under Vitest browser mode
+      # (#42/#63), so this gating job needs the browser too. Same three steps
+      # as coverage.yml, where the cache key and the --with-deps reasoning are
+      # written out in full.
+      - name: Resolve the Playwright version for the cache key
+        id: pw
+        run: |
+          version="$(node -p "require('playwright/package.json').version")"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Cache the Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ steps.pw.outputs.version }}
+
+      - name: Install headless Chromium
+        run: npx playwright install --with-deps chromium
+
       - name: Run the TypeScript tests
         run: npm run test
 
