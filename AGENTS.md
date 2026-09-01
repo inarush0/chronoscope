@@ -52,8 +52,12 @@ Two facts the commands hide:
   the CI table. The `coverage` workflow reports Go and TypeScript as two
   numbers and enforces neither.
 
-Which layers are tested, which deliberately are not, and why the runner is
-Vitest: [ADR-0002](docs/adr/0002-vitest-and-a-deliberately-narrow-test-scope.md).
+Which layers are tested, which deliberately are not, and what the coverage
+number does and does not mean:
+[ADR-0003](docs/adr/0003-repo-wide-coverage-as-a-goal-that-never-blocks-a-merge.md).
+Why the runner is Vitest:
+[ADR-0002](docs/adr/0002-vitest-and-a-deliberately-narrow-test-scope.md), which
+0003 supersedes.
 
 ## Agent skills
 
