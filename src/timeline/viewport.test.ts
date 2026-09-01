@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 
+import { UNCATEGORIZED } from "../theme.js";
+import type { TimelineEvent } from "./types.js";
 import { Viewport } from "./viewport.js";
 
 /**
@@ -105,6 +107,178 @@ describe("Viewport", () => {
       const grid = FULL_VIEW.bins(24);
       expect(grid.indexAt(FULL_VIEW.start - FULL_VIEW.span)).toBe(0);
       expect(grid.indexAt(FULL_VIEW.end + FULL_VIEW.span)).toBe(32);
+    });
+  });
+
+  /**
+   * Round numbers rather than the real epoch here: 1000 ms across 100 px binned
+   * at 10 px is ten columns of exactly 100 ms, so a start time reads as its own
+   * column index and a miscounted bin is obvious rather than arithmetic.
+   */
+  describe("tally", () => {
+    const TEN_COLUMNS = new Viewport(0, 1000, 100);
+
+    /** `start` doubles as the id, so a failure names the event that moved. */
+    function ev(
+      start: number,
+      rest: Partial<TimelineEvent> = {},
+    ): TimelineEvent {
+      return { id: `e${start}`, title: `event at ${start}`, start, ...rest };
+    }
+
+    it("counts each event into the column indexAt assigns it", () => {
+      const grid = TEN_COLUMNS.bins(10);
+      const events = [ev(0), ev(50), ev(150), ev(950)];
+
+      const bins = grid.tally(events);
+
+      expect(bins).toHaveLength(grid.count);
+      expect(bins.map((b) => b.count)).toEqual([2, 1, 0, 0, 0, 0, 0, 0, 0, 1]);
+      // The invariant the grid exists to hold: the renderer draws a bar where
+      // tally counted it, and the hit-test asks indexAt where to look. They
+      // agree because there is now one assignment, not two loops of it.
+      for (const event of events) {
+        expect(bins[grid.indexAt(event.start)].count).toBeGreaterThan(0);
+      }
+    });
+
+    it("assigns an interval by its start, not by where it ends", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(50, { end: 950 })]);
+
+      expect(bins[0].count).toBe(1);
+      expect(bins[9].count).toBe(0);
+    });
+
+    it("keeps an interval that starts before the view but reaches into it", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      // Clamped into column 0, which is where the renderer draws it too.
+      const bins = grid.tally([ev(-5000, { end: 300 })]);
+
+      expect(bins[0].count).toBe(1);
+    });
+
+    it("drops an event that has finished before the view starts", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(-5000, { end: -4000 }), ev(500)]);
+
+      expect(bins.map((b) => b.count)).toEqual([0, 0, 0, 0, 0, 1, 0, 0, 0, 0]);
+    });
+
+    it("stops at the first event past the view end", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(500), ev(9000), ev(99000)]);
+
+      // Events arrive sorted, so the scan breaks rather than clamping the
+      // off-screen tail into the last column.
+      expect(bins[9].count).toBe(0);
+      expect(bins.reduce((n, b) => n + b.count, 0)).toBe(1);
+    });
+
+    it("records the extent of the start times in a column", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(210), ev(240), ev(290)]);
+
+      expect(bins[2].firstStart).toBe(210);
+      expect(bins[2].lastStart).toBe(290);
+    });
+
+    it("tallies category votes, defaulting an absent category", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([
+        ev(210, { category: "Abraham" }),
+        ev(240, { category: "Abraham" }),
+        ev(290),
+      ]);
+
+      expect(bins[2].votes).toEqual({ Abraham: 2, [UNCATEGORIZED]: 1 });
+    });
+
+    it("leaves an empty column with zero votes", () => {
+      const grid = TEN_COLUMNS.bins(10);
+
+      const bins = grid.tally([ev(210)]);
+
+      expect(bins[5]).toMatchObject({ count: 0, votes: {} });
+    });
+  });
+
+  /**
+   * The hit-test wants one column, not all of them, and it asks on every
+   * pointer move. Same assignment rule as `tally` — sharing that is the whole
+   * point of the grid — but without building and discarding the other columns.
+   */
+  describe("tallyAt", () => {
+    const TEN_COLUMNS = new Viewport(0, 1000, 100);
+    const ev = (start: number, category?: string): TimelineEvent => ({
+      id: `e${start}`,
+      title: `event at ${start}`,
+      start,
+      ...(category === undefined ? {} : { category }),
+    });
+
+    it("matches the column tally computes for the same events", () => {
+      const grid = TEN_COLUMNS.bins(10);
+      const events = [ev(210, "Abraham"), ev(290), ev(500)];
+
+      expect(grid.tallyAt(events, 2)).toEqual(grid.tally(events)[2]);
+      expect(grid.tallyAt(events, 5)).toEqual(grid.tally(events)[5]);
+      // Including the empty columns, which is where a divergence would hide.
+      expect(grid.tallyAt(events, 7)).toEqual(grid.tally(events)[7]);
+    });
+  });
+
+  /**
+   * Where drilling into a density column takes you.
+   *
+   * This used to be a ternary inside the controller's hit-test, reachable only
+   * through a canvas. It is a fact about a column and its contents, so it lives
+   * on the grid and is assertable without one.
+   */
+  describe("zoomRangeAt", () => {
+    const TEN_COLUMNS = new Viewport(0, 1000, 100);
+    const ev = (id: string, start: number): TimelineEvent => ({
+      id,
+      title: id,
+      start,
+    });
+
+    it("opens the extent of the column's start times", () => {
+      const grid = TEN_COLUMNS.bins(10);
+      const events = [ev("a", 210), ev("b", 240), ev("c", 290)];
+
+      expect(grid.zoomRangeAt(2, grid.tallyAt(events, 2))).toEqual({
+        start: 210,
+        end: 290,
+      });
+    });
+
+    it("opens the column's own range when every event shares a start", () => {
+      const grid = TEN_COLUMNS.bins(10);
+      const events = [ev("a", 250), ev("twin", 250)];
+
+      // The zero-width case: zooming to 250–250 would open an empty instant,
+      // so the column's own range is what the caller gets instead.
+      expect(grid.zoomRangeAt(2, grid.tallyAt(events, 2))).toEqual({
+        start: 200,
+        end: 300,
+      });
+    });
+
+    it("opens the column's own range for a lone event", () => {
+      const grid = TEN_COLUMNS.bins(10);
+      const events = [ev("only", 250)];
+
+      expect(grid.zoomRangeAt(2, grid.tallyAt(events, 2))).toEqual({
+        start: 200,
+        end: 300,
+      });
     });
   });
 });

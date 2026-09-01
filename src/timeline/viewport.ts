@@ -1,4 +1,5 @@
-import type { Time } from "./types.js";
+import { UNCATEGORIZED } from "../theme.js";
+import type { Time, TimelineEvent } from "./types.js";
 
 /**
  * The window of time on screen, and every transform that follows from it.
@@ -86,6 +87,26 @@ export class Viewport {
   }
 }
 
+/** What one column of a `BinGrid` contains, once the events are counted. */
+export interface BinTally {
+  count: number;
+  /** Events per category, keyed by `category ?? UNCATEGORIZED`. */
+  votes: Record<string, number>;
+  /**
+   * The earliest and latest start time counted into this column. Both are
+   * meaningless when `count` is 0, and equal when every event in the column
+   * shares a start — the case a caller drilling into the column has to fall
+   * back from, since there is then no extent to zoom to.
+   */
+  firstStart: Time;
+  lastStart: Time;
+}
+
+/** The identity a column starts from: the extent sentinels lose to any start. */
+function emptyTally(): BinTally {
+  return { count: 0, votes: {}, firstStart: Infinity, lastStart: -Infinity };
+}
+
 /**
  * A fixed number of equal-time columns across a viewport, used by the
  * density-histogram level of detail.
@@ -100,6 +121,79 @@ export class BinGrid {
     private readonly view: Viewport,
     readonly count: number,
   ) {}
+
+  /**
+   * Count `events` into the columns, one entry per column.
+   *
+   * This used to be two hand-maintained loops — one in the renderer, one in the
+   * hit-test — walking the same events under the same rules, and they had
+   * already drifted on the category key. One traversal is what actually makes
+   * the agreement above structural rather than a promise.
+   *
+   * Events are assigned by start time, so an interval is counted where it
+   * begins even when it stretches across half the grid; an interval that begins
+   * off the left edge clamps into column 0, which is where it is drawn. Expects
+   * `events` sorted by start, and stops at the first one past the right edge.
+   */
+  tally(events: readonly TimelineEvent[]): BinTally[] {
+    const bins: BinTally[] = Array.from({ length: this.count }, emptyTally);
+    this.assign(events, (index) => bins[index]);
+    return bins;
+  }
+
+  /**
+   * Count `events` into column `index` alone.
+   *
+   * What `tally(events)[index]` means, without building and discarding the
+   * other columns: the hit-test wants one column and asks on every pointer
+   * move, and at ~33 columns that was 33 objects allocated per move for a
+   * single answer. Both routes share `assign`, so the answer cannot differ.
+   */
+  tallyAt(events: readonly TimelineEvent[], index: number): BinTally {
+    const bin = emptyTally();
+    this.assign(events, (i) => (i === index ? bin : null));
+    return bin;
+  }
+
+  /**
+   * The one place an event is assigned to a column. `pick` chooses which tally
+   * (if any) receives it; everything about *which* column, and about which
+   * events count at all, is here and nowhere else.
+   */
+  private assign(
+    events: readonly TimelineEvent[],
+    pick: (index: number) => BinTally | null,
+  ): void {
+    for (const event of events) {
+      if (event.start > this.view.end) break;
+      if ((event.end ?? event.start) < this.view.start) continue;
+
+      const bin = pick(this.indexAt(event.start));
+      if (bin === null) continue;
+
+      bin.count += 1;
+      if (event.start < bin.firstStart) bin.firstStart = event.start;
+      if (event.start > bin.lastStart) bin.lastStart = event.start;
+      const category = event.category ?? UNCATEGORIZED;
+      bin.votes[category] = (bin.votes[category] ?? 0) + 1;
+    }
+  }
+
+  /**
+   * The range to open when drilling into column `index`.
+   *
+   * The extent of the column's start times, since start time is what assigned
+   * the events here; taking their end times instead stretches the view across
+   * one long interval and leaves the events crushed into a corner of it.
+   *
+   * When every event in the column shares a start there is no extent, and
+   * zooming to it would open a zero-width window on an empty instant — so the
+   * column's own range is the fallback. A single event is that same case.
+   */
+  zoomRangeAt(index: number, bin: BinTally): { start: Time; end: Time } {
+    if (bin.firstStart === bin.lastStart) return this.rangeAt(index);
+    return { start: bin.firstStart, end: bin.lastStart };
+  }
 
   /** The column `time` falls in, clamped to the grid. */
   indexAt(time: Time): number {

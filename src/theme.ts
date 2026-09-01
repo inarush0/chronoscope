@@ -28,6 +28,35 @@ export const CATEGORY_COLORS: Record<string, string> = {
 
 export const DEFAULT_CATEGORY_COLOR = "#7777aa";
 
+/**
+ * The category an event without one is counted and coloured under.
+ *
+ * Deliberately absent from `CATEGORY_COLORS` above, so it falls through to
+ * `DEFAULT_CATEGORY_COLOR`. The engine used to spell this two ways — `""` in
+ * the density renderer, `"Uncategorized"` in the hit-test — and got away with
+ * it only because neither spelling was a palette key either. Unifying on one
+ * label moved no pixel for exactly that reason; adding it to the palette would,
+ * which is what `theme.test.ts` guards.
+ */
+export const UNCATEGORIZED = "Uncategorized";
+
+/** The palette, packed once, in the form Pixi's `fill` takes. */
+const CATEGORY_FILLS: Record<string, number> = Object.fromEntries(
+  Object.entries(CATEGORY_COLORS).map(([name, hex]) => [name, toPixi(hex)]),
+);
+const DEFAULT_CATEGORY_FILL = toPixi(DEFAULT_CATEGORY_COLOR);
+
+/**
+ * The packed colour to draw `category` in, defaulting an unknown or absent one.
+ *
+ * The lookup-and-fall-through lived at three call sites in the timeline
+ * renderer, each repeating the default; here it is one function over the
+ * palette that owns it.
+ */
+export function fillFor(category: string | undefined): number {
+  return CATEGORY_FILLS[category ?? UNCATEGORIZED] ?? DEFAULT_CATEGORY_FILL;
+}
+
 // ─── Canvas theme ────────────────────────────────────────────────────────────
 
 /** Canvas colours, in the packed form Pixi's renderer takes. */

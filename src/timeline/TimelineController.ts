@@ -1,10 +1,6 @@
 import { Application, Graphics } from "pixi.js";
-import {
-  CATEGORY_COLORS,
-  DEFAULT_CATEGORY_COLOR,
-  THEME_COLORS,
-  toPixi,
-} from "../theme.js";
+import { formatDuration } from "../format.js";
+import { THEME_COLORS, UNCATEGORIZED, fillFor } from "../theme.js";
 import type { TimelineColors } from "../theme.js";
 import type { Time, TimelineEvent } from "./types.js";
 import { Viewport } from "./viewport.js";
@@ -22,12 +18,6 @@ const BAR_BOTTOM = 34; // px — spine → bottom of interval bar (clears the do
 const BAR_HEIGHT = 8; // px — height of interval bars
 const DOT_RADIUS = 3; // px — instant event dot radius
 const MIN_BAR_WIDTH = 3; // px — minimum rendered width for interval bars
-
-/** `src/theme.ts` authors the palette in CSS form; Pixi needs it packed. */
-const CATEGORY_FILLS: Record<string, number> = Object.fromEntries(
-  Object.entries(CATEGORY_COLORS).map(([name, hex]) => [name, toPixi(hex)]),
-);
-const DEFAULT_EVENT_COLOR = toPixi(DEFAULT_CATEGORY_COLOR);
 
 // ─── Public data shapes ───────────────────────────────────────────────────────
 
@@ -62,7 +52,6 @@ export interface BinInfo {
 
 /** px below spine where the gap connector line sits. */
 const GAP_LINE_OFFSET = 20;
-const MS_PER_YEAR = 365.25 * 24 * 3600 * 1000;
 
 // ─── LOD constants ────────────────────────────────────────────────────────────
 
@@ -375,38 +364,23 @@ export class TimelineController {
 
     const { start: binStart, end: binEnd } = grid.rangeAt(binIdx);
 
-    // Count events assigned to this bin (same assignment logic as renderLODA).
-    const votes: Record<string, number> = {};
-    let count = 0;
-    let firstStart = Infinity;
-    let lastStart = -Infinity;
-    for (const event of this.events) {
-      if (event.start > view.end) break;
-      const end = event.end ?? event.start;
-      if (end < view.start) continue;
-      if (grid.indexAt(event.start) === binIdx) {
-        count++;
-        if (event.start < firstStart) firstStart = event.start;
-        if (event.start > lastStart) lastStart = event.start;
-        const cat = event.category ?? "Uncategorized";
-        votes[cat] = (votes[cat] ?? 0) + 1;
-      }
-    }
+    // Counted by the same rule the renderer drew from, so a click cannot report
+    // a bin the bar under it was not built from.
+    const bin = grid.tallyAt(this.events, binIdx);
+    if (bin.count === 0) return null;
 
-    if (count === 0) return null;
-
-    const categories = Object.entries(votes)
+    const categories = Object.entries(bin.votes)
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => b.count - a.count);
 
-    const coincident = firstStart === lastStart;
+    const { start: zoomStart, end: zoomEnd } = grid.zoomRangeAt(binIdx, bin);
 
     return {
       timeStart: binStart,
       timeEnd: binEnd,
-      zoomStart: coincident ? binStart : firstStart,
-      zoomEnd: coincident ? binEnd : lastStart,
-      count,
+      zoomStart,
+      zoomEnd,
+      count: bin.count,
       categories,
     };
   }
@@ -432,15 +406,7 @@ export class TimelineController {
       const x2 = this.timeToPixel(b.start);
       if (x2 < 0 || x2 <= x1) continue;
 
-      const years = Math.round((b.start - a.start) / MS_PER_YEAR);
-      const label =
-        years === 0
-          ? "<1 yr"
-          : years === 1
-            ? "1 yr"
-            : `${years.toLocaleString()} yrs`;
-
-      gaps.push({ x1, x2, y, label });
+      gaps.push({ x1, x2, y, label: formatDuration(b.start - a.start) });
     }
 
     return gaps;
@@ -500,24 +466,7 @@ export class TimelineController {
     const grid = view.bins(LOD_BIN_WIDTH);
     const numBins = grid.count;
 
-    // Accumulate event count + category votes per bin.
-    type Bin = { count: number; votes: Record<string, number> };
-    const bins: Bin[] = Array.from({ length: numBins }, () => ({
-      count: 0,
-      votes: {},
-    }));
-
-    for (const event of this.events) {
-      // Use start time to assign to a bin.
-      if (event.start > view.end) break; // sorted, so safe to break
-      const end = event.end ?? event.start;
-      if (end < view.start) continue;
-
-      const binIdx = grid.indexAt(event.start);
-      bins[binIdx].count++;
-      const cat = event.category ?? "";
-      bins[binIdx].votes[cat] = (bins[binIdx].votes[cat] ?? 0) + 1;
-    }
+    const bins = grid.tally(this.events);
 
     const maxCount = Math.max(1, ...bins.map((b) => b.count));
 
@@ -532,7 +481,7 @@ export class TimelineController {
       if (bin.count === 0) continue;
 
       // Dominant category color.
-      let dominantCat = "";
+      let dominantCat = UNCATEGORIZED;
       let maxVotes = 0;
       for (const [cat, votes] of Object.entries(bin.votes)) {
         if (votes > maxVotes) {
@@ -540,7 +489,7 @@ export class TimelineController {
           dominantCat = cat;
         }
       }
-      const color = CATEGORY_FILLS[dominantCat] ?? DEFAULT_EVENT_COLOR;
+      const color = fillFor(dominantCat);
       const isSelected = i === selectedBinIdx;
 
       const barH = Math.max(2, (bin.count / maxCount) * LOD_MAX_BAR_HEIGHT);
@@ -575,7 +524,7 @@ export class TimelineController {
       const eventEnd = event.end;
       if (eventEnd < this._viewStart || event.start > this._viewEnd) continue;
 
-      const color = CATEGORY_FILLS[event.category ?? ""] ?? DEFAULT_EVENT_COLOR;
+      const color = fillFor(event.category);
       const isSelected = event.id === this.selectedId;
       const alpha = isSelected ? 1 : 0.8;
 
@@ -613,7 +562,7 @@ export class TimelineController {
       const x1 = this.timeToPixel(event.start);
       if (x1 < -DOT_RADIUS || x1 > w + DOT_RADIUS) continue;
 
-      const color = CATEGORY_FILLS[event.category ?? ""] ?? DEFAULT_EVENT_COLOR;
+      const color = fillFor(event.category);
       const isSelected = event.id === this.selectedId;
       const alpha = isSelected ? 1 : 0.8;
 
