@@ -136,13 +136,13 @@ errs the other way.
 is per-block by line range with no per-function exclusion, so `server.go` takes
 `handler`, `etags` and the embed while `main.go` keeps `main()` alone — which
 lets the workflow filter by path instead of hardcoded line numbers.
-([#54](https://github.com/inarush0/chronoscope/issues/54), pending.)
+([#54](https://github.com/inarush0/chronoscope/issues/54), landed; Go now
+reads 92.1%.)
 
-**Two exclusions this ADR describes are decided but not yet landed**:
-`main.go` ([#54](https://github.com/inarush0/chronoscope/issues/54)) and
+**One exclusion this ADR describes is decided but not yet landed**:
 `dataset/*.ts` ([#57](https://github.com/inarush0/chronoscope/issues/57)).
-Until they do, the measured numbers above stand; after, Go reads ~92% and the
-TypeScript denominator drops 777 → 700.
+Until it does, the TypeScript number above stands; after, its denominator
+drops 777 → 700.
 
 **80% is a ratchet, not a forecast, and the honest model lands just short.**
 Modelling realistic per-file targets puts TypeScript at about 78.6%.

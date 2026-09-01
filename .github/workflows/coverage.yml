@@ -102,13 +102,43 @@ jobs:
         id: go
         continue-on-error: true
         run: |
-          go test -coverprofile="$RUNNER_TEMP/go-cover.out" ./...
+          # Held rather than propagated on the spot, and handed back by the
+          # last line. The step runs under `bash -e`, so a failing `go test`
+          # would otherwise abort before the filter — and a red suite is
+          # exactly when the profile it did write is worth reading.
+          status=0
+          go test -coverprofile="$RUNNER_TEMP/go-cover.raw" ./... || status=$?
+
+          # main.go leaves the denominator; ADR-0003 has the argument. A Go
+          # profile is per-block by line range with no per-function exclusion,
+          # which is why main.go holds nothing but main() — the filter can then
+          # be a path grep rather than hardcoded line numbers. Everything
+          # downstream reads the filtered profile, so -func, -html and the
+          # summary all agree.
+          #
+          # The grep is by basename, so a second entrypoint added later (a
+          # cmd/*/main.go) would leave the denominator silently along with it.
+          #
+          # Guarded so the redirect cannot invent a go-cover.out the summary
+          # would then report on. (Measured: a compile failure still leaves a
+          # header-only raw profile, which `-func` reads as a cheerful 0.0%
+          # — that is pre-existing and unchanged here, not something the
+          # filter introduces.)
+          if [ -s "$RUNNER_TEMP/go-cover.raw" ]; then
+            awk '/^mode:/ { print; next } !/\/main\.go:/' \
+              "$RUNNER_TEMP/go-cover.raw" > "$RUNNER_TEMP/go-cover.out"
+          fi
+
           # Into coverage/ so one artifact carries both languages. `go tool
           # cover -html` writes a single self-contained file, so it travels and
           # opens offline. mkdir because a TypeScript step that died before
           # writing anything leaves no coverage/ to write into.
           mkdir -p coverage
-          go tool cover -html="$RUNNER_TEMP/go-cover.out" -o coverage/go-coverage.html
+          if [ -s "$RUNNER_TEMP/go-cover.out" ]; then
+            go tool cover -html="$RUNNER_TEMP/go-cover.out" -o coverage/go-coverage.html
+          fi
+
+          exit "$status"
 
       # The two tables are not the same shape and the summary does not pretend
       # they are: istanbul-reports has no per-function reporter, so the
@@ -141,6 +171,13 @@ jobs:
             echo "| --- | ---: | ---: |"
             echo "| Go | ${go_pct} | 80% |"
             echo "| TypeScript | ${ts_pct} | 80% |"
+            echo
+            echo "Both numbers exclude their entrypoint — \`main.go\` on the Go side,"
+            echo "\`src/main.ts\` on the TypeScript side — as shell wiring whose bugs"
+            echo "are integration bugs a unit test would not catch. Neither is"
+            echo "untested by accident. (\`src/test-support/\` is out for a different"
+            echo "reason: it is test scaffolding, not production code.) ADR-0003 has"
+            echo "the argument for all three."
             echo
             echo "### Go, by function"
             echo
