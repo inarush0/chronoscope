@@ -1,0 +1,65 @@
+# The counterpart to `dataset.yml`, which checks the *contents* of the dataset
+# and stays fast by skipping `npm ci`. This job makes the opposite trade: it
+# installs dependencies and a Go toolchain so the code is type-checked and
+# actually built. The dataset tooling is type-checked here rather than there
+# for exactly that reason — `tsc` is a devDependency, so it needs the install.
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks-pass-and-app-builds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      # cache: false because there is no go.sum to key a cache on — main.go is
+      # stdlib only. Left on, setup-go globs for one and warns when it finds
+      # nothing.
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: false
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type-check the app
+        run: npm run check
+
+      - name: Type-check the dataset tooling
+        run: npm run check:dataset
+
+      # Same file set `npm run format` writes, so a contributor who ran the
+      # script cannot be failed here. README.md and the JSON data files are
+      # deliberately outside both.
+      - name: Check formatting
+        run: npm run format:check
+
+      # Not `gofmt -l . | (! read)`: the default shell is `bash -e` without
+      # pipefail, so a gofmt that exits non-zero on an unparseable file writes
+      # nothing to stdout and the pipeline passes. Assigning instead lets -e
+      # catch that, and the -n test catches the ordinary unformatted case.
+      - name: Check Go formatting
+        run: |
+          unformatted=$(gofmt -l .)
+          if [ -n "$unformatted" ]; then
+            echo "These files need gofmt:" >&2
+            echo "$unformatted" >&2
+            exit 1
+          fi
+
+      # Builds the frontend first on purpose: `//go:embed dist` needs dist/ to
+      # exist, and it is gitignored, so a bare `go build` cannot compile here.
+      # On this ubuntu runner the result is the linux/amd64 binary anyway, which
+      # is why `build:linux` is not also run.
+      - name: Build the binary
+        run: npm run build:binary
