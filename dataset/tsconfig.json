@@ -15,5 +15,9 @@
     "erasableSyntaxOnly": true,
     "noEmit": true
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  // Tests belong to `tsconfig.tests.json`, the one config that knows about
+  // Vitest, so that `npm run check:tests` covers every test in the repo rather
+  // than splitting them across two passes by directory.
+  "exclude": ["**/*.test.ts"]
 }
