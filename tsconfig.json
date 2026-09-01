@@ -15,7 +15,7 @@
     "skipLibCheck": true,
     "noEmit": true
   },
-  "include": ["src", "vite.config.ts"],
+  "include": ["src", "vite.config.ts", "vitest.config.ts"],
   // Tests are node-scoped and type-check separately under
   // `tsconfig.tests.json`; keeping them out leaves `npm run check` a purely
   // browser-scoped check.

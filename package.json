@@ -11,9 +11,10 @@
     "preview": "vite preview",
     "check": "tsc -p tsconfig.json",
     "test": "vitest run",
+    "coverage": "vitest run --coverage",
     "check:tests": "tsc -p tsconfig.tests.json",
-    "format": "prettier --write \"src/**/*.{ts,css}\" \"dataset/**/*.ts\" package.json tsconfig.json vite.config.ts",
-    "format:check": "prettier --check \"src/**/*.{ts,css}\" \"dataset/**/*.ts\" package.json tsconfig.json vite.config.ts",
+    "format": "prettier --write \"src/**/*.{ts,css}\" \"dataset/**/*.ts\" package.json tsconfig.json vite.config.ts vitest.config.ts",
+    "format:check": "prettier --check \"src/**/*.{ts,css}\" \"dataset/**/*.ts\" package.json tsconfig.json vite.config.ts vitest.config.ts",
     "check:dataset": "tsc -p dataset/tsconfig.json",
     "build-db": "node dataset/build.ts",
     "validate": "node dataset/validate.ts",
@@ -24,10 +25,11 @@
   },
   "devDependencies": {
     "@types/node": "^25.6.0",
+    "@vitest/coverage-v8": "4.1.11",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
-    "vitest": "^4.1.11"
+    "vitest": "4.1.11"
   },
   "dependencies": {
     "pixi.js": "^8.16.0"

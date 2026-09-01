@@ -82,6 +82,7 @@ time and every reload would re-download the 531 KB dataset in full.
 | `npm run check`        | Type-check the app with `tsc`                       |
 | `npm run check:dataset`| Type-check the dataset build tooling                |
 | `npm run test`         | Run the Vitest suite — it never type-checks         |
+| `npm run coverage`     | Run the suite and write a coverage report to `coverage/` |
 | `npm run check:tests`  | Type-check every test in the repo                   |
 | `npm run format`       | Format source files with Prettier                   |
 | `npm run format:check` | Check that formatting is clean, without writing     |
