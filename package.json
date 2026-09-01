@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "check": "tsc -p tsconfig.json",
     "format": "prettier --write \"src/**/*.{ts,css}\" \"dataset/**/*.ts\" package.json tsconfig.json vite.config.ts",
+    "format:check": "prettier --check \"src/**/*.{ts,css}\" \"dataset/**/*.ts\" package.json tsconfig.json vite.config.ts",
     "check:dataset": "tsc -p dataset/tsconfig.json",
     "build-db": "node dataset/build.ts",
     "validate": "node dataset/validate.ts",

@@ -79,6 +79,7 @@ time and every reload would re-download the 531 KB dataset in full.
 | `npm run check`        | Type-check the app with `tsc`                       |
 | `npm run check:dataset`| Type-check the dataset build tooling                |
 | `npm run format`       | Format source files with Prettier                   |
+| `npm run format:check` | Check that formatting is clean, without writing     |
 | `npm run validate`     | Check the authored event files without building     |
 | `npm run build-db`     | Rebuild `static/chronoscope.json` from `events/`    |
 | `npm run check:artifact`| Fail if the committed dataset has drifted from `events/` |
