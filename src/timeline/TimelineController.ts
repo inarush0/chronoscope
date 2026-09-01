@@ -7,6 +7,7 @@ import {
 } from "../theme.js";
 import type { TimelineColors } from "../theme.js";
 import type { Time, TimelineEvent } from "./types.js";
+import { Viewport } from "./viewport.js";
 
 // ─── Layout constants ───────────────────────────────────────────────────────
 
@@ -93,8 +94,9 @@ export class TimelineController {
   // --- Interaction state ---
   private isPanning = false;
   private panOriginX = 0;
-  private panOriginStart: Time = 0;
-  private panOriginEnd: Time = 0;
+  /** Viewport as of pointerdown; every move re-drags from here, never from the
+   *  previous move, so a drag cannot accumulate rounding drift. */
+  private panOrigin = new Viewport(0, 0, 1);
 
   // --- Selection ---
   private selectedId: string | null = null;
@@ -180,6 +182,23 @@ export class TimelineController {
 
   // ─── Coordinate transforms ─────────────────────────────────────────────────
 
+  /**
+   * The current view as a `Viewport`: all the time↔pixel math lives there.
+   *
+   * Built on read rather than stored so Pixi's screen stays the single source
+   * of the canvas width — a cached copy would need invalidating on every
+   * resize, and a stale one silently skews every transform. Methods that use it
+   * more than once hoist it into a local, as they already do for `w` and `h`.
+   */
+  private get view(): Viewport {
+    return new Viewport(this._viewStart, this._viewEnd, this.viewWidth);
+  }
+
+  private setView(view: Viewport): void {
+    this._viewStart = view.start;
+    this._viewEnd = view.end;
+  }
+
   private get viewWidth(): number {
     return this.app.screen.width;
   }
@@ -188,29 +207,10 @@ export class TimelineController {
   }
 
   private timeToPixel(time: Time): number {
-    return (
-      ((time - this._viewStart) / (this._viewEnd - this._viewStart)) *
-      this.viewWidth
-    );
-  }
-
-  private pixelToTime(px: number): number {
-    return (
-      this._viewStart +
-      (px / this.viewWidth) * (this._viewEnd - this._viewStart)
-    );
+    return this.view.timeToPixel(time);
   }
 
   // ─── View manipulation ─────────────────────────────────────────────────────
-
-  private zoom(factor: number, cursorX: number): void {
-    const tCursor = this.pixelToTime(cursorX);
-    const span = this._viewEnd - this._viewStart;
-    const newSpan = span / factor;
-    const fraction = cursorX / this.viewWidth;
-    this._viewStart = tCursor - newSpan * fraction;
-    this._viewEnd = tCursor + newSpan * (1 - fraction);
-  }
 
   resetView(): void {
     this._viewStart = this.defaultViewStart;
@@ -290,13 +290,13 @@ export class TimelineController {
   }
 
   private computeLod(): "A" | "B" {
+    const view = this.view;
     let visibleCount = 0;
     for (const e of this.events) {
-      const end = e.end ?? e.start;
-      if (end >= this._viewStart && e.start <= this._viewEnd) visibleCount += 1;
+      if (view.intersects(e.start, e.end ?? e.start)) visibleCount += 1;
     }
     if (visibleCount === 0) return "B";
-    const pxPerEvent = this.viewWidth / visibleCount;
+    const pxPerEvent = view.width / visibleCount;
     return pxPerEvent < LOD_THRESHOLD ? "A" : "B";
   }
 
@@ -360,20 +360,20 @@ export class TimelineController {
   getBinAt(x: number, y: number): BinInfo | null {
     if (this.lod !== "A") return null;
 
-    const w = this.viewWidth;
+    const view = this.view;
     const h = this.viewHeight;
     const spineY = h * SPINE_Y_FRACTION;
 
     // Respond anywhere above (and just below) the spine in the canvas.
     if (y > spineY + 8 || y < 0) return null;
 
-    const numBins = Math.max(1, Math.floor(w / LOD_BIN_WIDTH));
+    const grid = view.bins(LOD_BIN_WIDTH);
+    // Columns are laid out on pixel multiples of LOD_BIN_WIDTH by renderLODA,
+    // so the lookup inverts the draw rather than going back through time.
     const binIdx = Math.floor(x / LOD_BIN_WIDTH);
-    if (binIdx < 0 || binIdx >= numBins) return null;
+    if (binIdx < 0 || binIdx >= grid.count) return null;
 
-    const timePerBin = (this._viewEnd - this._viewStart) / numBins;
-    const binStart = this._viewStart + binIdx * timePerBin;
-    const binEnd = binStart + timePerBin;
+    const { start: binStart, end: binEnd } = grid.rangeAt(binIdx);
 
     // Count events assigned to this bin (same assignment logic as renderLODA).
     const votes: Record<string, number> = {};
@@ -381,16 +381,10 @@ export class TimelineController {
     let firstStart = Infinity;
     let lastStart = -Infinity;
     for (const event of this.events) {
-      if (event.start > this._viewEnd) break;
+      if (event.start > view.end) break;
       const end = event.end ?? event.start;
-      if (end < this._viewStart) continue;
-      const fraction =
-        (event.start - this._viewStart) / (this._viewEnd - this._viewStart);
-      const idx = Math.min(
-        numBins - 1,
-        Math.max(0, Math.floor(fraction * numBins)),
-      );
-      if (idx === binIdx) {
+      if (end < view.start) continue;
+      if (grid.indexAt(event.start) === binIdx) {
         count++;
         if (event.start < firstStart) firstStart = event.start;
         if (event.start > lastStart) lastStart = event.start;
@@ -500,10 +494,11 @@ export class TimelineController {
     const g = this.eventLayer;
     g.clear();
 
-    const w = this.viewWidth;
+    const view = this.view;
     const h = this.viewHeight;
     const spineY = h * SPINE_Y_FRACTION;
-    const numBins = Math.max(1, Math.floor(w / LOD_BIN_WIDTH));
+    const grid = view.bins(LOD_BIN_WIDTH);
+    const numBins = grid.count;
 
     // Accumulate event count + category votes per bin.
     type Bin = { count: number; votes: Record<string, number> };
@@ -514,16 +509,11 @@ export class TimelineController {
 
     for (const event of this.events) {
       // Use start time to assign to a bin.
-      if (event.start > this._viewEnd) break; // sorted, so safe to break
+      if (event.start > view.end) break; // sorted, so safe to break
       const end = event.end ?? event.start;
-      if (end < this._viewStart) continue;
+      if (end < view.start) continue;
 
-      const fraction =
-        (event.start - this._viewStart) / (this._viewEnd - this._viewStart);
-      const binIdx = Math.min(
-        numBins - 1,
-        Math.max(0, Math.floor(fraction * numBins)),
-      );
+      const binIdx = grid.indexAt(event.start);
       bins[binIdx].count++;
       const cat = event.category ?? "";
       bins[binIdx].votes[cat] = (bins[binIdx].votes[cat] ?? 0) + 1;
@@ -534,13 +524,7 @@ export class TimelineController {
     // Determine which bin index corresponds to the selected bin range.
     let selectedBinIdx = -1;
     if (this.selectedBinRange) {
-      const fraction =
-        (this.selectedBinRange.start - this._viewStart) /
-        (this._viewEnd - this._viewStart);
-      selectedBinIdx = Math.min(
-        numBins - 1,
-        Math.max(0, Math.floor(fraction * numBins)),
-      );
+      selectedBinIdx = grid.indexAt(this.selectedBinRange.start);
     }
 
     for (let i = 0; i < numBins; i++) {
@@ -660,19 +644,14 @@ export class TimelineController {
     const canvas = e.currentTarget as HTMLCanvasElement;
     this.isPanning = true;
     this.panOriginX = e.offsetX;
-    this.panOriginStart = this._viewStart;
-    this.panOriginEnd = this._viewEnd;
+    this.panOrigin = this.view;
     canvas.setPointerCapture(e.pointerId);
     canvas.style.cursor = "grabbing";
   };
 
   private onPointerMove = (e: PointerEvent): void => {
     if (this.isPanning) {
-      const dx = e.offsetX - this.panOriginX;
-      const span = this.panOriginEnd - this.panOriginStart;
-      const dt = -(dx / this.viewWidth) * span;
-      this._viewStart = this.panOriginStart + dt;
-      this._viewEnd = this.panOriginEnd + dt;
+      this.setView(this.panOrigin.dragBy(e.offsetX - this.panOriginX));
     }
   };
 
@@ -695,7 +674,7 @@ export class TimelineController {
   private onWheel = (e: WheelEvent): void => {
     e.preventDefault();
     const factor = e.deltaY < 0 ? ZOOM_FACTOR : 1 / ZOOM_FACTOR;
-    this.zoom(factor, e.offsetX);
+    this.setView(this.view.zoomAt(factor, e.offsetX));
   };
 
   private onDblClick = (e: MouseEvent): void => {
