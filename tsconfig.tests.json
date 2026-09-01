@@ -1,0 +1,27 @@
+// Tests run under Vitest on node, not in the browser, so they need node's
+// types on top of the DOM lib the modules under test are written against.
+// Neither the app config (`types: []`, browser-only) nor the dataset config
+// (no DOM) can express that, so — following the same reasoning as
+// `dataset/tsconfig.json` — the tests type-check themselves.
+//
+// Vitest strips types via esbuild and never type-checks, exactly as node does
+// for the dataset scripts. `npm run check:tests` is the only thing that does.
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["node"],
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": true,
+    "rewriteRelativeImportExtensions": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*.test.ts"]
+}
