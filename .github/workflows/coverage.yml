@@ -172,12 +172,13 @@ jobs:
             echo "| Go | ${go_pct} | 80% |"
             echo "| TypeScript | ${ts_pct} | 80% |"
             echo
-            echo "Both numbers exclude their entrypoint — \`main.go\` on the Go side,"
-            echo "\`src/main.ts\` on the TypeScript side — as shell wiring whose bugs"
-            echo "are integration bugs a unit test would not catch. Neither is"
-            echo "untested by accident. (\`src/test-support/\` is out for a different"
-            echo "reason: it is test scaffolding, not production code.) ADR-0003 has"
-            echo "the argument for all three."
+            echo "Both numbers exclude their entrypoints — \`main.go\` on the Go side,"
+            echo "\`src/main.ts\` and the \`dataset/*.ts\` scripts on the TypeScript"
+            echo "side — as shell wiring whose bugs are integration bugs a unit test"
+            echo "would not catch. None is untested by accident; the dataset scripts"
+            echo "are gated by the \`dataset\` workflow. (\`src/test-support/\` is out"
+            echo "for a different reason: it is test scaffolding, not production"
+            echo "code.) ADR-0003 has the argument for all four."
             echo
             echo "### Go, by function"
             echo

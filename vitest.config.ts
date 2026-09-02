@@ -65,6 +65,32 @@ export default defineConfig({
         // but counting it would inflate the numerator with code that exists
         // only to be executed by tests.
         "src/test-support/**",
+        // The dataset entrypoint shells — flag parsing, path anchoring,
+        // `console.log` formatting, `process.exit` — because `dataset/lib/`
+        // already holds the logic they call. This is the counterpart of
+        // `src/main.ts` above and of `main.go` (#54); ADR-0003 and #57 carry
+        // the argument.
+        //
+        // They also cannot be covered in-process. Each does its whole job in
+        // its module body, so importing one runs it: `check-artifact.ts` ends
+        // in an unconditional `process.exit`, which kills the runner, and
+        // `build.ts` would overwrite `static/chronoscope.json` from whatever
+        // `dataset/events/` held at the time.
+        //
+        // They are not untested. `.github/workflows/dataset.yml` runs
+        // `npm run validate` and `npm run check:artifact` on every pull
+        // request and every push to main, against the real 1181-event
+        // dataset, and fails on their exit codes. `build.ts` runs in no
+        // workflow, but `check-artifact.ts` calls the same `buildArtifact` +
+        // `serializeArtifact` pair and diffs the result against the committed
+        // file, so its logic is verified by proxy.
+        //
+        // A glob, not the three filenames: the tree already encodes the rule —
+        // top level is entrypoint, `dataset/lib/` is logic — so a future
+        // top-level script is a deliberate choice to be an entrypoint. Note
+        // the single `*`: `dataset/lib/` stays measured, and it is where the
+        // remaining statements live.
+        "dataset/*.ts",
       ],
 
       // Four reporters, one run. `text` is redirected to a file so the CI job
