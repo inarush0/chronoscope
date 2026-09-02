@@ -221,3 +221,9 @@ lowers the percentage. Revisit only once the number has stabilised.
 Decided across
 [Map: coverage reporting and a backfill to 80%](https://github.com/inarush0/chronoscope/issues/38),
 where the measurements and reasoning behind each claim above are recorded.
+
+Background: the provider comparison is measured in
+[Choosing the TypeScript coverage provider](../research/vitest-coverage-providers.md)
+and the Go reporting design in
+[How Go coverage is produced and surfaced](../research/go-coverage-reporting.md).
+Both are dated snapshots — see [docs/research/](../research/README.md).
