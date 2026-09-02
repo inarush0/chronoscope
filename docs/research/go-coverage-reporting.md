@@ -7,10 +7,6 @@ job. Nothing here relitigates the map's locked decisions: reporting is
 self-hosted (job summary + artifact, no Codecov/Coveralls), Go and TypeScript
 are two numbers never blended, and coverage never gates a merge.
 
-There was no existing convention for research notes in this repo (`docs/` held
-only `adr/`, `agents/`, `extraction.md`, `parity-checklist.md`), so this lands in
-a new `docs/research/`.
-
 Toolchain measured against: `go.mod` says `go 1.27`; the local toolchain is
 `go1.27.0 darwin/arm64`. Every "measured" figure below was produced by running
 the command on this repo at `6b8045d`, after `npm run build:binary`.

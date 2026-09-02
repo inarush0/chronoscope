@@ -10,10 +10,6 @@ locally on **node v24.18.0, darwin arm64 (Darwin 25.5.0)** against **pixi.js
 8.20.1** and **vitest 4.1.11**, in a throwaway sandbox outside this repo. No
 dependency was added to this repo and no file under `src/` was touched.
 
-There was no `docs/research/` directory before this file; the repo's existing
-convention is `docs/adr/` for decisions and loose notes at `docs/*.md`. A
-research note is neither, so it goes in a new `docs/research/`.
-
 ## What the barrier actually is
 
 `TimelineController.create()`
