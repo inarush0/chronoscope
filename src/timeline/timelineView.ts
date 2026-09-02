@@ -19,13 +19,10 @@ import type {
 import type { TimelineColors } from "../theme.js";
 import type { TimelineEvent } from "./types.js";
 import { formatYear } from "../format.js";
+import { placeTooltip } from "./tooltipPlacement.js";
 
 /** A gap narrower than this gets a connector line but no year label. */
 const GAP_LABEL_MIN_WIDTH = 48;
-
-/** Tooltip offset from the cursor, in CSS pixels. */
-const TOOLTIP_DX = 14;
-const TOOLTIP_DY = -12;
 
 export interface TimelineViewOptions {
   initialViewStart: number;
@@ -115,6 +112,13 @@ export async function createTimelineView(
   // unchanged the tooltip only moves; its contents are left alone.
   let tooltipKey: string | null = null;
 
+  // The box the tooltip is being kept inside, and the box it is. Both are read
+  // from layout, which is why neither is read on the move path: the viewport
+  // comes from the `ResizeObserver` below, and the tooltip is measured once per
+  // content change, since only its content can resize it.
+  let viewportSize = { width: root.clientWidth, height: root.clientHeight };
+  let tooltipSize = { width: 0, height: 0 };
+
   function hideTooltip(): void {
     if (tooltipKey === null) return;
     tooltipKey = null;
@@ -127,9 +131,21 @@ export async function createTimelineView(
       tooltipKey = key;
       tooltip.replaceChildren(...build());
       tooltip.style.display = "";
+      // Measured after the display flip, or the box reads zero while hidden,
+      // and from the left edge, because an absolutely positioned box shrinks
+      // to fit `containing block − left`: measured where it last sat, a
+      // tooltip near the right edge reports the narrow, wrapped box it would
+      // be *there* rather than the wide one about to be laid out somewhere
+      // else — and near the right edge is the whole point of the clamp.
+      setStyle(tooltip, "left", "0px");
+      tooltipSize = {
+        width: tooltip.offsetWidth,
+        height: tooltip.offsetHeight,
+      };
     }
-    setStyle(tooltip, "left", `${x + TOOLTIP_DX}px`);
-    setStyle(tooltip, "top", `${y + TOOLTIP_DY}px`);
+    const at = placeTooltip({ x, y }, tooltipSize, viewportSize);
+    setStyle(tooltip, "left", `${at.x}px`);
+    setStyle(tooltip, "top", `${at.y}px`);
   }
 
   function line(className: string, text: string): HTMLDivElement {
@@ -207,7 +223,9 @@ export async function createTimelineView(
   const ro = new ResizeObserver(([entry]) => {
     if (!entry) return;
     const { width, height } = entry.contentRect;
-    if (width > 0 && height > 0) ctrl.resize(width, height);
+    if (width <= 0 || height <= 0) return;
+    viewportSize = { width, height };
+    ctrl.resize(width, height);
   });
   ro.observe(root);
 
