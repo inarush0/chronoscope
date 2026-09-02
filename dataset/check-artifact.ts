@@ -12,7 +12,7 @@
  */
 
 import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { relative, resolve } from "node:path";
 import { UsageError, anchoredPath } from "./lib/args.ts";
 import {
   BuildError,
@@ -38,6 +38,13 @@ try {
 }
 
 const committedPath = resolve(scriptDir, "../static/chronoscope.json");
+
+// The messages below name the tree that was actually read, so `--events` can't
+// report a mismatch against a directory it never opened. Inside the repo that
+// prints the familiar `dataset/events`; anywhere else, the absolute path.
+const repoRoot = resolve(scriptDir, "..");
+const fromRoot = relative(repoRoot, eventsDir);
+const eventsLabel = fromRoot.startsWith("..") ? eventsDir : fromRoot;
 
 let expected: string;
 try {
@@ -65,12 +72,12 @@ try {
 }
 
 if (committed === expected) {
-  console.log("static/chronoscope.json is up to date with dataset/events/.");
+  console.log(`static/chronoscope.json is up to date with ${eventsLabel}/.`);
   process.exit(0);
 }
 
 console.error(
-  "static/chronoscope.json is out of date with dataset/events/.\n" +
-    "Run 'npm run build-db' and commit the result.",
+  `static/chronoscope.json is out of date with ${eventsLabel}/.\n` +
+    `Run 'npm run build-db' and commit the result.`,
 );
 process.exit(1);

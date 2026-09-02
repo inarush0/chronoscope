@@ -19,20 +19,31 @@ import { resolve } from "node:path";
 export class UsageError extends Error {}
 
 /**
- * The value following `name` in `argv`, or `fallback` when it is absent.
+ * The value the caller gave for `name`, or `undefined` when the flag is absent.
  *
- * A flag given as the final argument has no value to return; rather than hand
- * back `undefined` for a caller to trip over later, refuse it here, named.
+ * A flag given as the final argument, or given an empty value, has nothing to
+ * return. Neither can mean "absent": `--events` with nothing after it is a
+ * caller mistake, and silently falling back to the default would check or build
+ * a tree the caller did not name. Refuse both here, named after the flag typed.
  */
-export function flag(argv: string[], name: string, fallback: string): string {
+function lookup(argv: string[], name: string): string | undefined {
   const index = argv.indexOf(name);
-  if (index === -1) return fallback;
+  if (index === -1) return undefined;
 
   const value = argv[index + 1];
-  if (value === undefined) {
+  if (value === undefined || value === "") {
     throw new UsageError(`${name} needs a value after it.`);
   }
   return value;
+}
+
+/** The value following `name` in `argv`, or `fallback` when it is absent. */
+export function flagValue(
+  argv: string[],
+  name: string,
+  fallback: string,
+): string {
+  return lookup(argv, name) ?? fallback;
 }
 
 /**
@@ -45,6 +56,8 @@ export function anchoredPath(
   name: string,
   options: { scriptDir: string; fallback: string },
 ): string {
-  const value = flag(argv, name, "");
-  return value ? resolve(value) : resolve(options.scriptDir, options.fallback);
+  const value = lookup(argv, name);
+  return value === undefined
+    ? resolve(options.scriptDir, options.fallback)
+    : resolve(value);
 }

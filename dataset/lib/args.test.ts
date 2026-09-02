@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { resolve } from "node:path";
 
-import { UsageError, anchoredPath, flag } from "./args.ts";
+import { UsageError, anchoredPath, flagValue } from "./args.ts";
 
 /**
  * The rule this module exists to hold in one place: an explicit flag resolves
@@ -17,13 +17,13 @@ import { UsageError, anchoredPath, flag } from "./args.ts";
  */
 const SCRIPT_DIR = "/opt/chronoscope/dataset";
 
-describe("flag", () => {
+describe("flagValue", () => {
   it("returns the value that follows the flag", () => {
-    expect(flag(["--slug", "torah"], "--slug", "bible")).toBe("torah");
+    expect(flagValue(["--slug", "torah"], "--slug", "bible")).toBe("torah");
   });
 
   it("returns the fallback when the flag is absent", () => {
-    expect(flag(["--out", "x.json"], "--slug", "bible")).toBe("bible");
+    expect(flagValue(["--out", "x.json"], "--slug", "bible")).toBe("bible");
   });
 
   // `args[index + 1]` on the old build.ts returned undefined here, which
@@ -31,8 +31,18 @@ describe("flag", () => {
   // message about the wrong thing entirely. Refusing up front, named after the
   // flag the caller actually typed, is the deliberate replacement.
   it("refuses a flag given last with no value after it", () => {
-    expect(() => flag(["--events"], "--events", "events")).toThrow(UsageError);
-    expect(() => flag(["--events"], "--events", "events")).toThrow("--events");
+    const call = () => flagValue(["--events"], "--events", "events");
+    expect(call).toThrow(UsageError);
+    expect(call).toThrow("--events");
+  });
+
+  // An empty value must not read as "absent". The old `anchored` in build.ts
+  // used "" as its own sentinel for absence, so `--events ""` fell through to
+  // the default and quietly worked on a tree the caller never named.
+  it("refuses an empty value rather than falling back", () => {
+    expect(() => flagValue(["--slug", ""], "--slug", "bible")).toThrow(
+      UsageError,
+    );
   });
 });
 
@@ -76,6 +86,15 @@ describe("anchoredPath", () => {
   it("refuses a flag given last with no value after it", () => {
     expect(() =>
       anchoredPath(["--events"], "--events", {
+        scriptDir: SCRIPT_DIR,
+        fallback: "events",
+      }),
+    ).toThrow(UsageError);
+  });
+
+  it("refuses an empty value rather than anchoring to the script dir", () => {
+    expect(() =>
+      anchoredPath(["--events", ""], "--events", {
         scriptDir: SCRIPT_DIR,
         fallback: "events",
       }),

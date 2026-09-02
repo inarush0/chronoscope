@@ -16,7 +16,7 @@
 
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
-import { UsageError, anchoredPath, flag } from "./lib/args.ts";
+import { UsageError, anchoredPath, flagValue } from "./lib/args.ts";
 import {
   BuildError,
   buildArtifact,
@@ -35,7 +35,7 @@ try {
     scriptDir,
     fallback: "../static/chronoscope.json",
   });
-  datasetSlug = flag(args, "--slug", "bible");
+  datasetSlug = flagValue(args, "--slug", "bible");
 } catch (error) {
   if (error instanceof UsageError) {
     console.error(error.message);
