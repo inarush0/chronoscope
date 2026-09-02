@@ -65,7 +65,12 @@ export interface TimelineColors {
   spine: number;
 }
 
-const THEME_PALETTE = {
+/**
+ * Exported for the same reason `CATEGORY_COLORS` is: this is the authored
+ * form, and the derived `THEME_COLORS` below is only meaningful as a claim
+ * about it. Nothing in the app reads it — the app reads the packed table.
+ */
+export const THEME_PALETTE = {
   light: { background: "#f5f5f5", spine: "#7777bb" },
   dark: { background: "#13131f", spine: "#5555aa" },
 } satisfies Record<string, Record<keyof TimelineColors, string>>;
