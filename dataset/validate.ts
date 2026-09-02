@@ -11,17 +11,25 @@
 
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { UsageError, anchoredPath } from "./lib/args.ts";
 import { loadAllBooks } from "./lib/events.ts";
 import { formatDate } from "./lib/dates.ts";
 
-// Default is anchored to this file so the script works from any cwd; an
-// explicit flag is resolved from the cwd, where the caller typed it.
 const args = process.argv.slice(2);
-const index = args.indexOf("--events");
-const eventsDir =
-  index === -1
-    ? resolve(import.meta.dirname, "events")
-    : resolve(args[index + 1]);
+
+let eventsDir: string;
+try {
+  eventsDir = anchoredPath(args, "--events", {
+    scriptDir: import.meta.dirname,
+    fallback: "events",
+  });
+} catch (error) {
+  if (error instanceof UsageError) {
+    console.error(error.message);
+    process.exit(1);
+  }
+  throw error;
+}
 
 const { books, errors, spread } = loadAllBooks(eventsDir);
 
