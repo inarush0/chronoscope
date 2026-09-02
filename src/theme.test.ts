@@ -21,15 +21,19 @@ describe("toPixi", () => {
  * The claim the module exists to make: every colour is authored once as CSS
  * and the packed form is derived from it, so the two cannot drift.
  *
- * Asserted as a round-trip — pack, unpack, compare to the string it came from
- * — rather than against literal hex values. A palette tweak is a decision, not
- * a regression, and a test that pins the numbers would fail on every one.
+ * Stated against the authored string each colour comes from, never against a
+ * literal hex value. A palette tweak is a decision, not a regression, and a
+ * test that pinned the numbers would fail on every one.
  */
 describe("the CSS form and the packed form agree", () => {
   it.each(Object.entries(CATEGORY_COLORS))(
-    "round-trips the %s category colour",
-    (_name, hex) => {
-      expect(`#${toPixi(hex).toString(16).padStart(6, "0")}`).toBe(hex);
+    "draws the %s category in its own authored colour",
+    (name, hex) => {
+      // Through `fillFor`, because the packed table it reads is private and is
+      // the thing that could drift. Unpacking `toPixi(hex)` back into a string
+      // and comparing it to `hex` would hold for any hex at all — a fact about
+      // `parseInt`, not about the palette.
+      expect(fillFor(name)).toBe(toPixi(hex));
     },
   );
 

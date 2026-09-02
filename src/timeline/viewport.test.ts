@@ -87,14 +87,16 @@ describe("Viewport", () => {
     });
   });
 
-  describe("withRange / withWidth", () => {
+  describe("withRange", () => {
     it("replaces the time range and keeps the canvas", () => {
       const zoomed = FULL_VIEW.withRange(0, 1000);
       expect(zoomed.start).toBe(0);
       expect(zoomed.end).toBe(1000);
       expect(zoomed.width).toBe(FULL_VIEW.width);
     });
+  });
 
+  describe("withWidth", () => {
     it("replaces the canvas width and keeps the time range", () => {
       // What a resize does: the same stretch of time, redrawn wider, so a
       // given time lands further across the canvas than it did.

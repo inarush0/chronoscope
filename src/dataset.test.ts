@@ -11,11 +11,16 @@ function ev(start: number, rest: Partial<TimelineEvent> = {}): TimelineEvent {
 /**
  * The one impure function in the module reaches the network through `fetch`,
  * which node has natively — so the seam is already there and a stub on
- * `globalThis` is the whole harness. Only the two fields `loadDataset` reads
- * are stubbed; a full `Response` would be scaffolding nothing asserts.
+ * `globalThis` is the whole harness. Only the fields `loadDataset` reads are
+ * stubbed; a full `Response` would be scaffolding nothing asserts.
+ *
+ * Returns the `json` mock, because whether the body was ever read is the
+ * observable difference between refusing a failed response and parsing it.
  */
-function stubFetch(res: Partial<Response>): void {
-  vi.stubGlobal("fetch", vi.fn().mockResolvedValue(res as Response));
+function stubFetch(res: Omit<Partial<Response>, "json">, body: unknown) {
+  const json = vi.fn().mockResolvedValue(body);
+  vi.stubGlobal("fetch", vi.fn().mockResolvedValue({ ...res, json }));
+  return json;
 }
 
 afterEach(() => {
@@ -30,29 +35,23 @@ describe("loadDataset", () => {
   };
 
   it("returns the parsed payload", async () => {
-    stubFetch({ ok: true, json: async () => PAYLOAD });
+    stubFetch({ ok: true }, PAYLOAD);
 
     await expect(loadDataset()).resolves.toEqual(PAYLOAD);
   });
 
-  it("throws with the status on a failed response, and yields no dataset", async () => {
-    // Assert the consequence: a 404 body still parses as JSON, so a caller
-    // that only checked for a thrown error could be handed the error page as
-    // if it were the dataset.
-    stubFetch({
-      ok: false,
-      status: 404,
-      statusText: "Not Found",
-      json: async () => ({ oops: true }),
-    });
+  it("throws with the status on a failed response, and never reads the body", async () => {
+    // The consequence, not just the complaint: an error page is still valid
+    // JSON, so dropping the `ok` check would hand the caller `{ oops: true }`
+    // as if it were the dataset. Asserting the body was never parsed is what
+    // distinguishes refusing the response from parsing it and throwing later.
+    const json = stubFetch(
+      { ok: false, status: 404, statusText: "Not Found" },
+      { oops: true },
+    );
 
-    let resolved: Dataset | undefined;
-    await expect(
-      loadDataset().then((d) => {
-        resolved = d;
-      }),
-    ).rejects.toThrow(/404 Not Found/);
-    expect(resolved).toBeUndefined();
+    await expect(loadDataset()).rejects.toThrow(/404 Not Found/);
+    expect(json).not.toHaveBeenCalled();
   });
 });
 
@@ -62,12 +61,13 @@ describe("initialView", () => {
     expect(initialView([ev(0), ev(1000)])).toEqual({ start: -50, end: 1050 });
   });
 
-  it("counts an interval's end, not only its start", () => {
-    // The lone event ends long after it begins; the extent has to follow it
-    // there, or the view opens with the interval running off the right edge.
-    expect(initialView([ev(0), ev(200, { end: 1000 })])).toEqual({
-      start: -50,
-      end: 1050,
+  it("takes both ends of an interval into the extent", () => {
+    // One interval and nothing else, so both edges must come from it: a
+    // version that read only `start` would collapse the view onto 200, and
+    // one that read only `end` onto 1000. Span 800, so the padding is 40.
+    expect(initialView([ev(200, { end: 1000 })])).toEqual({
+      start: 160,
+      end: 1040,
     });
   });
 
