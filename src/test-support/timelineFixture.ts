@@ -54,6 +54,9 @@ export const HIT = 8;
 /** A y inside the interval bar's band and outside every instant's. */
 export const BAR_Y = (BAR_TOP_Y + BAR_BOT_Y) / 2; // 162
 
+/** Where `getGaps` puts its connector line: below the spine, not on it. */
+export const GAP_Y = SPINE_Y + 20; // 220
+
 // ─── Dataset ─────────────────────────────────────────────────────────────────
 
 /**
@@ -94,13 +97,26 @@ function mountCanvas(): HTMLCanvasElement {
   return canvas;
 }
 
+export interface FixtureOptions {
+  /** Dataset to load instead of the five-event fixture above. */
+  events?: TimelineEvent[];
+  onSelectionChange?: (id: string | null) => void;
+}
+
 /**
  * A real controller over a real canvas, with the fixture dataset loaded and
  * the view rigged to one day per pixel. No production code is mocked or
  * subclassed: `create()` runs as written, Pixi picks a renderer, and the
  * caller hit-tests through the public surface.
+ *
+ * The overrides exist for tests whose subject is not the geometry: a gap or an
+ * LOD flip needs a dataset shaped for it, and a selection needs a callback to
+ * observe. The view and the canvas stay as they are either way, so an
+ * overridden dataset is still laid out at one day per pixel.
  */
-export async function createFixtureController(): Promise<{
+export async function createFixtureController(
+  options: FixtureOptions = {},
+): Promise<{
   ctrl: TimelineController;
   canvas: HTMLCanvasElement;
 }> {
@@ -108,8 +124,12 @@ export async function createFixtureController(): Promise<{
   const ctrl = await TimelineController.create(canvas, {
     initialViewStart: VIEW_START,
     initialViewEnd: VIEW_END,
+    // Defaulted here rather than passed through as `undefined`, which
+    // `exactOptionalPropertyTypes` rejects even though the controller would
+    // have supplied the same no-op.
+    onSelectionChange: options.onSelectionChange ?? (() => {}),
   });
-  ctrl.setDataset(events);
+  ctrl.setDataset(options.events ?? events);
   return { ctrl, canvas };
 }
 
