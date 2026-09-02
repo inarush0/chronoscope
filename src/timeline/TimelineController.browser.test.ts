@@ -34,7 +34,7 @@ import {
 } from "../test-support/timelineFixture.js";
 
 /** An instant at day `day`, which on the fixture's view is x = `day`. */
-function at(day: number): TimelineEvent {
+function instantAt(day: number): TimelineEvent {
   return { id: `d${day}`, start: day * DAY, title: `Day ${day}` };
 }
 
@@ -60,7 +60,7 @@ function spans(gaps: { x1: number; x2: number }[]): number[][] {
  */
 function pointer(
   canvas: HTMLCanvasElement,
-  type: string,
+  type: "pointerdown" | "pointermove" | "pointerup",
   x: number,
   y: number,
 ): void {
@@ -231,7 +231,8 @@ describe("TimelineController.getGaps", () => {
   let ctrl: TimelineController;
   let canvas: HTMLCanvasElement;
 
-  async function withDataset(events: TimelineEvent[]): Promise<void> {
+  /** The fixture, minus the dataset — every test here brings its own. */
+  async function mount(events: TimelineEvent[]): Promise<void> {
     ({ ctrl, canvas } = await createFixtureController({ events }));
   }
 
@@ -240,28 +241,29 @@ describe("TimelineController.getGaps", () => {
   });
 
   it("reports one gap across a hole, below the spine", async () => {
-    await withDataset([at(100), at(500)]);
+    await mount([instantAt(100), instantAt(500)]);
     expect(ctrl.lod).toBe("B");
 
     const gaps = ctrl.getGaps();
-    expect(gaps).toHaveLength(1);
-    expect(gaps[0].x1).toBe(100);
-    expect(gaps[0].x2).toBe(500);
-    // Below the spine, not on it: the overlay draws under the events.
+    expect(spans(gaps)).toEqual([[100, 500]]);
+    // `GAP_Y` is the fixture's restatement of the offset below the spine that
+    // the connector line is drawn at; the overlay draws under the events.
     expect(gaps[0].y).toBe(GAP_Y);
-    expect(gaps[0].y).toBeGreaterThan(SPINE_Y);
-    // 400 days is 1.09 mean Julian years.
+    // The one label asserted here. `formatDuration`'s cases belong to
+    // `format.test.ts` (#50) and are not re-run; what this pins is that the
+    // gap carries a label for *its own* span — 400 days, which is 1.09 mean
+    // Julian years — rather than for the neighbouring pair or the whole view.
     expect(gaps[0].label).toBe("1 yr");
   });
 
   /**
-   * The only pair that yields nothing is one with no span at all. There is no
-   * minimum width — the next test pins that a 2px gap is still reported — so
-   * the guard being tested here is `x2 <= x1`, which two events sharing a
-   * start time are the only way to reach going forwards.
+   * A pair with no span at all. There is no minimum width — the next test pins
+   * that a 2px gap is still reported — so what this reaches is the `x2 <= x1`
+   * half of the guard, and two events sharing a start time are the only way to
+   * reach it going forwards. (The other half, `x2 < 0`, is two tests down.)
    */
   it("reports no gap between two events that share a start time", async () => {
-    await withDataset([at(300), { ...at(300), id: "also-300" }]);
+    await mount([instantAt(300), { ...instantAt(300), id: "also-300" }]);
     expect(ctrl.lod).toBe("B");
     expect(ctrl.getGaps()).toEqual([]);
   });
@@ -274,6 +276,7 @@ describe("TimelineController.getGaps", () => {
    */
   it("reports every consecutive pair, however narrow", async () => {
     ({ ctrl, canvas } = await createFixtureController());
+    expect(ctrl.lod).toBe("B");
     expect(spans(ctrl.getGaps())).toEqual([
       [100, 400],
       [400, 402],
@@ -297,7 +300,12 @@ describe("TimelineController.getGaps", () => {
    * dataset — a difference no assertion on the return value can see.
    */
   it("keeps a gap that runs off an edge and drops one entirely off it", async () => {
-    await withDataset([at(-200), at(300), at(900), at(1000)]);
+    await mount([
+      instantAt(-200),
+      instantAt(300),
+      instantAt(900),
+      instantAt(1000),
+    ]);
     expect(ctrl.lod).toBe("B");
     expect(spans(ctrl.getGaps())).toEqual([
       [-200, 300],
@@ -306,7 +314,7 @@ describe("TimelineController.getGaps", () => {
   });
 
   it("drops a gap that ends before the left edge", async () => {
-    await withDataset([at(-400), at(-200), at(300)]);
+    await mount([instantAt(-400), instantAt(-200), instantAt(300)]);
     expect(ctrl.lod).toBe("B");
     expect(spans(ctrl.getGaps())).toEqual([[-200, 300]]);
   });
@@ -317,7 +325,7 @@ describe("TimelineController.getGaps", () => {
    * threshold of 40.
    */
   it("reports nothing in LOD A", async () => {
-    await withDataset(Array.from({ length: 30 }, (_, i) => at(i * 20)));
+    await mount(Array.from({ length: 30 }, (_, i) => instantAt(i * 20)));
     expect(ctrl.lod).toBe("A");
     expect(ctrl.getGaps()).toEqual([]);
   });
@@ -360,7 +368,7 @@ describe("TimelineController.lod memo", () => {
     ({ ctrl, canvas } = await createFixtureController());
     expect(ctrl.lod).toBe("B");
 
-    ctrl.setDataset(Array.from({ length: 30 }, (_, i) => at(i * 20)));
+    ctrl.setDataset(Array.from({ length: 30 }, (_, i) => instantAt(i * 20)));
     expect(ctrl.lod).toBe("A");
   });
 
@@ -376,13 +384,32 @@ describe("TimelineController.lod memo", () => {
    * 400 px per event is comfortably back in LOD B.
    */
   it("sees a pan that no frame has rendered yet", async () => {
-    const cluster = Array.from({ length: 30 }, (_, i) => at(i * 3));
+    const cluster = Array.from({ length: 30 }, (_, i) => instantAt(i * 3));
     ({ ctrl, canvas } = await createFixtureController({
-      events: [...cluster, at(700), at(750)],
+      events: [...cluster, instantAt(700), instantAt(750)],
     }));
     expect(ctrl.lod).toBe("A");
 
     drag(canvas, 700, 100);
+    expect(ctrl.lod).toBe("B");
+  });
+
+  /**
+   * The same pan, taken far enough that nothing is left on screen. An empty
+   * view has no px-per-event to compare against the threshold, and the answer
+   * is "B" — a division by zero here would be Infinity and read as "B" by
+   * luck, so the early return is what makes it deliberate. Reached from "A",
+   * because starting from "B" would prove nothing about which branch answered.
+   */
+  it("reads an empty view as LOD B", async () => {
+    const cluster = Array.from({ length: 30 }, (_, i) => instantAt(i * 3));
+    ({ ctrl, canvas } = await createFixtureController({
+      events: [...cluster, instantAt(700), instantAt(750)],
+    }));
+    expect(ctrl.lod).toBe("A");
+
+    // 790 days forward leaves the view at 790..1590, past the last event.
+    drag(canvas, 790, 0);
     expect(ctrl.lod).toBe("B");
   });
 });
