@@ -131,7 +131,13 @@ export async function createTimelineView(
       tooltipKey = key;
       tooltip.replaceChildren(...build());
       tooltip.style.display = "";
-      // After the display flip, or the box measures zero while hidden.
+      // Measured after the display flip, or the box reads zero while hidden,
+      // and from the left edge, because an absolutely positioned box shrinks
+      // to fit `containing block − left`: measured where it last sat, a
+      // tooltip near the right edge reports the narrow, wrapped box it would
+      // be *there* rather than the wide one about to be laid out somewhere
+      // else — and near the right edge is the whole point of the clamp.
+      setStyle(tooltip, "left", "0px");
       tooltipSize = {
         width: tooltip.offsetWidth,
         height: tooltip.offsetHeight,
