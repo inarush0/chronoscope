@@ -15,7 +15,8 @@
  */
 
 import { mkdirSync, writeFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
+import { dirname } from "node:path";
+import { UsageError, anchoredPath, flagValue } from "./lib/args.ts";
 import {
   BuildError,
   buildArtifact,
@@ -23,21 +24,25 @@ import {
 } from "./lib/artifact.ts";
 
 const args = process.argv.slice(2);
-const getFlag = (name: string, fallback: string) => {
-  const index = args.indexOf(name);
-  return index === -1 ? fallback : args[index + 1];
-};
+const scriptDir = import.meta.dirname;
 
-// Defaults are anchored to this file so the script works from any cwd; an
-// explicit flag is resolved from the cwd, where the caller typed it.
-const anchored = (flag: string, fallback: string) => {
-  const value = getFlag(flag, "");
-  return value ? resolve(value) : resolve(import.meta.dirname, fallback);
-};
-
-const eventsDir = anchored("--events", "events");
-const outPath = anchored("--out", "../static/chronoscope.json");
-const datasetSlug = getFlag("--slug", "bible");
+let eventsDir: string;
+let outPath: string;
+let datasetSlug: string;
+try {
+  eventsDir = anchoredPath(args, "--events", { scriptDir, fallback: "events" });
+  outPath = anchoredPath(args, "--out", {
+    scriptDir,
+    fallback: "../static/chronoscope.json",
+  });
+  datasetSlug = flagValue(args, "--slug", "bible");
+} catch (error) {
+  if (error instanceof UsageError) {
+    console.error(error.message);
+    process.exit(1);
+  }
+  throw error;
+}
 
 let built;
 try {
