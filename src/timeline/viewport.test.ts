@@ -87,6 +87,55 @@ describe("Viewport", () => {
     });
   });
 
+  describe("withRange", () => {
+    it("replaces the time range and keeps the canvas", () => {
+      const zoomed = FULL_VIEW.withRange(0, 1000);
+      expect(zoomed.start).toBe(0);
+      expect(zoomed.end).toBe(1000);
+      expect(zoomed.width).toBe(FULL_VIEW.width);
+    });
+  });
+
+  describe("withWidth", () => {
+    it("replaces the canvas width and keeps the time range", () => {
+      // What a resize does: the same stretch of time, redrawn wider, so a
+      // given time lands further across the canvas than it did.
+      const resized = FULL_VIEW.withWidth(1600);
+      expect(resized.width).toBe(1600);
+      expect(resized.start).toBe(FULL_VIEW.start);
+      expect(resized.end).toBe(FULL_VIEW.end);
+      expect(resized.timeToPixel(resized.end)).toBe(1600);
+    });
+  });
+
+  /**
+   * The predicate that decides whether an event is drawn at all. An interval
+   * only touching the view is still on screen, so the comparisons are
+   * inclusive; a strict one would blink events out at the edge mid-pan.
+   */
+  describe("intersects", () => {
+    const VIEW = new Viewport(0, 1000, 100);
+
+    it("accepts an interval overlapping an edge", () => {
+      expect(VIEW.intersects(-500, 200)).toBe(true);
+      expect(VIEW.intersects(800, 5000)).toBe(true);
+    });
+
+    it("accepts an interval containing the whole view", () => {
+      expect(VIEW.intersects(-5000, 5000)).toBe(true);
+    });
+
+    it("accepts an interval merely touching an edge", () => {
+      expect(VIEW.intersects(-500, 0)).toBe(true);
+      expect(VIEW.intersects(1000, 5000)).toBe(true);
+    });
+
+    it("rejects an interval entirely outside the view", () => {
+      expect(VIEW.intersects(-5000, -4000)).toBe(false);
+      expect(VIEW.intersects(4000, 5000)).toBe(false);
+    });
+  });
+
   describe("bins", () => {
     it("splits the canvas into whole columns of at least one bin", () => {
       expect(FULL_VIEW.bins(24).count).toBe(33);
