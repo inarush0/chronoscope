@@ -139,10 +139,12 @@ lets the workflow filter by path instead of hardcoded line numbers.
 ([#54](https://github.com/inarush0/chronoscope/issues/54), landed; Go now
 reads 92.1%.)
 
-**One exclusion this ADR describes is decided but not yet landed**:
-`dataset/*.ts` ([#57](https://github.com/inarush0/chronoscope/issues/57)).
-Until it does, the TypeScript number above stands; after, its denominator
-drops 777 → 700.
+**The `dataset/*.ts` exclusion has landed**
+([#57](https://github.com/inarush0/chronoscope/issues/57)). It was forecast
+here as 777 → 700; by the time it landed the tests merged alongside it had
+moved both sides, so the measured drop was 819 → 727 with the numerator
+unchanged — the headline went 50.42% → 56.80% on a config change alone. The
+forecast's arithmetic aged; its shape held.
 
 **80% is a ratchet, not a forecast, and the honest model lands just short.**
 Modelling realistic per-file targets puts TypeScript at about 78.6%.
@@ -174,15 +176,17 @@ already reachable through `handler(fs.Sub(distFS, "dist"))`. Excluding `main`
 is what lifts Go from 70.0% to ~92%, so the exclusion is named here rather than
 left for a reader to infer the entrypoint is tested.
 
-**The three `dataset/*.ts` entrypoint scripts (77 statements).** The third
-member of that family, but excluded with a positive claim rather than a shrug:
-`dataset.yml` runs `validate` and `check:artifact` on every push against the
-real 1181 events, and `check-artifact.ts` verifies `build.ts`'s logic by proxy.
+**The three `dataset/*.ts` entrypoint scripts (92 statements as landed; 77
+when this was written).** The third member of that family, but excluded with a
+positive claim rather than a shrug: `dataset.yml` runs `validate` and
+`check:artifact` on every pull request and every push to main against the real
+1181 events, and `check-artifact.ts` verifies `build.ts`'s logic by proxy.
 These are tested by a mechanism `v8` cannot see. Covering them *in situ* is not
-an option — a top-level module body calling `process.exit` kills the runner on
-import — so it would require a `main(argv)` extraction, which buys 4 of the 22
-points that excluding them buys. `dataset/lib/` stays measured, and is where
-the remaining 151 statements live.
+an option — each does its whole job in its module body, so an import runs it:
+`check-artifact.ts` exits the runner outright and `build.ts` rewrites
+`static/chronoscope.json` — so it would require a `main(argv)` extraction,
+which buys a fraction of the points that excluding them buys. `dataset/lib/`
+stays measured, and is where the remaining 161 statements live.
 
 **`src/test-support/` (added #63).** Not a shrug and not a narrowing of the
 denominator this ADR defends: the directory holds no production code at all,
